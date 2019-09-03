@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Sphere1
+  - Sphere2
+  - Sphere0
+  - Plane
   layers:
   - Default
   - TransparentFX
