@@ -4,7 +4,11 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 18
+<<<<<<< HEAD
   productGUID: 0210d31776ba8064e9cf8a37378a37ad
+=======
+  productGUID: eb1cdebddc974b84b95e30cbf29a7142
+>>>>>>> 9b446d3886632e6997b155631440621b1601a76d
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -12,7 +16,11 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
+<<<<<<< HEAD
   companyName: DefaultCompany
+=======
+  companyName: 'DADIU: Team 4 - The Cult'
+>>>>>>> 9b446d3886632e6997b155631440621b1601a76d
   productName: MiniGameProduction01
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
