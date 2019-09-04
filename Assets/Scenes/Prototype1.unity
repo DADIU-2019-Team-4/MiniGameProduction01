@@ -490,7 +490,7 @@ GameObject:
   - component: {fileID: 177600411}
   - component: {fileID: 177600410}
   m_Layer: 0
-  m_Name: Cube (9)
+  m_Name: Poster2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -868,7 +868,7 @@ GameObject:
   m_Component:
   - component: {fileID: 371096572}
   m_Layer: 0
-  m_Name: Car
+  m_Name: Toy Car
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -887,7 +887,7 @@ Transform:
   m_Children:
   - {fileID: 1241626313}
   m_Father: {fileID: 846569966}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &380219341
 GameObject:
@@ -994,7 +994,7 @@ GameObject:
   - component: {fileID: 411911816}
   - component: {fileID: 411911815}
   m_Layer: 0
-  m_Name: Cube (8)
+  m_Name: Poster1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1259,7 +1259,7 @@ GameObject:
   - component: {fileID: 511023313}
   - component: {fileID: 511023312}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Bed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1275,7 +1275,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.509999, y: 0.26, z: 3.66}
   m_LocalScale: {x: 2.7186844, y: 1, z: 5.358671}
-  m_Children: []
+  m_Children:
+  - {fileID: 2102227063}
   m_Father: {fileID: 846569966}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1371,7 +1372,7 @@ Transform:
   - {fileID: 1825247969}
   - {fileID: 1051197432}
   m_Father: {fileID: 846569966}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &680323569
 GameObject:
@@ -1833,7 +1834,7 @@ GameObject:
   m_Component:
   - component: {fileID: 758479181}
   m_Layer: 0
-  m_Name: Room
+  m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1855,7 +1856,7 @@ Transform:
   - {fileID: 11978094}
   - {fileID: 182807643}
   m_Father: {fileID: 846569966}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &763943815
 GameObject:
@@ -2052,7 +2053,7 @@ GameObject:
   m_Component:
   - component: {fileID: 846569966}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2071,9 +2072,7 @@ Transform:
   m_Children:
   - {fileID: 1211002278}
   - {fileID: 511023311}
-  - {fileID: 907947787}
   - {fileID: 2041316897}
-  - {fileID: 2102227063}
   - {fileID: 1315667242}
   - {fileID: 1650898512}
   - {fileID: 665762500}
@@ -2281,7 +2280,7 @@ GameObject:
   - component: {fileID: 907947789}
   - component: {fileID: 907947788}
   m_Layer: 0
-  m_Name: ball 2
+  m_Name: Bedstand Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2295,11 +2294,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 907947786}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.629999, y: 0.52, z: 5.87}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: -0.24483588, y: 0.58, z: -0.089999676}
+  m_LocalScale: {x: 0.30376673, y: 0.5, z: 0.50000006}
   m_Children: []
-  m_Father: {fileID: 846569966}
-  m_RootOrder: 2
+  m_Father: {fileID: 2041316897}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &907947788
 SphereCollider:
@@ -2705,7 +2704,7 @@ GameObject:
   - component: {fileID: 1051197434}
   - component: {fileID: 1051197433}
   m_Layer: 0
-  m_Name: Cube (11)
+  m_Name: Poster4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3264,7 +3263,7 @@ Transform:
   - {fileID: 145943192}
   - {fileID: 1067895872}
   m_Father: {fileID: 846569966}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1241626312
 GameObject:
@@ -3482,7 +3481,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 846569966}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 26.4, y: -543.1, z: -185}
 --- !u!108 &1310422754
 Light:
@@ -3557,12 +3556,12 @@ GameObject:
   - component: {fileID: 1315667244}
   - component: {fileID: 1315667243}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Timmy (Capsule)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1315667242
 Transform:
   m_ObjectHideFlags: 0
@@ -3575,7 +3574,7 @@ Transform:
   m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children: []
   m_Father: {fileID: 846569966}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &1315667243
 CapsuleCollider:
@@ -4097,7 +4096,7 @@ GameObject:
   - component: {fileID: 1374401034}
   - component: {fileID: 1374401033}
   m_Layer: 0
-  m_Name: Cube (7)
+  m_Name: Poster0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4384,7 +4383,7 @@ Transform:
   - {fileID: 777295042}
   - {fileID: 469960089}
   m_Father: {fileID: 846569966}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1579641561
 GameObject:
@@ -4479,12 +4478,12 @@ GameObject:
   - component: {fileID: 1650898514}
   - component: {fileID: 1650898513}
   m_Layer: 0
-  m_Name: ball
+  m_Name: Toy Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1650898512
 Transform:
   m_ObjectHideFlags: 0
@@ -4497,7 +4496,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 846569966}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &1650898513
 SphereCollider:
@@ -5052,7 +5051,7 @@ GameObject:
   - component: {fileID: 1825247971}
   - component: {fileID: 1825247970}
   m_Layer: 0
-  m_Name: Cube (10)
+  m_Name: Poster3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5660,7 +5659,7 @@ GameObject:
   - component: {fileID: 2041316899}
   - component: {fileID: 2041316898}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: Bedstand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5676,9 +5675,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.226999, y: -0.06, z: 5.96}
   m_LocalScale: {x: 1.646, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 907947787}
   m_Father: {fileID: 846569966}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2041316898
 BoxCollider:
@@ -5844,7 +5844,7 @@ GameObject:
   - component: {fileID: 2102227065}
   - component: {fileID: 2102227064}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: Pillow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5857,12 +5857,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2102227062}
-  m_LocalRotation: {x: -0.21115413, y: -0, z: -0, w: 0.9774528}
-  m_LocalPosition: {x: -3.579999, y: 0.65, z: 6.23}
-  m_LocalScale: {x: 2.1691349, y: 1, z: 0.86}
+  m_LocalRotation: {x: -0.2111541, y: -0, z: -0, w: 0.97745275}
+  m_LocalPosition: {x: -0.025747722, y: 0.39, z: 0.47959667}
+  m_LocalScale: {x: 0.79786193, y: 0.8614051, z: 0.2796793}
   m_Children: []
-  m_Father: {fileID: 846569966}
-  m_RootOrder: 4
+  m_Father: {fileID: 511023311}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -24.38, y: 0, z: 0}
 --- !u!65 &2102227064
 BoxCollider:
