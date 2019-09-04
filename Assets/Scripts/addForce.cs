@@ -6,13 +6,16 @@ using UnityEngine.SceneManagement;
 public class addForce : MonoBehaviour
 {
     private float thrust = 22F;
-    public Rigidbody rb;
-    public bool isRightHand = false;
-    public bool isLeftHand = false;
+    private Rigidbody rb;
+    private bool isRightHand = false;
+    private bool isLeftHand = false;
+    private GameControl gc;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        gc = GetComponent<GameControl>();
+        Debug.Log(gc.throwCount);
         Debug.Log(rb);
     }
 
@@ -32,12 +35,10 @@ public class addForce : MonoBehaviour
         if (collider.tag == "RightHand")
         {
             isRightHand = true;
-            isLeftHand = false;
             rb.position = new Vector3(-1.46F, 0, 0);
         }
         else if (collider.tag == "LeftHand")
         {
-            isRightHand = false;
             isLeftHand = true;
             rb.position = new Vector3(1.46F, 0, 0);
         }
@@ -47,7 +48,7 @@ public class addForce : MonoBehaviour
         }
         
         rb.velocity = new Vector3(0, 0, 0);
-        rb.useGravity = false;
+        //rb.useGravity = false;
     }
 
     private void OnTriggerExit(Collider collider)
@@ -56,7 +57,7 @@ public class addForce : MonoBehaviour
         isRightHand = false;
         isLeftHand = false;
     }
-    public void throwRight()
+    public int throwRight()
     {
         if (isLeftHand)
         {
@@ -64,28 +65,41 @@ public class addForce : MonoBehaviour
 
             rb.useGravity = true;
             rb.AddForce(new Vector3(-0.2F, 1, 0) * thrust);
+            gc.throwCount++;
 
             isLeftHand = false;
+
+            return 1;
         }
         else
         {
             Debug.Log("Not tapable");
+            return 0;
         }
     }
-    public void throwLeft()
+    public int throwLeft()
     {
-        if (isRightHand)
+        if (gc.getCurrentLevel() == 1) //on level 1 just throw upwards
+        {
+            rb.AddForce(new Vector3(0, 0.8F, 0) * thrust);
+            gc.throwCount++;
+            return 1;
+        }
+        else if (isRightHand)
         {
             Debug.Log("Tap!");
 
             rb.useGravity = true;
-            rb.AddForce(new Vector3(0.3F, 0.6F, 0) * thrust);
+            rb.AddForce(new Vector3(0.35F, 0.6F, 0) * thrust);
+            gc.throwCount++;
 
             isRightHand = false;
+            return 1;
         }
         else
         {
             Debug.Log("Not tapable");
+            return 0;
         }
     }
 
