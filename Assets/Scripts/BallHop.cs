@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BallHop : MonoBehaviour
 {
@@ -18,18 +19,42 @@ public class BallHop : MonoBehaviour
     {
         var rigidbody = GetComponent<Rigidbody>();
         var pos = rigidbody.position;
-        var vel = rigidbody.velocity;
+        //var vel = rigidbody.velocity;
 
-        if (-10 > pos.x || pos.x > 10)
-            rigidbody.velocity = new Vector3(-vel.x, vel.y, vel.z);
+        //if (-SideClamp > pos.x || pos.x > SideClamp)
+        //    vel.x *= -1;
 
+        //rigidbody.velocity = new Vector3(vel.x, vel.y, 0);
+        if (pos.y < -4.5)
+            SceneManager.LoadScene("Prototype1");
     }
 
     void OnMouseDown()
     {
-        float randomX = Random.Range(-MaxRandomX, MaxRandomX);
-
         var rigidbody = GetComponent<Rigidbody>();
-        rigidbody.velocity = new Vector3(randomX, VelocityUpPower, 0);
+        if (rigidbody.position.y < 3)
+        {
+            float randomX = Random.Range(-MaxRandomX, MaxRandomX);
+            rigidbody.velocity = new Vector3(randomX, VelocityUpPower, 0);
+        }
+    }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        string tag = collision.gameObject.tag;
+        if (tag.Contains("Sphere"))
+        {
+            var animation = GetComponent<Animator>();
+
+
+            string thisTag = gameObject.tag;
+            if (thisTag.Contains("0"))
+                animation.Play("blueballTouch");
+            if (thisTag.Contains("1"))
+                animation.Play("redballTouch");
+            if (thisTag.Contains("2"))
+                animation.Play("whiteballTouch");
+        }
     }
 }
