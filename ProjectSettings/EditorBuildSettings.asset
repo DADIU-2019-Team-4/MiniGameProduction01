@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Day1Test.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SwipingTest.unity
     guid: 463bf542b1306944c8fcdf1b77ef116a
+  - enabled: 1
+    path: Assets/Scenes/Prototype3.unity
+    guid: a633a6adb5e3747548478c37097c91a9
   m_configObjects: {}
