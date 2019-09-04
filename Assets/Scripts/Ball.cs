@@ -43,11 +43,17 @@ public class Ball : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             if (Input.mousePosition.x < _width / 2)
+            {
                 if (_isInLeftHand)
                     StartCoroutine(JuggleLeft());
+                Debug.Log("left side");
+            }
             else
+            {
                 if (_isInRightHand)
                     StartCoroutine(JuggleRight());
+                Debug.Log("right side");
+            }
         }
     }
 
@@ -88,12 +94,16 @@ public class Ball : MonoBehaviour
                         // swipe up
                         if (_lastTouchPos.y > _firstTouchPos.y)
                         {
-                            if(_lastTouchPos.x < _width/2)
+                            if (_lastTouchPos.x < _width / 2)
+                            {
                                 if (_isInLeftHand)
                                     StartCoroutine(JuggleLeft());
+                            }
                             else
+                            {
                                 if (_isInRightHand)
                                     StartCoroutine(JuggleRight());
+                            }
                         }
                     }
                 }
