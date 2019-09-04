@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Ball : MonoBehaviour
@@ -12,7 +11,7 @@ public class Ball : MonoBehaviour
 
     private Animator _animator;
 
-    private float _width;
+    private float _screenWidth;
 
     // mobile input variables
     private Vector3 _firstTouchPos;
@@ -24,8 +23,8 @@ public class Ball : MonoBehaviour
     void Start()
     {
         _animator = GetComponent<Animator>();
-        _minSwipeDistance = Screen.height * 0.15f; //dragDistance is 15% height of the screen
-        _width = Screen.width;
+        _minSwipeDistance = Screen.height * 0.15f; // 15% height of the screen
+        _screenWidth = Screen.width;
     }
 
     // Update is called once per frame
@@ -38,11 +37,14 @@ public class Ball : MonoBehaviour
 #endif
     }
 
+    /// <summary>
+    /// Read PC input and act accordingly
+    /// </summary>
     private void PcInput()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (Input.mousePosition.x < _width / 2)
+            if (Input.mousePosition.x < _screenWidth / 2)
             {
                 if (_isInLeftHand)
                     StartCoroutine(JuggleLeft());
@@ -57,6 +59,9 @@ public class Ball : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Reads mobile input and act accordingly
+    /// </summary>
     private void MobileInput()
     {
         // if user is touching the screen with a single touch...
@@ -85,32 +90,34 @@ public class Ball : MonoBehaviour
                 var differenceVec = _lastTouchPos - _firstTouchPos;
 
                 // check if swipe distance is greater than 15% of the screen height
-                if (Math.Abs(differenceVec.x) > _minSwipeDistance || Math.Abs(differenceVec.y) > _minSwipeDistance)
-                {
+                if (!(Math.Abs(differenceVec.x) > _minSwipeDistance) &&
+                    !(Math.Abs(differenceVec.y) > _minSwipeDistance)) return;
 
-                    // check if the swipe is vertical or horizontal
-                    if (Mathf.Abs(differenceVec.x) <= Mathf.Abs(differenceVec.y))
-                    {
-                        // swipe up
-                        if (_lastTouchPos.y > _firstTouchPos.y)
-                        {
-                            if (_lastTouchPos.x < _width / 2)
-                            {
-                                if (_isInLeftHand)
-                                    StartCoroutine(JuggleLeft());
-                            }
-                            else
-                            {
-                                if (_isInRightHand)
-                                    StartCoroutine(JuggleRight());
-                            }
-                        }
-                    }
+                // check if the swipe is vertical
+                if (!(Mathf.Abs(differenceVec.x) <= Mathf.Abs(differenceVec.y))) return;
+
+                // check if we have swiped up
+                if (!(_lastTouchPos.y > _firstTouchPos.y)) return;
+
+                // swiped on left side of the screen
+                if (_lastTouchPos.x < _screenWidth / 2)
+                {
+                    if (_isInLeftHand)
+                        StartCoroutine(JuggleLeft());
+                }
+                // swiped on right side of the screen
+                else
+                {
+                    if (_isInRightHand)
+                        StartCoroutine(JuggleRight());
                 }
             }
         }
     }
 
+    /// <summary>
+    /// Setting up animator settings for juggling with the right hand
+    /// </summary>
     private IEnumerator JuggleRight()
     {
         _animator.SetBool("isInLeftHand", false);
@@ -128,6 +135,9 @@ public class Ball : MonoBehaviour
         _isInRightHand = false;
     }
 
+    /// <summary>
+    /// Setting up animator settings for juggling with the left hand
+    /// </summary>
     private IEnumerator JuggleLeft()
     {
         _animator.SetBool("isInLeftHand", true);
