@@ -20,7 +20,7 @@ public class TouchControl : MonoBehaviour
     private bool _hasSwipedRight;
 
     [SerializeField]
-    private float _stopTimerValue = 0.5f;
+    private float _stopTimerValue = 0.15f;
 
 
     // Start is called before the first frame update
