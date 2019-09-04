@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 505171660684869035}
   - component: {fileID: 505171660684869033}
-  - component: {fileID: 505171660684869032}
+  - component: {fileID: -892892516842240082}
+  - component: {fileID: 7983392908799067626}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -45,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 532857877177543079, guid: 307d95a891291ee458e0102d3baaf89f, type: 3}
---- !u!114 &505171660684869032
+--- !u!114 &-892892516842240082
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,4 +58,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccae9a7faab6a69468bba648a4441432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _stopTimerValue: 0.5
+  _stopTimerValue: 0.15
+--- !u!114 &7983392908799067626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505171660684869034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dab2d80bb33d3f449a0d94ab2e00c2cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwCount: 0
