@@ -15,60 +15,83 @@ MonoBehaviour:
   AcousticTextureWwu:
   - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: a61c84f37d1d794e9341ff6be4516ad5
+    guid: 652ef63b863360458add58a5bc32b28b
     GuidInternal: 
-    m_lastTime: -8586340849120305702
+    m_lastTime: -8586340174294775808
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: 0aa774fe07b95448bda881d2c23c97ce
+    guid: 26ede085ba8edd4d84a1e48e2ce905f3
     GuidInternal: 
-    m_lastTime: -8586340849119955467
+    m_lastTime: -8586340174294775808
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: bfe7650806e48845a98d0b42397bef1e
+    guid: 207c6f81333d85408092d3a1d2f59894
     GuidInternal: 
-    m_lastTime: -8586340849119725274
-    List: []
+    m_lastTime: -8586340167914775808
+    List:
+    - name: MusicBank
+      guid: 61de74b161e7ad428fb2d10e1ca0a92b
+      id: 3017428748
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MusicBank
+        ObjectType: 7
+      Path: Default Work Unit\MusicBank
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: 5608bbe727ac5f449a137313e2dff4a9
+    guid: 5076fae0cc0c7a43a62c15588b435fee
     GuidInternal: 
-    m_lastTime: -8586340849120025487
-    List: []
+    m_lastTime: -8586340167914775808
+    List:
+    - name: Test_event
+      guid: 8c91e56ac1c9ef49ab2930c099ce7ac0
+      id: 4258653052
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Test_event
+        ObjectType: 3
+      Path: Default Work Unit\Test_event
+      maxAttenuation: 0
+      maxDuration: 186000000
+      minDuration: 186000000
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: e4b4d84f3ed9924ba191f4b2aa2e4c86
+    guid: e1f2ecb3ad510649a12ca51d7c81c473
     GuidInternal: 
-    m_lastTime: -8586340849119995474
+    m_lastTime: -8586340174274775808
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: 983e0476ff69ed4a8a81b9d264a3e43c
+    guid: b9e0adba5f80d04daf56a21d72c7a51e
     GuidInternal: 
-    m_lastTime: -8586340849119635095
+    m_lastTime: -8586340174294775808
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: 583bade3c9c2404192f23bd8b11b8a68
+    guid: 1f4cfa72844fe240bf3af8bf99444437
     GuidInternal: 
-    m_lastTime: -8586340849119615201
+    m_lastTime: -8586340174294775808
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: 6fb7a8641fd4714181b97d86801a9038
+    guid: 81018c68581c2549a02128127290bacc
     GuidInternal: 
-    m_lastTime: -8586340849119895399
+    m_lastTime: -8586340174274775808
     List: []
   ExpandedItems:
   - /MiniGameProduction01_WwiseProject
+  - /MiniGameProduction01_WwiseProject/Events
+  - /MiniGameProduction01_WwiseProject/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
