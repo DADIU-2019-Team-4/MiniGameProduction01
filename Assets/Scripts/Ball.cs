@@ -12,6 +12,8 @@ public class Ball : MonoBehaviour
 
     private Animator _animator;
 
+    private float _width;
+
     // mobile input variables
     private Vector3 _firstTouchPos;
     private Vector3 _lastTouchPos;
@@ -23,6 +25,7 @@ public class Ball : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
         _minSwipeDistance = Screen.height * 0.15f; //dragDistance is 15% height of the screen
+        _width = Screen.width;
     }
 
     // Update is called once per frame
@@ -38,12 +41,14 @@ public class Ball : MonoBehaviour
     private void PcInput()
     {
         if (Input.GetMouseButtonDown(0))
-            if (_isInLeftHand)
-                StartCoroutine(JuggleLeft());
-
-        if (Input.GetMouseButtonDown(1))
-            if (_isInRightHand)
-                StartCoroutine(JuggleRight());
+        {
+            if (Input.mousePosition.x < _width / 2)
+                if (_isInLeftHand)
+                    StartCoroutine(JuggleLeft());
+            else
+                if (_isInRightHand)
+                    StartCoroutine(JuggleRight());
+        }
     }
 
     private void MobileInput()
@@ -83,11 +88,12 @@ public class Ball : MonoBehaviour
                         // swipe up
                         if (_lastTouchPos.y > _firstTouchPos.y)
                         {
-                            if (_isInLeftHand)
-                                StartCoroutine(JuggleLeft());
-
-                            if (_isInRightHand)
-                                StartCoroutine(JuggleRight());
+                            if(_lastTouchPos.x < _width/2)
+                                if (_isInLeftHand)
+                                    StartCoroutine(JuggleLeft());
+                            else
+                                if (_isInRightHand)
+                                    StartCoroutine(JuggleRight());
                         }
                     }
                 }
