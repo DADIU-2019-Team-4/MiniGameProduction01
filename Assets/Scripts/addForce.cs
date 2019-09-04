@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class addForce : MonoBehaviour
 {
@@ -9,12 +10,16 @@ public class addForce : MonoBehaviour
     private Rigidbody rb;
     private bool isRightHand = false;
     private bool isLeftHand = false;
+    private BoxCollider leftHandCollider;
+    private BoxCollider rightHandCollider;
     private GameControl gc;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        gc = GetComponent<GameControl>();
+        leftHandCollider = GameObject.FindGameObjectsWithTag("LeftHand")[0].GetComponent<BoxCollider>();
+        rightHandCollider = GameObject.FindGameObjectsWithTag("LeftHand")[0].GetComponent<BoxCollider>();
+        gc = GameObject.FindGameObjectsWithTag("GameController")[0].GetComponent<GameControl>();
         Debug.Log(gc.throwCount);
         Debug.Log(rb);
     }
