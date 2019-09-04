@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections;
 
 public class addForce : MonoBehaviour
 {
@@ -28,7 +27,7 @@ public class addForce : MonoBehaviour
     {
         if (collision.gameObject.tag=="Ball")
         {
-            SceneManager.LoadScene("Prototype3");
+            //SceneManager.LoadScene("Prototype3");
         }
     }
 
@@ -62,50 +61,43 @@ public class addForce : MonoBehaviour
         isRightHand = false;
         isLeftHand = false;
     }
-    public int throwRight()
+    public void throwRight()
     {
         if (isLeftHand)
         {
-            Debug.Log("Tap!");
-
-            rb.useGravity = true;
-            rb.AddForce(new Vector3(-0.2F, 1, 0) * thrust);
-            gc.throwCount++;
-
+            applyForce(new Vector3(-0.2F, 1, 0));
             isLeftHand = false;
-
-            return 1;
         }
         else
         {
             Debug.Log("Not tapable");
-            return 0;
         }
     }
-    public int throwLeft()
+    public void throwLeft()
     {
-        if (gc.getCurrentLevel() == 1) //on level 1 just throw upwards
+        if (gc.getCurrentLevel() == 1 && isRightHand) //on level 1 just throw upwards
         {
-            rb.AddForce(new Vector3(0, 0.8F, 0) * thrust);
-            gc.throwCount++;
-            return 1;
+            applyForce(new Vector3(0, 0.8F, 0));
+            isRightHand = false;
         }
         else if (isRightHand)
         {
-            Debug.Log("Tap!");
-
-            rb.useGravity = true;
-            rb.AddForce(new Vector3(0.35F, 0.6F, 0) * thrust);
-            gc.throwCount++;
-
+            applyForce(new Vector3(0.35F, 0.6F, 0));
+            
             isRightHand = false;
-            return 1;
         }
         else
         {
             Debug.Log("Not tapable");
-            return 0;
         }
+    }
+
+    public void applyForce(Vector3 dir)
+    {
+        Debug.Log("Tap!");
+        rb.velocity = new Vector3(0, 0, 0);
+        rb.AddForce(dir * thrust);
+        gc.throwCount++;
     }
 
     private void Update()
@@ -121,6 +113,12 @@ public class addForce : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene("SceneSetup");
+        }
+
+        if(transform.position.y<-3)
+        {
+            gc.removeBall();
+            Destroy(transform.gameObject);
         }
     }
 }
