@@ -38,8 +38,8 @@ namespace UnityEditor
         public static string filename
         {
             get {
-                return (DateTime.Now.ToString("yyyyMMddHHmm") + ".apk");
-                //return "minigame1.apk";
+                //return (DateTime.Now.ToString("yyyyMMddHHmm") + ".apk");
+                return "minigame1.apk";
             }
         }
     }
