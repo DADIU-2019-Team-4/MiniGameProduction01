@@ -6,13 +6,20 @@ using UnityEngine.SceneManagement;
 public class addForce : MonoBehaviour
 {
     private float thrust = 22F;
-    public Rigidbody rb;
-    public bool isRightHand = false;
-    public bool isLeftHand = false;
+    private Rigidbody rb;
+    private bool isRightHand = false;
+    private bool isLeftHand = false;
+    private BoxCollider leftHandCollider;
+    private BoxCollider rightHandCollider;
+    private GameControl gc;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        leftHandCollider = GameObject.FindGameObjectsWithTag("LeftHand")[0].GetComponent<BoxCollider>();
+        rightHandCollider = GameObject.FindGameObjectsWithTag("LeftHand")[0].GetComponent<BoxCollider>();
+        gc = GameObject.FindGameObjectsWithTag("GameController")[0].GetComponent<GameControl>();
+        Debug.Log(gc.throwCount);
         Debug.Log(rb);
     }
 
@@ -20,7 +27,7 @@ public class addForce : MonoBehaviour
     {
         if (collision.gameObject.tag=="Ball")
         {
-            SceneManager.LoadScene("Prototype3");
+            //SceneManager.LoadScene("Prototype3");
         }
     }
 
@@ -32,12 +39,10 @@ public class addForce : MonoBehaviour
         if (collider.tag == "RightHand")
         {
             isRightHand = true;
-            isLeftHand = false;
             rb.position = new Vector3(-1.46F, 0, 0);
         }
         else if (collider.tag == "LeftHand")
         {
-            isRightHand = false;
             isLeftHand = true;
             rb.position = new Vector3(1.46F, 0, 0);
         }
@@ -47,7 +52,7 @@ public class addForce : MonoBehaviour
         }
         
         rb.velocity = new Vector3(0, 0, 0);
-        rb.useGravity = false;
+        //rb.useGravity = false;
     }
 
     private void OnTriggerExit(Collider collider)
@@ -60,11 +65,7 @@ public class addForce : MonoBehaviour
     {
         if (isLeftHand)
         {
-            Debug.Log("Tap!");
-
-            rb.useGravity = true;
-            rb.AddForce(new Vector3(-0.2F, 1, 0) * thrust);
-
+            applyForce(new Vector3(-0.2F, 1, 0));
             isLeftHand = false;
         }
         else
@@ -74,19 +75,29 @@ public class addForce : MonoBehaviour
     }
     public void throwLeft()
     {
-        if (isRightHand)
+        if (gc.getCurrentLevel() == 1 && isRightHand) //on level 1 just throw upwards
         {
-            Debug.Log("Tap!");
-
-            rb.useGravity = true;
-            rb.AddForce(new Vector3(0.3F, 0.6F, 0) * thrust);
-
+            applyForce(new Vector3(0, 0.8F, 0));
+            isRightHand = false;
+        }
+        else if (isRightHand)
+        {
+            applyForce(new Vector3(0.35F, 0.6F, 0));
+            
             isRightHand = false;
         }
         else
         {
             Debug.Log("Not tapable");
         }
+    }
+
+    public void applyForce(Vector3 dir)
+    {
+        Debug.Log("Tap!");
+        rb.velocity = new Vector3(0, 0, 0);
+        rb.AddForce(dir * thrust);
+        gc.throwCount++;
     }
 
     private void Update()
@@ -102,6 +113,12 @@ public class addForce : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene("SceneSetup");
+        }
+
+        if(transform.position.y<-3)
+        {
+            gc.removeBall();
+            Destroy(transform.gameObject);
         }
     }
 }

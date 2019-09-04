@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ball
+  - Sphere0
+  - Plane
+  - Sphere1
+  - Sphere2
+  - LeftHand
+  - RightHand
   layers:
   - Default
   - TransparentFX

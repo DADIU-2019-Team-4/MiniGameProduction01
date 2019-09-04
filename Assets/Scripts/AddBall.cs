@@ -18,6 +18,6 @@ public class AddBall : MonoBehaviour
 
     public void SpawnBall()
     {
-        Instantiate(prefab, new Vector3(-1.6F, 2, 0), Quaternion.identity);
+        Instantiate(prefab, new Vector3(-1.6F, 4, 0), Quaternion.identity);
     }
 }
