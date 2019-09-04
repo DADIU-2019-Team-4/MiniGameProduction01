@@ -1227,21 +1227,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
   - component: {fileID: 467558816}
   - component: {fileID: 467558815}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
-=======
-  - component: {fileID: 721485009}
-  - component: {fileID: 721485011}
-  - component: {fileID: 721485010}
-  - component: {fileID: 721485012}
-  m_Layer: 0
-  m_Name: GameController
-  m_TagString: GameController
->>>>>>> Magnus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1258,7 +1248,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d30227ce2ac9764bae4cad4e2201928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   InitializationSettings: {fileID: 11400000, guid: fc406831967b3af4c97fb7afade38172,
     type: 2}
   basePath: 
@@ -1276,53 +1265,6 @@ MonoBehaviour:
   diffractionFlags: 11
   engineLogging: 0
 --- !u!4 &467558816
-=======
-  prefab: {fileID: 532857877177543079, guid: 307d95a891291ee458e0102d3baaf89f, type: 3}
---- !u!114 &721485012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 721485008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dab2d80bb33d3f449a0d94ab2e00c2cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  throwCount: 0
---- !u!1 &833785403
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 833785405}
-  - component: {fileID: 833785404}
-  m_Layer: 0
-  m_Name: RightCollider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!65 &833785404
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 833785403}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 1}
-  m_Center: {x: 5, y: 0, z: 0}
---- !u!4 &833785405
->>>>>>> Magnus
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6891,7 +6833,6 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
   - component: {fileID: 1897881696}
   - component: {fileID: 1897881699}
   - component: {fileID: 1897881698}
@@ -6899,15 +6840,6 @@ GameObject:
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
-=======
-  - component: {fileID: 1868935276}
-  - component: {fileID: 1868935279}
-  - component: {fileID: 1868935278}
-  - component: {fileID: 1868935277}
-  m_Layer: 9
-  m_Name: RightHand
-  m_TagString: RightHand
->>>>>>> Magnus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6985,7 +6917,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1897881695}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-<<<<<<< HEAD
 --- !u!1 &2026898042
 GameObject:
   m_ObjectHideFlags: 0
@@ -7022,8 +6953,6 @@ Transform:
   m_Father: {fileID: 2137627554}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
->>>>>>> Magnus
 --- !u!1 &2030213908
 GameObject:
   m_ObjectHideFlags: 0

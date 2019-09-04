@@ -1,0 +1,9 @@
+diff a/Assets/Scenes/Prototype3.unity b/Assets/Scenes/Prototype3.unity	(rejected hunks)
+@@ -1258,6 +1258,7 @@
+   m_Script: {fileID: 11500000, guid: 1d30227ce2ac9764bae4cad4e2201928, type: 3}
+   m_Name: 
+   m_EditorClassIdentifier: 
++<<<<<<< HEAD
+   InitializationSettings: {fileID: 11400000, guid: fc406831967b3af4c97fb7afade38172,
+     type: 2}
+   basePath: 
