@@ -39,7 +39,7 @@ namespace UnityEditor
         {
             get {
                 //return (DateTime.Now.ToString("yyyyMMddHHmm") + ".apk");
-                return ("Minigame1" + ".apk");
+                return "minigame1.apk";
             }
         }
     }
