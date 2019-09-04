@@ -14,11 +14,20 @@ public class TouchControl : MonoBehaviour
     // minimum distance for a swipe to be registered
     private float _minSwipeDistance;
 
+    private float _swipeTimerLeft;
+    private float _swipeTimerRight;
+    private bool _hasSwipedLeft;
+    private bool _hasSwipedRight;
+
+    [SerializeField]
+    private float _stopTimerValue = 0.5f;
+
+
     // Start is called before the first frame update
     void Start()
     {
         width = (float)Screen.width;
-        _minSwipeDistance = Screen.height * 0.15f; // 15% height of the screen
+        _minSwipeDistance = Screen.height * 0.10f; // 10% height of the screen
     }
 
     // Update is called once per frame
@@ -26,6 +35,22 @@ public class TouchControl : MonoBehaviour
     {
         balls = new List<addForce>(FindObjectsOfType<addForce>());
         //Debug.Log(balls.Capacity);
+
+        if (_hasSwipedLeft)
+        {
+            ThrowLeft();
+            _swipeTimerLeft += Time.deltaTime;
+            if (_swipeTimerLeft > _stopTimerValue)
+                _hasSwipedLeft = false;
+        }
+
+        if (_hasSwipedRight)
+        {
+            ThrowRight();
+            _swipeTimerRight += Time.deltaTime;
+            if (_swipeTimerRight > _stopTimerValue)
+                _hasSwipedRight = false;
+        }
 
 #if UNITY_EDITOR || UNITY_STANDALONE
         PcInput();
@@ -84,10 +109,18 @@ public class TouchControl : MonoBehaviour
 
                 // swiped on left side of the screen
                 if (_lastTouchPos.x < width / 2)
+                {
                     ThrowLeft();
+                    _swipeTimerLeft = 0;
+                    _hasSwipedLeft = true;
+                }
                 // swiped on right side of the screen
                 else
+                {
                     ThrowRight();
+                    _swipeTimerRight = 0;
+                    _hasSwipedRight = true;
+                }
             }
         }
     }
