@@ -8,8 +8,7 @@ public class addForce : MonoBehaviour
     private Rigidbody rb;
     private bool isRightHand = false;
     private bool isLeftHand = false;
-    private BoxCollider leftHandCollider; //not used at the moment
-    private BoxCollider rightHandCollider;  //not used at the moment
+
     [HideInInspector]
     public GameControl gc;
     [HideInInspector]
@@ -20,11 +19,7 @@ public class addForce : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         _animator = GetComponent<Animator>();
         _animator.enabled = false;
-        leftHandCollider = GameObject.FindGameObjectsWithTag("LeftHand")[0].GetComponent<BoxCollider>();
-        rightHandCollider = GameObject.FindGameObjectsWithTag("RightHand")[0].GetComponent<BoxCollider>();
         gc = GameObject.FindObjectOfType<GameControl>();
-        Debug.Log(gc.throwCount);
-        Debug.Log(rb);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -32,28 +27,34 @@ public class addForce : MonoBehaviour
         //restart if balls hit eachother
         if (collision.gameObject.tag=="Ball")
         {
+            if(collision.gameObject.GetComponent<Rigidbody>().isKinematic)
+            {
+                Destroy(transform.gameObject);
+                gc.removeBall();
+            }
+
             //SceneManager.LoadScene("Prototype3");
         }
     }
 
     private void OnTriggerEnter(Collider collider)
     {
-        Debug.Log(collider.tag);
-        Debug.Log(collider.ToString());
 
         if (collider.tag == "RightHand")
         {
             isRightHand = true;
             rb.position = new Vector3(-1.46F, 0, 0);
+            rb.isKinematic = true;
         }
         else if (collider.tag == "LeftHand")
         {
             isLeftHand = true;
             rb.position = new Vector3(1.46F, 0, 0);
+            rb.isKinematic = true;
         }
         else
         {
-            Debug.Log("What is this??");
+            //some other trigger
         }
         
         rb.velocity = new Vector3(0, 0, 0);
@@ -61,17 +62,19 @@ public class addForce : MonoBehaviour
 
     private void OnTriggerExit(Collider collider)
     {
-        Debug.Log("OnTriggerExit");
         isRightHand = false;
         isLeftHand = false;
     }
+
     public bool throwRight()
     {
         if (isLeftHand)
         {
             //applyForce(new Vector3(-0.2F, 1, 0));
+            rb.isKinematic = false;
             StartCoroutine(JuggleRight());
             isLeftHand = false;
+            
             return true;
         }
         else
@@ -82,19 +85,24 @@ public class addForce : MonoBehaviour
     }
     public bool throwLeft()
     {
-        if (gc.getCurrentLevel() == 1 && isRightHand) //on level 1 just throw upwards
+        if(isRightHand)
         {
-            applyForce(new Vector3(0, 0.8F, 0));
+            rb.isKinematic = false;
+            if (gc.getCurrentLevel()==1) //on level 1 just throw upwards
+            {
+                applyForce(new Vector3(0, 0.8F, 0));
+            }
+            else
+            {
+                //applyForce(new Vector3(0.35F, 0.6F, 0));           
+                StartCoroutine(JuggleLeft());
+            }
+
             isRightHand = false;
+            
             return true;
         }
-        else if (isRightHand)
-        {
-            //applyForce(new Vector3(0.35F, 0.6F, 0));           
-            StartCoroutine(JuggleLeft());
-            isRightHand = false;
-            return true;
-        }
+        
         else
         {
             Debug.Log("Not tapable");
@@ -102,11 +110,13 @@ public class addForce : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Setting up animator settings for juggling with the right hand
-    /// </summary>
+    
     private IEnumerator JuggleRight()
     {
+        /// <summary>
+        /// Setting up animator settings for juggling with the right hand
+        /// </summary>
+
         _animator.enabled = true;
         _animator.SetBool("isInLeftHand", false);
         _animator.SetBool("isInRightHand", true);
@@ -122,11 +132,13 @@ public class addForce : MonoBehaviour
         gc.throwCount++;
     }
 
-    /// <summary>
-    /// Setting up animator settings for juggling with the left hand
-    /// </summary>
+
     private IEnumerator JuggleLeft()
     {
+        /// <summary>
+        /// Setting up animator settings for juggling with the left hand
+        /// </summary>
+
         _animator.enabled = true;
         _animator.SetBool("isInLeftHand", true);
         _animator.SetBool("isInRightHand", false);

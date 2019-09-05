@@ -26,7 +26,7 @@ public class GameControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (throwCount > 6 && currentLevel==1)
+        if (throwCount > 3 && currentLevel==1)
         {
             currentLevel=2;
         }
