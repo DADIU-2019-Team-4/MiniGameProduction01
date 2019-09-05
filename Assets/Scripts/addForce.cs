@@ -9,15 +9,15 @@ public class addForce : MonoBehaviour
     private Rigidbody rb;
     private bool isRightHand = false;
     private bool isLeftHand = false;
-    private BoxCollider leftHandCollider;
-    private BoxCollider rightHandCollider;
+    private BoxCollider leftHandCollider; //not used at the moment
+    private BoxCollider rightHandCollider;  //not used at the moment
     private GameControl gc;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         leftHandCollider = GameObject.FindGameObjectsWithTag("LeftHand")[0].GetComponent<BoxCollider>();
-        rightHandCollider = GameObject.FindGameObjectsWithTag("LeftHand")[0].GetComponent<BoxCollider>();
+        rightHandCollider = GameObject.FindGameObjectsWithTag("RightHand")[0].GetComponent<BoxCollider>();
         gc = GameObject.FindObjectOfType<GameControl>();
         Debug.Log(gc.throwCount);
         Debug.Log(rb);
@@ -25,6 +25,7 @@ public class addForce : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        //restart if balls hit eachother
         if (collision.gameObject.tag=="Ball")
         {
             //SceneManager.LoadScene("Prototype3");
@@ -52,7 +53,6 @@ public class addForce : MonoBehaviour
         }
         
         rb.velocity = new Vector3(0, 0, 0);
-        //rb.useGravity = false;
     }
 
     private void OnTriggerExit(Collider collider)
@@ -100,6 +100,19 @@ public class addForce : MonoBehaviour
         gc.throwCount++;
     }
 
+    public void Wait()
+    {
+        rb.position = new Vector3(-2F, 0, 0);
+        rb.useGravity = false;
+    }
+
+    public void Begin()
+    {
+        rb.position = new Vector3(-1.46F, 0, 0);
+        rb.useGravity = true;
+    }
+
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.X))
@@ -115,7 +128,7 @@ public class addForce : MonoBehaviour
             SceneManager.LoadScene("SceneSetup");
         }
 
-        if(transform.position.y<-3)
+        if(transform.position.y<-3) //destroy ball if it falls to the bottom of screen
         {
             gc.removeBall();
             Destroy(transform.gameObject);
