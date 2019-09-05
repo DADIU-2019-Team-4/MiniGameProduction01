@@ -38,7 +38,7 @@ public class InputController : MonoBehaviour
 
         if (_hasSwipedLeft)
         {
-            ThrowLeft();
+            //ThrowLeft();
             _swipeTimerLeft += Time.deltaTime;
             if (_swipeTimerLeft > _stopTimerValue)
                 _hasSwipedLeft = false;
@@ -46,7 +46,7 @@ public class InputController : MonoBehaviour
 
         if (_hasSwipedRight)
         {
-            ThrowRight();
+            //ThrowRight();
             _swipeTimerRight += Time.deltaTime;
             if (_swipeTimerRight > _stopTimerValue)
                 _hasSwipedRight = false;
