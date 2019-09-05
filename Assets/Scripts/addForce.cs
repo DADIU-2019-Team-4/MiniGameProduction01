@@ -18,7 +18,7 @@ public class addForce : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         leftHandCollider = GameObject.FindGameObjectsWithTag("LeftHand")[0].GetComponent<BoxCollider>();
         rightHandCollider = GameObject.FindGameObjectsWithTag("LeftHand")[0].GetComponent<BoxCollider>();
-        gc = GameObject.FindGameObjectsWithTag("GameController")[0].GetComponent<GameControl>();
+        gc = GameObject.FindObjectOfType<GameControl>();
         Debug.Log(gc.throwCount);
         Debug.Log(rb);
     }
