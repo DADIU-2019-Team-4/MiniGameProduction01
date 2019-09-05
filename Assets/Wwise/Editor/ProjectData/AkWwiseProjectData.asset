@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 26ede085ba8edd4d84a1e48e2ce905f3
     GuidInternal: 
-    m_lastTime: -8586340174294775808
+    m_lastTime: -8586340091514775808
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
@@ -47,8 +47,20 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 5076fae0cc0c7a43a62c15588b435fee
     GuidInternal: 
-    m_lastTime: -8586340167914775808
+    m_lastTime: -8586339356034775808
     List:
+    - name: FailFeed_event
+      guid: 9f9426a990d0004d925e7d1e57c5c9a0
+      id: 3370210432
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: FailFeed_event
+        ObjectType: 3
+      Path: Default Work Unit\FailFeed_event
+      maxAttenuation: 0
+      maxDuration: 4106871
+      minDuration: 4106871
     - name: Test_event
       guid: 8c91e56ac1c9ef49ab2930c099ce7ac0
       id: 4258653052
@@ -61,6 +73,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 186000000
       minDuration: 186000000
+    - name: WinFeed_event
+      guid: 82fee822b565ff4bac89e9eb345a5bfb
+      id: 3651821476
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: WinFeed_event
+        ObjectType: 3
+      Path: Default Work Unit\WinFeed_event
+      maxAttenuation: 0
+      maxDuration: 3678141
+      minDuration: 3678141
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -87,11 +111,13 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 81018c68581c2549a02128127290bacc
     GuidInternal: 
-    m_lastTime: -8586340174274775808
+    m_lastTime: -8586340078014775808
     List: []
   ExpandedItems:
   - /MiniGameProduction01_WwiseProject
   - /MiniGameProduction01_WwiseProject/Events
   - /MiniGameProduction01_WwiseProject/Events/Default Work Unit
+  - /MiniGameProduction01_WwiseProject/SoundBanks
+  - /MiniGameProduction01_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
