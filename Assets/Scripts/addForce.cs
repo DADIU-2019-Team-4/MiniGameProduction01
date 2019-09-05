@@ -112,7 +112,7 @@ public class addForce : MonoBehaviour
         _animator.SetBool("isInRightHand", true);
         _animator.SetBool("swipedRightSide", true);
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.05f);
 
         _animator.SetBool("isInLeftHand", true);
         _animator.SetBool("isInRightHand", false);
@@ -132,7 +132,7 @@ public class addForce : MonoBehaviour
         _animator.SetBool("isInRightHand", false);
         _animator.SetBool("swipedLeftSide", true);
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.05f);
 
         _animator.SetBool("isInLeftHand", false);
         _animator.SetBool("isInRightHand", true);

@@ -59,6 +59,12 @@ public class GameControl : MonoBehaviour
         }
         spawnTimer += Time.deltaTime;
 
+
+    }
+
+    public void AddBall()
+    {
+        addBall.SpawnBall();
     }
 
     public int getCurrentLevel()
