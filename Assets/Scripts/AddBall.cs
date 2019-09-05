@@ -16,8 +16,10 @@ public class AddBall : MonoBehaviour
         }
     }
 
-    public void SpawnBall()
+    public GameObject SpawnBall()
     {
-        Instantiate(prefab, new Vector3(-1.6F, 2, 0), Quaternion.identity);
+        GameObject g = Instantiate(prefab, new Vector3(-1.6F, 4, 0), Quaternion.identity);
+        Debug.Log(g);
+        return g;
     }
 }

@@ -1,107 +1,188 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class addForce : MonoBehaviour
 {
+    private Animator _animator;
     private float thrust = 22F;
-    public Rigidbody rb;
-    public bool isRightHand = false;
-    public bool isLeftHand = false;
+    private Rigidbody rb;
+    private bool isRightHand = false;
+    private bool isLeftHand = false;
 
-    void Start()
+    [HideInInspector]
+    public GameControl gc;
+    [HideInInspector]
+    public bool isWaiting;
+
+    void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        Debug.Log(rb);
+        _animator = GetComponent<Animator>();
+        _animator.enabled = false;
+        gc = GameObject.FindObjectOfType<GameControl>();
     }
 
     private void OnCollisionEnter(Collision collision)
     {
+        //restart if balls hit eachother
         if (collision.gameObject.tag=="Ball")
         {
-            SceneManager.LoadScene("Prototype3");
+            if(collision.gameObject.GetComponent<Rigidbody>().isKinematic)
+            {
+                Destroy(transform.gameObject);
+                gc.removeBall();
+            }
+
+            //SceneManager.LoadScene("Prototype3");
         }
     }
 
     private void OnTriggerEnter(Collider collider)
     {
-        Debug.Log(collider.tag);
-        Debug.Log(collider.ToString());
 
         if (collider.tag == "RightHand")
         {
             isRightHand = true;
-            isLeftHand = false;
             rb.position = new Vector3(-1.46F, 0, 0);
+            rb.isKinematic = true;
         }
         else if (collider.tag == "LeftHand")
         {
-            isRightHand = false;
             isLeftHand = true;
             rb.position = new Vector3(1.46F, 0, 0);
+            rb.isKinematic = true;
         }
         else
         {
-            Debug.Log("What is this??");
+            //some other trigger
         }
         
         rb.velocity = new Vector3(0, 0, 0);
-        rb.useGravity = false;
     }
 
     private void OnTriggerExit(Collider collider)
     {
-        Debug.Log("OnTriggerExit");
         isRightHand = false;
         isLeftHand = false;
     }
-    public void throwRight()
+
+    public bool throwRight()
     {
         if (isLeftHand)
         {
-            Debug.Log("Tap!");
-
-            rb.useGravity = true;
-            rb.AddForce(new Vector3(-0.2F, 1, 0) * thrust);
-
+            //applyForce(new Vector3(-0.2F, 1, 0));
+            rb.isKinematic = false;
+            StartCoroutine(JuggleRight());
             isLeftHand = false;
+            
+            return true;
         }
         else
         {
             Debug.Log("Not tapable");
+            return false;
         }
     }
-    public void throwLeft()
+    public bool throwLeft()
     {
-        if (isRightHand)
+        if(isRightHand)
         {
-            Debug.Log("Tap!");
-
-            rb.useGravity = true;
-            rb.AddForce(new Vector3(0.3F, 0.6F, 0) * thrust);
+            rb.isKinematic = false;
+            if (gc.getCurrentLevel()==1) //on level 1 just throw upwards
+            {
+                applyForce(new Vector3(0, 0.8F, 0));
+            }
+            else
+            {
+                //applyForce(new Vector3(0.35F, 0.6F, 0));           
+                StartCoroutine(JuggleLeft());
+            }
 
             isRightHand = false;
+            
+            return true;
         }
+        
         else
         {
             Debug.Log("Not tapable");
+            return false;
         }
     }
+
+    
+    private IEnumerator JuggleRight()
+    {
+        /// <summary>
+        /// Setting up animator settings for juggling with the right hand
+        /// </summary>
+
+        _animator.enabled = true;
+        _animator.SetBool("isInLeftHand", false);
+        _animator.SetBool("isInRightHand", true);
+        _animator.SetBool("swipedRightSide", true);
+
+        yield return new WaitForSeconds(1.05f);
+
+        _animator.SetBool("isInLeftHand", true);
+        _animator.SetBool("isInRightHand", false);
+        _animator.SetBool("swipedRightSide", false);
+        _animator.enabled = false;
+
+        gc.throwCount++;
+    }
+
+
+    private IEnumerator JuggleLeft()
+    {
+        /// <summary>
+        /// Setting up animator settings for juggling with the left hand
+        /// </summary>
+
+        _animator.enabled = true;
+        _animator.SetBool("isInLeftHand", true);
+        _animator.SetBool("isInRightHand", false);
+        _animator.SetBool("swipedLeftSide", true);
+
+        yield return new WaitForSeconds(1.05f);
+
+        _animator.SetBool("isInLeftHand", false);
+        _animator.SetBool("isInRightHand", true);
+        _animator.SetBool("swipedLeftSide", false);
+        _animator.enabled = false;
+
+        gc.throwCount++;
+    }
+
+    public void applyForce(Vector3 dir)
+    {
+        Debug.Log("Tap!");
+        rb.velocity = new Vector3(0, 0, 0);
+        rb.AddForce(dir * thrust);
+        gc.throwCount++;
+    }
+
+    public void Wait()
+    {
+        gc.ballWaiting = isWaiting = true;
+        rb.position = new Vector3(-2.6F, 0, 0);
+        rb.useGravity = false;
+    }
+
+    public void Begin()
+    {
+        gc.ballWaiting = isWaiting = false;
+        rb.position = new Vector3(-1.46F, 0, 0);
+        rb.useGravity = true;
+    }
+
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X))
+        if(transform.position.y<-3) //destroy ball if it falls to the bottom of screen
         {
-            throwRight();
-        }
-        else if (Input.GetKeyDown(KeyCode.Z))
-        {
-            throwLeft();
-        }
-        else if (Input.GetKeyDown(KeyCode.R))
-        {
-            SceneManager.LoadScene("SceneSetup");
+            gc.removeBall();
+            Destroy(transform.gameObject);
         }
     }
 }

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="134">
+	<RootPaths>
+		<ProjectRoot>E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1239515581" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Default_bank</ObjectPath>
+			<ShortName>Default_bank</ShortName>
+			<Path>Default_bank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3370210432" Name="FailFeed_event" ObjectPath="\Events\Default Work Unit\FailFeed_event" DurationType="OneShot" DurationMin="4.106871" DurationMax="4.106871"/>
+				<Event Id="4258653052" Name="Test_event" ObjectPath="\Events\Default Work Unit\Test_event" DurationType="OneShot" DurationMin="186.000000" DurationMax="186.000000"/>
+				<Event Id="3651821476" Name="WinFeed_event" ObjectPath="\Events\Default Work Unit\WinFeed_event" DurationType="OneShot" DurationMin="3.678141" DurationMax="3.678141"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="87159758" Language="SFX">
+					<ShortName>FailFeed.wav</ShortName>
+					<Path>SFX\FailFeed_10C4C929.wem</Path>
+				</File>
+				<File Id="94761567" Language="SFX">
+					<ShortName>DADIU-Little Timmy2.wav</ShortName>
+					<Path>SFX\DADIU-Little Timmy2_10C4C929.wem</Path>
+				</File>
+				<File Id="131794834" Language="SFX">
+					<ShortName>WinFeed.wav</ShortName>
+					<Path>SFX\WinFeed_10C4C929.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

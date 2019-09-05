@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5896535ffb6967f4fb90bb43e955023b, type: 3}
   m_Name: B174DE61-E761-42AD-8FB2-D10E1CA0A92B
   m_EditorClassIdentifier: 
-  objectName: MusicBank
-  id: 3017428748
+  objectName: Default_bank
+  id: 1239515581
   guid: B174DE61-E761-42AD-8FB2-D10E1CA0A92B
