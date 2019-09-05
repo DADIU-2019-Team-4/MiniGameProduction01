@@ -29,7 +29,7 @@ public class FountainBall : MonoBehaviour
 
         if (col.gameObject.CompareTag("Ground"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene(0);
         }
     }
 

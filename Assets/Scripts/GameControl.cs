@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameControl : MonoBehaviour
 {
@@ -39,6 +40,11 @@ public class GameControl : MonoBehaviour
         {
             currentLevel = 4;
             numOfBalls++;
+        }
+
+        if (throwCount > 40 && currentLevel == 4)
+        {
+            SceneManager.LoadScene(1);
         }
 
         if(numOfBalls>currentNumOfBalls && 
