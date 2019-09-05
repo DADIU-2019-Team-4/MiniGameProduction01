@@ -147,6 +147,7 @@ public class InputController : MonoBehaviour
         if(waitingBall!= null)
         {
             waitingBall.Begin();
+            waitingBall.throwLeft();
         }
 
     }
