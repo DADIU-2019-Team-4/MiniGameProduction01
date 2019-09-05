@@ -37,14 +37,19 @@ public class GameControl : MonoBehaviour
             numOfBalls++;
         }
 
-        if(numOfBalls>currentNumOfBalls && spawnTimer>spawnInterval)
-        {
-            spawnTimer = 0;
-            addBall.SpawnBall();
-            currentNumOfBalls++;
-        }
-        spawnTimer += Time.deltaTime;
+        //if(numOfBalls>currentNumOfBalls && spawnTimer>spawnInterval)
+        //{
+        //    spawnTimer = 0;
+        //    addBall.SpawnBall();
+        //    currentNumOfBalls++;
+        //}
+        //spawnTimer += Time.deltaTime;
 
+    }
+
+    public void AddBall()
+    {
+        addBall.SpawnBall();
     }
 
     public int getCurrentLevel()
