@@ -67,8 +67,8 @@ public class addForce : MonoBehaviour
         if (isLeftHand)
         {
             //applyForce(new Vector3(-0.2F, 1, 0));
-            //isLeftHand = false;
             StartCoroutine(JuggleRight());
+            isLeftHand = false;
         }
         else
         {
@@ -85,8 +85,8 @@ public class addForce : MonoBehaviour
         else if (isRightHand)
         {
             //applyForce(new Vector3(0.35F, 0.6F, 0));           
-            //isRightHand = false;
             StartCoroutine(JuggleLeft());
+            isRightHand = false;
         }
         else
         {
@@ -110,7 +110,7 @@ public class addForce : MonoBehaviour
         _animator.SetBool("isInRightHand", false);
         _animator.SetBool("swipedRightSide", false);
         _animator.enabled = false;
-        isRightHand = false;
+
         gc.throwCount++;
     }
 
@@ -130,7 +130,7 @@ public class addForce : MonoBehaviour
         _animator.SetBool("isInRightHand", true);
         _animator.SetBool("swipedLeftSide", false);
         _animator.enabled = false;
-        isLeftHand = false;
+
         gc.throwCount++;
     }
 

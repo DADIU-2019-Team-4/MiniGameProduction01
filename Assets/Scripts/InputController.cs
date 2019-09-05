@@ -20,7 +20,7 @@ public class InputController : MonoBehaviour
     private bool _hasSwipedRight;
 
     [SerializeField]
-    private float _stopTimerValue = 0.15f;
+    private float _stopTimerValue = 0.2f;
 
 
     // Start is called before the first frame update
