@@ -11,9 +11,12 @@ public class addForce : MonoBehaviour
     private bool isLeftHand = false;
     private BoxCollider leftHandCollider; //not used at the moment
     private BoxCollider rightHandCollider;  //not used at the moment
-    private GameControl gc;
+    [HideInInspector]
+    public GameControl gc;
+    [HideInInspector]
+    public bool isWaiting;
 
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody>();
         leftHandCollider = GameObject.FindGameObjectsWithTag("LeftHand")[0].GetComponent<BoxCollider>();
@@ -61,34 +64,39 @@ public class addForce : MonoBehaviour
         isRightHand = false;
         isLeftHand = false;
     }
-    public void throwRight()
+    public bool throwRight()
     {
         if (isLeftHand)
         {
             applyForce(new Vector3(-0.2F, 1, 0));
             isLeftHand = false;
+            return true;
         }
         else
         {
             Debug.Log("Not tapable");
+            return false;
         }
     }
-    public void throwLeft()
+    public bool throwLeft()
     {
         if (gc.getCurrentLevel() == 1 && isRightHand) //on level 1 just throw upwards
         {
             applyForce(new Vector3(0, 0.8F, 0));
             isRightHand = false;
+            return true;
         }
         else if (isRightHand)
         {
             applyForce(new Vector3(0.35F, 0.6F, 0));
             
             isRightHand = false;
+            return true;
         }
         else
         {
             Debug.Log("Not tapable");
+            return false;
         }
     }
 
@@ -102,12 +110,14 @@ public class addForce : MonoBehaviour
 
     public void Wait()
     {
-        rb.position = new Vector3(-2F, 0, 0);
+        gc.ballWaiting = isWaiting = true;
+        rb.position = new Vector3(-2.6F, 0, 0);
         rb.useGravity = false;
     }
 
     public void Begin()
     {
+        gc.ballWaiting = isWaiting = false;
         rb.position = new Vector3(-1.46F, 0, 0);
         rb.useGravity = true;
     }

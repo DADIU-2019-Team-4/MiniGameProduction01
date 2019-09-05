@@ -11,7 +11,8 @@ public class GameControl : MonoBehaviour
     private int currentNumOfBalls = 0;
     private float spawnInterval = 1.0f;
     private float spawnTimer = 0f;
-    private bool ballWaiting = false;
+    [HideInInspector]
+    public bool ballWaiting = false;
     private GameObject waitingBall;
     private AddBall addBall;
 
@@ -41,14 +42,20 @@ public class GameControl : MonoBehaviour
         }
 
         if(numOfBalls>currentNumOfBalls && 
-           spawnTimer>spawnInterval     &&
-           !ballWaiting)
+           spawnTimer>spawnInterval)
         {
-            spawnTimer = 0;
-            waitingBall = addBall.SpawnBall();
-            waitingBall.GetComponent<addForce>().Wait();
-            ballWaiting = true;
-            currentNumOfBalls++;
+            if (!ballWaiting)
+            {
+                spawnTimer = 0;
+                waitingBall = addBall.SpawnBall();
+                waitingBall.GetComponent<addForce>().Wait();
+                currentNumOfBalls++;
+            }
+            else
+            {
+                spawnTimer = 0;
+            }
+            
         }
         spawnTimer += Time.deltaTime;
 

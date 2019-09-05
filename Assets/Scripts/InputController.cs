@@ -127,8 +127,28 @@ public class InputController : MonoBehaviour
 
     private void ThrowLeft()
     {
+        addForce waitingBall = null;
+
         foreach (addForce ball in balls)
-            ball.throwLeft();
+        {
+            if (ball.isWaiting)
+            {
+                waitingBall = ball;
+                
+            }
+
+            else if (ball.throwLeft())
+            {
+                return;
+            }
+
+        }
+
+        if(waitingBall!= null)
+        {
+            waitingBall.Begin();
+        }
+
     }
 
     private void ThrowRight()
