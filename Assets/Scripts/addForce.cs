@@ -32,8 +32,6 @@ public class addForce : MonoBehaviour
         //restart if balls hit eachother
         if (collision.gameObject.tag=="Ball")
         {
-            if (collision.gameObject.GetComponent<Rigidbody>().useGravity)
-                collision.gameObject.SetActive(false);
             //SceneManager.LoadScene("Prototype3");
         }
     }
@@ -47,13 +45,11 @@ public class addForce : MonoBehaviour
         {
             isRightHand = true;
             rb.position = new Vector3(-1.46F, 0, 0);
-            rb.useGravity = false;
         }
         else if (collider.tag == "LeftHand")
         {
             isLeftHand = true;
             rb.position = new Vector3(1.46F, 0, 0);
-            rb.useGravity = false;
         }
         else
         {
@@ -148,7 +144,6 @@ public class addForce : MonoBehaviour
 
     public void applyForce(Vector3 dir)
     {
-        rb.useGravity = true;
         Debug.Log("Tap!");
         rb.velocity = new Vector3(0, 0, 0);
         rb.AddForce(dir * thrust);
