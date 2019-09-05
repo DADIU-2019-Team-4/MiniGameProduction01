@@ -1,10 +1,9 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class addForce : MonoBehaviour
 {
+    private Animator _animator;
     private float thrust = 22F;
     private Rigidbody rb;
     private bool isRightHand = false;
@@ -16,8 +15,10 @@ public class addForce : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        _animator = GetComponent<Animator>();
+        _animator.enabled = false;
         leftHandCollider = GameObject.FindGameObjectsWithTag("LeftHand")[0].GetComponent<BoxCollider>();
-        rightHandCollider = GameObject.FindGameObjectsWithTag("LeftHand")[0].GetComponent<BoxCollider>();
+        rightHandCollider = GameObject.FindGameObjectsWithTag("RightHand")[0].GetComponent<BoxCollider>();
         gc = GameObject.FindObjectOfType<GameControl>();
         Debug.Log(gc.throwCount);
         Debug.Log(rb);
@@ -65,8 +66,9 @@ public class addForce : MonoBehaviour
     {
         if (isLeftHand)
         {
-            applyForce(new Vector3(-0.2F, 1, 0));
-            isLeftHand = false;
+            //applyForce(new Vector3(-0.2F, 1, 0));
+            //isLeftHand = false;
+            StartCoroutine(JuggleRight());
         }
         else
         {
@@ -82,14 +84,54 @@ public class addForce : MonoBehaviour
         }
         else if (isRightHand)
         {
-            applyForce(new Vector3(0.35F, 0.6F, 0));
-            
-            isRightHand = false;
+            //applyForce(new Vector3(0.35F, 0.6F, 0));           
+            //isRightHand = false;
+            StartCoroutine(JuggleLeft());
         }
         else
         {
             Debug.Log("Not tapable");
         }
+    }
+
+    /// <summary>
+    /// Setting up animator settings for juggling with the right hand
+    /// </summary>
+    private IEnumerator JuggleRight()
+    {
+        _animator.enabled = true;
+        _animator.SetBool("isInLeftHand", false);
+        _animator.SetBool("isInRightHand", true);
+        _animator.SetBool("swipedRightSide", true);
+
+        yield return new WaitForSeconds(1f);
+
+        _animator.SetBool("isInLeftHand", true);
+        _animator.SetBool("isInRightHand", false);
+        _animator.SetBool("swipedRightSide", false);
+        _animator.enabled = false;
+        isRightHand = false;
+        gc.throwCount++;
+    }
+
+    /// <summary>
+    /// Setting up animator settings for juggling with the left hand
+    /// </summary>
+    private IEnumerator JuggleLeft()
+    {
+        _animator.enabled = true;
+        _animator.SetBool("isInLeftHand", true);
+        _animator.SetBool("isInRightHand", false);
+        _animator.SetBool("swipedLeftSide", true);
+
+        yield return new WaitForSeconds(1f);
+
+        _animator.SetBool("isInLeftHand", false);
+        _animator.SetBool("isInRightHand", true);
+        _animator.SetBool("swipedLeftSide", false);
+        _animator.enabled = false;
+        isLeftHand = false;
+        gc.throwCount++;
     }
 
     public void applyForce(Vector3 dir)
@@ -102,19 +144,6 @@ public class addForce : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            throwRight();
-        }
-        else if (Input.GetKeyDown(KeyCode.Z))
-        {
-            throwLeft();
-        }
-        else if (Input.GetKeyDown(KeyCode.R))
-        {
-            SceneManager.LoadScene("SceneSetup");
-        }
-
         if(transform.position.y<-3)
         {
             gc.removeBall();
