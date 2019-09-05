@@ -11,12 +11,16 @@ public class GameControl : MonoBehaviour
     private int currentNumOfBalls = 0;
     private float spawnInterval = 1.0f;
     private float spawnTimer = 0f;
+    [HideInInspector]
+    public bool ballWaiting = false;
+    private GameObject waitingBall;
     private AddBall addBall;
 
     // Start is called before the first frame update
     void Start()
     {
         addBall = GetComponent<AddBall>();
+        Time.timeScale = 0.8f;
     }
 
     // Update is called once per frame
@@ -37,11 +41,21 @@ public class GameControl : MonoBehaviour
             numOfBalls++;
         }
 
-        if(numOfBalls>currentNumOfBalls && spawnTimer>spawnInterval)
+        if(numOfBalls>currentNumOfBalls && 
+           spawnTimer>spawnInterval)
         {
-            spawnTimer = 0;
-            addBall.SpawnBall();
-            currentNumOfBalls++;
+            if (!ballWaiting)
+            {
+                spawnTimer = 0;
+                waitingBall = addBall.SpawnBall();
+                waitingBall.GetComponent<addForce>().Wait();
+                currentNumOfBalls++;
+            }
+            else
+            {
+                spawnTimer = 0;
+            }
+            
         }
         spawnTimer += Time.deltaTime;
 
