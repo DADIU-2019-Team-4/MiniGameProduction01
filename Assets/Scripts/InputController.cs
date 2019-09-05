@@ -22,12 +22,20 @@ public class InputController : MonoBehaviour
     [SerializeField]
     private float _stopTimerValue = 0.2f;
 
+    [SerializeField]
+    private bool _isFountain;
+
+    private FountainGameController _fountainGameController;
+
 
     // Start is called before the first frame update
     void Start()
     {
         width = (float)Screen.width;
         _minSwipeDistance = Screen.height * 0.10f; // 10% height of the screen
+
+        if (_isFountain)
+            _fountainGameController = FindObjectOfType<FountainGameController>();
     }
 
     // Update is called once per frame
@@ -127,33 +135,47 @@ public class InputController : MonoBehaviour
 
     private void ThrowLeft()
     {
-        addForce waitingBall = null;
-
-        foreach (addForce ball in balls)
+        if (!_isFountain)
         {
-            if (ball.isWaiting)
+            addForce waitingBall = null;
+
+            foreach (addForce ball in balls)
             {
-                waitingBall = ball;
-                
+                if (ball.isWaiting)
+                {
+                    waitingBall = ball;
+
+                }
+
+                else if (ball.throwLeft())
+                {
+                    return;
+                }
+
             }
 
-            else if (ball.throwLeft())
+            if (waitingBall != null)
             {
-                return;
+                waitingBall.Begin();
             }
-
         }
-
-        if(waitingBall!= null)
+        else
         {
-            waitingBall.Begin();
+            _fountainGameController.JuggleLeft();
         }
 
     }
 
     private void ThrowRight()
     {
-        foreach (addForce ball in balls)
-            ball.throwRight();
+        if (!_isFountain)
+        {
+            foreach (addForce ball in balls)
+                ball.throwRight();
+        }
+        else
+        {
+            _fountainGameController.JuggleRight();
+        }
     }
 }

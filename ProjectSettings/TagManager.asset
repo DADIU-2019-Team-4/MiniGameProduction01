@@ -11,6 +11,7 @@ TagManager:
   - Sphere2
   - LeftHand
   - RightHand
+  - Ground
   layers:
   - Default
   - TransparentFX

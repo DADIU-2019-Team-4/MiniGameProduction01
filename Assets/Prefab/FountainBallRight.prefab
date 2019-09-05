@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 6201742878533365182}
   - component: {fileID: 3909620939533217102}
   - component: {fileID: 1523082238466128894}
-  - component: {fileID: 6128027503595162629}
   - component: {fileID: -5080412990647649283}
-  - component: {fileID: 1893297867}
+  - component: {fileID: -5722045200202813501}
+  - component: {fileID: 6664843090573102892}
+  - component: {fileID: -4165724433649489800}
   m_Layer: 9
   m_Name: FountainBallRight
   m_TagString: Ball
@@ -95,20 +96,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6128027503595162629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 532857877177543079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bedaa0df173d2d1499b63378e8f87c1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gc: {fileID: 0}
-  isWaiting: 0
 --- !u!54 &-5080412990647649283
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -125,22 +112,44 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!95 &1893297867
-Animator:
-  serializedVersion: 3
+--- !u!114 &-5722045200202813501
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 532857877177543079}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a982bdbdf400b1c479af4264331f4173, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c90cfdc4e3fd2e64f9ea40524e26e8bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!111 &6664843090573102892
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532857877177543079}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 7ecf1e9012a708c48816109a598ffcb1, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 7ecf1e9012a708c48816109a598ffcb1, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!135 &-4165724433649489800
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532857877177543079}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
