@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Prototype3.unity
     guid: a633a6adb5e3747548478c37097c91a9
+  - enabled: 1
+    path: Assets/Scenes/FountainPrototype.unity
+    guid: 55e88dc9e3424d142957df95fa406e15
   m_configObjects: {}
