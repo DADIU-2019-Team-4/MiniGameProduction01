@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" SchemaVersion="94">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Test_event" ID="{6AE5918C-C9C1-49EF-AB29-30C099CE7AC0}">
+					<ChildrenList>
+						<Action Name="" ID="{568F9154-9DE4-4C17-8735-7C3909172AF7}" ShortID="543862581">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="DADIU-Little Timmy2" ID="{E7C8785B-F78C-4682-A3C0-B1A17CD5E542}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="WinFeed_event" ID="{22E8FE82-65B5-4BFF-AC89-E9EB345A5BFB}">
+					<ChildrenList>
+						<Action Name="" ID="{B9D9218F-A5DE-4676-8753-A7C1F50E572A}" ShortID="577769354">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WinFeed" ID="{5D4A71CB-CE41-4038-A71C-B2D8982861A6}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="FailFeed_event" ID="{A926949F-D090-4D00-925E-7D1E57C5C9A0}">
+					<ChildrenList>
+						<Action Name="" ID="{74565E09-0992-4EBA-B6C1-2A0FEB28C5AA}" ShortID="468739113">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FailFeed" ID="{D5EF642B-D080-4607-96A2-5C537267EC09}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
