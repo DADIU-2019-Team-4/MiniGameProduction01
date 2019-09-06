@@ -74,3 +74,5 @@ Assets/Wwise/Deployment/Plugins/Windows/x86_64/Profile/AkSoundEngine.pdb.meta
 Assets/Wwise/Deployment/Plugins/Windows/x86_64/Profile/AkWaapiClient.pdb.meta
 Assets/Wwise/Deployment/Plugins/Windows/x86_64/Release/AkSoundEngine.pdb.meta
 Assets/Wwise/Deployment/Plugins/Windows/x86_64/Release/AkWaapiClient.pdb.meta
+Assets/Demigiant/DOTween/DOTween.dll.mdb.meta
+Assets/Demigiant/DOTween/Editor/DOTweenEditor.dll.mdb.meta
