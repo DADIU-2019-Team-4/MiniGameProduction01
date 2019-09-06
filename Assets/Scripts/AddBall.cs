@@ -4,22 +4,43 @@ using UnityEngine;
 
 public class AddBall : MonoBehaviour
 {
-    public GameObject prefab;
+    public GameObject BallOne;
+    public GameObject BallTwo;
+    public GameObject BallThree;
+    public GameObject BallFour;
+    private int MaximumNumberOfBalls;
 
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.N))
-        {
             SpawnBall();
-        }
     }
 
     public GameObject SpawnBall()
     {
-        GameObject g = Instantiate(prefab, new Vector3(-1.6F, 4, 0), Quaternion.identity);
-        Debug.Log(g);
+        MaximumNumberOfBalls = GetComponent<GameControl>().MaximumNumberOfBalls;
+        GameObject g = null;
+        switch (MaximumNumberOfBalls)
+        {
+            case 1:
+                g = BallOne;
+                break;
+
+            case 2:
+                g = BallTwo;
+                break;
+
+            case 3:
+                g = BallThree;
+                break;
+
+            case 4:
+                g = BallFour;
+                break;
+        }
+        g = Instantiate(g, new Vector3(-1.6F, 4, 0), Quaternion.identity);
         return g;
     }
 }
