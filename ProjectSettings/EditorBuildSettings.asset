@@ -5,16 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Day1Test.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 0
-    path: Assets/Scenes/SwipingTest.unity
-    guid: 463bf542b1306944c8fcdf1b77ef116a
   - enabled: 1
-    path: Assets/Scenes/Prototype3.unity
-    guid: a633a6adb5e3747548478c37097c91a9
+    path: Assets/Scenes/Phase 1.unity
+    guid: ecc1eb177b1d580479880ab6cd0b42d1
   - enabled: 1
-    path: Assets/Scenes/FountainPrototype.unity
-    guid: 55e88dc9e3424d142957df95fa406e15
+    path: Assets/Scenes/Phase 2.unity
+    guid: b99ad6b7e5043ba4a81292f46807f232
+  - enabled: 1
+    path: Assets/Scenes/Phase 3.unity
+    guid: 57c7f0597f3805d4fbfb6c8724fd4064
+  - enabled: 1
+    path: Assets/Scenes/Phase 4.unity
+    guid: f8f25d86c6b761d4da8e82dd6ddb20ad
+  - enabled: 1
+    path: Assets/Scenes/Phase 5.unity
+    guid: 96fd32c7bb9a8f94392ac9312c308c28
+  - enabled: 1
+    path: Assets/Scenes/Phase 6.unity
+    guid: a1d9e274a7eecf54c97682e9652e171e
   m_configObjects: {}
