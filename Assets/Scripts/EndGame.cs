@@ -14,12 +14,12 @@ public class EndGame : MonoBehaviour
     [SerializeField]
     private GameObject _paperBall;
 
-    [SerializeField]
-    private Fade _fade;
+    private MenuManager _menuManager;
 
     // Start is called before the first frame update
     void Start()
     {
+        _menuManager = FindObjectOfType<MenuManager>();
         StartCoroutine(EndSequence());
     }
 
@@ -29,6 +29,6 @@ public class EndGame : MonoBehaviour
         _timmy.SetActive(false);
         _paperBall.SetActive(true);
         yield return new WaitForSeconds(_timeUntilEnd);
-        _fade.gameObject.SetActive(true);
+        _menuManager.OpenMenu();
     }
 }
