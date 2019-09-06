@@ -93,7 +93,7 @@ public class ThrowableObject : MonoBehaviour
     {
         if (isRightHand)
         {
-            rb.useGravity = true;
+            
             if (gc.getCurrentLevel() == 1) //on level 1 just throw upwards
             {
                 applyForce(new Vector3(0, 0.8F, 0));
@@ -104,6 +104,7 @@ public class ThrowableObject : MonoBehaviour
                 StartCoroutine(JuggleLeft());
             }
 
+            rb.useGravity = true;
             isRightHand = false;
 
             return true;
@@ -123,6 +124,9 @@ public class ThrowableObject : MonoBehaviour
         /// Setting up animator settings for juggling with the right hand
         /// </summary>
 
+
+        Debug.Log("Animating");
+
         _animator.enabled = true;
         _animator.SetBool("isInLeftHand", false);
         _animator.SetBool("isInRightHand", true);
@@ -135,8 +139,8 @@ public class ThrowableObject : MonoBehaviour
         _animator.SetBool("swipedRightSide", false);
         _animator.enabled = false;
 
+        Debug.Log("Done");
         gc.currentThrowCount++;
-        yield return 5;
     }
 
 
@@ -145,6 +149,7 @@ public class ThrowableObject : MonoBehaviour
         /// <summary>
         /// Setting up animator settings for juggling with the left hand
         /// </summary>
+
 
         _animator.enabled = true;
         _animator.SetBool("isInLeftHand", true);

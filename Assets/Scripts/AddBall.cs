@@ -39,6 +39,9 @@ public class AddBall : MonoBehaviour
             case 4:
                 g = BallFour;
                 break;
+            case 5:
+                g = BallFour;
+            break;
         }
         g = Instantiate(g, new Vector3(-1.6F, 4, 0), Quaternion.identity);
         return g;

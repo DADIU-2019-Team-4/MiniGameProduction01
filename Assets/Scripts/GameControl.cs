@@ -67,7 +67,10 @@ public class GameControl : MonoBehaviour
 
         if (currentThrowCount > toLevel5Count && currentLevel == 4)
         {
-            SceneManager.LoadScene(1);
+            currentLevel = 5;
+            MaximumNumberOfBalls++;
+            //SceneManager.LoadScene(1);
+            Time.timeScale = 1.1f;
         }
         
         if(MaximumNumberOfBalls > currentNumOfBalls)
