@@ -25,6 +25,8 @@ public class InputController : MonoBehaviour
     [SerializeField]
     private bool _isFountain;
 
+    public GameControl gc;
+
     private FountainGameController _fountainGameController;
 
 
@@ -36,6 +38,8 @@ public class InputController : MonoBehaviour
 
         if (_isFountain)
             _fountainGameController = FindObjectOfType<FountainGameController>();
+
+        gc = GameObject.FindObjectOfType<GameControl>();
     }
 
     // Update is called once per frame
@@ -137,27 +141,15 @@ public class InputController : MonoBehaviour
     {
         if (!_isFountain)
         {
-            ThrowableObject waitingBall = null;
+            ThrowableObject to = null;
 
-            foreach (ThrowableObject ball in balls)
+            if (gc.rightHandObjects.Count > 0)
             {
-                if (ball.isWaiting)
-                {
-                    waitingBall = ball;
+                to = gc.rightHandObjects.Dequeue();
+                to.throwLeft();
 
-                }
 
-                else if (ball.throwLeft())
-                {
-                    return;
-                }
-
-            }
-
-            if (waitingBall != null)
-            {
-                waitingBall.Begin();
-            waitingBall.throwLeft();
+                Debug.Log(to.gameObject.GetInstanceID() + "Size = " + gc.rightHandObjects.Count);
             }
         }
         else
@@ -171,8 +163,16 @@ public class InputController : MonoBehaviour
     {
         if (!_isFountain)
         {
-            foreach (ThrowableObject ball in balls)
-                ball.throwRight();
+            ThrowableObject to = null;
+
+            if (gc.leftHandObjects.Count > 0)
+            {
+                to = gc.leftHandObjects.Dequeue();
+                to.throwRight();
+
+
+                Debug.Log(to.gameObject.GetInstanceID() + "Size = " + gc.leftHandObjects.Count);
+            }
         }
         else
         {

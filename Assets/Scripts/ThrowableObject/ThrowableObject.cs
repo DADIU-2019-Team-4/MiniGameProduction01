@@ -33,20 +33,7 @@ public class ThrowableObject : MonoBehaviour
         _animator.enabled = false;
         gc = GameObject.FindObjectOfType<GameControl>();
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        //restart if balls hit eachother
-        if (collision.gameObject.tag == "Ball")
-        {
-            if (collision.gameObject.GetComponent<Rigidbody>().isKinematic)
-            {
-                Destroy(transform.gameObject);
-                gc.removeBall();
-            }
 
-            //SceneManager.LoadScene("Prototype3");
-        }
-    }
 
     private void OnTriggerEnter(Collider collider)
     {
@@ -54,14 +41,18 @@ public class ThrowableObject : MonoBehaviour
         if (collider.tag == "RightHand")
         {
             isRightHand = true;
+            gc.rightHandObjects.Enqueue(this);
+            Debug.Log("Ball Caught," + this.gameObject.GetInstanceID() + "Size = " + gc.rightHandObjects.Count);
             rb.position = new Vector3(-1.46F, 0, 0);
-            rb.isKinematic = true;
+            rb.useGravity = false;
         }
         else if (collider.tag == "LeftHand")
         {
             isLeftHand = true;
+            gc.leftHandObjects.Enqueue(this);
+            Debug.Log("Ball Caught," + this.gameObject.GetInstanceID() + "Size = " + gc.leftHandObjects.Count);
             rb.position = new Vector3(1.46F, 0, 0);
-            rb.isKinematic = true;
+            rb.useGravity = false;
         }
         else
         {
@@ -73,8 +64,12 @@ public class ThrowableObject : MonoBehaviour
 
     private void OnTriggerExit(Collider collider)
     {
-        isRightHand = false;
-        isLeftHand = false;
+        if (collider.tag == "RightHand" || collider.tag == "LeftHand")
+        {
+            isRightHand = false;
+            isLeftHand = false;
+        }
+           
     }
 
     public bool throwRight()
@@ -82,7 +77,7 @@ public class ThrowableObject : MonoBehaviour
         if (isLeftHand)
         {
             //applyForce(new Vector3(-0.2F, 1, 0));
-            rb.isKinematic = false;
+            rb.useGravity = true;
             StartCoroutine(JuggleRight());
             isLeftHand = false;
 
@@ -98,7 +93,7 @@ public class ThrowableObject : MonoBehaviour
     {
         if (isRightHand)
         {
-            rb.isKinematic = false;
+            rb.useGravity = true;
             if (gc.getCurrentLevel() == 1) //on level 1 just throw upwards
             {
                 applyForce(new Vector3(0, 0.8F, 0));
@@ -141,6 +136,7 @@ public class ThrowableObject : MonoBehaviour
         _animator.enabled = false;
 
         gc.throwCount++;
+        yield return 5;
     }
 
 
@@ -171,20 +167,6 @@ public class ThrowableObject : MonoBehaviour
         rb.velocity = new Vector3(0, 0, 0);
         rb.AddForce(dir * thrust);
         gc.throwCount++;
-    }
-
-    public void Wait()
-    {
-        gc.ballWaiting = isWaiting = true;
-        rb.position = new Vector3(-2.6F, 0, 0);
-        rb.useGravity = false;
-    }
-
-    public void Begin()
-    {
-        gc.ballWaiting = isWaiting = false;
-        rb.position = new Vector3(-1.46F, 0, 0);
-        rb.useGravity = true;
     }
 
     // Start is called before the first frame update
