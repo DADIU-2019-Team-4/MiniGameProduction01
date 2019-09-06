@@ -5,12 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class GameControl : MonoBehaviour
 {
+
     private int catchCounter;
-    private int currentLevel=1;
-    public int throwCount=0;
-    private int numOfBalls = 1;
-    private int currentNumOfBalls = 0;
-    private float spawnInterval = 1.0f;
+    [SerializeField]
+    public int currentLevel=1;
+    public int currentThrowCount=0; // Total number of throws.
+    [SerializeField]
+    public int MaximumNumberOfBalls = 1;
+    private int currentNumOfBalls = 0; // As it say on the label.
+    [SerializeField]
+    private float ballSpawnInterval = 1.0f;
     private float spawnTimer = 0f;
     [HideInInspector]
     public bool ballWaiting = false;
@@ -19,6 +23,15 @@ public class GameControl : MonoBehaviour
     private List<ThrowableObject> throwableObjectList;
     public Queue<ThrowableObject> leftHandObjects;
     public Queue<ThrowableObject> rightHandObjects;
+
+    [SerializeField]
+    public int toLevel2Count = 3;
+    [SerializeField]
+    public int toLevel3Count = 13;
+    [SerializeField]
+    public int toLevel4Count = 25;
+    [SerializeField]
+    public int toLevel5Count = 45;
 
     // Start is called before the first frame update
     void Start()
@@ -32,27 +45,27 @@ public class GameControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (throwCount > 3 && currentLevel==1)
+        if (currentThrowCount > toLevel2Count && currentLevel==1)
         {
             currentLevel=2;
         }
-        if (throwCount > 13 && currentLevel == 2)
+        if (currentThrowCount > toLevel3Count && currentLevel == 2)
         {
             currentLevel = 3;
-            numOfBalls++;
+            MaximumNumberOfBalls++;
         }
-        if (throwCount > 25 && currentLevel == 3)
+        if (currentThrowCount > toLevel4Count && currentLevel == 3)
         {
             currentLevel = 4;
-            numOfBalls++;
+            MaximumNumberOfBalls++;
         }
 
-        if (throwCount > 40 && currentLevel == 4)
+        if (currentThrowCount > toLevel5Count && currentLevel == 4)
         {
             SceneManager.LoadScene(1);
         }
-
-        if(numOfBalls>currentNumOfBalls)
+        
+        if(MaximumNumberOfBalls > currentNumOfBalls)
         {
              addBall.SpawnBall();
              currentNumOfBalls++;

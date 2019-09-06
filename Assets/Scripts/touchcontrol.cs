@@ -12,6 +12,7 @@ public class TouchControl : MonoBehaviour
     private Vector3 _firstTouchPos;
     private Vector3 _lastTouchPos;
     // minimum distance for a swipe to be registered
+    private float _minSwipeDistanceInPercentage = 0.10f;
     private float _minSwipeDistance;
 
     private float _swipeTimerLeft;
@@ -27,7 +28,7 @@ public class TouchControl : MonoBehaviour
     void Start()
     {
         width = (float)Screen.width;
-        _minSwipeDistance = Screen.height * 0.10f; // 10% height of the screen
+        _minSwipeDistance = Screen.height * _minSwipeDistanceInPercentage; // 10% height of the screen
     }
 
     // Update is called once per frame

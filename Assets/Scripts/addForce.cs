@@ -4,6 +4,7 @@ using UnityEngine;
 public class addForce : MonoBehaviour
 {
     private Animator _animator;
+    [SerializeField]
     private float thrust = 22F;
     private Rigidbody rb;
     private bool isRightHand = false;
@@ -129,7 +130,7 @@ public class addForce : MonoBehaviour
         _animator.SetBool("swipedRightSide", false);
         _animator.enabled = false;
 
-        gc.throwCount++;
+        gc.currentThrowCount++;
     }
 
 
@@ -151,7 +152,7 @@ public class addForce : MonoBehaviour
         _animator.SetBool("swipedLeftSide", false);
         _animator.enabled = false;
 
-        gc.throwCount++;
+        gc.currentThrowCount++;
     }
 
     public void applyForce(Vector3 dir)
@@ -159,7 +160,7 @@ public class addForce : MonoBehaviour
         Debug.Log("Tap!");
         rb.velocity = new Vector3(0, 0, 0);
         rb.AddForce(dir * thrust);
-        gc.throwCount++;
+        gc.currentThrowCount++;
     }
 
     public void Wait()
