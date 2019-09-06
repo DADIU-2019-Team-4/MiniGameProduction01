@@ -17,13 +17,15 @@ public class Ball : MonoBehaviour
     private Vector3 _firstTouchPos;
     private Vector3 _lastTouchPos;
     // minimum distance for a swipe to be registered
+    [SerializeField]
+    private float _minSwipeDistanceInPercentage = 0.15f;
     private float _minSwipeDistance;
 
     // Start is called before the first frame update
     void Start()
     {
         _animator = GetComponent<Animator>();
-        _minSwipeDistance = Screen.height * 0.15f; // 15% height of the screen
+        _minSwipeDistance = Screen.height * _minSwipeDistanceInPercentage; // 15% height of the screen
         _screenWidth = Screen.width;
     }
 

@@ -6,16 +6,28 @@ using UnityEngine.SceneManagement;
 public class GameControl : MonoBehaviour
 {
     private int catchCounter;
+    [SerializeField]
     private int currentLevel=1;
-    public int throwCount=0;
+    public int currentThrowCount=0;
+    [SerializeField]
     private int numOfBalls = 1;
     private int currentNumOfBalls = 0;
-    private float spawnInterval = 1.0f;
+    [SerializeField]
+    private float ballSpawnInterval = 1.0f;
     private float spawnTimer = 0f;
     [HideInInspector]
     public bool ballWaiting = false;
     private GameObject waitingBall;
     private AddBall addBall;
+
+    [SerializeField]
+    private int toLevel2Count = 3;
+    [SerializeField]
+    private int toLevel3Count = 13;
+    [SerializeField]
+    private int toLevel4Count = 25;
+    [SerializeField]
+    private int toLevel5Count = 45;
 
     // Start is called before the first frame update
     void Start()
@@ -27,28 +39,28 @@ public class GameControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (throwCount > 3 && currentLevel==1)
+        if (currentThrowCount > toLevel2Count && currentLevel==1)
         {
             currentLevel=2;
         }
-        if (throwCount > 13 && currentLevel == 2)
+        if (currentThrowCount > toLevel3Count && currentLevel == 2)
         {
             currentLevel = 3;
             numOfBalls++;
         }
-        if (throwCount > 25 && currentLevel == 3)
+        if (currentThrowCount > toLevel4Count && currentLevel == 3)
         {
             currentLevel = 4;
             numOfBalls++;
         }
 
-        if (throwCount > 40 && currentLevel == 4)
+        if (currentThrowCount > toLevel5Count && currentLevel == 4)
         {
             SceneManager.LoadScene(1);
         }
 
         if(numOfBalls>currentNumOfBalls && 
-           spawnTimer>spawnInterval)
+           spawnTimer>ballSpawnInterval)
         {
             if (!ballWaiting)
             {
