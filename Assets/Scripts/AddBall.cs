@@ -10,12 +10,14 @@ public class AddBall : MonoBehaviour
     public GameObject BallFour;
     private int MaximumNumberOfBalls;
 
+    public List<GameObject> Balls = new List<GameObject>();
+
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.N))
-            SpawnBall();
+        //if (Input.GetKeyDown(KeyCode.N))
+        //    SpawnBall();
     }
 
     public GameObject SpawnBall()
@@ -44,6 +46,7 @@ public class AddBall : MonoBehaviour
             break;
         }
         g = Instantiate(g, new Vector3(-1.6F, 4, 0), Quaternion.identity);
+        Balls.Add(g);
         return g;
     }
 }

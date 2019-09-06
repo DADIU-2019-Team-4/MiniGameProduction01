@@ -32,12 +32,20 @@ public class GameControl : MonoBehaviour
     public int toLevel4Count = 25;
     [SerializeField]
     public int toLevel5Count = 45;
+    [SerializeField]
+    public int toLevel6Count = 60;
 
     public float gameSpeed = 0.8f;
+
+    [SerializeField]
+    private GameObject _endGameObject;
+
+    public List<GameObject> Balls = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
     {
+        _endGameObject.SetActive(false);
         leftHandObjects = new Queue<ThrowableObject>();
         rightHandObjects = new Queue<ThrowableObject>();
         addBall = GetComponent<AddBall>();
@@ -69,13 +77,17 @@ public class GameControl : MonoBehaviour
         {
             currentLevel = 5;
             MaximumNumberOfBalls++;
-            //SceneManager.LoadScene(1);
-            Time.timeScale = 1.1f;
         }
-        
-        if(MaximumNumberOfBalls > currentNumOfBalls)
+
+        if (currentThrowCount > toLevel6Count && currentLevel == 5)
         {
-             addBall.SpawnBall();
+            _endGameObject.SetActive(true);
+        }
+
+        if (MaximumNumberOfBalls > currentNumOfBalls)
+        {
+             GameObject ball = addBall.SpawnBall();
+            Balls.Add(ball);
              currentNumOfBalls++;
         }
 

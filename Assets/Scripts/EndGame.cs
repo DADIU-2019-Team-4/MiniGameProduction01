@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndGame : MonoBehaviour
 {
@@ -15,20 +16,28 @@ public class EndGame : MonoBehaviour
     private GameObject _paperBall;
 
     private MenuManager _menuManager;
+    private GameControl _gameControl;
 
     // Start is called before the first frame update
     void Start()
     {
         _menuManager = FindObjectOfType<MenuManager>();
+        _gameControl = FindObjectOfType<GameControl>();
         StartCoroutine(EndSequence());
     }
 
     private IEnumerator EndSequence()
     {
         yield return new WaitForSeconds(_timeUntilPaper);
+        foreach (GameObject ball in _gameControl.Balls)
+        {
+            ball.SetActive(false);
+        }
         _timmy.SetActive(false);
         _paperBall.SetActive(true);
         yield return new WaitForSeconds(_timeUntilEnd);
         _menuManager.OpenMenu();
+        yield return new WaitForSeconds(_timeUntilEnd);
+        SceneManager.LoadScene(0);
     }
 }
