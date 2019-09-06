@@ -24,10 +24,10 @@ public class InputController : MonoBehaviour
     [SerializeField]
     private float _stopTimerValue = 0.2f;
 
-    [SerializeField]
-    private bool _isFountain;
+    //[SerializeField]
+    //private bool _isFountain;
 
-    public GameControl gc;
+    private GameControl gc;
 
     private FountainGameController _fountainGameController;
 
@@ -38,8 +38,8 @@ public class InputController : MonoBehaviour
         width = (float)Screen.width;
         _minSwipeDistance = Screen.height * _minSwipeDistanceInPercentage; // 10% height of the screen
 
-        if (_isFountain)
-            _fountainGameController = FindObjectOfType<FountainGameController>();
+        //if (_isFountain)
+        //    _fountainGameController = FindObjectOfType<FountainGameController>();
 
         gc = GameObject.FindObjectOfType<GameControl>();
     }
@@ -141,44 +141,30 @@ public class InputController : MonoBehaviour
 
     private void ThrowLeft()
     {
-        if (!_isFountain)
+        ThrowableObject to = null;
+
+        if (gc.rightHandObjects.Count > 0)
         {
-            ThrowableObject to = null;
-
-            if (gc.rightHandObjects.Count > 0)
-            {
-                to = gc.rightHandObjects.Dequeue();
-                to.throwLeft();
+            to = gc.rightHandObjects.Dequeue();
+            to.throwLeft();
 
 
-                Debug.Log(to.gameObject.GetInstanceID() + "Size = " + gc.rightHandObjects.Count);
-            }
-        }
-        else
-        {
-            _fountainGameController.JuggleLeft();
+            Debug.Log(to.gameObject.GetInstanceID() + "Size = " + gc.rightHandObjects.Count);
         }
 
     }
 
     private void ThrowRight()
     {
-        if (!_isFountain)
+        ThrowableObject to = null;
+
+        if (gc.leftHandObjects.Count > 0)
         {
-            ThrowableObject to = null;
-
-            if (gc.leftHandObjects.Count > 0)
-            {
-                to = gc.leftHandObjects.Dequeue();
-                to.throwRight();
+            to = gc.leftHandObjects.Dequeue();
+            to.throwRight();
 
 
-                Debug.Log(to.gameObject.GetInstanceID() + "Size = " + gc.leftHandObjects.Count);
-            }
-        }
-        else
-        {
-            _fountainGameController.JuggleRight();
+            Debug.Log(to.gameObject.GetInstanceID() + "Size = " + gc.leftHandObjects.Count);
         }
     }
 }
