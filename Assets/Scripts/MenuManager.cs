@@ -12,6 +12,7 @@ public class MenuManager : MonoBehaviour
     private bool _isSoundSettingsOpen;
     private GameControl _gameControl;
 
+
     // Start is called before the first frame update
     void Start()
     {
