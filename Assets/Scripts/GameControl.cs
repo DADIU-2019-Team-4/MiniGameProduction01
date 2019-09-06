@@ -11,7 +11,7 @@ public class GameControl : MonoBehaviour
     public int currentLevel=1;
     public int currentThrowCount=0; // Total number of throws.
     [SerializeField]
-    private int numOfBalls = 1; // Maximum number of ball spawning if the player loses
+    public int MaximumNumberOfBalls = 1;
     private int currentNumOfBalls = 0; // As it say on the label.
     [SerializeField]
     private float ballSpawnInterval = 1.0f;
@@ -47,12 +47,12 @@ public class GameControl : MonoBehaviour
         if (currentThrowCount > toLevel3Count && currentLevel == 2)
         {
             currentLevel = 3;
-            numOfBalls++;
+            MaximumNumberOfBalls++;
         }
         if (currentThrowCount > toLevel4Count && currentLevel == 3)
         {
             currentLevel = 4;
-            numOfBalls++;
+            MaximumNumberOfBalls++;
         }
 
         if (currentThrowCount > toLevel5Count && currentLevel == 4)
@@ -60,7 +60,7 @@ public class GameControl : MonoBehaviour
             SceneManager.LoadScene(1);
         }
 
-        if(numOfBalls>currentNumOfBalls && 
+        if(MaximumNumberOfBalls>currentNumOfBalls && 
            spawnTimer>ballSpawnInterval)
         {
             if (!ballWaiting)
