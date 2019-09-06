@@ -10,10 +10,12 @@ public class MenuManager : MonoBehaviour
     private GameObject _soundSettings;
 
     private bool _isSoundSettingsOpen;
+    private GameControl _gameControl;
 
     // Start is called before the first frame update
     void Start()
     {
+        _gameControl = FindObjectOfType<GameControl>();
         _menuScreen.SetActive(false);
         _soundSettings.SetActive(false);
     }
@@ -21,11 +23,15 @@ public class MenuManager : MonoBehaviour
     public void CloseMenu()
     {
         if (!_isSoundSettingsOpen)
+        {
             _menuScreen.SetActive(false);
+            Time.timeScale = _gameControl.gameSpeed;
+        }
     }
 
     public void OpenMenu()
     {
+        Time.timeScale = 0f;
         _menuScreen.SetActive(true);
     }
 

@@ -33,13 +33,15 @@ public class GameControl : MonoBehaviour
     [SerializeField]
     public int toLevel5Count = 45;
 
+    public float gameSpeed = 0.8f;
+
     // Start is called before the first frame update
     void Start()
     {
         leftHandObjects = new Queue<ThrowableObject>();
         rightHandObjects = new Queue<ThrowableObject>();
         addBall = GetComponent<AddBall>();
-        Time.timeScale = 0.8f;
+        Time.timeScale = gameSpeed;
     }
 
     // Update is called once per frame
