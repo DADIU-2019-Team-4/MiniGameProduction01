@@ -54,7 +54,7 @@ public class GameControl : MonoBehaviour
             {
                 spawnTimer = 0;
                 waitingBall = addBall.SpawnBall();
-                waitingBall.GetComponent<addForce>().Wait();
+                waitingBall.GetComponent<ThrowableObject>().Wait();
                 currentNumOfBalls++;
             }
             else

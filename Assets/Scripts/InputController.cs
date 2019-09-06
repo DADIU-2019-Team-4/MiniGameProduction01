@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InputController : MonoBehaviour
 {
-    private List<addForce> balls;
+    private List<ThrowableObject> balls;
     private Vector3 position;
     private float width;
 
@@ -41,7 +41,7 @@ public class InputController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        balls = new List<addForce>(FindObjectsOfType<addForce>());
+        balls = new List<ThrowableObject>(FindObjectsOfType<ThrowableObject>());
         //Debug.Log(balls.Capacity);
 
         if (_hasSwipedLeft)
@@ -137,9 +137,9 @@ public class InputController : MonoBehaviour
     {
         if (!_isFountain)
         {
-            addForce waitingBall = null;
+            ThrowableObject waitingBall = null;
 
-            foreach (addForce ball in balls)
+            foreach (ThrowableObject ball in balls)
             {
                 if (ball.isWaiting)
                 {
@@ -171,7 +171,7 @@ public class InputController : MonoBehaviour
     {
         if (!_isFountain)
         {
-            foreach (addForce ball in balls)
+            foreach (ThrowableObject ball in balls)
                 ball.throwRight();
         }
         else
