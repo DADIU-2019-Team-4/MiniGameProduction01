@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 6201742878533365182}
   - component: {fileID: 3909620939533217102}
   - component: {fileID: 1523082238466128894}
+  - component: {fileID: 6128027503595162629}
   - component: {fileID: -5080412990647649283}
-  - component: {fileID: 5853403155780136327}
   - component: {fileID: 1893297867}
   m_Layer: 9
   m_Name: Ball1
@@ -30,8 +30,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 532857877177543079}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.86, y: -1.24, z: 2.7304688}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -61,11 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-<<<<<<< HEAD:Assets/Prefab/Sphere.prefab
-  - {fileID: 0}
-=======
   - {fileID: 2100000, guid: 59dedd48936f3b245912b353d0bfd231, type: 2}
->>>>>>> master:Assets/Prefabs/Ball3.prefab
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -94,13 +90,11 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 532857877177543079}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.1
   m_Center: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD:Assets/Prefab/Sphere.prefab
-=======
 --- !u!114 &6128027503595162629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,7 +110,6 @@ MonoBehaviour:
   thrust: 22
   gc: {fileID: 0}
   isWaiting: 0
->>>>>>> master:Assets/Prefabs/Ball3.prefab
 --- !u!54 &-5080412990647649283
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -133,21 +126,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5853403155780136327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 532857877177543079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a762b581ed1a5454899ea18c4e0d60ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gc: {fileID: 0}
-  isWaiting: 0
-  type: 0
 --- !u!95 &1893297867
 Animator:
   serializedVersion: 3
