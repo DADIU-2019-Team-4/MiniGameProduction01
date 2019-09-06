@@ -33,18 +33,23 @@ public class GameControl : MonoBehaviour
     [SerializeField]
     public int toLevel5Count = 45;
 
+    public float gameSpeed = 0.8f;
+
     // Start is called before the first frame update
     void Start()
     {
         leftHandObjects = new Queue<ThrowableObject>();
         rightHandObjects = new Queue<ThrowableObject>();
         addBall = GetComponent<AddBall>();
-        Time.timeScale = 0.8f;
+        Time.timeScale = gameSpeed;
     }
 
     // Update is called once per frame
     void Update()
     {
+        // to test preloading scenes
+        ToNextScene();
+
         if (currentThrowCount > toLevel2Count && currentLevel==1)
         {
             currentLevel=2;
@@ -72,6 +77,28 @@ public class GameControl : MonoBehaviour
         }
 
 
+    }
+
+    private void ToNextScene()
+    {
+        if (Input.GetKeyDown(KeyCode.N))
+            StartCoroutine(LoadYourAsyncScene());
+    }
+
+    private IEnumerator LoadYourAsyncScene()
+    {
+        // The Application loads the Scene in the background as the current Scene runs.
+        // This is particularly good for creating loading screens.
+        // You could also load the Scene by using sceneBuildIndex. In this case Scene2 has
+        // a sceneBuildIndex of 1 as shown in Build Settings.
+
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(0);
+
+        // Wait until the asynchronous scene fully loads
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
     }
 
     public void AddBall()
