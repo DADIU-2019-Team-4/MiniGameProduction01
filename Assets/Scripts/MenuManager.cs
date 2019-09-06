@@ -16,7 +16,6 @@ public class MenuManager : MonoBehaviour
     void Start()
     {
         _gameControl = FindObjectOfType<GameControl>();
-        _menuScreen.SetActive(false);
         _soundSettings.SetActive(false);
     }
 
