@@ -135,7 +135,7 @@ public class ThrowableObject : MonoBehaviour
         _animator.SetBool("swipedRightSide", false);
         _animator.enabled = false;
 
-        gc.throwCount++;
+        gc.currentThrowCount++;
         yield return 5;
     }
 
@@ -158,7 +158,7 @@ public class ThrowableObject : MonoBehaviour
         _animator.SetBool("swipedLeftSide", false);
         _animator.enabled = false;
 
-        gc.throwCount++;
+        gc.currentThrowCount++;
     }
 
     public void applyForce(Vector3 dir)
@@ -166,7 +166,7 @@ public class ThrowableObject : MonoBehaviour
         Debug.Log("Tap!");
         rb.velocity = new Vector3(0, 0, 0);
         rb.AddForce(dir * thrust);
-        gc.throwCount++;
+        gc.currentThrowCount++;
     }
 
     // Start is called before the first frame update
