@@ -20,6 +20,9 @@ public class GameControl : MonoBehaviour
     public bool ballWaiting = false;
     private GameObject waitingBall;
     private AddBall addBall;
+    private List<ThrowableObject> throwableObjectList;
+    public Queue<ThrowableObject> leftHandObjects;
+    public Queue<ThrowableObject> rightHandObjects;
 
     [SerializeField]
     public int toLevel2Count = 3;
@@ -33,6 +36,8 @@ public class GameControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        leftHandObjects = new Queue<ThrowableObject>();
+        rightHandObjects = new Queue<ThrowableObject>();
         addBall = GetComponent<AddBall>();
         Time.timeScale = 0.8f;
     }
@@ -62,24 +67,12 @@ public class GameControl : MonoBehaviour
         {
             SceneManager.LoadScene(1);
         }
-
-        if(MaximumNumberOfBalls>currentNumOfBalls && 
-           spawnTimer>ballSpawnInterval)
+        
+        if(MaximumNumberOfBalls > currentNumOfBalls)
         {
-            if (!ballWaiting)
-            {
-                spawnTimer = 0;
-                waitingBall = addBall.SpawnBall();
-                waitingBall.GetComponent<addForce>().Wait();
-                currentNumOfBalls++;
-            }
-            else
-            {
-                spawnTimer = 0;
-            }
-            
+             addBall.SpawnBall();
+             currentNumOfBalls++;
         }
-        spawnTimer += Time.deltaTime;
 
 
     }
