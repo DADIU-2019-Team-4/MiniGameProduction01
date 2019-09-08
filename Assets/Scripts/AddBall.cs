@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class AddBall : MonoBehaviour
 {
     public GameObject BallOne;
@@ -12,6 +13,8 @@ public class AddBall : MonoBehaviour
 
     public List<GameObject> Balls = new List<GameObject>();
 
+   
+
 
     // Update is called once per frame
     void Update()
@@ -20,7 +23,7 @@ public class AddBall : MonoBehaviour
         //    SpawnBall();
     }
 
-    public GameObject SpawnBall()
+    public GameObject SpawnBall(Side side)
     {
         MaximumNumberOfBalls = GetComponent<GameControl>().MaximumNumberOfBalls;
         GameObject g = null;
@@ -50,3 +53,6 @@ public class AddBall : MonoBehaviour
         return g;
     }
 }
+
+
+public enum Side { Left, Right };
