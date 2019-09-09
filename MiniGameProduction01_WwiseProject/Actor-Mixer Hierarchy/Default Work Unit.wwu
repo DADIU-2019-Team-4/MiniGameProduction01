@@ -61,6 +61,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<SwitchContainer Name="da_dia_switch" ID="{A36786C4-D558-48D5-8101-BA43BF60FC7E}" ShortID="344877322">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
@@ -253,6 +260,13 @@
 					</GroupingInfo>
 				</SwitchContainer>
 				<SwitchContainer Name="en_dia_switch" ID="{9DF05E67-C57E-4F14-B7CD-FDB52A38B0B9}" ShortID="258496853">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
