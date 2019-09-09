@@ -24,8 +24,11 @@ public class InputController : MonoBehaviour
     [SerializeField]
     private float _stopTimerValue = 0.2f;
 
-    //[SerializeField]
-    //private bool _isFountain;
+    //Disable control variables
+    private bool disableControls = false;
+    private float disableControlsTimer = 0; //timer for counting how long the controls have been turned off
+    private static float disableControlsTime = 3f; //how long should the controls be turned off
+
 
     private GameControl gc;
 
@@ -64,6 +67,18 @@ public class InputController : MonoBehaviour
             _swipeTimerRight += Time.deltaTime;
             if (_swipeTimerRight > _stopTimerValue)
                 _hasSwipedRight = false;
+        }
+
+        if (disableControls)
+        {
+            if (disableControlsTimer > disableControlsTime)
+            {
+                disableControls = false;
+            }
+            else
+            {
+                disableControlsTimer += Time.deltaTime;
+            }
         }
 
 #if UNITY_EDITOR || UNITY_STANDALONE
@@ -143,11 +158,11 @@ public class InputController : MonoBehaviour
     {
         ThrowableObject to = null;
 
-        if (gc.rightHandObjects.Count > 0)
+        if (gc.rightHandObjects.Count > 0 )
         {
             to = gc.rightHandObjects.Dequeue();
             to.throwLeft();
-
+            gc.stackingIsAllowed = false;
 
             Debug.Log(to.gameObject.GetInstanceID() + "Size = " + gc.rightHandObjects.Count);
         }
@@ -158,13 +173,19 @@ public class InputController : MonoBehaviour
     {
         ThrowableObject to = null;
 
-        if (gc.leftHandObjects.Count > 0)
+        if (gc.leftHandObjects.Count > 0 )
         {
             to = gc.leftHandObjects.Dequeue();
             to.throwRight();
-
+            gc.stackingIsAllowed = false;
 
             Debug.Log(to.gameObject.GetInstanceID() + "Size = " + gc.leftHandObjects.Count);
         }
+    }
+
+    public void DisableControls()
+    {
+        disableControls = true;
+        disableControlsTimer = 0;
     }
 }

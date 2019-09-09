@@ -1,4 +1,5 @@
-﻿using System.Collections;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,8 +9,8 @@ public class GameControl : MonoBehaviour
 
     //private int catchCounter;
     [SerializeField]
-    public int currentLevel=1;
-    public int currentThrowCount=0; // Total number of throws.
+    public int currentLevel = 1;
+    public int currentLevelThrowCount = 0; // Total number of throws.
     [SerializeField]
     public int MaximumNumberOfBalls = 1;
     private int currentNumOfBalls = 0; // As it say on the label.
@@ -20,27 +21,72 @@ public class GameControl : MonoBehaviour
     //public bool ballWaiting = false;
     //private GameObject waitingBall;
     private AddBall addBall;
-    private List<ThrowableObject> throwableObjectList;
+    public List<ThrowableObject> throwableObjectList;
     public Queue<ThrowableObject> leftHandObjects;
     public Queue<ThrowableObject> rightHandObjects;
 
     [SerializeField]
     public int toLevel2Count = 3;
     [SerializeField]
-    public int toLevel3Count = 13;
+    public int toLevel3Count = 5;
     [SerializeField]
-    public int toLevel4Count = 25;
+    public int toLevel4Count = 10;
     [SerializeField]
-    public int toLevel5Count = 45;
+    public int toLevel5Count = 10;
     [SerializeField]
-    public int toLevel6Count = 60;
+    public int toLevel6Count = 10;
+    [SerializeField]
+    public int toLevel7Count = 10;
 
     public float gameSpeed = 0.8f;
 
     [SerializeField]
     private GameObject _endGameObject;
 
+    public bool stackingIsAllowed = false;
+
+    private InputController inputController;
+
+    internal void QueueLeftHand(ThrowableObject throwableObject)
+    {
+
+        if (!stackingIsAllowed)
+        {
+            if (leftHandObjects.Count > 0)
+            {
+                //restart level
+                StartLevel(currentLevel);
+                Debug.Log("Fail!!");
+                return;
+            }
+        }
+
+        leftHandObjects.Enqueue(throwableObject);
+
+    }
+
+    internal void QueueRightHand(ThrowableObject throwableObject)
+    {
+
+        if (!stackingIsAllowed)
+        {
+            if (rightHandObjects.Count > 0)
+            {
+                //restart level
+                StartLevel(currentLevel);
+                Debug.Log("Fail!!");
+                return;
+            }
+        }
+
+        rightHandObjects.Enqueue(throwableObject);
+
+    }
+
     public List<GameObject> Balls = new List<GameObject>();
+
+
+   
 
     // Start is called before the first frame update
     void Start()
@@ -50,6 +96,10 @@ public class GameControl : MonoBehaviour
         rightHandObjects = new Queue<ThrowableObject>();
         addBall = GetComponent<AddBall>();
         Time.timeScale = gameSpeed;
+        inputController = FindObjectOfType<InputController>();
+
+        //level 1 setup
+        StartLevel(1);
     }
 
     // Update is called once per frame
@@ -58,40 +108,48 @@ public class GameControl : MonoBehaviour
         // to test preloading scenes
         ToNextScene();
 
-        if (currentThrowCount > toLevel2Count && currentLevel==1)
+        if (currentLevelThrowCount > toLevel2Count && currentLevel == 1)
         {
-            currentLevel=2;
+            StartLevel(2);
         }
-        if (currentThrowCount > toLevel3Count && currentLevel == 2)
+        if (currentLevelThrowCount > toLevel3Count && currentLevel == 2)
         {
-            currentLevel = 3;
-            MaximumNumberOfBalls++;
+            StartLevel(3);
         }
-        if (currentThrowCount > toLevel4Count && currentLevel == 3)
+        if (currentLevelThrowCount > toLevel4Count && currentLevel == 3)
         {
-            currentLevel = 4;
-            MaximumNumberOfBalls++;
+            StartLevel(4);
         }
 
-        if (currentThrowCount > toLevel5Count && currentLevel == 4)
+        if (currentLevelThrowCount > toLevel5Count && currentLevel == 4)
         {
-            currentLevel = 5;
-            MaximumNumberOfBalls++;
+            StartLevel(5);
         }
 
-        if (currentThrowCount > toLevel6Count && currentLevel == 5)
+        if (currentLevelThrowCount > toLevel6Count && currentLevel == 5)
+        {
+            StartLevel(6);
+        }
+
+        if (currentLevelThrowCount > toLevel7Count && currentLevel == 6)
         {
             _endGameObject.SetActive(true);
         }
 
         if (MaximumNumberOfBalls > currentNumOfBalls)
         {
-             GameObject ball = addBall.SpawnBall(Side.Left);
-            Balls.Add(ball);
-             currentNumOfBalls++;
+            //GameObject ball = addBall.SpawnBall(Side.Left);
+            //Balls.Add(ball);
+            //currentNumOfBalls++;
         }
 
+        CheckLooseCondition();
 
+    }
+
+    private void CheckLooseCondition()
+    {
+        
     }
 
     private void ToNextScene()
@@ -116,9 +174,69 @@ public class GameControl : MonoBehaviour
         }
     }
 
-    public void AddBall()
+    public void AddBall(Side side)
     {
-        addBall.SpawnBall(Side.Left);
+        addBall.SpawnBall(side);
+        currentNumOfBalls++;
+    }
+
+    public void StartLevel(int levelNumber)
+    {
+        currentLevel = levelNumber;
+        currentLevelThrowCount = 0;
+        inputController.DisableControls();
+        stackingIsAllowed = true;
+        
+        foreach (ThrowableObject ball in throwableObjectList)
+        {
+            Destroy(ball.gameObject);
+        }
+        throwableObjectList.Clear();
+        leftHandObjects.Clear();
+        rightHandObjects.Clear();
+
+        switch (levelNumber)
+        {
+            case 1:
+                AddBall(Side.Left);
+                break;
+            case 2:
+                AddBall(Side.Left);
+                AddBall(Side.Right);
+                break;
+            case 3:
+                AddBall(Side.Left);
+                AddBall(Side.Left);
+                AddBall(Side.Right);
+                break;
+            case 4:
+                AddBall(Side.Left);
+                AddBall(Side.Left);
+                AddBall(Side.Right);
+                AddBall(Side.Right);
+                break;
+            case 5:
+                AddBall(Side.Left);
+                AddBall(Side.Left);
+                AddBall(Side.Right);
+                AddBall(Side.Right);
+                Time.timeScale = gameSpeed = 1;
+                break;
+            case 6:
+
+                AddBall(Side.Left);
+                AddBall(Side.Left);
+                AddBall(Side.Left);
+                AddBall(Side.Right);
+                AddBall(Side.Right);
+                
+                break;
+            case 7:
+
+                break;
+            default:
+                break;
+        }
     }
 
     public int getCurrentLevel()
