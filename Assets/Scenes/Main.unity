@@ -1415,81 +1415,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 950896741}
-    - target: {fileID: 2080568103341605914, guid: 81f419b01d9623c40be51ff1a542f27e,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CloseSoundSettings
-      objectReference: {fileID: 0}
     - target: {fileID: 6090837897687578249, guid: 81f419b01d9623c40be51ff1a542f27e,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 950896741}
-    - target: {fileID: 6090837897687578249, guid: 81f419b01d9623c40be51ff1a542f27e,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ExitGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 379408546030707182, guid: 81f419b01d9623c40be51ff1a542f27e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 950896741}
     - target: {fileID: 379408546030707182, guid: 81f419b01d9623c40be51ff1a542f27e,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CloseMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 7467820663446068412, guid: 81f419b01d9623c40be51ff1a542f27e,
-        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 950896741}
     - target: {fileID: 7467820663446068412, guid: 81f419b01d9623c40be51ff1a542f27e,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenSoundSettings
-      objectReference: {fileID: 0}
-    - target: {fileID: 2690416103672880297, guid: 81f419b01d9623c40be51ff1a542f27e,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2690416103672880297, guid: 81f419b01d9623c40be51ff1a542f27e,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2690416103672880297, guid: 81f419b01d9623c40be51ff1a542f27e,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2690416103672880297, guid: 81f419b01d9623c40be51ff1a542f27e,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2690416103672880297, guid: 81f419b01d9623c40be51ff1a542f27e,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 116
-      objectReference: {fileID: 0}
-    - target: {fileID: 2690416103672880297, guid: 81f419b01d9623c40be51ff1a542f27e,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -123
-      objectReference: {fileID: 0}
-    - target: {fileID: 6025256998011746829, guid: 81f419b01d9623c40be51ff1a542f27e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 950896741}
     - target: {fileID: 6025256998011746829, guid: 81f419b01d9623c40be51ff1a542f27e,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenMenu
-      objectReference: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 950896741}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81f419b01d9623c40be51ff1a542f27e, type: 3}
 --- !u!1 &1475366677 stripped
