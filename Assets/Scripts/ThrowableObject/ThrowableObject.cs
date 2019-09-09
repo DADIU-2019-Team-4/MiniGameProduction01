@@ -45,7 +45,7 @@ public class ThrowableObject : MonoBehaviour
             Debug.Log("Ball Caught," + this.gameObject.GetInstanceID() + "Size = " + gc.rightHandObjects.Count);
             rb.position = new Vector3(-1.46F, 0, 0);
             rb.useGravity = false;
-            PlaySFXCaughtItem();
+  
         }
         else if (collider.tag == "LeftHand")
         {
@@ -54,7 +54,7 @@ public class ThrowableObject : MonoBehaviour
             Debug.Log("Ball Caught," + this.gameObject.GetInstanceID() + "Size = " + gc.leftHandObjects.Count);
             rb.position = new Vector3(1.46F, 0, 0);
             rb.useGravity = false;
-            PlaySFXCaughtItem();
+
         }
         else
         {

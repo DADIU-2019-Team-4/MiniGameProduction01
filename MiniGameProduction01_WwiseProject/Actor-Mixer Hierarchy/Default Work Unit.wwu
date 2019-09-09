@@ -60,6 +60,208 @@
 						<ActiveSource Name="FailFeed" ID="{56175757-45BF-4952-9173-BCF7D257BC67}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<ActorMixer Name="DA_Dialogue" ID="{04227A41-58C3-430F-ACA9-5B2D0257AAAE}" ShortID="936117691">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85E0ED26-8EBA-4DDD-84A1-E48E2CE905F3}"/>
+						</Reference>
+					</ReferenceList>
+				</ActorMixer>
+				<SwitchContainer Name="da_dia_switch" ID="{A36786C4-D558-48D5-8101-BA43BF60FC7E}" ShortID="344877322">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
+						</Reference>
+						<Reference Name="DefaultSwitchOrState">
+							<ObjectRef Name="menu" ID="{F1CC0C0D-AEA2-4119-A2FC-63EEB8577F84}" WorkUnitID="{72FA4C1F-4F84-40E2-BF3A-F8BF99444437}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85E0ED26-8EBA-4DDD-84A1-E48E2CE905F3}"/>
+						</Reference>
+						<Reference Name="SwitchGroupOrStateGroup">
+							<ObjectRef Name="game_stage" ID="{C794BBEB-141D-4A22-B91D-34EBD3F8731F}" WorkUnitID="{72FA4C1F-4F84-40E2-BF3A-F8BF99444437}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="DA_DIA_P1" ID="{5D854D47-0872-4FAE-88DE-E05BD0619688}" ShortID="829932500">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85E0ED26-8EBA-4DDD-84A1-E48E2CE905F3}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="DA_DIA_P1" ID="{5D816144-5CE1-4F22-AE99-54C6EEA19454}" ShortID="1037089670">
+									<Language>SFX</Language>
+									<AudioFile>DA_DIA_P1.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="DA_DIA_P1" ID="{5D816144-5CE1-4F22-AE99-54C6EEA19454}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="DA_DIA_P2" ID="{5793E883-96F8-4A18-9B5B-4DCEC04BF5EB}" ShortID="610983090">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85E0ED26-8EBA-4DDD-84A1-E48E2CE905F3}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="DA_DIA_P2" ID="{D77E18A8-588B-46A7-9F9D-85E06659F03F}" ShortID="779881088">
+									<Language>SFX</Language>
+									<AudioFile>DA_DIA_P2.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="DA_DIA_P2" ID="{D77E18A8-588B-46A7-9F9D-85E06659F03F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="DA_DIA_P3" ID="{DE7C407A-C2AD-46AA-AD04-3DF9E0561E5D}" ShortID="306758142">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85E0ED26-8EBA-4DDD-84A1-E48E2CE905F3}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="DA_DIA_P3" ID="{BB736BE2-3A34-4F75-B3D7-4B5B8C19AFD5}" ShortID="983276854">
+									<Language>SFX</Language>
+									<AudioFile>DA_DIA_P3.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="DA_DIA_P3" ID="{BB736BE2-3A34-4F75-B3D7-4B5B8C19AFD5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="DA_DIA_P4" ID="{B848EAB7-FA55-4ED4-A877-61E38FF5AA42}" ShortID="685065505">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85E0ED26-8EBA-4DDD-84A1-E48E2CE905F3}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="DA_DIA_P4" ID="{DA152B83-9C1B-4C1E-8497-B84CCBCAC210}" ShortID="829961090">
+									<Language>SFX</Language>
+									<AudioFile>DA_DIA_P4.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="DA_DIA_P4" ID="{DA152B83-9C1B-4C1E-8497-B84CCBCAC210}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="DA_DIA_P5" ID="{3CCA8027-4C49-4CE5-8226-2B2248433FAA}" ShortID="77512312">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85E0ED26-8EBA-4DDD-84A1-E48E2CE905F3}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="DA_DIA_P5" ID="{DE1F413A-B2DD-4257-8B1C-5DF4C68E5BB7}" ShortID="502417597">
+									<Language>SFX</Language>
+									<AudioFile>DA_DIA_P5.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="DA_DIA_P5" ID="{DE1F413A-B2DD-4257-8B1C-5DF4C68E5BB7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="DA_DIA_P6" ID="{D28F4FAF-6104-41AE-B3C6-8F135F828C83}" ShortID="707443533">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85E0ED26-8EBA-4DDD-84A1-E48E2CE905F3}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="DA_DIA_P6" ID="{4B2AE148-82FF-4C52-B199-A6860E843C01}" ShortID="9110680">
+									<Language>SFX</Language>
+									<AudioFile>DA_DIA_P6.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="DA_DIA_P6" ID="{4B2AE148-82FF-4C52-B199-A6860E843C01}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<GroupingInfo>
+						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="DA_DIA_P5" ID="{3CCA8027-4C49-4CE5-8226-2B2248433FAA}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="DA_DIA_P1" ID="{5D854D47-0872-4FAE-88DE-E05BD0619688}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="DA_DIA_P3" ID="{DE7C407A-C2AD-46AA-AD04-3DF9E0561E5D}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="DA_DIA_P2" ID="{5793E883-96F8-4A18-9B5B-4DCEC04BF5EB}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="DA_DIA_P6" ID="{D28F4FAF-6104-41AE-B3C6-8F135F828C83}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="DA_DIA_P4" ID="{B848EAB7-FA55-4ED4-A877-61E38FF5AA42}"/>
+							</GroupingBehavior>
+						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="phase6" ID="{BA107603-1752-4647-AC7D-188A5C85DCB2}"/>
+								<ItemList>
+									<ItemRef Name="DA_DIA_P6" ID="{D28F4FAF-6104-41AE-B3C6-8F135F828C83}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="phase2" ID="{9F243609-51A0-4B43-ABA7-1BE03F1AF101}"/>
+								<ItemList>
+									<ItemRef Name="DA_DIA_P2" ID="{5793E883-96F8-4A18-9B5B-4DCEC04BF5EB}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="phase5" ID="{7DEE1018-7D21-4770-A17F-147C5FCBD469}"/>
+								<ItemList>
+									<ItemRef Name="DA_DIA_P5" ID="{3CCA8027-4C49-4CE5-8226-2B2248433FAA}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="phase3" ID="{E50E0820-84F8-4DDB-A6DC-14BED02DF51B}"/>
+								<ItemList>
+									<ItemRef Name="DA_DIA_P3" ID="{DE7C407A-C2AD-46AA-AD04-3DF9E0561E5D}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="phase4" ID="{334A1765-05B4-42B5-8E16-6C2F60DAFF34}"/>
+								<ItemList>
+									<ItemRef Name="DA_DIA_P4" ID="{B848EAB7-FA55-4ED4-A877-61E38FF5AA42}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="phase1" ID="{8EE4EAF4-D03F-433A-BE91-BED4866CC46C}"/>
+								<ItemList>
+									<ItemRef Name="DA_DIA_P1" ID="{5D854D47-0872-4FAE-88DE-E05BD0619688}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
+					</GroupingInfo>
+				</SwitchContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

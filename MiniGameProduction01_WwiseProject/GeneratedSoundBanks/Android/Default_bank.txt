@@ -1,10 +1,27 @@
 Event	ID	Name			Wwise Object Path	Notes
+	893562230	Dialogue_event			\Default Work Unit\Dialogue_event	
 	3370210432	FailFeed_event			\Default Work Unit\FailFeed_event	
 	3651821476	WinFeed_event			\Default Work Unit\WinFeed_event	
-	4258653052	Test_event			\Default Work Unit\Test_event	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	548614456	game_stage			\Default Work Unit\game_stage	
+
+Switch	ID	Name	Switch Group			Notes
+	2607556080	menu	game_stage			
+	3630028968	phase2	game_stage			
+	3630028969	phase3	game_stage			
+	3630028971	phase1	game_stage			
+	3630028972	phase6	game_stage			
+	3630028974	phase4	game_stage			
+	3630028975	phase5	game_stage			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	9110680	DA_DIA_P6	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Android\SFX\DA_DIA_P6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\da_dia_switch\DA_DIA_P6		6988096
 	87159758	FailFeed	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Android\SFX\FailFeed_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FailFeed		724516
-	94761567	DADIU-Little Timmy2	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Android\SFX\DADIU-Little Timmy2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\DADIU-Little Timmy2		32810464
 	131794834	WinFeed	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Android\SFX\WinFeed_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\WinFeed		648888
+	502417597	DA_DIA_P5	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Android\SFX\DA_DIA_P5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\da_dia_switch\DA_DIA_P5		4204864
+	779881088	DA_DIA_P2	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Android\SFX\DA_DIA_P2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\da_dia_switch\DA_DIA_P2		2502208
+	829961090	DA_DIA_P4	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Android\SFX\DA_DIA_P4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\da_dia_switch\DA_DIA_P4		3193408
+	983276854	DA_DIA_P3	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Android\SFX\DA_DIA_P3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\da_dia_switch\DA_DIA_P3		9218368
+	1037089670	DA_DIA_P1	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Android\SFX\DA_DIA_P1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\da_dia_switch\DA_DIA_P1		2032192
 
