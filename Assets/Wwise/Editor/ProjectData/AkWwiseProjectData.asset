@@ -31,7 +31,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 207c6f81333d85408092d3a1d2f59894
     GuidInternal: 
-    m_lastTime: -8586335874214775808
+    m_lastTime: -8586335659814775808
     List:
     - name: Default_bank
       guid: 61de74b161e7ad428fb2d10e1ca0a92b
@@ -47,22 +47,38 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 5076fae0cc0c7a43a62c15588b435fee
     GuidInternal: 
-    m_lastTime: -8586335853914775808
+    m_lastTime: -8586335660394775808
     List:
-    - name: Dialogue_event
+    - name: DialogueDA_event
       guid: ed9df0f08eaa664d9902e9c7ff9f4bd3
-      id: 893562230
+      id: 2450003899
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Dialogue_event
+      - ElementName: Dialogue
+        ObjectType: 4
+      - ElementName: DialogueDA_event
         ObjectType: 3
-      Path: Default Work Unit\Dialogue_event
+      Path: Default Work Unit\Dialogue\DialogueDA_event
       maxAttenuation: 0
-      maxDuration: 104515910
+      maxDuration: 83720950
       minDuration: 23040000
+    - name: DialogueEN_event
+      guid: 27cef34cbf77124da0901c77b5b4a6e5
+      id: 1976820711
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Dialogue
+        ObjectType: 4
+      - ElementName: DialogueEN_event
+        ObjectType: 3
+      Path: Default Work Unit\Dialogue\DialogueEN_event
+      maxAttenuation: 0
+      maxDuration: 93488380
+      minDuration: 26723264
     - name: FailFeed_event
-      guid: 9f9426a990d0004d925e7d1e57c5c9a0
+      guid: c8899f95300c804bba4f6128f55f9171
       id: 3370210432
       PathAndIcons:
       - ElementName: Default Work Unit
@@ -71,32 +87,78 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\FailFeed_event
       maxAttenuation: 0
-      maxDuration: 4106871
-      minDuration: 4106871
-    - name: Test_event
+      maxDuration: 2021565
+      minDuration: 2021565
+    - name: stars_event0
+      guid: fa46e216f9f09f42a12548528f1d2dd2
+      id: 902224743
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stars
+        ObjectType: 4
+      - ElementName: stars_event0
+        ObjectType: 3
+      Path: Default Work Unit\Stars\stars_event0
+      maxAttenuation: 0
+      maxDuration: 1671247
+      minDuration: 1671247
+    - name: stars_event4
+      guid: 4a3b56180ee8254b8efc50cbd25826f5
+      id: 902224739
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stars
+        ObjectType: 4
+      - ElementName: stars_event4
+        ObjectType: 3
+      Path: Default Work Unit\Stars\stars_event4
+      maxAttenuation: 0
+      maxDuration: 1761610
+      minDuration: 1761610
+    - name: stars_event5
+      guid: 257bd5f96701a849b7ec50a1f2cdab70
+      id: 902224738
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stars
+        ObjectType: 4
+      - ElementName: stars_event5
+        ObjectType: 3
+      Path: Default Work Unit\Stars\stars_event5
+      maxAttenuation: 0
+      maxDuration: 1765283
+      minDuration: 1765283
+    - name: stars_event6
+      guid: 052fcd1285d5724cac8ea55cc83c66cf
+      id: 902224737
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stars
+        ObjectType: 4
+      - ElementName: stars_event6
+        ObjectType: 3
+      Path: Default Work Unit\Stars\stars_event6
+      maxAttenuation: 0
+      maxDuration: 1710816
+      minDuration: 1710816
+    - name: stars_event7
       guid: 8c91e56ac1c9ef49ab2930c099ce7ac0
-      id: 4258653052
+      id: 902224736
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Test_event
+      - ElementName: Stars
+        ObjectType: 4
+      - ElementName: stars_event7
         ObjectType: 3
-      Path: Default Work Unit\Test_event
+      Path: Default Work Unit\Stars\stars_event7
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: WinFeed_event
-      guid: 82fee822b565ff4bac89e9eb345a5bfb
-      id: 3651821476
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: WinFeed_event
-        ObjectType: 3
-      Path: Default Work Unit\WinFeed_event
-      maxAttenuation: 0
-      maxDuration: 3678141
-      minDuration: 3678141
+      maxDuration: 2809546
+      minDuration: 2809546
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -184,5 +246,7 @@ MonoBehaviour:
   - /MiniGameProduction01_WwiseProject
   - /MiniGameProduction01_WwiseProject/Events
   - /MiniGameProduction01_WwiseProject/Events/Default Work Unit
+  - /MiniGameProduction01_WwiseProject/Events/Default Work Unit/Dialogue
+  - /MiniGameProduction01_WwiseProject/Events/Default Work Unit/Stars
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

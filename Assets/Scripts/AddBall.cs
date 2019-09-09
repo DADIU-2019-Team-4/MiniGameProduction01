@@ -15,6 +15,8 @@ public class AddBall : MonoBehaviour
 
     public List<GameObject> Balls = new List<GameObject>();
 
+    public Vector3 LeftHandSpawn;
+    public Vector3 RightHandSpawn;
 
     private void Start()
     {
@@ -55,11 +57,11 @@ public class AddBall : MonoBehaviour
         }
         if(side == Side.Left)
         {
-            g = Instantiate(g, new Vector3(-1.6F, 4, 0), Quaternion.identity);
+            g = Instantiate(g, LeftHandSpawn, Quaternion.identity);
         }
         else if (side == Side.Right)
         {
-            g = Instantiate(g, new Vector3(+1.6F, 4, 0), Quaternion.identity);
+            g = Instantiate(g, RightHandSpawn, Quaternion.identity);
         }
 
         gc.throwableObjectList.Add(g.GetComponent<ThrowableObject>());

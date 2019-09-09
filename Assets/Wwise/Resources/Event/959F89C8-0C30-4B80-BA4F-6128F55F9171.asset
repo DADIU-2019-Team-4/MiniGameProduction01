@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b27c913a3b6762a4694a96529ff42f91, type: 3}
   m_Name: 959F89C8-0C30-4B80-BA4F-6128F55F9171
   m_EditorClassIdentifier: 
-  objectName: FailFeed_event1
-  id: 3132622257
+  objectName: FailFeed_event
+  id: 3370210432
   guid: 959F89C8-0C30-4B80-BA4F-6128F55F9171

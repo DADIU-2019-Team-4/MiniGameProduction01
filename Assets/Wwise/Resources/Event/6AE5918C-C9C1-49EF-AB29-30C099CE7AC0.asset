@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b27c913a3b6762a4694a96529ff42f91, type: 3}
   m_Name: 6AE5918C-C9C1-49EF-AB29-30C099CE7AC0
   m_EditorClassIdentifier: 
-  objectName: Test_event
-  id: 4258653052
+  objectName: stars_event7
+  id: 902224736
   guid: 6AE5918C-C9C1-49EF-AB29-30C099CE7AC0

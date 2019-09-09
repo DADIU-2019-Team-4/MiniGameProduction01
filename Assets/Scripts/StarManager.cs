@@ -30,15 +30,12 @@ public class StarManager : MonoBehaviour
         float percentage = (float)current / total;
         int starsToFill =  (int)Mathf.Floor(percentage * _totalAmountOfStars);
 
-        for (int i = 0; i < starsToFill; i++)
+		int i = 0;
+
+        for ( i=0; i< starsToFill; i++)
         {
-            if (i < _totalAmountOfStars)
-            {
-                stars[i].transform.GetChild(0).gameObject.SetActive(true);
-                // todo uncomment this for 3D models and play sound
-                //stars[i].GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
-				AkSoundEngine.PostEvent("FailFeed_event" + i, stars[i].transform.GetChild(0).gameObject);
-            }
+            
+            
 
             Debug.Log("Stars to fill: " + percentage * _totalAmountOfStars);
 
@@ -47,6 +44,25 @@ public class StarManager : MonoBehaviour
                 StartCoroutine(ResetStars(1f));
             }
         }
+
+		if (i < _totalAmountOfStars)
+        {
+				
+
+			if(i >= 3 && i<7)
+			{
+				AkSoundEngine.PostEvent("stars_event" + (i+1) , stars[i].transform.GetChild(0).gameObject);
+				stars[i].transform.GetChild(0).gameObject.SetActive(true);
+			}
+			else
+			{
+				stars[i].transform.GetChild(0).gameObject.SetActive(true);
+				// todo uncomment this for 3D models and play sound
+				//stars[i].GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
+				AkSoundEngine.PostEvent("stars_event0" , gameObject);
+			}
+
+		}
     }
 
     public IEnumerator ResetStars(float waitForReset)

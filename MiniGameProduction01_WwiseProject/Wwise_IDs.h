@@ -15,9 +15,12 @@ namespace AK
     {
         static const AkUniqueID DIALOGUEDA_EVENT = 2450003899U;
         static const AkUniqueID DIALOGUEEN_EVENT = 1976820711U;
-        static const AkUniqueID FAILFEED_EVENT0 = 3132622256U;
-        static const AkUniqueID FAILFEED_EVENT1 = 3132622257U;
-        static const AkUniqueID WINFEED_EVENT = 3651821476U;
+        static const AkUniqueID FAILFEED_EVENT = 3370210432U;
+        static const AkUniqueID STARS_EVENT0 = 902224743U;
+        static const AkUniqueID STARS_EVENT4 = 902224739U;
+        static const AkUniqueID STARS_EVENT5 = 902224738U;
+        static const AkUniqueID STARS_EVENT6 = 902224737U;
+        static const AkUniqueID STARS_EVENT7 = 902224736U;
     } // namespace EVENTS
 
     namespace SWITCHES

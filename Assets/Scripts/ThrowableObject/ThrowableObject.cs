@@ -16,6 +16,9 @@ public class ThrowableObject : MonoBehaviour
     [HideInInspector]
     public bool isWaiting;
 
+    public Vector3 RightHandHold;
+    public Vector3 LeftHandHold;
+
     public enum Type
     {
         Ball,
@@ -43,7 +46,7 @@ public class ThrowableObject : MonoBehaviour
             isRightHand = true;
             gc.QueueRightHand(this);
             Debug.Log("Ball Caught," + this.gameObject.GetInstanceID() + "Size = " + gc.rightHandObjects.Count);
-            rb.position = new Vector3(-1.46F, 0, 0);
+            rb.position = RightHandHold;
             rb.useGravity = false;
   
         }
@@ -52,7 +55,7 @@ public class ThrowableObject : MonoBehaviour
             isLeftHand = true;
             gc.QueueLeftHand(this);
             Debug.Log("Ball Caught," + this.gameObject.GetInstanceID() + "Size = " + gc.leftHandObjects.Count);
-            rb.position = new Vector3(1.46F, 0, 0);
+            rb.position = LeftHandHold;
             rb.useGravity = false;
 
         }
