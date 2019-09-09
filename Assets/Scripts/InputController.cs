@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class InputController : MonoBehaviour
 {
@@ -22,14 +23,18 @@ public class InputController : MonoBehaviour
     private bool _hasSwipedRight;
 
     [SerializeField]
-    private float _stopTimerValue = 0.2f;
+    private float _coyoteTime = 0.2f;
 
-    //[SerializeField]
-    //private bool _isFountain;
+    //Disable control variables
+    private bool disableControls = false;
+    private float disableControlsTimer = 0; //timer for counting how long the controls have been turned off
+    private static float disableControlsTime = 3f; //how long should the controls be turned off
+
 
     private GameControl gc;
 
     private FountainGameController _fountainGameController;
+    public UnityEvent ThrowEvent;
 
 
     // Start is called before the first frame update
@@ -54,7 +59,7 @@ public class InputController : MonoBehaviour
         {
             //ThrowLeft();
             _swipeTimerLeft += Time.deltaTime;
-            if (_swipeTimerLeft > _stopTimerValue)
+            if (_swipeTimerLeft > _coyoteTime)
                 _hasSwipedLeft = false;
         }
 
@@ -62,8 +67,20 @@ public class InputController : MonoBehaviour
         {
             //ThrowRight();
             _swipeTimerRight += Time.deltaTime;
-            if (_swipeTimerRight > _stopTimerValue)
+            if (_swipeTimerRight > _coyoteTime)
                 _hasSwipedRight = false;
+        }
+
+        if (disableControls)
+        {
+            if (disableControlsTimer > disableControlsTime)
+            {
+                disableControls = false;
+            }
+            else
+            {
+                disableControlsTimer += Time.deltaTime;
+            }
         }
 
 #if UNITY_EDITOR || UNITY_STANDALONE
@@ -100,9 +117,9 @@ public class InputController : MonoBehaviour
             // update the last position based on where it moved
             else if (touch.phase == TouchPhase.Moved)
             {
+                // last touch position
                 _lastTouchPos = touch.position;
             }
-            // check if the finger is removed from the screen
             else if (touch.phase == TouchPhase.Ended)
             {
                 // last touch position
@@ -143,13 +160,14 @@ public class InputController : MonoBehaviour
     {
         ThrowableObject to = null;
 
-        if (gc.rightHandObjects.Count > 0)
+        if (gc.rightHandObjects.Count > 0 )
         {
             to = gc.rightHandObjects.Dequeue();
             to.throwLeft();
-
+            gc.stackingIsAllowed = false;
 
             Debug.Log(to.gameObject.GetInstanceID() + "Size = " + gc.rightHandObjects.Count);
+            ThrowEvent.Invoke();
         }
 
     }
@@ -158,13 +176,20 @@ public class InputController : MonoBehaviour
     {
         ThrowableObject to = null;
 
-        if (gc.leftHandObjects.Count > 0)
+        if (gc.leftHandObjects.Count > 0 )
         {
             to = gc.leftHandObjects.Dequeue();
             to.throwRight();
-
+            gc.stackingIsAllowed = false;
 
             Debug.Log(to.gameObject.GetInstanceID() + "Size = " + gc.leftHandObjects.Count);
+            ThrowEvent.Invoke();
         }
+    }
+
+    public void DisableControls()
+    {
+        disableControls = true;
+        disableControlsTimer = 0;
     }
 }

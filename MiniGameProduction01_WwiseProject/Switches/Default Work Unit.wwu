@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{72FA4C1F-4F84-40E2-BF3A-F8BF99444437}" SchemaVersion="94">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{72FA4C1F-4F84-40E2-BF3A-F8BF99444437}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{72FA4C1F-4F84-40E2-BF3A-F8BF99444437}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="game_stage" ID="{C794BBEB-141D-4A22-B91D-34EBD3F8731F}">
+					<ChildrenList>
+						<Switch Name="menu" ID="{F1CC0C0D-AEA2-4119-A2FC-63EEB8577F84}"/>
+						<Switch Name="phase1" ID="{8EE4EAF4-D03F-433A-BE91-BED4866CC46C}"/>
+						<Switch Name="phase2" ID="{9F243609-51A0-4B43-ABA7-1BE03F1AF101}"/>
+						<Switch Name="phase3" ID="{E50E0820-84F8-4DDB-A6DC-14BED02DF51B}"/>
+						<Switch Name="phase4" ID="{334A1765-05B4-42B5-8E16-6C2F60DAFF34}"/>
+						<Switch Name="phase5" ID="{7DEE1018-7D21-4770-A17F-147C5FCBD469}"/>
+						<Switch Name="phase6" ID="{BA107603-1752-4647-AC7D-188A5C85DCB2}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>

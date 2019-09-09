@@ -37,7 +37,7 @@ public class EndGame : MonoBehaviour
         _paperBall.SetActive(true);
         yield return new WaitForSeconds(_timeUntilEnd);
         _menuManager.OpenMenu();
-        yield return new WaitForSeconds(_timeUntilEnd);
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(0);
     }
 }

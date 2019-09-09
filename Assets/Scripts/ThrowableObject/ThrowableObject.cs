@@ -16,6 +16,9 @@ public class ThrowableObject : MonoBehaviour
     [HideInInspector]
     public bool isWaiting;
 
+    public Vector3 RightHandHold;
+    public Vector3 LeftHandHold;
+
     public enum Type
     {
         Ball,
@@ -41,18 +44,20 @@ public class ThrowableObject : MonoBehaviour
         if (collider.tag == "RightHand")
         {
             isRightHand = true;
-            gc.rightHandObjects.Enqueue(this);
+            gc.QueueRightHand(this);
             Debug.Log("Ball Caught," + this.gameObject.GetInstanceID() + "Size = " + gc.rightHandObjects.Count);
-            rb.position = new Vector3(-1.46F, 0, 0);
+            rb.position = RightHandHold;
             rb.useGravity = false;
+  
         }
         else if (collider.tag == "LeftHand")
         {
             isLeftHand = true;
-            gc.leftHandObjects.Enqueue(this);
+            gc.QueueLeftHand(this);
             Debug.Log("Ball Caught," + this.gameObject.GetInstanceID() + "Size = " + gc.leftHandObjects.Count);
-            rb.position = new Vector3(1.46F, 0, 0);
+            rb.position = LeftHandHold;
             rb.useGravity = false;
+
         }
         else
         {
@@ -62,12 +67,22 @@ public class ThrowableObject : MonoBehaviour
         rb.velocity = new Vector3(0, 0, 0);
     }
 
+    private void PlaySFXCaughtItem()
+    {
+        string meshname = GetComponent<MeshFilter>().mesh.name;
+        meshname = meshname.Substring(0, meshname.Length - " Instance".Length);
+        //AkSoundEngine.PostEvent("caught_" + meshname, null);
+        Debug.Log("caught_" + meshname);
+    }
+
+
     private void OnTriggerExit(Collider collider)
     {
         if (collider.tag == "RightHand" || collider.tag == "LeftHand")
         {
             isRightHand = false;
             isLeftHand = false;
+            rb.useGravity = true;
         }
            
     }
@@ -93,17 +108,18 @@ public class ThrowableObject : MonoBehaviour
     {
         if (isRightHand)
         {
-            
+
             if (gc.getCurrentLevel() == 1) //on level 1 just throw upwards
             {
-                applyForce(new Vector3(0, 0.8F, 0));
+                //applyForce(new Vector3(0, 0.8F, 0));
             }
             else
             {
                 //applyForce(new Vector3(0.35F, 0.6F, 0));           
-                StartCoroutine(JuggleLeft());
+
             }
 
+            StartCoroutine(JuggleLeft());
             rb.useGravity = true;
             isRightHand = false;
 
@@ -117,15 +133,14 @@ public class ThrowableObject : MonoBehaviour
         }
     }
 
-
+    /// <summary>
+    /// Setting up animator settings for juggling with the right hand
+    /// </summary>
     private IEnumerator JuggleRight()
     {
-        /// <summary>
-        /// Setting up animator settings for juggling with the right hand
-        /// </summary>
-
-
         Debug.Log("Animating");
+
+        gc.currentLevelThrowCount++;
 
         _animator.enabled = true;
         _animator.SetBool("isInLeftHand", false);
@@ -140,16 +155,14 @@ public class ThrowableObject : MonoBehaviour
         _animator.enabled = false;
 
         Debug.Log("Done");
-        gc.currentThrowCount++;
     }
 
-
+    /// <summary>
+    /// Setting up animator settings for juggling with the left hand
+    /// </summary>
     private IEnumerator JuggleLeft()
     {
-        /// <summary>
-        /// Setting up animator settings for juggling with the left hand
-        /// </summary>
-
+        gc.currentLevelThrowCount++;
 
         _animator.enabled = true;
         _animator.SetBool("isInLeftHand", true);
@@ -162,8 +175,6 @@ public class ThrowableObject : MonoBehaviour
         _animator.SetBool("isInRightHand", true);
         _animator.SetBool("swipedLeftSide", false);
         _animator.enabled = false;
-
-        gc.currentThrowCount++;
     }
 
     public void applyForce(Vector3 dir)
@@ -171,18 +182,6 @@ public class ThrowableObject : MonoBehaviour
         Debug.Log("Tap!");
         rb.velocity = new Vector3(0, 0, 0);
         rb.AddForce(dir * thrust);
-        gc.currentThrowCount++;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        gc.currentLevelThrowCount++;
     }
 }
