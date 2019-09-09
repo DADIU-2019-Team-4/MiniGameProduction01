@@ -130,15 +130,14 @@ public class ThrowableObject : MonoBehaviour
         }
     }
 
-
+    /// <summary>
+    /// Setting up animator settings for juggling with the right hand
+    /// </summary>
     private IEnumerator JuggleRight()
     {
-        /// <summary>
-        /// Setting up animator settings for juggling with the right hand
-        /// </summary>
-
-
         Debug.Log("Animating");
+
+        gc.currentLevelThrowCount++;
 
         _animator.enabled = true;
         _animator.SetBool("isInLeftHand", false);
@@ -153,16 +152,14 @@ public class ThrowableObject : MonoBehaviour
         _animator.enabled = false;
 
         Debug.Log("Done");
-        gc.currentLevelThrowCount++;
     }
 
-
+    /// <summary>
+    /// Setting up animator settings for juggling with the left hand
+    /// </summary>
     private IEnumerator JuggleLeft()
     {
-        /// <summary>
-        /// Setting up animator settings for juggling with the left hand
-        /// </summary>
-
+        gc.currentLevelThrowCount++;
 
         _animator.enabled = true;
         _animator.SetBool("isInLeftHand", true);
@@ -175,8 +172,6 @@ public class ThrowableObject : MonoBehaviour
         _animator.SetBool("isInRightHand", true);
         _animator.SetBool("swipedLeftSide", false);
         _animator.enabled = false;
-
-        gc.currentLevelThrowCount++;
     }
 
     public void applyForce(Vector3 dir)
@@ -185,17 +180,5 @@ public class ThrowableObject : MonoBehaviour
         rb.velocity = new Vector3(0, 0, 0);
         rb.AddForce(dir * thrust);
         gc.currentLevelThrowCount++;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

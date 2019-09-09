@@ -110,40 +110,40 @@ public class GameControl : MonoBehaviour
         // to test preloading scenes
         ToNextScene();
 
-        if (currentLevelThrowCount > toLevel2Count && currentLevel == 1)
+        if (currentLevelThrowCount >= toLevel2Count && currentLevel == 1)
         {
             StartLevel(2);
             AkSoundEngine.SetSwitch("game_stage", "phase1", gameObject);
 			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
         }
-        if (currentLevelThrowCount > toLevel3Count && currentLevel == 2)
+        if (currentLevelThrowCount >= toLevel3Count && currentLevel == 2)
         {
             StartLevel(3);
             AkSoundEngine.SetSwitch("game_stage", "phase2", gameObject);
 			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
         }
-        if (currentLevelThrowCount > toLevel4Count && currentLevel == 3)
+        if (currentLevelThrowCount >= toLevel4Count && currentLevel == 3)
         {
             StartLevel(4);
             AkSoundEngine.SetSwitch("game_stage", "phase3", gameObject);
 			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
         }
 
-        if (currentLevelThrowCount > toLevel5Count && currentLevel == 4)
+        if (currentLevelThrowCount >= toLevel5Count && currentLevel == 4)
         {
             StartLevel(5);
             AkSoundEngine.SetSwitch("game_stage", "phase4", gameObject);
 			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
         }
 
-        if (currentLevelThrowCount > toLevel6Count && currentLevel == 5)
+        if (currentLevelThrowCount >= toLevel6Count && currentLevel == 5)
         {
             StartLevel(6);
             AkSoundEngine.SetSwitch("game_stage", "phase5", gameObject);
             AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
         }
 
-        if (currentLevelThrowCount > toLevel7Count && currentLevel == 6)
+        if (currentLevelThrowCount >= toLevel7Count && currentLevel == 6)
         {
             StartLevel(7);
             AkSoundEngine.SetSwitch("game_stage", "phase6", gameObject);
