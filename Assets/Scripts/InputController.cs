@@ -26,6 +26,9 @@ public class InputController : MonoBehaviour
     private bool _hasSwipedLeft;
     private bool _hasSwipedRight;
 
+    private bool _madeSwipe1;
+    private bool _madeSwipe2;
+
     [SerializeField]
     private float _coyoteTime = 0.2f;
 
@@ -135,9 +138,7 @@ public class InputController : MonoBehaviour
         {
             // last touch position
             _lastTouchPos1 = touch.position;
-        }
-        else if (touch.phase == TouchPhase.Ended)
-        {
+
             // difference vector
             var differenceVec = _lastTouchPos1 - _firstTouchPos1;
 
@@ -151,12 +152,15 @@ public class InputController : MonoBehaviour
             // check if we have swiped up
             if (!(_lastTouchPos1.y > _firstTouchPos1.y)) return;
 
+            if (_madeSwipe1) return;
+
             // swiped on left side of the screen
             if (_lastTouchPos1.x < width / 2)
             {
                 ThrowLeft();
                 _swipeTimerLeft = 0;
                 _hasSwipedLeft = true;
+                _madeSwipe1 = true;
             }
             // swiped on right side of the screen
             else
@@ -164,7 +168,12 @@ public class InputController : MonoBehaviour
                 ThrowRight();
                 _swipeTimerRight = 0;
                 _hasSwipedRight = true;
+                _madeSwipe1 = true;
             }
+        }
+        else if (touch.phase == TouchPhase.Ended)
+        {
+            _madeSwipe1 = false;
         }
     }
 
@@ -183,9 +192,7 @@ public class InputController : MonoBehaviour
         {
             // last touch position
             _lastTouchPos2 = touch.position;
-        }
-        else if (touch.phase == TouchPhase.Ended)
-        {
+
             // difference vector
             var differenceVec = _lastTouchPos2 - _firstTouchPos2;
 
@@ -199,12 +206,15 @@ public class InputController : MonoBehaviour
             // check if we have swiped up
             if (!(_lastTouchPos2.y > _firstTouchPos2.y)) return;
 
+            if (_madeSwipe2) return;
+
             // swiped on left side of the screen
             if (_lastTouchPos2.x < width / 2)
             {
                 ThrowLeft();
                 _swipeTimerLeft = 0;
                 _hasSwipedLeft = true;
+                _madeSwipe2 = true;
             }
             // swiped on right side of the screen
             else
@@ -212,7 +222,12 @@ public class InputController : MonoBehaviour
                 ThrowRight();
                 _swipeTimerRight = 0;
                 _hasSwipedRight = true;
+                _madeSwipe2 = true;
             }
+        }
+        else if (touch.phase == TouchPhase.Ended)
+        {
+            _madeSwipe2 = false;
         }
     }
 
