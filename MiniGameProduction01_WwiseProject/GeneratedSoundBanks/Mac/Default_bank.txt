@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
-	893562230	Dialogue_event			\Default Work Unit\Dialogue_event	
+	1976820711	DialogueEN_event			\Default Work Unit\DialogueEN_event	
+	2450003899	DialogueDA_event			\Default Work Unit\DialogueDA_event	
 	3370210432	FailFeed_event			\Default Work Unit\FailFeed_event	
 	3651821476	WinFeed_event			\Default Work Unit\WinFeed_event	
 
@@ -16,12 +17,18 @@ Switch	ID	Name	Switch Group			Notes
 	3630028975	phase5	game_stage			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	9110680	DA_DIA_P6	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Mac\SFX\DA_DIA_P6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\da_dia_switch\DA_DIA_P6		6988096
 	87159758	FailFeed	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Mac\SFX\FailFeed_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FailFeed		724516
 	131794834	WinFeed	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Mac\SFX\WinFeed_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\WinFeed		648888
-	502417597	DA_DIA_P5	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Mac\SFX\DA_DIA_P5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\da_dia_switch\DA_DIA_P5		4204864
-	779881088	DA_DIA_P2	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Mac\SFX\DA_DIA_P2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\da_dia_switch\DA_DIA_P2		2502208
-	829961090	DA_DIA_P4	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Mac\SFX\DA_DIA_P4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\da_dia_switch\DA_DIA_P4		3193408
-	983276854	DA_DIA_P3	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Mac\SFX\DA_DIA_P3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\da_dia_switch\DA_DIA_P3		9218368
-	1037089670	DA_DIA_P1	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Mac\SFX\DA_DIA_P1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\da_dia_switch\DA_DIA_P1		2032192
+	295969561	EN_DIA_P2-edit	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Mac\SFX\EN_DIA_P2-edit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\en_dia_switch\EN_DIA_P2-edit		5927926
+	422535274	DA_DIA_P1	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Mac\SFX\DA_DIA_P1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\da_dia_switch\DA_DIA_P1		2032192
+	609625544	DA_DIA_P3-edit	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Mac\SFX\DA_DIA_P3-edit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\da_dia_switch\DA_DIA_P3-edit		6819734
+	759778719	DA_DIA_P4-edit	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Mac\SFX\DA_DIA_P4-edit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\da_dia_switch\DA_DIA_P4-edit		3363862
+	807246711	EN_DIA_P6-edit	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Mac\SFX\EN_DIA_P6-edit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\en_dia_switch\EN_DIA_P6-edit		7384252
+	840184733	DA_DIA_P6-edit	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Mac\SFX\DA_DIA_P6-edit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\da_dia_switch\DA_DIA_P6-edit		7384252
+	845272853	EN_DIA_P4-edit	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Mac\SFX\EN_DIA_P4-edit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\en_dia_switch\EN_DIA_P4-edit		3151042
+	855172982	EN_DIA_P1-edit	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Mac\SFX\EN_DIA_P1-edit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\en_dia_switch\EN_DIA_P1-edit		2357056
+	876716406	DA_DIA_P2-edit	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Mac\SFX\DA_DIA_P2-edit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\da_dia_switch\DA_DIA_P2-edit		5630502
+	939687044	EN_DIA_P3-edit	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Mac\SFX\EN_DIA_P3-edit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\en_dia_switch\EN_DIA_P3-edit		8245740
+	975427891	EN_DIA_P5-edit	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Mac\SFX\EN_DIA_P5-edit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\en_dia_switch\EN_DIA_P5-edit		4704356
+	1007295197	DA_DIA_P5-edit	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Mac\SFX\DA_DIA_P5-edit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\da_dia_switch\DA_DIA_P5-edit		4423114
 

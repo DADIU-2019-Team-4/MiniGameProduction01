@@ -60,16 +60,6 @@
 						<ActiveSource Name="FailFeed" ID="{56175757-45BF-4952-9173-BCF7D257BC67}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<ActorMixer Name="DA_Dialogue" ID="{04227A41-58C3-430F-ACA9-5B2D0257AAAE}" ShortID="936117691">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85E0ED26-8EBA-4DDD-84A1-E48E2CE905F3}"/>
-						</Reference>
-					</ReferenceList>
-				</ActorMixer>
 				<SwitchContainer Name="da_dia_switch" ID="{A36786C4-D558-48D5-8101-BA43BF60FC7E}" ShortID="344877322">
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -86,7 +76,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="DA_DIA_P1" ID="{5D854D47-0872-4FAE-88DE-E05BD0619688}" ShortID="829932500">
+						<Sound Name="DA_DIA_P2-edit" ID="{3D73AE26-2A1C-4701-8E04-F06B35187048}" ShortID="264644674">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
@@ -96,167 +86,359 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="DA_DIA_P1" ID="{5D816144-5CE1-4F22-AE99-54C6EEA19454}" ShortID="1037089670">
+								<AudioFileSource Name="DA_DIA_P2-edit" ID="{B13C7FC3-0C65-4A23-B945-7DB1EE129890}" ShortID="876716406">
+									<Language>SFX</Language>
+									<AudioFile>DA_DIA_P2-edit.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="DA_DIA_P2-edit" ID="{B13C7FC3-0C65-4A23-B945-7DB1EE129890}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="DA_DIA_P3-edit" ID="{BAB81C81-974D-4824-BF84-C0B2C8F03DBC}" ShortID="493828688">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85E0ED26-8EBA-4DDD-84A1-E48E2CE905F3}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="DA_DIA_P3-edit" ID="{3C00F4AF-4E30-4E9A-9F2E-A7D9A9799753}" ShortID="609625544">
+									<Language>SFX</Language>
+									<AudioFile>DA_DIA_P3-edit.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="DA_DIA_P3-edit" ID="{3C00F4AF-4E30-4E9A-9F2E-A7D9A9799753}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="DA_DIA_P4-edit" ID="{4D5A0550-B2C5-4379-8F12-E4CC1E2E39C0}" ShortID="615652044">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85E0ED26-8EBA-4DDD-84A1-E48E2CE905F3}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="DA_DIA_P4-edit" ID="{201A7632-B336-4A48-A56B-A67D6C9E47EF}" ShortID="759778719">
+									<Language>SFX</Language>
+									<AudioFile>DA_DIA_P4-edit.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="DA_DIA_P4-edit" ID="{201A7632-B336-4A48-A56B-A67D6C9E47EF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="DA_DIA_P5-edit" ID="{442BC11D-52A9-47BA-9FC2-17CBE4D3FF93}" ShortID="606902554">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85E0ED26-8EBA-4DDD-84A1-E48E2CE905F3}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="DA_DIA_P5-edit" ID="{C0DAFA2B-AF17-4019-BD3B-144103B233C9}" ShortID="1007295197">
+									<Language>SFX</Language>
+									<AudioFile>DA_DIA_P5-edit.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="DA_DIA_P5-edit" ID="{C0DAFA2B-AF17-4019-BD3B-144103B233C9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="DA_DIA_P6-edit" ID="{2E63CBA6-569A-4C0D-B323-D7DFA37F6758}" ShortID="248619411">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85E0ED26-8EBA-4DDD-84A1-E48E2CE905F3}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="DA_DIA_P6-edit" ID="{2B8BFB23-A4A2-4FD4-B051-674DE78E2E4A}" ShortID="840184733">
+									<Language>SFX</Language>
+									<AudioFile>DA_DIA_P6-edit.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="DA_DIA_P6-edit" ID="{2B8BFB23-A4A2-4FD4-B051-674DE78E2E4A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="DA_DIA_P1" ID="{E19C6C63-88D6-436A-8BFB-7252706FAEC8}" ShortID="617547361">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85E0ED26-8EBA-4DDD-84A1-E48E2CE905F3}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="DA_DIA_P1" ID="{469B3387-AAEC-4877-90AC-A21249185F3D}" ShortID="422535274">
 									<Language>SFX</Language>
 									<AudioFile>DA_DIA_P1.wav</AudioFile>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="DA_DIA_P1" ID="{5D816144-5CE1-4F22-AE99-54C6EEA19454}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="DA_DIA_P2" ID="{5793E883-96F8-4A18-9B5B-4DCEC04BF5EB}" ShortID="610983090">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85E0ED26-8EBA-4DDD-84A1-E48E2CE905F3}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="DA_DIA_P2" ID="{D77E18A8-588B-46A7-9F9D-85E06659F03F}" ShortID="779881088">
-									<Language>SFX</Language>
-									<AudioFile>DA_DIA_P2.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="DA_DIA_P2" ID="{D77E18A8-588B-46A7-9F9D-85E06659F03F}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="DA_DIA_P3" ID="{DE7C407A-C2AD-46AA-AD04-3DF9E0561E5D}" ShortID="306758142">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85E0ED26-8EBA-4DDD-84A1-E48E2CE905F3}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="DA_DIA_P3" ID="{BB736BE2-3A34-4F75-B3D7-4B5B8C19AFD5}" ShortID="983276854">
-									<Language>SFX</Language>
-									<AudioFile>DA_DIA_P3.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="DA_DIA_P3" ID="{BB736BE2-3A34-4F75-B3D7-4B5B8C19AFD5}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="DA_DIA_P4" ID="{B848EAB7-FA55-4ED4-A877-61E38FF5AA42}" ShortID="685065505">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85E0ED26-8EBA-4DDD-84A1-E48E2CE905F3}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="DA_DIA_P4" ID="{DA152B83-9C1B-4C1E-8497-B84CCBCAC210}" ShortID="829961090">
-									<Language>SFX</Language>
-									<AudioFile>DA_DIA_P4.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="DA_DIA_P4" ID="{DA152B83-9C1B-4C1E-8497-B84CCBCAC210}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="DA_DIA_P5" ID="{3CCA8027-4C49-4CE5-8226-2B2248433FAA}" ShortID="77512312">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85E0ED26-8EBA-4DDD-84A1-E48E2CE905F3}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="DA_DIA_P5" ID="{DE1F413A-B2DD-4257-8B1C-5DF4C68E5BB7}" ShortID="502417597">
-									<Language>SFX</Language>
-									<AudioFile>DA_DIA_P5.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="DA_DIA_P5" ID="{DE1F413A-B2DD-4257-8B1C-5DF4C68E5BB7}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="DA_DIA_P6" ID="{D28F4FAF-6104-41AE-B3C6-8F135F828C83}" ShortID="707443533">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85E0ED26-8EBA-4DDD-84A1-E48E2CE905F3}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="DA_DIA_P6" ID="{4B2AE148-82FF-4C52-B199-A6860E843C01}" ShortID="9110680">
-									<Language>SFX</Language>
-									<AudioFile>DA_DIA_P6.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="DA_DIA_P6" ID="{4B2AE148-82FF-4C52-B199-A6860E843C01}" Platform="Linked"/>
+								<ActiveSource Name="DA_DIA_P1" ID="{469B3387-AAEC-4877-90AC-A21249185F3D}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
 					<GroupingInfo>
 						<GroupingBehaviorList>
 							<GroupingBehavior>
-								<ItemRef Name="DA_DIA_P5" ID="{3CCA8027-4C49-4CE5-8226-2B2248433FAA}"/>
+								<ItemRef Name="DA_DIA_P5-edit" ID="{442BC11D-52A9-47BA-9FC2-17CBE4D3FF93}"/>
 							</GroupingBehavior>
 							<GroupingBehavior>
-								<ItemRef Name="DA_DIA_P1" ID="{5D854D47-0872-4FAE-88DE-E05BD0619688}"/>
+								<ItemRef Name="DA_DIA_P2-edit" ID="{3D73AE26-2A1C-4701-8E04-F06B35187048}"/>
 							</GroupingBehavior>
 							<GroupingBehavior>
-								<ItemRef Name="DA_DIA_P3" ID="{DE7C407A-C2AD-46AA-AD04-3DF9E0561E5D}"/>
+								<ItemRef Name="DA_DIA_P4-edit" ID="{4D5A0550-B2C5-4379-8F12-E4CC1E2E39C0}"/>
 							</GroupingBehavior>
 							<GroupingBehavior>
-								<ItemRef Name="DA_DIA_P2" ID="{5793E883-96F8-4A18-9B5B-4DCEC04BF5EB}"/>
+								<ItemRef Name="DA_DIA_P1" ID="{E19C6C63-88D6-436A-8BFB-7252706FAEC8}"/>
 							</GroupingBehavior>
 							<GroupingBehavior>
-								<ItemRef Name="DA_DIA_P6" ID="{D28F4FAF-6104-41AE-B3C6-8F135F828C83}"/>
+								<ItemRef Name="DA_DIA_P3-edit" ID="{BAB81C81-974D-4824-BF84-C0B2C8F03DBC}"/>
 							</GroupingBehavior>
 							<GroupingBehavior>
-								<ItemRef Name="DA_DIA_P4" ID="{B848EAB7-FA55-4ED4-A877-61E38FF5AA42}"/>
+								<ItemRef Name="DA_DIA_P6-edit" ID="{2E63CBA6-569A-4C0D-B323-D7DFA37F6758}"/>
 							</GroupingBehavior>
 						</GroupingBehaviorList>
 						<GroupingList>
 							<Grouping>
 								<SwitchRef Name="phase6" ID="{BA107603-1752-4647-AC7D-188A5C85DCB2}"/>
 								<ItemList>
-									<ItemRef Name="DA_DIA_P6" ID="{D28F4FAF-6104-41AE-B3C6-8F135F828C83}"/>
+									<ItemRef Name="DA_DIA_P6-edit" ID="{2E63CBA6-569A-4C0D-B323-D7DFA37F6758}"/>
 								</ItemList>
 							</Grouping>
 							<Grouping>
 								<SwitchRef Name="phase2" ID="{9F243609-51A0-4B43-ABA7-1BE03F1AF101}"/>
 								<ItemList>
-									<ItemRef Name="DA_DIA_P2" ID="{5793E883-96F8-4A18-9B5B-4DCEC04BF5EB}"/>
+									<ItemRef Name="DA_DIA_P2-edit" ID="{3D73AE26-2A1C-4701-8E04-F06B35187048}"/>
 								</ItemList>
 							</Grouping>
 							<Grouping>
 								<SwitchRef Name="phase5" ID="{7DEE1018-7D21-4770-A17F-147C5FCBD469}"/>
 								<ItemList>
-									<ItemRef Name="DA_DIA_P5" ID="{3CCA8027-4C49-4CE5-8226-2B2248433FAA}"/>
+									<ItemRef Name="DA_DIA_P5-edit" ID="{442BC11D-52A9-47BA-9FC2-17CBE4D3FF93}"/>
 								</ItemList>
 							</Grouping>
 							<Grouping>
 								<SwitchRef Name="phase3" ID="{E50E0820-84F8-4DDB-A6DC-14BED02DF51B}"/>
 								<ItemList>
-									<ItemRef Name="DA_DIA_P3" ID="{DE7C407A-C2AD-46AA-AD04-3DF9E0561E5D}"/>
+									<ItemRef Name="DA_DIA_P3-edit" ID="{BAB81C81-974D-4824-BF84-C0B2C8F03DBC}"/>
 								</ItemList>
 							</Grouping>
 							<Grouping>
 								<SwitchRef Name="phase4" ID="{334A1765-05B4-42B5-8E16-6C2F60DAFF34}"/>
 								<ItemList>
-									<ItemRef Name="DA_DIA_P4" ID="{B848EAB7-FA55-4ED4-A877-61E38FF5AA42}"/>
+									<ItemRef Name="DA_DIA_P4-edit" ID="{4D5A0550-B2C5-4379-8F12-E4CC1E2E39C0}"/>
 								</ItemList>
 							</Grouping>
 							<Grouping>
 								<SwitchRef Name="phase1" ID="{8EE4EAF4-D03F-433A-BE91-BED4866CC46C}"/>
 								<ItemList>
-									<ItemRef Name="DA_DIA_P1" ID="{5D854D47-0872-4FAE-88DE-E05BD0619688}"/>
+									<ItemRef Name="DA_DIA_P1" ID="{E19C6C63-88D6-436A-8BFB-7252706FAEC8}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
+					</GroupingInfo>
+				</SwitchContainer>
+				<SwitchContainer Name="en_dia_switch" ID="{9DF05E67-C57E-4F14-B7CD-FDB52A38B0B9}" ShortID="258496853">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
+						</Reference>
+						<Reference Name="DefaultSwitchOrState">
+							<ObjectRef Name="menu" ID="{F1CC0C0D-AEA2-4119-A2FC-63EEB8577F84}" WorkUnitID="{72FA4C1F-4F84-40E2-BF3A-F8BF99444437}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85E0ED26-8EBA-4DDD-84A1-E48E2CE905F3}"/>
+						</Reference>
+						<Reference Name="SwitchGroupOrStateGroup">
+							<ObjectRef Name="game_stage" ID="{C794BBEB-141D-4A22-B91D-34EBD3F8731F}" WorkUnitID="{72FA4C1F-4F84-40E2-BF3A-F8BF99444437}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="EN_DIA_P2-edit" ID="{5079D964-1B1A-492C-8A69-DA02CE01F8F5}" ShortID="983190959">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85E0ED26-8EBA-4DDD-84A1-E48E2CE905F3}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="EN_DIA_P2-edit" ID="{F5FA399E-6AF3-472D-87F7-177ED41C7E77}" ShortID="295969561">
+									<Language>SFX</Language>
+									<AudioFile>EN_DIA_P2-edit.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="EN_DIA_P2-edit" ID="{F5FA399E-6AF3-472D-87F7-177ED41C7E77}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="EN_DIA_P3-edit" ID="{51DC224C-D755-4AEC-8C8E-6A025B0A07FE}" ShortID="437010252">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85E0ED26-8EBA-4DDD-84A1-E48E2CE905F3}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="EN_DIA_P3-edit" ID="{A81E9B13-FF46-4C7C-94BC-798B75085DF4}" ShortID="939687044">
+									<Language>SFX</Language>
+									<AudioFile>EN_DIA_P3-edit.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="EN_DIA_P3-edit" ID="{A81E9B13-FF46-4C7C-94BC-798B75085DF4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="EN_DIA_P4-edit" ID="{6FD58B0D-3BC7-41D9-ABBD-E12AAC87635B}" ShortID="11832217">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85E0ED26-8EBA-4DDD-84A1-E48E2CE905F3}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="EN_DIA_P4-edit" ID="{B56F2D72-8B2A-4351-831F-A2EEBD3BCE6D}" ShortID="845272853">
+									<Language>SFX</Language>
+									<AudioFile>EN_DIA_P4-edit.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="EN_DIA_P4-edit" ID="{B56F2D72-8B2A-4351-831F-A2EEBD3BCE6D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="EN_DIA_P5-edit" ID="{D45DF9F6-7615-441A-9F4E-CCD45DDECBE4}" ShortID="182881399">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85E0ED26-8EBA-4DDD-84A1-E48E2CE905F3}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="EN_DIA_P5-edit" ID="{78D27FFD-9411-4A08-AAF9-C57BC220AC8F}" ShortID="975427891">
+									<Language>SFX</Language>
+									<AudioFile>EN_DIA_P5-edit.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="EN_DIA_P5-edit" ID="{78D27FFD-9411-4A08-AAF9-C57BC220AC8F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="EN_DIA_P6-edit" ID="{ADECE3AB-ABC2-4A0A-B4D2-0924B8F7A6B1}" ShortID="855066182">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85E0ED26-8EBA-4DDD-84A1-E48E2CE905F3}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="EN_DIA_P6-edit" ID="{304AB83A-EFB3-4B59-960C-DAB2456B4057}" ShortID="807246711">
+									<Language>SFX</Language>
+									<AudioFile>EN_DIA_P6-edit.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="EN_DIA_P6-edit" ID="{304AB83A-EFB3-4B59-960C-DAB2456B4057}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="EN_DIA_P1-edit" ID="{DEA5E669-EA9E-45CC-A97C-2A5F330E75D5}" ShortID="843608439">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85E0ED26-8EBA-4DDD-84A1-E48E2CE905F3}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="EN_DIA_P1-edit" ID="{3C2971CE-14CD-4016-8758-F98DD2E64DE7}" ShortID="855172982">
+									<Language>SFX</Language>
+									<AudioFile>EN_DIA_P1-edit.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="EN_DIA_P1-edit" ID="{3C2971CE-14CD-4016-8758-F98DD2E64DE7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<GroupingInfo>
+						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="EN_DIA_P4-edit" ID="{6FD58B0D-3BC7-41D9-ABBD-E12AAC87635B}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="EN_DIA_P3-edit" ID="{51DC224C-D755-4AEC-8C8E-6A025B0A07FE}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="EN_DIA_P2-edit" ID="{5079D964-1B1A-492C-8A69-DA02CE01F8F5}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="EN_DIA_P1-edit" ID="{DEA5E669-EA9E-45CC-A97C-2A5F330E75D5}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="EN_DIA_P6-edit" ID="{ADECE3AB-ABC2-4A0A-B4D2-0924B8F7A6B1}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="EN_DIA_P5-edit" ID="{D45DF9F6-7615-441A-9F4E-CCD45DDECBE4}"/>
+							</GroupingBehavior>
+						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="phase6" ID="{BA107603-1752-4647-AC7D-188A5C85DCB2}"/>
+								<ItemList>
+									<ItemRef Name="EN_DIA_P6-edit" ID="{ADECE3AB-ABC2-4A0A-B4D2-0924B8F7A6B1}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="phase2" ID="{9F243609-51A0-4B43-ABA7-1BE03F1AF101}"/>
+								<ItemList>
+									<ItemRef Name="EN_DIA_P2-edit" ID="{5079D964-1B1A-492C-8A69-DA02CE01F8F5}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="phase5" ID="{7DEE1018-7D21-4770-A17F-147C5FCBD469}"/>
+								<ItemList>
+									<ItemRef Name="EN_DIA_P5-edit" ID="{D45DF9F6-7615-441A-9F4E-CCD45DDECBE4}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="phase3" ID="{E50E0820-84F8-4DDB-A6DC-14BED02DF51B}"/>
+								<ItemList>
+									<ItemRef Name="EN_DIA_P3-edit" ID="{51DC224C-D755-4AEC-8C8E-6A025B0A07FE}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="phase4" ID="{334A1765-05B4-42B5-8E16-6C2F60DAFF34}"/>
+								<ItemList>
+									<ItemRef Name="EN_DIA_P4-edit" ID="{6FD58B0D-3BC7-41D9-ABBD-E12AAC87635B}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="phase1" ID="{8EE4EAF4-D03F-433A-BE91-BED4866CC46C}"/>
+								<ItemList>
+									<ItemRef Name="EN_DIA_P1-edit" ID="{DEA5E669-EA9E-45CC-A97C-2A5F330E75D5}"/>
 								</ItemList>
 							</Grouping>
 						</GroupingList>
