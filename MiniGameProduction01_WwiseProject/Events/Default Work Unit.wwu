@@ -25,9 +25,42 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="FailFeed_event" ID="{A926949F-D090-4D00-925E-7D1E57C5C9A0}">
+				<Event Name="FailFeed_event0" ID="{A926949F-D090-4D00-925E-7D1E57C5C9A0}">
 					<ChildrenList>
-						<Action Name="" ID="{74565E09-0992-4EBA-B6C1-2A0FEB28C5AA}" ShortID="468739113">
+						<Action Name="" ID="{DE2209BA-566C-4D6A-AB95-701AEEF064FE}" ShortID="1014082984">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BongoCan02" ID="{EF340A69-C7FD-4B19-8E35-C9DF2D51066F}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="DialogueDA_event" ID="{F0F09DED-AA8E-4D66-9902-E9C7FF9F4BD3}">
+					<ChildrenList>
+						<Action Name="" ID="{5B0034BA-9CF2-4DF7-BD75-8E93DCA40953}" ShortID="693954575">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="da_dia_switch" ID="{A36786C4-D558-48D5-8101-BA43BF60FC7E}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="DialogueEN_event" ID="{4CF3CE27-77BF-4D12-A090-1C77B5B4A6E5}">
+					<ChildrenList>
+						<Action Name="" ID="{7C7E68F8-E584-4626-A194-B15FF7709758}" ShortID="947256435">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="en_dia_switch" ID="{9DF05E67-C57E-4F14-B7CD-FDB52A38B0B9}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="FailFeed_event1" ID="{959F89C8-0C30-4B80-BA4F-6128F55F9171}">
+					<ChildrenList>
+						<Action Name="" ID="{FC0FCBB5-505B-44F6-BFC8-D2DC1B30528A}" ShortID="102934311">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="FailFeed" ID="{D5EF642B-D080-4607-96A2-5C537267EC09}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>

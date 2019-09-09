@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class InputController : MonoBehaviour
 {
-    private List<addForce> balls;
+    private List<ThrowableObject> balls;
     private Vector3 position;
     private float width;
 
@@ -22,12 +23,18 @@ public class InputController : MonoBehaviour
     private bool _hasSwipedRight;
 
     [SerializeField]
-    private float _stopTimerValue = 0.2f;
+    private float _coyoteTime = 0.2f;
 
-    [SerializeField]
-    private bool _isFountain;
+    //Disable control variables
+    private bool disableControls = false;
+    private float disableControlsTimer = 0; //timer for counting how long the controls have been turned off
+    private static float disableControlsTime = 3f; //how long should the controls be turned off
+
+
+    private GameControl gc;
 
     private FountainGameController _fountainGameController;
+    public UnityEvent ThrowEvent;
 
 
     // Start is called before the first frame update
@@ -36,21 +43,23 @@ public class InputController : MonoBehaviour
         width = (float)Screen.width;
         _minSwipeDistance = Screen.height * _minSwipeDistanceInPercentage; // 10% height of the screen
 
-        if (_isFountain)
-            _fountainGameController = FindObjectOfType<FountainGameController>();
+        //if (_isFountain)
+        //    _fountainGameController = FindObjectOfType<FountainGameController>();
+
+        gc = GameObject.FindObjectOfType<GameControl>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        balls = new List<addForce>(FindObjectsOfType<addForce>());
+        balls = new List<ThrowableObject>(FindObjectsOfType<ThrowableObject>());
         //Debug.Log(balls.Capacity);
 
         if (_hasSwipedLeft)
         {
             //ThrowLeft();
             _swipeTimerLeft += Time.deltaTime;
-            if (_swipeTimerLeft > _stopTimerValue)
+            if (_swipeTimerLeft > _coyoteTime)
                 _hasSwipedLeft = false;
         }
 
@@ -58,8 +67,20 @@ public class InputController : MonoBehaviour
         {
             //ThrowRight();
             _swipeTimerRight += Time.deltaTime;
-            if (_swipeTimerRight > _stopTimerValue)
+            if (_swipeTimerRight > _coyoteTime)
                 _hasSwipedRight = false;
+        }
+
+        if (disableControls)
+        {
+            if (disableControlsTimer > disableControlsTime)
+            {
+                disableControls = false;
+            }
+            else
+            {
+                disableControlsTimer += Time.deltaTime;
+            }
         }
 
 #if UNITY_EDITOR || UNITY_STANDALONE
@@ -95,11 +116,6 @@ public class InputController : MonoBehaviour
             }
             // update the last position based on where it moved
             else if (touch.phase == TouchPhase.Moved)
-            {
-                _lastTouchPos = touch.position;
-            }
-            // check if the finger is removed from the screen
-            else if (touch.phase == TouchPhase.Ended)
             {
                 // last touch position
                 _lastTouchPos = touch.position;
@@ -137,48 +153,38 @@ public class InputController : MonoBehaviour
 
     private void ThrowLeft()
     {
-        if (!_isFountain)
+        ThrowableObject to = null;
+
+        if (gc.rightHandObjects.Count > 0 )
         {
-            addForce waitingBall = null;
+            to = gc.rightHandObjects.Dequeue();
+            to.throwLeft();
+            gc.stackingIsAllowed = false;
 
-            foreach (addForce ball in balls)
-            {
-                if (ball.isWaiting)
-                {
-                    waitingBall = ball;
-
-                }
-
-                else if (ball.throwLeft())
-                {
-                    return;
-                }
-
-            }
-
-            if (waitingBall != null)
-            {
-                waitingBall.Begin();
-            waitingBall.throwLeft();
-            }
-        }
-        else
-        {
-            _fountainGameController.JuggleLeft();
+            Debug.Log(to.gameObject.GetInstanceID() + "Size = " + gc.rightHandObjects.Count);
+            ThrowEvent.Invoke();
         }
 
     }
 
     private void ThrowRight()
     {
-        if (!_isFountain)
+        ThrowableObject to = null;
+
+        if (gc.leftHandObjects.Count > 0 )
         {
-            foreach (addForce ball in balls)
-                ball.throwRight();
+            to = gc.leftHandObjects.Dequeue();
+            to.throwRight();
+            gc.stackingIsAllowed = false;
+
+            Debug.Log(to.gameObject.GetInstanceID() + "Size = " + gc.leftHandObjects.Count);
+            ThrowEvent.Invoke();
         }
-        else
-        {
-            _fountainGameController.JuggleRight();
-        }
+    }
+
+    public void DisableControls()
+    {
+        disableControls = true;
+        disableControlsTimer = 0;
     }
 }
