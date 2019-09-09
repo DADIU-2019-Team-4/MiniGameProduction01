@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameControl : MonoBehaviour
 {
 
-    private int catchCounter;
+    //private int catchCounter;
     [SerializeField]
     public int currentLevel=1;
     public int currentThrowCount=0; // Total number of throws.
@@ -17,8 +17,8 @@ public class GameControl : MonoBehaviour
     private float ballSpawnInterval = 1.0f;
     private float spawnTimer = 0f;
     [HideInInspector]
-    public bool ballWaiting = false;
-    private GameObject waitingBall;
+    //public bool ballWaiting = false;
+    //private GameObject waitingBall;
     private AddBall addBall;
     private List<ThrowableObject> throwableObjectList;
     public Queue<ThrowableObject> leftHandObjects;
@@ -86,7 +86,7 @@ public class GameControl : MonoBehaviour
 
         if (MaximumNumberOfBalls > currentNumOfBalls)
         {
-             GameObject ball = addBall.SpawnBall();
+             GameObject ball = addBall.SpawnBall(Side.Left);
             Balls.Add(ball);
              currentNumOfBalls++;
         }
@@ -118,7 +118,7 @@ public class GameControl : MonoBehaviour
 
     public void AddBall()
     {
-        addBall.SpawnBall();
+        addBall.SpawnBall(Side.Left);
     }
 
     public int getCurrentLevel()
