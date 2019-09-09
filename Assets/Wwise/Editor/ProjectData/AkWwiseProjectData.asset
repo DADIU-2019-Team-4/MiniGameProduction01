@@ -17,38 +17,50 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 652ef63b863360458add58a5bc32b28b
     GuidInternal: 
-    m_lastTime: -8586340174294775808
+    m_lastTime: -8586336298774775808
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 26ede085ba8edd4d84a1e48e2ce905f3
     GuidInternal: 
-    m_lastTime: -8586340091514775808
+    m_lastTime: -8586336298794775808
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 207c6f81333d85408092d3a1d2f59894
     GuidInternal: 
-    m_lastTime: -8586340167914775808
+    m_lastTime: -8586335874214775808
     List:
-    - name: MusicBank
+    - name: Default_bank
       guid: 61de74b161e7ad428fb2d10e1ca0a92b
-      id: 3017428748
+      id: 1239515581
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: MusicBank
+      - ElementName: Default_bank
         ObjectType: 7
-      Path: Default Work Unit\MusicBank
+      Path: Default Work Unit\Default_bank
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 5076fae0cc0c7a43a62c15588b435fee
     GuidInternal: 
-    m_lastTime: -8586339356034775808
+    m_lastTime: -8586335853914775808
     List:
+    - name: Dialogue_event
+      guid: ed9df0f08eaa664d9902e9c7ff9f4bd3
+      id: 893562230
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Dialogue_event
+        ObjectType: 3
+      Path: Default Work Unit\Dialogue_event
+      maxAttenuation: 0
+      maxDuration: 104515910
+      minDuration: 23040000
     - name: FailFeed_event
       guid: 9f9426a990d0004d925e7d1e57c5c9a0
       id: 3370210432
@@ -71,8 +83,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Test_event
       maxAttenuation: 0
-      maxDuration: 186000000
-      minDuration: 186000000
+      maxDuration: -1
+      minDuration: -1
     - name: WinFeed_event
       guid: 82fee822b565ff4bac89e9eb345a5bfb
       id: 3651821476
@@ -90,34 +102,87 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: e1f2ecb3ad510649a12ca51d7c81c473
     GuidInternal: 
-    m_lastTime: -8586340174274775808
+    m_lastTime: -8586336298854775808
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: b9e0adba5f80d04daf56a21d72c7a51e
     GuidInternal: 
-    m_lastTime: -8586340174294775808
+    m_lastTime: -8586335851554775808
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 1f4cfa72844fe240bf3af8bf99444437
     GuidInternal: 
-    m_lastTime: -8586340174294775808
-    List: []
+    m_lastTime: -8586335851554775808
+    List:
+    - name: game_stage
+      guid: ebbb94c71d14224ab91d34ebd3f8731f
+      id: 548614456
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: game_stage
+        ObjectType: 11
+      Path: Default Work Unit\game_stage
+      values:
+      - name: menu
+        guid: 0d0cccf1a2ae1941a2fc63eeb8577f84
+        id: 2607556080
+        PathAndIcons:
+        - ElementName: menu
+          ObjectType: 10
+      - name: phase1
+        guid: f4eae48e3fd03a43be91bed4866cc46c
+        id: 3630028971
+        PathAndIcons:
+        - ElementName: phase1
+          ObjectType: 10
+      - name: phase2
+        guid: 0936249fa051434baba71be03f1af101
+        id: 3630028968
+        PathAndIcons:
+        - ElementName: phase2
+          ObjectType: 10
+      - name: phase3
+        guid: 20080ee5f884db4da6dc14bed02df51b
+        id: 3630028969
+        PathAndIcons:
+        - ElementName: phase3
+          ObjectType: 10
+      - name: phase4
+        guid: 65174a33b405b5428e166c2f60daff34
+        id: 3630028974
+        PathAndIcons:
+        - ElementName: phase4
+          ObjectType: 10
+      - name: phase5
+        guid: 1810ee7d217d7047a17f147c5fcbd469
+        id: 3630028975
+        PathAndIcons:
+        - ElementName: phase5
+          ObjectType: 10
+      - name: phase6
+        guid: 037610ba52174746ac7d188a5c85dcb2
+        id: 3630028972
+        PathAndIcons:
+        - ElementName: phase6
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 81018c68581c2549a02128127290bacc
     GuidInternal: 
-    m_lastTime: -8586340078014775808
+    m_lastTime: -8586336298774775808
     List: []
   ExpandedItems:
   - /MiniGameProduction01_WwiseProject
   - /MiniGameProduction01_WwiseProject/Events
   - /MiniGameProduction01_WwiseProject/Events/Default Work Unit
-  - /MiniGameProduction01_WwiseProject/SoundBanks
-  - /MiniGameProduction01_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

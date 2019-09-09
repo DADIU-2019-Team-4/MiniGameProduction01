@@ -3,42 +3,42 @@
 	<Platform GUID="{653E2107-FC62-4505-B4A7-FD8F9C71D4C8}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Default_bank" Hash="2913776302" Timestamp="1567671386"/>
-				<File Name="Init" Hash="2375102000" Timestamp="1567671388"/>
+				<File Name="Default_bank" Hash="3309019109" Timestamp="1568021688"/>
+				<File Name="Init" Hash="2375102000" Timestamp="1568021688"/>
 				<File Name="MusicBank" Hash="3992173603" Timestamp="1567590086"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="3516349247" Timestamp="1567671388"/>
+				<File Name="" Hash="3538507422" Timestamp="1568021688"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
 	<Platform GUID="{5121FCB5-9CF8-4929-BB40-846F9ED26061}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Default_bank" Hash="2913776302" Timestamp="1567671384"/>
-				<File Name="Init" Hash="2097875816" Timestamp="1567671384"/>
+				<File Name="Default_bank" Hash="3309019109" Timestamp="1568021686"/>
+				<File Name="Init" Hash="2097875816" Timestamp="1568021686"/>
 				<File Name="MusicBank" Hash="3992173603" Timestamp="1567590082"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="2803060705" Timestamp="1567671384"/>
+				<File Name="" Hash="2925601832" Timestamp="1568021686"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
 	<Platform GUID="{AD7A906E-C7A4-4963-AA58-66680AF4CD75}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Default_bank" Hash="2913776302" Timestamp="1567671386"/>
-				<File Name="Init" Hash="618911802" Timestamp="1567671386"/>
+				<File Name="Default_bank" Hash="3309019109" Timestamp="1568021686"/>
+				<File Name="Init" Hash="618911802" Timestamp="1568021688"/>
 				<File Name="MusicBank" Hash="3992173603" Timestamp="1567590084"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1418609517" Timestamp="1567671386"/>
+				<File Name="" Hash="3122910100" Timestamp="1568021688"/>
 			</Language>
 		</XMLInfo>
 	</Platform>

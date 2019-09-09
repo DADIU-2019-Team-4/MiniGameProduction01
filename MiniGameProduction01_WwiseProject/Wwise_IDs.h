@@ -13,10 +13,30 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID DIALOGUE_EVENT = 893562230U;
         static const AkUniqueID FAILFEED_EVENT = 3370210432U;
-        static const AkUniqueID TEST_EVENT = 4258653052U;
         static const AkUniqueID WINFEED_EVENT = 3651821476U;
     } // namespace EVENTS
+
+    namespace SWITCHES
+    {
+        namespace GAME_STAGE
+        {
+            static const AkUniqueID GROUP = 548614456U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID MENU = 2607556080U;
+                static const AkUniqueID PHASE1 = 3630028971U;
+                static const AkUniqueID PHASE2 = 3630028968U;
+                static const AkUniqueID PHASE3 = 3630028969U;
+                static const AkUniqueID PHASE4 = 3630028974U;
+                static const AkUniqueID PHASE5 = 3630028975U;
+                static const AkUniqueID PHASE6 = 3630028972U;
+            } // namespace SWITCH
+        } // namespace GAME_STAGE
+
+    } // namespace SWITCHES
 
     namespace BANKS
     {
