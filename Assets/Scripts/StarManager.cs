@@ -34,10 +34,15 @@ public class StarManager : MonoBehaviour
         {
             if (i < _totalAmountOfStars)
             {
-                stars[i].transform.GetChild(0).gameObject.SetActive(true);
-                // todo uncomment this for 3D models and play sound
-                //stars[i].GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
-				AkSoundEngine.PostEvent("FailFeed_event" + i, stars[i].transform.GetChild(0).gameObject);
+				if(i >= 4)
+					AkSoundEngine.PostEvent("stars_event" + i , stars[i].transform.GetChild(0).gameObject);	
+				else
+				{
+					stars[i].transform.GetChild(0).gameObject.SetActive(true);
+					// todo uncomment this for 3D models and play sound
+					//stars[i].GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
+					AkSoundEngine.PostEvent("stars_event0" , stars[i].transform.GetChild(0).gameObject);
+				}
             }
 
             Debug.Log("Stars to fill: " + percentage * _totalAmountOfStars);
