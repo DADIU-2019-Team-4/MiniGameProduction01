@@ -36,7 +36,7 @@ public class StarManager : MonoBehaviour
             {
                 stars[i].transform.GetChild(0).gameObject.SetActive(true);
                 // todo uncomment this for 3D models and play sound
-                //stars[i].GetComponent<Material>().EnableKeyword("_EMISSION");
+                //stars[i].GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
 				AkSoundEngine.PostEvent("FailFeed_event" + i, stars[i].transform.GetChild(0).gameObject);
             }
 
@@ -56,7 +56,7 @@ public class StarManager : MonoBehaviour
         {
             star.transform.GetChild(0).gameObject.SetActive(false);
             // todo uncomment this for 3D models
-            //star.GetComponent<Material>().DisableKeyword("_EMISSION");
+            //star.GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
         }
     }
 }
