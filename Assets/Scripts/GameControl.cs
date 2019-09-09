@@ -49,6 +49,8 @@ public class GameControl : MonoBehaviour
 
     public List<GameObject> Balls = new List<GameObject>();
 
+    private StarManager _starManager;
+
     internal void QueueLeftHand(ThrowableObject throwableObject)
     {
 
@@ -58,6 +60,7 @@ public class GameControl : MonoBehaviour
             {
                 //restart level
                 StartLevel(currentLevel);
+                StartCoroutine(_starManager.ResetStars(0f));
                 Debug.Log("Fail!!");
                 return;
             }
@@ -76,6 +79,7 @@ public class GameControl : MonoBehaviour
             {
                 //restart level
                 StartLevel(currentLevel);
+                StartCoroutine(_starManager.ResetStars(0f));
                 Debug.Log("Fail!!");
                 return;
             }
@@ -93,12 +97,15 @@ public class GameControl : MonoBehaviour
         rightHandObjects = new Queue<ThrowableObject>();
         addBall = GetComponent<AddBall>();
         Time.timeScale = gameSpeed;
+        _starManager = FindObjectOfType<StarManager>();
 
-   //     if (currentLevel == 1)
+        //     if (currentLevel == 1)
         // NO SOUND IN PHASE 1   
-		//  AkSoundEngine.SetSwitch("game_stage", "phase1", gameObject);
+        //  AkSoundEngine.SetSwitch("game_stage", "phase1", gameObject);
         inputController = FindObjectOfType<InputController>();
-		//	AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+        //	AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+
+        inputController.ThrowEvent.AddListener(UpdateStars);
 
         //level 1 setup
         StartLevel(1);
@@ -160,6 +167,31 @@ public class GameControl : MonoBehaviour
 
         CheckLooseCondition();
 
+    }
+
+    private void UpdateStars()
+    {
+        switch (currentLevel)
+        {
+            case 1:
+                _starManager.CalculatePercentage(currentLevelThrowCount, toLevel2Count);
+                break;
+            case 2:
+                _starManager.CalculatePercentage(currentLevelThrowCount, toLevel3Count);
+                break;
+            case 3:
+                _starManager.CalculatePercentage(currentLevelThrowCount, toLevel4Count);
+                break;
+            case 4:
+                _starManager.CalculatePercentage(currentLevelThrowCount, toLevel5Count);
+                break;
+            case 5:
+                _starManager.CalculatePercentage(currentLevelThrowCount, toLevel6Count);
+                break;
+            case 6:
+                _starManager.CalculatePercentage(currentLevelThrowCount, toLevel7Count);
+                break;
+        }
     }
 
     private void CheckLooseCondition()
