@@ -52,7 +52,7 @@ public class GameControl : MonoBehaviour
         Time.timeScale = gameSpeed;
 
         if (currentLevel == 1)
-            AkSoundEngine.SetState("game_stage", "phase1");
+            AkSoundEngine.SetSwitch("game_stage", "phase1", gameObject);
     }
 
     // Update is called once per frame
@@ -64,32 +64,32 @@ public class GameControl : MonoBehaviour
         if (currentThrowCount > toLevel2Count && currentLevel==1)
         {
             currentLevel=2;
-            AkSoundEngine.SetState("game_stage", "phase2");
+            AkSoundEngine.SetSwitch("game_stage", "phase2", gameObject);
         }
         if (currentThrowCount > toLevel3Count && currentLevel == 2)
         {
             currentLevel = 3;
             MaximumNumberOfBalls++;
-            AkSoundEngine.SetState("game_stage", "phase3");
+            AkSoundEngine.SetSwitch("game_stage", "phase3", gameObject);
         }
         if (currentThrowCount > toLevel4Count && currentLevel == 3)
         {
             currentLevel = 4;
             MaximumNumberOfBalls++;
-            AkSoundEngine.SetState("game_stage", "phase4");
+            AkSoundEngine.SetSwitch("game_stage", "phase4", gameObject);
         }
 
         if (currentThrowCount > toLevel5Count && currentLevel == 4)
         {
             currentLevel = 5;
             MaximumNumberOfBalls++;
-            AkSoundEngine.SetState("game_stage", "phase5");
+            AkSoundEngine.SetSwitch("game_stage", "phase5", gameObject);
         }
 
         if (currentThrowCount > toLevel6Count && currentLevel == 5)
         {
             currentLevel = 6;
-            AkSoundEngine.SetState("game_stage", "phase6");
+            AkSoundEngine.SetSwitch("game_stage", "phase6", gameObject);
             _endGameObject.SetActive(true);
         }
 

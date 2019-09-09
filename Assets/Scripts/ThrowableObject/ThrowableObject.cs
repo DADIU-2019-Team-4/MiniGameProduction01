@@ -45,6 +45,7 @@ public class ThrowableObject : MonoBehaviour
             Debug.Log("Ball Caught," + this.gameObject.GetInstanceID() + "Size = " + gc.rightHandObjects.Count);
             rb.position = new Vector3(-1.46F, 0, 0);
             rb.useGravity = false;
+            PlaySFXCaughtItem();
         }
         else if (collider.tag == "LeftHand")
         {
@@ -53,6 +54,7 @@ public class ThrowableObject : MonoBehaviour
             Debug.Log("Ball Caught," + this.gameObject.GetInstanceID() + "Size = " + gc.leftHandObjects.Count);
             rb.position = new Vector3(1.46F, 0, 0);
             rb.useGravity = false;
+            PlaySFXCaughtItem();
         }
         else
         {
@@ -61,6 +63,15 @@ public class ThrowableObject : MonoBehaviour
 
         rb.velocity = new Vector3(0, 0, 0);
     }
+
+    private void PlaySFXCaughtItem()
+    {
+        string meshname = GetComponent<MeshFilter>().mesh.name;
+        meshname = meshname.Substring(0, meshname.Length - " Instance".Length);
+        AkSoundEngine.PostEvent("caught_" + meshname, gameObject);
+        Debug.Log("caught_" + meshname);
+    }
+
 
     private void OnTriggerExit(Collider collider)
     {
