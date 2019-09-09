@@ -13,6 +13,7 @@ public class AddBall : MonoBehaviour
 
     public List<GameObject> Balls = new List<GameObject>();
 
+    public Vector3 StartPosition;
    
 
 
@@ -48,7 +49,7 @@ public class AddBall : MonoBehaviour
                 g = BallFour;
             break;
         }
-        g = Instantiate(g, new Vector3(-1.6F, 4, 0), Quaternion.identity);
+        g = Instantiate(g, StartPosition, Quaternion.identity);
         Balls.Add(g);
         return g;
     }

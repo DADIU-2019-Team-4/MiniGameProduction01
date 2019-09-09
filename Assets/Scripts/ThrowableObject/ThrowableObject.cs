@@ -16,6 +16,10 @@ public class ThrowableObject : MonoBehaviour
     [HideInInspector]
     public bool isWaiting;
 
+    public Vector3 RightHandPosition;
+    public Vector3 LeftHandPosition;
+    public Vector3 UpwardsThrowForce;
+
     public enum Type
     {
         Ball,
@@ -42,17 +46,19 @@ public class ThrowableObject : MonoBehaviour
         {
             isRightHand = true;
             gc.rightHandObjects.Enqueue(this);
-            Debug.Log("Ball Caught," + this.gameObject.GetInstanceID() + "Size = " + gc.rightHandObjects.Count);
-            rb.position = new Vector3(-1.46F, 0, 0);
+            //Debug.Log("Ball Caught," + this.gameObject.GetInstanceID() + "Size = " + gc.rightHandObjects.Count);
+            Debug.Log("Caught right hand, " + RightHandPosition.ToString());
+            rb.position = RightHandPosition; //new Vector3(-1.46F, 0, 0);
             rb.useGravity = false;
-  
+
         }
         else if (collider.tag == "LeftHand")
         {
             isLeftHand = true;
             gc.leftHandObjects.Enqueue(this);
-            Debug.Log("Ball Caught," + this.gameObject.GetInstanceID() + "Size = " + gc.leftHandObjects.Count);
-            rb.position = new Vector3(1.46F, 0, 0);
+            //Debug.Log("Ball Caught," + this.gameObject.GetInstanceID() + "Size = " + gc.leftHandObjects.Count);
+            Debug.Log("Caught left hand, " + LeftHandPosition.ToString());
+            rb.position = LeftHandPosition; // new Vector3(1.46F, 0, 0);
             rb.useGravity = false;
 
         }
@@ -80,7 +86,7 @@ public class ThrowableObject : MonoBehaviour
             isRightHand = false;
             isLeftHand = false;
         }
-           
+
     }
 
     public bool throwRight()
@@ -104,10 +110,10 @@ public class ThrowableObject : MonoBehaviour
     {
         if (isRightHand)
         {
-            
+
             if (gc.getCurrentLevel() == 1) //on level 1 just throw upwards
             {
-                applyForce(new Vector3(0, 0.8F, 0));
+                applyForce(UpwardsThrowForce);
             }
             else
             {
@@ -188,12 +194,12 @@ public class ThrowableObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

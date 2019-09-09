@@ -8,8 +8,8 @@ public class GameControl : MonoBehaviour
 
     //private int catchCounter;
     [SerializeField]
-    public int currentLevel=1;
-    public int currentThrowCount=0; // Total number of throws.
+    public int currentLevel = 1;
+    public int currentThrowCount = 0; // Total number of throws.
     [SerializeField]
     public int MaximumNumberOfBalls = 1;
     private int currentNumOfBalls = 0; // As it say on the label.
@@ -53,7 +53,7 @@ public class GameControl : MonoBehaviour
 
         if (currentLevel == 1)
             AkSoundEngine.SetSwitch("game_stage", "phase1", gameObject);
-			AkSoundEngine.PostEvent("Dialogue_event", gameObject);
+        AkSoundEngine.PostEvent("Dialogue_event", gameObject);
     }
 
     // Update is called once per frame
@@ -62,18 +62,18 @@ public class GameControl : MonoBehaviour
         // to test preloading scenes
         ToNextScene();
 
-        if (currentThrowCount > toLevel2Count && currentLevel==1)
+        if (currentThrowCount > toLevel2Count && currentLevel == 1)
         {
-            currentLevel=2;
+            currentLevel = 2;
             AkSoundEngine.SetSwitch("game_stage", "phase2", gameObject);
-			AkSoundEngine.PostEvent("Dialogue_event", gameObject);
+            AkSoundEngine.PostEvent("Dialogue_event", gameObject);
         }
         if (currentThrowCount > toLevel3Count && currentLevel == 2)
         {
             currentLevel = 3;
             MaximumNumberOfBalls++;
             AkSoundEngine.SetSwitch("game_stage", "phase3", gameObject);
-			AkSoundEngine.PostEvent("Dialogue_event", gameObject);
+            AkSoundEngine.PostEvent("Dialogue_event", gameObject);
         }
         if (currentThrowCount > toLevel4Count && currentLevel == 3)
         {
@@ -87,22 +87,22 @@ public class GameControl : MonoBehaviour
             currentLevel = 5;
             MaximumNumberOfBalls++;
             AkSoundEngine.SetSwitch("game_stage", "phase5", gameObject);
-			AkSoundEngine.PostEvent("Dialogue_event", gameObject);
+            AkSoundEngine.PostEvent("Dialogue_event", gameObject);
         }
 
         if (currentThrowCount > toLevel6Count && currentLevel == 5)
         {
             currentLevel = 6;
             AkSoundEngine.SetSwitch("game_stage", "phase6", gameObject);
-			AkSoundEngine.PostEvent("Dialogue_event", gameObject);
+            AkSoundEngine.PostEvent("Dialogue_event", gameObject);
             _endGameObject.SetActive(true);
         }
 
         if (MaximumNumberOfBalls > currentNumOfBalls)
         {
-             GameObject ball = addBall.SpawnBall(Side.Left);
+            GameObject ball = addBall.SpawnBall(Side.Left);
             Balls.Add(ball);
-             currentNumOfBalls++;
+            currentNumOfBalls++;
         }
 
 
