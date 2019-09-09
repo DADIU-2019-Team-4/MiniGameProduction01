@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class InputController : MonoBehaviour
 {
@@ -33,6 +34,7 @@ public class InputController : MonoBehaviour
     private GameControl gc;
 
     private FountainGameController _fountainGameController;
+    public UnityEvent ThrowEvent;
 
 
     // Start is called before the first frame update
@@ -165,6 +167,7 @@ public class InputController : MonoBehaviour
             gc.stackingIsAllowed = false;
 
             Debug.Log(to.gameObject.GetInstanceID() + "Size = " + gc.rightHandObjects.Count);
+            ThrowEvent.Invoke();
         }
 
     }
@@ -180,6 +183,7 @@ public class InputController : MonoBehaviour
             gc.stackingIsAllowed = false;
 
             Debug.Log(to.gameObject.GetInstanceID() + "Size = " + gc.leftHandObjects.Count);
+            ThrowEvent.Invoke();
         }
     }
 

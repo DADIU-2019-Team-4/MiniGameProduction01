@@ -3,8 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
-using DG.Tweening;
 
 public class StarManager : MonoBehaviour
 {
@@ -14,17 +12,19 @@ public class StarManager : MonoBehaviour
     private int _totalAmountOfStars;
 
     private GameControl _gameControl;
+    private InputController _inputController;
 
 
     // Start is called before the first frame update
     void Start()
     {
         _gameControl = FindObjectOfType<GameControl>();
+        _inputController = FindObjectOfType<InputController>();
 
-        if (_gameControl.ThrowEvent == null)
-            _gameControl.ThrowEvent = new UnityEvent();
+        if (_inputController.ThrowEvent == null)
+            _inputController.ThrowEvent = new UnityEvent();
 
-        _gameControl.ThrowEvent.AddListener(UpdateStars);
+        _inputController.ThrowEvent.AddListener(UpdateStars);
 
         _totalAmountOfStars = stars.Count;
     }
@@ -53,7 +53,7 @@ public class StarManager : MonoBehaviour
 
     private void CalculatePercentage(int total)
     {
-        float percentage = (float)_gameControl.currentThrowCount / total;
+        float percentage = (float)_gameControl.currentLevelThrowCount / total;
         int starsToFill =  (int)Mathf.Floor(percentage * _totalAmountOfStars);
 
         for (int i = 0; i < starsToFill; i++)

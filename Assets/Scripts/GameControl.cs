@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class GameControl : MonoBehaviour
@@ -48,6 +47,8 @@ public class GameControl : MonoBehaviour
 
     private InputController inputController;
 
+    public List<GameObject> Balls = new List<GameObject>();
+
     internal void QueueLeftHand(ThrowableObject throwableObject)
     {
 
@@ -82,13 +83,7 @@ public class GameControl : MonoBehaviour
 
         rightHandObjects.Enqueue(throwableObject);
 
-    }
-
-    public List<GameObject> Balls = new List<GameObject>();
-    public UnityEvent ThrowEvent;
-
-
-   
+    }   
 
     // Start is called before the first frame update
     void Start()
@@ -166,12 +161,6 @@ public class GameControl : MonoBehaviour
     private void CheckLooseCondition()
     {
         
-    }
-
-    public void IncrementThrowCount()
-    {
-        currentThrowCount++;
-        ThrowEvent.Invoke();
     }
 
     private void ToNextScene()
