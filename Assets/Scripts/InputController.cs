@@ -10,8 +10,12 @@ public class InputController : MonoBehaviour
     private float width;
 
     // mobile input variables
-    private Vector3 _firstTouchPos;
-    private Vector3 _lastTouchPos;
+    private Vector3 _firstTouchPos1;
+    private Vector3 _lastTouchPos1;
+
+    private Vector3 _firstTouchPos2;
+    private Vector3 _lastTouchPos2;
+
     // minimum distance for a swipe to be registered
     [SerializeField]
     private float _minSwipeDistanceInPercentage = 0.10f;
@@ -104,49 +108,110 @@ public class InputController : MonoBehaviour
     private void MobileInput()
     {
         // if user is touching the screen with a single touch...
-        if (Input.touchCount == 1)
+        if (Input.touchCount > 0)
         {
-            // get the touch
-            Touch touch = Input.GetTouch(0);
-            // check for the first touch
-            if (touch.phase == TouchPhase.Began)
+            for (int i = 0; i < Input.touchCount; i++)
             {
-                _firstTouchPos = touch.position;
-                _lastTouchPos = touch.position;
+                if (i == 0)
+                    CheckSwipe1();
+                else if (i == 1)
+                    CheckSwipe2();
             }
-            // update the last position based on where it moved
-            else if (touch.phase == TouchPhase.Moved)
+        }
+    }
+
+    private void CheckSwipe1()
+    {
+        // get the touch
+        Touch touch = Input.GetTouch(0);
+        // check for the first touch
+        if (touch.phase == TouchPhase.Began)
+        {
+            _firstTouchPos1 = touch.position;
+            _lastTouchPos1 = touch.position;
+        }
+        // update the last position based on where it moved
+        else if (touch.phase == TouchPhase.Moved)
+        {
+            // last touch position
+            _lastTouchPos1 = touch.position;
+        }
+        else if (touch.phase == TouchPhase.Ended)
+        {
+            // difference vector
+            var differenceVec = _lastTouchPos1 - _firstTouchPos1;
+
+            // check if swipe distance is greater than 15% of the screen height
+            if (!(Math.Abs(differenceVec.x) > _minSwipeDistance) &&
+                !(Math.Abs(differenceVec.y) > _minSwipeDistance)) return;
+
+            // check if the swipe is vertical
+            if (!(Mathf.Abs(differenceVec.x) <= Mathf.Abs(differenceVec.y))) return;
+
+            // check if we have swiped up
+            if (!(_lastTouchPos1.y > _firstTouchPos1.y)) return;
+
+            // swiped on left side of the screen
+            if (_lastTouchPos1.x < width / 2)
             {
-                // last touch position
-                _lastTouchPos = touch.position;
+                ThrowLeft();
+                _swipeTimerLeft = 0;
+                _hasSwipedLeft = true;
+            }
+            // swiped on right side of the screen
+            else
+            {
+                ThrowRight();
+                _swipeTimerRight = 0;
+                _hasSwipedRight = true;
+            }
+        }
+    }
 
-                // difference vector
-                var differenceVec = _lastTouchPos - _firstTouchPos;
+    private void CheckSwipe2()
+    {
+        // get the touch
+        Touch touch = Input.GetTouch(1);
+        // check for the first touch
+        if (touch.phase == TouchPhase.Began)
+        {
+            _firstTouchPos2 = touch.position;
+            _lastTouchPos2 = touch.position;
+        }
+        // update the last position based on where it moved
+        else if (touch.phase == TouchPhase.Moved)
+        {
+            // last touch position
+            _lastTouchPos2 = touch.position;
+        }
+        else if (touch.phase == TouchPhase.Ended)
+        {
+            // difference vector
+            var differenceVec = _lastTouchPos2 - _firstTouchPos2;
 
-                // check if swipe distance is greater than 15% of the screen height
-                if (!(Math.Abs(differenceVec.x) > _minSwipeDistance) &&
-                    !(Math.Abs(differenceVec.y) > _minSwipeDistance)) return;
+            // check if swipe distance is greater than 15% of the screen height
+            if (!(Math.Abs(differenceVec.x) > _minSwipeDistance) &&
+                !(Math.Abs(differenceVec.y) > _minSwipeDistance)) return;
 
-                // check if the swipe is vertical
-                if (!(Mathf.Abs(differenceVec.x) <= Mathf.Abs(differenceVec.y))) return;
+            // check if the swipe is vertical
+            if (!(Mathf.Abs(differenceVec.x) <= Mathf.Abs(differenceVec.y))) return;
 
-                // check if we have swiped up
-                if (!(_lastTouchPos.y > _firstTouchPos.y)) return;
+            // check if we have swiped up
+            if (!(_lastTouchPos2.y > _firstTouchPos2.y)) return;
 
-                // swiped on left side of the screen
-                if (_lastTouchPos.x < width / 2)
-                {
-                    ThrowLeft();
-                    _swipeTimerLeft = 0;
-                    _hasSwipedLeft = true;
-                }
-                // swiped on right side of the screen
-                else
-                {
-                    ThrowRight();
-                    _swipeTimerRight = 0;
-                    _hasSwipedRight = true;
-                }
+            // swiped on left side of the screen
+            if (_lastTouchPos2.x < width / 2)
+            {
+                ThrowLeft();
+                _swipeTimerLeft = 0;
+                _hasSwipedLeft = true;
+            }
+            // swiped on right side of the screen
+            else
+            {
+                ThrowRight();
+                _swipeTimerRight = 0;
+                _hasSwipedRight = true;
             }
         }
     }
