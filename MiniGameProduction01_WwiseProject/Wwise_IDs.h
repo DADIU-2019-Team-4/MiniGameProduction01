@@ -13,7 +13,8 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID DIALOGUE_EVENT = 893562230U;
+        static const AkUniqueID DIALOGUEDA_EVENT = 2450003899U;
+        static const AkUniqueID DIALOGUEEN_EVENT = 1976820711U;
         static const AkUniqueID FAILFEED_EVENT = 3370210432U;
         static const AkUniqueID WINFEED_EVENT = 3651821476U;
     } // namespace EVENTS

@@ -94,10 +94,11 @@ public class GameControl : MonoBehaviour
         addBall = GetComponent<AddBall>();
         Time.timeScale = gameSpeed;
 
-        if (currentLevel == 1)
-            AkSoundEngine.SetSwitch("game_stage", "phase1", gameObject);
-			AkSoundEngine.PostEvent("Dialogue_event", gameObject);
+   //     if (currentLevel == 1)
+        // NO SOUND IN PHASE 1   
+		//  AkSoundEngine.SetSwitch("game_stage", "phase1", gameObject);
         inputController = FindObjectOfType<InputController>();
+		//	AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
 
         //level 1 setup
         StartLevel(1);
@@ -112,26 +113,27 @@ public class GameControl : MonoBehaviour
         if (currentLevelThrowCount > toLevel2Count && currentLevel == 1)
         {
             StartLevel(2);
-            AkSoundEngine.SetSwitch("game_stage", "phase2", gameObject);
-			AkSoundEngine.PostEvent("Dialogue_event", gameObject);
+            AkSoundEngine.SetSwitch("game_stage", "phase1", gameObject);
+			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
         }
         if (currentLevelThrowCount > toLevel3Count && currentLevel == 2)
         {
             StartLevel(3);
-            AkSoundEngine.SetSwitch("game_stage", "phase3", gameObject);
-			AkSoundEngine.PostEvent("Dialogue_event", gameObject);
+            AkSoundEngine.SetSwitch("game_stage", "phase2", gameObject);
+			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
         }
         if (currentLevelThrowCount > toLevel4Count && currentLevel == 3)
         {
             StartLevel(4);
-            AkSoundEngine.SetSwitch("game_stage", "phase4", gameObject);
+            AkSoundEngine.SetSwitch("game_stage", "phase3", gameObject);
+			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
         }
 
         if (currentLevelThrowCount > toLevel5Count && currentLevel == 4)
         {
             StartLevel(5);
-            AkSoundEngine.SetSwitch("game_stage", "phase5", gameObject);
-			AkSoundEngine.PostEvent("Dialogue_event", gameObject);
+            AkSoundEngine.SetSwitch("game_stage", "phase4", gameObject);
+			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
         }
 
         if (currentLevelThrowCount > toLevel6Count && currentLevel == 5)
@@ -142,10 +144,18 @@ public class GameControl : MonoBehaviour
         if (currentLevelThrowCount > toLevel7Count && currentLevel == 6)
         {
             currentLevel = 6;
-            AkSoundEngine.SetSwitch("game_stage", "phase6", gameObject);
-			AkSoundEngine.PostEvent("Dialogue_event", gameObject);
-            _endGameObject.SetActive(true);
+            AkSoundEngine.SetSwitch("game_stage", "phase5", gameObject);
+			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+         //   _endGameObject.SetActive(true);
         }
+
+		if (currentThrowCount > toLevel6Count && currentLevel == 6)
+        {
+            currentLevel = 7;
+            AkSoundEngine.SetSwitch("game_stage", "phase6", gameObject);
+			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+            _endGameObject.SetActive(true);
+			}
 
         if (MaximumNumberOfBalls > currentNumOfBalls)
         {
@@ -161,8 +171,8 @@ public class GameControl : MonoBehaviour
     private void CheckLooseCondition()
     {
         
-    }
-
+    
+	}
     private void ToNextScene()
     {
         if (Input.GetKeyDown(KeyCode.N))
