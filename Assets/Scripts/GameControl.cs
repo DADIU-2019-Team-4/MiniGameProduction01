@@ -50,6 +50,9 @@ public class GameControl : MonoBehaviour
         rightHandObjects = new Queue<ThrowableObject>();
         addBall = GetComponent<AddBall>();
         Time.timeScale = gameSpeed;
+
+        if (currentLevel == 1)
+            AkSoundEngine.SetState("game_stage", "phase1");
     }
 
     // Update is called once per frame
@@ -61,26 +64,32 @@ public class GameControl : MonoBehaviour
         if (currentThrowCount > toLevel2Count && currentLevel==1)
         {
             currentLevel=2;
+            AkSoundEngine.SetState("game_stage", "phase2");
         }
         if (currentThrowCount > toLevel3Count && currentLevel == 2)
         {
             currentLevel = 3;
             MaximumNumberOfBalls++;
+            AkSoundEngine.SetState("game_stage", "phase3");
         }
         if (currentThrowCount > toLevel4Count && currentLevel == 3)
         {
             currentLevel = 4;
             MaximumNumberOfBalls++;
+            AkSoundEngine.SetState("game_stage", "phase4");
         }
 
         if (currentThrowCount > toLevel5Count && currentLevel == 4)
         {
             currentLevel = 5;
             MaximumNumberOfBalls++;
+            AkSoundEngine.SetState("game_stage", "phase5");
         }
 
         if (currentThrowCount > toLevel6Count && currentLevel == 5)
         {
+            currentLevel = 6;
+            AkSoundEngine.SetState("game_stage", "phase6");
             _endGameObject.SetActive(true);
         }
 
