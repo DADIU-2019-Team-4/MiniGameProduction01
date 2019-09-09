@@ -1,10 +1,8 @@
 Event	ID	Name			Wwise Object Path	Notes
 	3370210432	FailFeed_event			\Default Work Unit\FailFeed_event	
 	3651821476	WinFeed_event			\Default Work Unit\WinFeed_event	
-	4258653052	Test_event			\Default Work Unit\Test_event	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	87159758	FailFeed	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Android\SFX\FailFeed_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FailFeed		724516
-	94761567	DADIU-Little Timmy2	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Android\SFX\DADIU-Little Timmy2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\DADIU-Little Timmy2		32810464
 	131794834	WinFeed	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Android\SFX\WinFeed_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\WinFeed		648888
 
