@@ -48,6 +48,9 @@ public class StarManager : MonoBehaviour
             case 5:
                 CalculatePercentage(_gameControl.toLevel6Count);
                 break;
+            case 6:
+                CalculatePercentage(_gameControl.toLevel7Count);
+                break;
         }
     }
 
@@ -59,7 +62,13 @@ public class StarManager : MonoBehaviour
         for (int i = 0; i < starsToFill; i++)
         {
             if (i < _totalAmountOfStars)
+            {
                 stars[i].transform.GetChild(0).gameObject.SetActive(true);
+                // todo uncomment this for 3D models and play sound
+                //stars[i].GetComponent<Material>().EnableKeyword("_EMISSION");
+            }
+
+            Debug.Log("Stars to fill: " + percentage * _totalAmountOfStars);
 
             if (starsToFill >= _totalAmountOfStars)
             {
@@ -74,6 +83,8 @@ public class StarManager : MonoBehaviour
         foreach (GameObject star in stars)
         {
             star.transform.GetChild(0).gameObject.SetActive(false);
+            // todo uncomment this for 3D models
+            //star.GetComponent<Material>().DisableKeyword("_EMISSION");
         }
     }
 }
