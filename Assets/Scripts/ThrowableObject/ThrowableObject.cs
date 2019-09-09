@@ -68,7 +68,7 @@ public class ThrowableObject : MonoBehaviour
     {
         string meshname = GetComponent<MeshFilter>().mesh.name;
         meshname = meshname.Substring(0, meshname.Length - " Instance".Length);
-        AkSoundEngine.PostEvent("caught_" + meshname, gameObject);
+        //AkSoundEngine.PostEvent("caught_" + meshname, null);
         Debug.Log("caught_" + meshname);
     }
 
