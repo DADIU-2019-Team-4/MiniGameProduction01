@@ -117,12 +117,6 @@ public class InputController : MonoBehaviour
             // update the last position based on where it moved
             else if (touch.phase == TouchPhase.Moved)
             {
-                _lastTouchPos = touch.position;
-            }
-
-            // check if the finger is removed from the screen
-            else if (touch.phase == TouchPhase.Ended)
-            {
                 // last touch position
                 _lastTouchPos = touch.position;
 
