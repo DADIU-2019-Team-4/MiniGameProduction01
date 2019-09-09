@@ -119,6 +119,11 @@ public class InputController : MonoBehaviour
             {
                 // last touch position
                 _lastTouchPos = touch.position;
+            }
+            else if (touch.phase == TouchPhase.Ended)
+            {
+                // last touch position
+                _lastTouchPos = touch.position;
 
                 // difference vector
                 var differenceVec = _lastTouchPos - _firstTouchPos;
