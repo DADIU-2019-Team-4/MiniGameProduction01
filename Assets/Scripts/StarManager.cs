@@ -11,52 +11,23 @@ public class StarManager : MonoBehaviour
 
     private int _totalAmountOfStars;
 
-    private GameControl _gameControl;
     private InputController _inputController;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        _gameControl = FindObjectOfType<GameControl>();
         _inputController = FindObjectOfType<InputController>();
 
         if (_inputController.ThrowEvent == null)
             _inputController.ThrowEvent = new UnityEvent();
 
-        _inputController.ThrowEvent.AddListener(UpdateStars);
-
         _totalAmountOfStars = stars.Count;
     }
 
-    private void UpdateStars()
+    public void CalculatePercentage(int current, int total)
     {
-        switch (_gameControl.currentLevel)
-        {
-            case 1:
-                CalculatePercentage(_gameControl.toLevel2Count);
-                break;
-            case 2:
-                CalculatePercentage(_gameControl.toLevel3Count);
-                break;
-            case 3:
-                CalculatePercentage(_gameControl.toLevel4Count);
-                break;
-            case 4:
-                CalculatePercentage(_gameControl.toLevel5Count);
-                break;
-            case 5:
-                CalculatePercentage(_gameControl.toLevel6Count);
-                break;
-            case 6:
-                CalculatePercentage(_gameControl.toLevel7Count);
-                break;
-        }
-    }
-
-    private void CalculatePercentage(int total)
-    {
-        float percentage = (float)_gameControl.currentLevelThrowCount / total;
+        float percentage = (float)current / total;
         int starsToFill =  (int)Mathf.Floor(percentage * _totalAmountOfStars);
 
         for (int i = 0; i < starsToFill; i++)
@@ -65,7 +36,7 @@ public class StarManager : MonoBehaviour
             {
                 stars[i].transform.GetChild(0).gameObject.SetActive(true);
                 // todo uncomment this for 3D models and play sound
-                //stars[i].GetComponent<Material>().EnableKeyword("_EMISSION");
+                //stars[i].GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
 				AkSoundEngine.PostEvent("FailFeed_event" + i, stars[i].transform.GetChild(0).gameObject);
             }
 
@@ -73,19 +44,19 @@ public class StarManager : MonoBehaviour
 
             if (starsToFill >= _totalAmountOfStars)
             {
-                StartCoroutine(ResetStars());
+                StartCoroutine(ResetStars(1f));
             }
         }
     }
 
-    private IEnumerator ResetStars()
+    public IEnumerator ResetStars(float waitForReset)
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(waitForReset);
         foreach (GameObject star in stars)
         {
             star.transform.GetChild(0).gameObject.SetActive(false);
             // todo uncomment this for 3D models
-            //star.GetComponent<Material>().DisableKeyword("_EMISSION");
+            //star.GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
         }
     }
 }
