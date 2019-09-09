@@ -139,23 +139,17 @@ public class GameControl : MonoBehaviour
         if (currentLevelThrowCount > toLevel6Count && currentLevel == 5)
         {
             StartLevel(6);
+            AkSoundEngine.SetSwitch("game_stage", "phase5", gameObject);
+            AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
         }
 
         if (currentLevelThrowCount > toLevel7Count && currentLevel == 6)
         {
-            currentLevel = 6;
-            AkSoundEngine.SetSwitch("game_stage", "phase5", gameObject);
-			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
-         //   _endGameObject.SetActive(true);
-        }
-
-		if (currentThrowCount > toLevel6Count && currentLevel == 6)
-        {
-            currentLevel = 7;
+            StartLevel(7);
             AkSoundEngine.SetSwitch("game_stage", "phase6", gameObject);
-			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
-            _endGameObject.SetActive(true);
-			}
+            AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+            //_endGameObject.SetActive(true);
+        }
 
         if (MaximumNumberOfBalls > currentNumOfBalls)
         {
