@@ -22,7 +22,7 @@ public class InputController : MonoBehaviour
     private bool _hasSwipedRight;
 
     [SerializeField]
-    private float _stopTimerValue = 0.2f;
+    private float _coyoteTime = 0.2f;
 
     //[SerializeField]
     //private bool _isFountain;
@@ -54,7 +54,7 @@ public class InputController : MonoBehaviour
         {
             //ThrowLeft();
             _swipeTimerLeft += Time.deltaTime;
-            if (_swipeTimerLeft > _stopTimerValue)
+            if (_swipeTimerLeft > _coyoteTime)
                 _hasSwipedLeft = false;
         }
 
@@ -62,7 +62,7 @@ public class InputController : MonoBehaviour
         {
             //ThrowRight();
             _swipeTimerRight += Time.deltaTime;
-            if (_swipeTimerRight > _stopTimerValue)
+            if (_swipeTimerRight > _coyoteTime)
                 _hasSwipedRight = false;
         }
 

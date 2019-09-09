@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class GameControl : MonoBehaviour
@@ -41,6 +42,7 @@ public class GameControl : MonoBehaviour
     private GameObject _endGameObject;
 
     public List<GameObject> Balls = new List<GameObject>();
+    public UnityEvent ThrowEvent;
 
     // Start is called before the first frame update
     void Start()
@@ -58,22 +60,22 @@ public class GameControl : MonoBehaviour
         // to test preloading scenes
         ToNextScene();
 
-        if (currentThrowCount > toLevel2Count && currentLevel==1)
+        if (currentThrowCount >= toLevel2Count && currentLevel==1)
         {
             currentLevel=2;
         }
-        if (currentThrowCount > toLevel3Count && currentLevel == 2)
+        if (currentThrowCount >= toLevel3Count && currentLevel == 2)
         {
             currentLevel = 3;
             MaximumNumberOfBalls++;
         }
-        if (currentThrowCount > toLevel4Count && currentLevel == 3)
+        if (currentThrowCount >= toLevel4Count && currentLevel == 3)
         {
             currentLevel = 4;
             MaximumNumberOfBalls++;
         }
 
-        if (currentThrowCount > toLevel5Count && currentLevel == 4)
+        if (currentThrowCount >= toLevel5Count && currentLevel == 4)
         {
             currentLevel = 5;
             MaximumNumberOfBalls++;
@@ -92,6 +94,12 @@ public class GameControl : MonoBehaviour
         }
 
 
+    }
+
+    public void IncrementThrowCount()
+    {
+        currentThrowCount++;
+        ThrowEvent.Invoke();
     }
 
     private void ToNextScene()
