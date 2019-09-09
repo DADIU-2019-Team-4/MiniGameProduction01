@@ -1,7 +1,7 @@
 Event	ID	Name			Wwise Object Path	Notes
 	1976820711	DialogueEN_event			\Default Work Unit\DialogueEN_event	
 	2450003899	DialogueDA_event			\Default Work Unit\DialogueDA_event	
-	3370210432	FailFeed_event			\Default Work Unit\FailFeed_event	
+	3132622256	FailFeed_event0			\Default Work Unit\FailFeed_event0	
 	3651821476	WinFeed_event			\Default Work Unit\WinFeed_event	
 
 Switch Group	ID	Name			Wwise Object Path	Notes

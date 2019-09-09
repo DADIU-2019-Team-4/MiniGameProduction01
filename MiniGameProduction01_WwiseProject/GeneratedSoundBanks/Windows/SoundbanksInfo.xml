@@ -18,14 +18,11 @@
 			<IncludedEvents>
 				<Event Id="2450003899" Name="DialogueDA_event" ObjectPath="\Events\Default Work Unit\DialogueDA_event" DurationType="OneShot" DurationMin="23.040001" DurationMax="83.720955"/>
 				<Event Id="1976820711" Name="DialogueEN_event" ObjectPath="\Events\Default Work Unit\DialogueEN_event" DurationType="OneShot" DurationMin="26.723265" DurationMax="93.488388"/>
-				<Event Id="3370210432" Name="FailFeed_event" ObjectPath="\Events\Default Work Unit\FailFeed_event" DurationType="OneShot" DurationMin="4.106871" DurationMax="4.106871"/>
+				<Event Id="3132622256" Name="FailFeed_event0" ObjectPath="\Events\Default Work Unit\FailFeed_event0" DurationType="OneShot" DurationMin="1.879342" DurationMax="1.879342"/>
+				<Event Id="3132622257" Name="FailFeed_event1" ObjectPath="\Events\Default Work Unit\FailFeed_event1" DurationType="OneShot" DurationMin="2.021565" DurationMax="2.021565"/>
 				<Event Id="3651821476" Name="WinFeed_event" ObjectPath="\Events\Default Work Unit\WinFeed_event" DurationType="OneShot" DurationMin="3.678141" DurationMax="3.678141"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="87159758" Language="SFX">
-					<ShortName>FailFeed.wav</ShortName>
-					<Path>SFX\FailFeed_10C4C929.wem</Path>
-				</File>
 				<File Id="131794834" Language="SFX">
 					<ShortName>WinFeed.wav</ShortName>
 					<Path>SFX\WinFeed_10C4C929.wem</Path>
@@ -41,6 +38,10 @@
 				<File Id="609625544" Language="SFX">
 					<ShortName>DA_DIA_P3-edit.wav</ShortName>
 					<Path>SFX\DA_DIA_P3-edit_10C4C929.wem</Path>
+				</File>
+				<File Id="620135521" Language="SFX">
+					<ShortName>BongoCan02.wav</ShortName>
+					<Path>SFX\BongoCan02_10C4C929.wem</Path>
 				</File>
 				<File Id="759778719" Language="SFX">
 					<ShortName>DA_DIA_P4-edit.wav</ShortName>
@@ -65,6 +66,10 @@
 				<File Id="876716406" Language="SFX">
 					<ShortName>DA_DIA_P2-edit.wav</ShortName>
 					<Path>SFX\DA_DIA_P2-edit_10C4C929.wem</Path>
+				</File>
+				<File Id="930556678" Language="SFX">
+					<ShortName>FX01.wav</ShortName>
+					<Path>SFX\FX01_10C4C929.wem</Path>
 				</File>
 				<File Id="939687044" Language="SFX">
 					<ShortName>EN_DIA_P3-edit.wav</ShortName>

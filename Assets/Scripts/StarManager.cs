@@ -66,6 +66,7 @@ public class StarManager : MonoBehaviour
                 stars[i].transform.GetChild(0).gameObject.SetActive(true);
                 // todo uncomment this for 3D models and play sound
                 //stars[i].GetComponent<Material>().EnableKeyword("_EMISSION");
+				AkSoundEngine.PostEvent("FailFeed_event" + i, stars[i].transform.GetChild(0).gameObject);
             }
 
             Debug.Log("Stars to fill: " + percentage * _totalAmountOfStars);

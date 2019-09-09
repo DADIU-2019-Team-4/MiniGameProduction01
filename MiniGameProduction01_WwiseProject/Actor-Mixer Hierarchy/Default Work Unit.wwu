@@ -51,13 +51,20 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="FailFeed" ID="{56175757-45BF-4952-9173-BCF7D257BC67}" ShortID="87159758">
+						<AudioFileSource Name="FX01" ID="{BE30B13E-594E-47EF-87D3-E64326176779}" ShortID="930556678">
+							<PropertyList>
+								<Property Name="VolumeOffset" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<Language>SFX</Language>
-							<AudioFile>FailFeed.wav</AudioFile>
+							<AudioFile>FX01.wav</AudioFile>
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
-						<ActiveSource Name="FailFeed" ID="{56175757-45BF-4952-9173-BCF7D257BC67}" Platform="Linked"/>
+						<ActiveSource Name="FX01" ID="{BE30B13E-594E-47EF-87D3-E64326176779}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 				<SwitchContainer Name="da_dia_switch" ID="{A36786C4-D558-48D5-8101-BA43BF60FC7E}" ShortID="344877322">
@@ -458,6 +465,25 @@
 						</GroupingList>
 					</GroupingInfo>
 				</SwitchContainer>
+				<Sound Name="BongoCan02" ID="{EF340A69-C7FD-4B19-8E35-C9DF2D51066F}" ShortID="1045107669">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85E0ED26-8EBA-4DDD-84A1-E48E2CE905F3}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="BongoCan02" ID="{09B56308-D383-4FCF-9933-7E96F833CE33}" ShortID="620135521">
+							<Language>SFX</Language>
+							<AudioFile>BongoCan02.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="BongoCan02" ID="{09B56308-D383-4FCF-9933-7E96F833CE33}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

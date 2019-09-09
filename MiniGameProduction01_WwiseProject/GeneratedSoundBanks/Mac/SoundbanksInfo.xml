@@ -18,7 +18,7 @@
 			<IncludedEvents>
 				<Event Id="2450003899" Name="DialogueDA_event" ObjectPath="\Events\Default Work Unit\DialogueDA_event" DurationType="OneShot" DurationMin="23.040001" DurationMax="83.720955"/>
 				<Event Id="1976820711" Name="DialogueEN_event" ObjectPath="\Events\Default Work Unit\DialogueEN_event" DurationType="OneShot" DurationMin="26.723265" DurationMax="93.488388"/>
-				<Event Id="3370210432" Name="FailFeed_event" ObjectPath="\Events\Default Work Unit\FailFeed_event" DurationType="OneShot" DurationMin="4.106871" DurationMax="4.106871"/>
+				<Event Id="3132622256" Name="FailFeed_event0" ObjectPath="\Events\Default Work Unit\FailFeed_event0" DurationType="OneShot" DurationMin="4.106871" DurationMax="4.106871"/>
 				<Event Id="3651821476" Name="WinFeed_event" ObjectPath="\Events\Default Work Unit\WinFeed_event" DurationType="OneShot" DurationMin="3.678141" DurationMax="3.678141"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
