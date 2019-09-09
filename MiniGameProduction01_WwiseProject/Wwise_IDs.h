@@ -14,6 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID FAILFEED_EVENT = 3370210432U;
+        static const AkUniqueID TEST_EVENT = 4258653052U;
         static const AkUniqueID WINFEED_EVENT = 3651821476U;
     } // namespace EVENTS
 
