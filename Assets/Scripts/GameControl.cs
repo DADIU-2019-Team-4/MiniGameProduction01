@@ -152,8 +152,9 @@ public class GameControl : MonoBehaviour
         {
             StartLevel(3);
             AkSoundEngine.SetSwitch("game_stage", "phase2", gameObject);
-			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
-			
+            AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+        }
+        
         if (currentLevelThrowCount >= toLevel4Count && currentLevel == 3)
         {
             StartLevel(4);
@@ -176,7 +177,7 @@ public class GameControl : MonoBehaviour
             AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
 			AkSoundEngine.PostEvent("rain_event", gameObject);
         }
-        }
+        
 
         if (currentLevelThrowCount >= toLevel7Count && currentLevel == 6)
         {
