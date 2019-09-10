@@ -25,6 +25,7 @@ public class GameControl : MonoBehaviour
     public Queue<ThrowableObject> leftHandObjects;
     public Queue<ThrowableObject> rightHandObjects;
 
+
     [SerializeField]
     public int toLevel2Count = 3;
     [SerializeField]
@@ -37,12 +38,30 @@ public class GameControl : MonoBehaviour
     public int toLevel6Count = 10;
     [SerializeField]
     public int toLevel7Count = 10;
+    
 
     public float gameSpeed = 0.8f;
     public float speedUpValue = 0.1f;
 
     [SerializeField]
     private GameObject _endGameObject;
+
+    [SerializeField]
+    private float levelTimer = 0;
+
+    [SerializeField]
+    private float bellSpawnTime = 36f;
+
+    [SerializeField]
+    private float packageSpawnTime = 0;
+
+    [SerializeField]
+    private float toySpawnTime = 0;
+
+    [SerializeField]
+    private float dvdSpawnTime = 0;
+
+
 
     public bool stackingIsAllowed = false;
 
@@ -201,7 +220,8 @@ public class GameControl : MonoBehaviour
             //currentNumOfBalls++;
         }
 
-        //CheckLooseCondition();
+        levelTimer += Time.deltaTime;
+        TimedSpawnHandler();
     }
 
     private void UpdateStars()
@@ -233,9 +253,12 @@ public class GameControl : MonoBehaviour
         }
     }
 
-    private void CheckLooseCondition()
+    private void TimedSpawnHandler()
     {    
-    
+        if (currentLevel==3 && levelTimer>bellSpawnTime)
+        {
+            throwableObjectList[0].gameObject.GetComponent<ModifyObjectMesh>().SetToBellMesh();
+        }
 	}
 
     private void ToNextScene()
@@ -272,6 +295,7 @@ public class GameControl : MonoBehaviour
         currentLevelThrowCount = 0;
         inputController.DisableControls(0f);
         stackingIsAllowed = true;
+        levelTimer = 0; //reset time used on level
         
         foreach (ThrowableObject ball in throwableObjectList)
         {
