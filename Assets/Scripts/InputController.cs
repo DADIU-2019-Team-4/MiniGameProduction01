@@ -37,6 +37,7 @@ public class InputController : MonoBehaviour
     private float disableControlsTimer = 0; //timer for counting how long the controls have been turned off
     private static float disableControlsTime = 3f; //how long should the controls be turned off
 
+    Animator m_Animator;
 
     private GameControl gc;
 
@@ -49,6 +50,9 @@ public class InputController : MonoBehaviour
     {
         width = (float)Screen.width;
         _minSwipeDistance = Screen.height * _minSwipeDistanceInPercentage; // 10% height of the screen
+
+        //Get the Animator attached to the Timmy's Model
+        m_Animator = GameObject.Find("Timmy_fbx").GetComponent<Animator>();
 
         //if (_isFountain)
         //    _fountainGameController = FindObjectOfType<FountainGameController>();
@@ -241,6 +245,9 @@ public class InputController : MonoBehaviour
             to.throwLeft();
             gc.stackingIsAllowed = false;
 
+            // Trigger throwing Animation
+            m_Animator.SetTrigger("throwR");
+
             Debug.Log(to.gameObject.GetInstanceID() + "Size = " + gc.rightHandObjects.Count);
             ThrowEvent.Invoke();
         }
@@ -256,6 +263,9 @@ public class InputController : MonoBehaviour
             to = gc.leftHandObjects.Dequeue();
             to.throwRight();
             gc.stackingIsAllowed = false;
+
+            // Trigger throwing Animation
+            m_Animator.SetTrigger("throwL");
 
             Debug.Log(to.gameObject.GetInstanceID() + "Size = " + gc.leftHandObjects.Count);
             ThrowEvent.Invoke();
