@@ -181,17 +181,15 @@ public class GameControl : MonoBehaviour
 			AkSoundEngine.PostEvent("rain_event", gameObject);
             LightStageModifier.ToStageSix();
         }
-        
+
 
         if (currentLevel == 6)
         {
             AkSoundEngine.SetSwitch("game_stage", "phase6", gameObject);
             AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
-			AkSoundEngine.PostEvent("thunder_event", gameObject);
+            AkSoundEngine.PostEvent("thunder_event", gameObject);
             LightStageModifier.ToStageSeven();
-        }
 
-            // speed up at level 7
             inputController.LevelEnd = true;
             gameSpeed += Time.deltaTime * speedUpValue;
             Time.timeScale = gameSpeed;
@@ -202,7 +200,7 @@ public class GameControl : MonoBehaviour
             {
                 _endGameObject.SetActive(true);
             }
-}
+        }
 
         if (MaximumNumberOfBalls > currentNumOfBalls)
         {
