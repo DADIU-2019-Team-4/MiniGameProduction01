@@ -306,7 +306,7 @@ public class GameControl : MonoBehaviour
                 AddBall(Side.Left, Type.Sex);
                 AddBall(Side.Right, Type.Package);
                 AddBall(Side.Right, Type.Rocket);
-                gameSpeed += 0.2f;
+                gameSpeed =1f;
                 Time.timeScale = gameSpeed;
                 break;
             case 6:
