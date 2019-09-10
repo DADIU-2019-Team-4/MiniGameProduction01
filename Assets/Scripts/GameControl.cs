@@ -50,18 +50,28 @@ public class GameControl : MonoBehaviour
     private float levelTimer = 0;
 
     [SerializeField]
-    private float bellSpawnTime = 36f;
+    private float bellSpawnTime = 19f;
 
     [SerializeField]
-    private float packageSpawnTime = 0;
+    private float packageSpawnTime = 4f;
 
     [SerializeField]
-    private float toySpawnTime = 0;
+    private float toySpawnTime = 12.3f;
 
     [SerializeField]
-    private float dvdSpawnTime = 0;
+    private float dvdSpawnTime = 59.5f;
 
+    [SerializeField]
+    private float carSpawnTime = 20f;
 
+    [SerializeField]
+    private float porcelainSpawnTime = 23f;
+
+    [SerializeField]
+    private float morePorcelainSpawnTime = 50f;
+
+   
+    private float numberOfObjectsSpawn;
 
     public bool stackingIsAllowed = false;
 
@@ -144,6 +154,7 @@ public class GameControl : MonoBehaviour
         inputController.ThrowEvent.AddListener(UpdateStars);
 
 		AkSoundEngine.PostEvent("sun_event", gameObject);
+        numberOfObjectsSpawn = 0;
 
         //level 1 setup
         StartLevel(currentLevel);
@@ -166,12 +177,14 @@ public class GameControl : MonoBehaviour
             StartLevel(2);
             AkSoundEngine.SetSwitch("game_stage", "phase1", gameObject);
 			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+            levelTimer = 0; //reset time used on level
         }
         if (currentLevelThrowCount >= toLevel3Count && currentLevel == 2)
         {
             StartLevel(3);
             AkSoundEngine.SetSwitch("game_stage", "phase2", gameObject);
             AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+            levelTimer = 0; //reset time used on level
         }
         
         if (currentLevelThrowCount >= toLevel4Count && currentLevel == 3)
@@ -180,6 +193,7 @@ public class GameControl : MonoBehaviour
             AkSoundEngine.SetSwitch("game_stage", "phase3", gameObject);
 			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
 			AkSoundEngine.PostEvent("crows_event", gameObject);
+            levelTimer = 0; //reset time used on level
         }
 
         if (currentLevelThrowCount >= toLevel5Count && currentLevel == 4)
@@ -187,6 +201,7 @@ public class GameControl : MonoBehaviour
             StartLevel(5);
             AkSoundEngine.SetSwitch("game_stage", "phase4", gameObject);
 			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+            levelTimer = 0; //reset time used on level
         }
 
         if (currentLevelThrowCount >= toLevel6Count && currentLevel == 5)
@@ -195,6 +210,7 @@ public class GameControl : MonoBehaviour
             AkSoundEngine.SetSwitch("game_stage", "phase5", gameObject);
             AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
 			AkSoundEngine.PostEvent("rain_event", gameObject);
+            levelTimer = 0; //reset time used on level
         }
         
 
@@ -204,6 +220,7 @@ public class GameControl : MonoBehaviour
             AkSoundEngine.SetSwitch("game_stage", "phase6", gameObject);
             AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
 			AkSoundEngine.PostEvent("thunder_event", gameObject);
+            levelTimer = 0; //reset time used on level
         }
 
         if (currentLevel == 7)
@@ -211,6 +228,7 @@ public class GameControl : MonoBehaviour
             // speed up at level 7
             gameSpeed += Time.deltaTime * speedUpValue;
             Time.timeScale = gameSpeed;
+            levelTimer = 0; //reset time used on level
         }
 
         if (MaximumNumberOfBalls > currentNumOfBalls)
@@ -254,12 +272,47 @@ public class GameControl : MonoBehaviour
     }
 
     private void TimedSpawnHandler()
-    {    
-        if (currentLevel==3 && levelTimer>bellSpawnTime)
+    {
+        if (currentLevel == 3 && levelTimer > bellSpawnTime && bellSpawnTime != 1f)
         {
-            throwableObjectList[0].gameObject.GetComponent<ModifyObjectMesh>().SetToBellMesh();
+            throwableObjectList[1].gameObject.GetComponent<ModifyObjectMesh>().SetToBellMesh();
+            bellSpawnTime = -1f;
         }
-	}
+        if (currentLevel == 4 && levelTimer > packageSpawnTime && packageSpawnTime!=-1f)
+        {
+            throwableObjectList[0].gameObject.GetComponent<ModifyObjectMesh>().SetToPackageMesh();
+            packageSpawnTime = -1f;
+        }
+        if (currentLevel == 4 && levelTimer > toySpawnTime && toySpawnTime != -1f)
+        {
+            throwableObjectList[1].gameObject.GetComponent<ModifyObjectMesh>().SetToRocketMesh();
+            toySpawnTime = -1f;
+        }
+        if (currentLevel == 4 && levelTimer > dvdSpawnTime && dvdSpawnTime != -1f)
+        {
+            throwableObjectList[0].gameObject.GetComponent<ModifyObjectMesh>().SetToSexDrawingMesh();
+            dvdSpawnTime = -1f;
+        }
+        if (currentLevel == 5 && levelTimer > carSpawnTime && carSpawnTime!=-1f)
+        {
+            throwableObjectList[3].gameObject.GetComponent<ModifyObjectMesh>().SetToToyCarMesh();
+            carSpawnTime = -1f;
+        }
+        if (currentLevel == 6 && levelTimer > porcelainSpawnTime && porcelainSpawnTime!=-1f)
+        {
+            throwableObjectList[4].gameObject.GetComponent<ModifyObjectMesh>().SetToPorcelain1Mesh();
+            porcelainSpawnTime = -1f;
+        }
+        if (currentLevel == 7 && levelTimer > morePorcelainSpawnTime && morePorcelainSpawnTime!=-1f)
+        {
+            throwableObjectList[0].gameObject.GetComponent<ModifyObjectMesh>().SetToPorcelain1Mesh();
+            throwableObjectList[1].gameObject.GetComponent<ModifyObjectMesh>().SetToPorcelain2Mesh();
+            throwableObjectList[2].gameObject.GetComponent<ModifyObjectMesh>().SetToPorcelain3Mesh();
+            throwableObjectList[3].gameObject.GetComponent<ModifyObjectMesh>().SetToPorcelain1Mesh();
+            throwableObjectList[4].gameObject.GetComponent<ModifyObjectMesh>().SetToPorcelain2Mesh();
+            morePorcelainSpawnTime = -1f;
+        }
+    }
 
     private void ToNextScene()
     {
@@ -295,7 +348,7 @@ public class GameControl : MonoBehaviour
         currentLevelThrowCount = 0;
         inputController.DisableControls(0f);
         stackingIsAllowed = true;
-        levelTimer = 0; //reset time used on level
+       
         
         foreach (ThrowableObject ball in throwableObjectList)
         {
