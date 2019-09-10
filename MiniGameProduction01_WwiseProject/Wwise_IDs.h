@@ -25,7 +25,7 @@ namespace AK
         static const AkUniqueID CAUGHT_TEACUP = 3444823518U;
         static const AkUniqueID CAUGHT_TOYCAR = 277406514U;
         static const AkUniqueID CROWS_EVENT = 3931550490U;
-        static const AkUniqueID DIALOGUEDA_EVENT = 2450003899U;
+        static const AkUniqueID DIALOGUEDK_EVENT = 4123255229U;
         static const AkUniqueID DIALOGUEEN_EVENT = 1976820711U;
         static const AkUniqueID FAILFEED_EVENT = 3370210432U;
         static const AkUniqueID MENUPAUSE_EVENT = 1105161895U;
@@ -40,6 +40,21 @@ namespace AK
         static const AkUniqueID SUN_EVENT = 2216443840U;
         static const AkUniqueID THUNDER_EVENT = 3141175304U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace DIA_LANG
+        {
+            static const AkUniqueID GROUP = 739838848U;
+
+            namespace STATE
+            {
+                static const AkUniqueID DK = 1836525770U;
+                static const AkUniqueID EN = 1819748192U;
+            } // namespace STATE
+        } // namespace DIA_LANG
+
+    } // namespace STATES
 
     namespace SWITCHES
     {

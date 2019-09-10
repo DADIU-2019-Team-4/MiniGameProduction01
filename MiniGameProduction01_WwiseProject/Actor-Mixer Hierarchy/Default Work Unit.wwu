@@ -163,11 +163,6 @@
 							</ValueList>
 						</Property>
 						<Property Name="SpeakerPanning" Type="int16" Value="1"/>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>6</Value>
-							</ValueList>
-						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -331,6 +326,27 @@
 									</PropertyList>
 								</Panner>
 							</PositioningInfo>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="dia_lang" ID="{00676B05-70FD-4069-9ED7-901BA80ABE9B}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="EN" ID="{38BB2719-CE75-4708-84C2-43FA2656A5B4}"/>
+										<CustomState Name="" ID="{FC0F3B70-0E99-42CF-A034-C671422FA51F}" ShortID="880217237">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-128"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="DK" ID="{9E83DD6D-7544-4F0C-9FB9-6F38019170FD}"/>
+										<CustomState Name="" ID="{F1A0B188-DBD2-46CD-84A7-606595DF0C3B}" ShortID="219875943"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<GroupingInfo>
 								<GroupingBehaviorList>
 									<GroupingBehavior>
@@ -548,6 +564,27 @@
 									</PropertyList>
 								</Panner>
 							</PositioningInfo>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="dia_lang" ID="{00676B05-70FD-4069-9ED7-901BA80ABE9B}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="EN" ID="{38BB2719-CE75-4708-84C2-43FA2656A5B4}"/>
+										<CustomState Name="" ID="{C9DF986D-D1EC-4B14-AA73-F4E678DED889}" ShortID="839172551"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="DK" ID="{9E83DD6D-7544-4F0C-9FB9-6F38019170FD}"/>
+										<CustomState Name="" ID="{DD76E7DE-254B-4AC0-A84E-0EAB342178B8}" ShortID="110111308">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-128"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<GroupingInfo>
 								<GroupingBehaviorList>
 									<GroupingBehavior>
