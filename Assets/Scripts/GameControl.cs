@@ -17,7 +17,7 @@ public class GameControl : MonoBehaviour
     [SerializeField]
     private float ballSpawnInterval = 1.0f;
     private float spawnTimer = 0f;
-    private float finalSceneDuration = 2f;
+    private float finalSceneDuration = 10f;
     private float finalSceneTimer= 0f;
     [HideInInspector]
     //public bool ballWaiting = false;
@@ -84,6 +84,7 @@ public class GameControl : MonoBehaviour
     Animator m_Animator;
 
     private LightStageModifier LightStageModifier;
+    private bool _triggeredEnding;
 
     internal void QueueLeftHand(ThrowableObject throwableObject)
     {
@@ -224,7 +225,7 @@ public class GameControl : MonoBehaviour
         }
 
 
-        if (currentLevel == 6)
+        if (currentLevel == 6 && !_triggeredEnding)
         {
             AkSoundEngine.SetSwitch("game_stage", "phase6", gameObject);
             AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
@@ -239,10 +240,10 @@ public class GameControl : MonoBehaviour
             Time.timeScale = gameSpeed;
 
             finalSceneTimer += Time.deltaTime;
-
             if (finalSceneTimer > finalSceneDuration)
             {
                 _endGameObject.SetActive(true);
+                _triggeredEnding = true;
             }
         }
 

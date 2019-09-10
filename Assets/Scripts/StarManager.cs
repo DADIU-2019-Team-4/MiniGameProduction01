@@ -35,20 +35,23 @@ public class StarManager : MonoBehaviour
 
             if (i < _totalAmountOfStars)
             {
+                Star star = stars[i].GetComponent<Star>();
                 if (i >= 3 && i < 7)
                 {
-                    if (!stars[i].GetComponent<Star>().IsActivated)
+                    if (!star.IsActivated)
                     {
                         stars[i].GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
                         AkSoundEngine.PostEvent("stars_event" + (i + 1), gameObject);
+                        star.IsActivated = true;
                     }
                 }
                 else
                 {
-                    if (!stars[i].GetComponent<Star>().IsActivated)
+                    if (!star.IsActivated)
                     {
                         stars[i].GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
                         AkSoundEngine.PostEvent("stars_event0", gameObject);
+                        star.IsActivated = true;
                     }
                 }
             }
@@ -69,6 +72,7 @@ public class StarManager : MonoBehaviour
         foreach (GameObject star in stars)
         {
             star.GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
+            star.GetComponent<Star>().IsActivated = false;
         }
     }
 }
