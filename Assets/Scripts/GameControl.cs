@@ -54,6 +54,8 @@ public class GameControl : MonoBehaviour
 
     Animator m_Animator;
 
+    private LightStageModifier LightStageModifier;
+
     internal void QueueLeftHand(ThrowableObject throwableObject)
     {
 
@@ -126,8 +128,11 @@ public class GameControl : MonoBehaviour
 
 		AkSoundEngine.PostEvent("sun_event", gameObject);
 
+        LightStageModifier = GetComponent<LightStageModifier>();
+
         //level 1 setup
         StartLevel(currentLevel);
+        LightStageModifier.ToStageOne();
     }
 
     void PickUpBallScene() {
@@ -147,12 +152,14 @@ public class GameControl : MonoBehaviour
             StartLevel(2);
             AkSoundEngine.SetSwitch("game_stage", "phase1", gameObject);
 			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+            LightStageModifier.ToStageTwo();
         }
         if (currentLevelThrowCount >= toLevel3Count && currentLevel == 2)
         {
             StartLevel(3);
             AkSoundEngine.SetSwitch("game_stage", "phase2", gameObject);
             AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+            LightStageModifier.ToStageThree();
         }
         
         if (currentLevelThrowCount >= toLevel4Count && currentLevel == 3)
@@ -161,6 +168,7 @@ public class GameControl : MonoBehaviour
             AkSoundEngine.SetSwitch("game_stage", "phase3", gameObject);
 			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
 			AkSoundEngine.PostEvent("crows_event", gameObject);
+            LightStageModifier.ToStageFour();
         }
 
         if (currentLevelThrowCount >= toLevel5Count && currentLevel == 4)
@@ -168,6 +176,7 @@ public class GameControl : MonoBehaviour
             StartLevel(5);
             AkSoundEngine.SetSwitch("game_stage", "phase4", gameObject);
 			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+            LightStageModifier.ToStageFive();
         }
 
         if (currentLevelThrowCount >= toLevel6Count && currentLevel == 5)
@@ -176,6 +185,7 @@ public class GameControl : MonoBehaviour
             AkSoundEngine.SetSwitch("game_stage", "phase5", gameObject);
             AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
 			AkSoundEngine.PostEvent("rain_event", gameObject);
+            LightStageModifier.ToStageSix();
         }
         
 
@@ -185,6 +195,7 @@ public class GameControl : MonoBehaviour
             AkSoundEngine.SetSwitch("game_stage", "phase6", gameObject);
             AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
 			AkSoundEngine.PostEvent("thunder_event", gameObject);
+            LightStageModifier.ToStageSeven();
         }
 
         if (currentLevel == 7)
