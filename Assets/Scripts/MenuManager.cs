@@ -29,7 +29,8 @@ public class MenuManager : MonoBehaviour
             if (!EndGame)
             {
                 _menuScreen.SetActive(false);
-                Time.timeScale = _gameControl.gameSpeed;
+            Time.timeScale = _gameControl.gameSpeed;
+			AkSoundEngine.PostEvent("menuResume_event", gameObject);
             }
             else
             {
@@ -42,6 +43,7 @@ public class MenuManager : MonoBehaviour
     {
         Time.timeScale = 0f;
         _menuScreen.SetActive(true);
+		AkSoundEngine.PostEvent("menuPause_event", gameObject);
     }
 
     public void CloseSoundSettings()

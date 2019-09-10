@@ -1,4 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
+	277406514	caught_toyCar			\Default Work Unit\Items\caught_toyCar	
+	843837580	caught_plate			\Default Work Unit\Items\caught_plate	
 	902224736	stars_event7			\Default Work Unit\Stars\stars_event7	
 	902224737	stars_event6			\Default Work Unit\Stars\stars_event6	
 	902224738	stars_event5			\Default Work Unit\Stars\stars_event5	
@@ -6,17 +8,22 @@ Event	ID	Name			Wwise Object Path	Notes
 	902224743	stars_event0			\Default Work Unit\Stars\stars_event0	
 	937827766	rain_event			\Default Work Unit\Weather\rain_event	
 	1105161895	menuPause_event			\Default Work Unit\menuPause_event	
-	1221441867	caught_Bell			\Default Work Unit\Items\caught_Bell	
-	1228823624	caught_Rocket			\Default Work Unit\Items\caught_Rocket	
+	1107252820	caught_jugglingBall02			\Default Work Unit\Items\caught_jugglingBall02	
+	1107252823	caught_jugglingBall01			\Default Work Unit\Items\caught_jugglingBall01	
+	1221441867	caught_bell			\Default Work Unit\Items\caught_bell	
+	1228823624	caught_rocket			\Default Work Unit\Items\caught_rocket	
+	1231394136	caught_package			\Default Work Unit\Items\caught_package	
 	1976820711	DialogueEN_event			\Default Work Unit\Dialogue\DialogueEN_event	
+	2008163460	menuResume_event			\Default Work Unit\menuResume_event	
 	2216443840	sun_event			\Default Work Unit\Weather\sun_event	
 	2387556230	caught_jugglingBall			\Default Work Unit\Items\caught_jugglingBall	
 	2450003899	DialogueDA_event			\Default Work Unit\Dialogue\DialogueDA_event	
-	2524224301	caught_Mom			\Default Work Unit\Items\caught_Mom	
+	2642800386	caught_dvd			\Default Work Unit\Items\caught_dvd	
 	2761588325	Room_event			\Default Work Unit\Room_event	
-	2961575211	caught_Dad			\Default Work Unit\Items\caught_Dad	
+	2960442441	caught_mug			\Default Work Unit\Items\caught_mug	
 	3141175304	thunder_event			\Default Work Unit\Weather\thunder_event	
 	3370210432	FailFeed_event			\Default Work Unit\FailFeed_event	
+	3444823518	caught_teaCup			\Default Work Unit\Items\caught_teaCup	
 	3931550490	crows_event			\Default Work Unit\Weather\crows_event	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
