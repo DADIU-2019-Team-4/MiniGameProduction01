@@ -40,23 +40,17 @@ public class StarManager : MonoBehaviour
             {
                 if (i >= 3 && i < 7)
                 {
-                    GameObject filling = stars[i].transform.GetChild(0).gameObject;
-                    if (!filling.activeSelf)
+                    if (!stars[i].GetComponent<Star>().IsActivated)
                     {
-                        filling.SetActive(true);
-                        // todo uncomment this for 3D models
-                        //stars[i].GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
-                        AkSoundEngine.PostEvent("stars_event" + (i + 1), stars[i].transform.GetChild(0).gameObject);
+                        stars[i].GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
+                        AkSoundEngine.PostEvent("stars_event" + (i + 1), gameObject);
                     }
                 }
                 else
                 {
-                    GameObject filling = stars[i].transform.GetChild(0).gameObject;
-                    if (!filling.activeSelf)
+                    if (!stars[i].GetComponent<Star>().IsActivated)
                     {
-                        filling.SetActive(true);
-                        // todo uncomment this for 3D models
-                        //stars[i].GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
+                        stars[i].GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
                         AkSoundEngine.PostEvent("stars_event0", gameObject);
                     }
                 }
@@ -77,9 +71,7 @@ public class StarManager : MonoBehaviour
         yield return new WaitForSeconds(waitForReset);
         foreach (GameObject star in stars)
         {
-            star.transform.GetChild(0).gameObject.SetActive(false);
-            // todo uncomment this for 3D models
-            //star.GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
+            star.GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
         }
     }
 }
