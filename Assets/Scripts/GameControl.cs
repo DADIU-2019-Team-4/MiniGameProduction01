@@ -151,6 +151,7 @@ public class GameControl : MonoBehaviour
         inputController.ThrowEvent.AddListener(UpdateStars);
 
 		AkSoundEngine.PostEvent("sun_event", gameObject);
+		AkSoundEngine.SetState("dia_lang", "EN");
         numberOfObjectsSpawn = 0;
 
         LightStageModifier = GetComponent<LightStageModifier>();

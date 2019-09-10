@@ -334,10 +334,6 @@
 								</StateGroupList>
 								<CustomStateList>
 									<CustomState>
-										<StateRef Name="DA" ID="{1D119CD1-BE27-426D-91E1-B8B94D1545D8}"/>
-										<CustomState Name="" ID="{1CB11F2A-49FA-4612-AC2A-62BB5D04AD7D}" ShortID="809747628"/>
-									</CustomState>
-									<CustomState>
 										<StateRef Name="EN" ID="{38BB2719-CE75-4708-84C2-43FA2656A5B4}"/>
 										<CustomState Name="" ID="{FC0F3B70-0E99-42CF-A034-C671422FA51F}" ShortID="880217237">
 											<PropertyList>
@@ -575,10 +571,6 @@
 									</StateGroupInfo>
 								</StateGroupList>
 								<CustomStateList>
-									<CustomState>
-										<StateRef Name="DA" ID="{1D119CD1-BE27-426D-91E1-B8B94D1545D8}"/>
-										<CustomState Name="" ID="{59CF5434-CA9E-4BE6-8CA9-3AEFF7D91B2F}" ShortID="653083000"/>
-									</CustomState>
 									<CustomState>
 										<StateRef Name="EN" ID="{38BB2719-CE75-4708-84C2-43FA2656A5B4}"/>
 										<CustomState Name="" ID="{C9DF986D-D1EC-4B14-AA73-F4E678DED889}" ShortID="839172551"/>
