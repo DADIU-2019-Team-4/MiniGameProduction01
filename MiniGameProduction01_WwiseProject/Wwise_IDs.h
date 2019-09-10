@@ -41,6 +41,24 @@ namespace AK
         static const AkUniqueID THUNDER_EVENT = 3141175304U;
     } // namespace EVENTS
 
+<<<<<<< Updated upstream
+=======
+    namespace STATES
+    {
+        namespace DIA_LANG
+        {
+            static const AkUniqueID GROUP = 739838848U;
+
+            namespace STATE
+            {
+                static const AkUniqueID DK = 1836525770U;
+                static const AkUniqueID EN = 1819748192U;
+            } // namespace STATE
+        } // namespace DIA_LANG
+
+    } // namespace STATES
+
+>>>>>>> Stashed changes
     namespace SWITCHES
     {
         namespace GAME_STAGE

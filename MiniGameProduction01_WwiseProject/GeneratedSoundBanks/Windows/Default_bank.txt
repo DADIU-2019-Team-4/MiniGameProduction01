@@ -38,6 +38,21 @@ Switch	ID	Name	Switch Group			Notes
 	3630028974	phase4	game_stage			
 	3630028975	phase5	game_stage			
 
+<<<<<<< Updated upstream
+=======
+State Group	ID	Name			Wwise Object Path	Notes
+	739838848	dia_lang			\Default Work Unit\dia_lang	
+
+State	ID	Name	State Group			Notes
+	0	None	dia_lang			
+	1819748192	EN	dia_lang			
+	1836525770	DK	dia_lang			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	110111308	DK	dia_lang	\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\en_dia_switch		
+	880217237	EN	dia_lang	\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\dk_dia_switch		
+
+>>>>>>> Stashed changes
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	10934945	catch_paper1	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\catch_paper1_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Catching\catch_paper1		5120
 	87244112	stars_event5	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\stars_event5_6296B0F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stars\stars_event5		34479
