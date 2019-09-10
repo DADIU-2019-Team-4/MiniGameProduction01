@@ -41,6 +41,10 @@ public class ThrowableObject : MonoBehaviour
     //vibration
     public long shakeDur = 5;
 
+    //screen shake
+    public GameObject mainCamera;
+    public CameShake1 shake;
+
 
     public Type type;
 
@@ -50,6 +54,9 @@ public class ThrowableObject : MonoBehaviour
         _animator = GetComponent<Animator>();
         _animator.enabled = false;
         gc = GameObject.FindObjectOfType<GameControl>();
+        //finding main camera
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+        shake = mainCamera.GetComponent<CameShake1>();
     }
 
 
@@ -107,6 +114,7 @@ public class ThrowableObject : MonoBehaviour
         {
             //applyForce(new Vector3(-0.2F, 1, 0));
             Vibration.Vibrate(shakeDur);
+           // StartCoroutine(shake.Shake(.04f, 0.03f));
             StartCoroutine(JuggleRight());
             isLeftHand = false;
 
@@ -134,6 +142,7 @@ public class ThrowableObject : MonoBehaviour
             }
 
             Vibration.Vibrate(shakeDur);
+           // StartCoroutine(shake.Shake(.04f, 0.03f));
             StartCoroutine(JuggleLeft());
             isRightHand = false;
 
