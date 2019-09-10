@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 505171660684869033}
   - component: {fileID: 7983392908799067626}
   - component: {fileID: 2157983160396943440}
+  - component: {fileID: 726737295}
+  - component: {fileID: 726737296}
+  - component: {fileID: 726737300}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -45,7 +48,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 684fa34806a87cb47b8de0ec8bb90cd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 532857877177543079, guid: 307d95a891291ee458e0102d3baaf89f, type: 3}
+  BallOne: {fileID: 532857877177543079, guid: 307d95a891291ee458e0102d3baaf89f, type: 3}
+  BallTwo: {fileID: 532857877177543079, guid: 5132b582809a8114b9aa091cd35e0061, type: 3}
+  BallThree: {fileID: 532857877177543079, guid: bca044d32c5c3b54792971f3b99cb4c5,
+    type: 3}
+  BallFour: {fileID: 532857877177543079, guid: 322b1d39817d0264e90a04685cfb6113, type: 3}
+  Balls: []
+  LeftHandSpawn: {x: -0.42, y: 1.3, z: 1.5}
+  RightHandSpawn: {x: 0.4, y: 1.3, z: 1.5}
 --- !u!114 &7983392908799067626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,7 +68,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dab2d80bb33d3f449a0d94ab2e00c2cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwCount: 0
+  currentLevel: 1
+  currentLevelThrowCount: 0
+  MaximumNumberOfBalls: 1
+  ballSpawnInterval: 1
+  throwableObjectList: []
+  toLevel2Count: 8
+  toLevel3Count: 25
+  toLevel4Count: 80
+  toLevel5Count: 120
+  toLevel6Count: 150
+  toLevel7Count: 20
+  gameSpeed: 0.8
+  speedUpValue: 0.1
+  _endGameObject: {fileID: 0}
+  stackingIsAllowed: 0
+  Balls: []
 --- !u!114 &2157983160396943440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,4 +96,100 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50c7d4230c5a39a449417dd4d8809f2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _stopTimerValue: 0.15
+  _minSwipeDistanceInPercentage: 0.1
+  _coyoteTime: 0.2
+  ThrowEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &726737295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505171660684869034}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06302d2035384244ab242a6cdc7bd0d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b57f27f0db815b64aa6708174547e385,
+      type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
+  LargeModePositions: []
+  multiPositionArray: []
+--- !u!114 &726737296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505171660684869034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06302d2035384244ab242a6cdc7bd0d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a70d65cd43edc074e96e11df948b3761,
+      type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
+  LargeModePositions: []
+  multiPositionArray: []
+--- !u!114 &726737300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505171660684869034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09513130d2478f44e94e96e591ff7675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1

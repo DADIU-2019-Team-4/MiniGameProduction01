@@ -39,6 +39,7 @@ public class GameControl : MonoBehaviour
     public int toLevel7Count = 10;
 
     public float gameSpeed = 0.8f;
+    public float speedUpValue = 0.1f;
 
     [SerializeField]
     private GameObject _endGameObject;
@@ -58,11 +59,16 @@ public class GameControl : MonoBehaviour
         {
             if (leftHandObjects.Count > 0)
             {
-                //restart level
-                StartLevel(currentLevel);
-                StartCoroutine(_starManager.ResetStars(0f));
-                Debug.Log("Fail!!");
-                return;
+                if (currentLevel != 7)
+                {
+                    //restart level
+                    StartLevel(currentLevel);
+                    StartCoroutine(_starManager.ResetStars(0f));
+                    Debug.Log("Fail!!");
+                    return;
+                }
+
+                _endGameObject.SetActive(true);
             }
         }
 
@@ -77,11 +83,16 @@ public class GameControl : MonoBehaviour
         {
             if (rightHandObjects.Count > 0)
             {
-                //restart level
-                StartLevel(currentLevel);
-                StartCoroutine(_starManager.ResetStars(0f));
-                Debug.Log("Fail!!");
-                return;
+                if (currentLevel != 7)
+                {
+                    //restart level
+                    StartLevel(currentLevel);
+                    StartCoroutine(_starManager.ResetStars(0f));
+                    Debug.Log("Fail!!");
+                    return;
+                }
+
+                _endGameObject.SetActive(true);
             }
         }
 
@@ -108,7 +119,7 @@ public class GameControl : MonoBehaviour
         inputController.ThrowEvent.AddListener(UpdateStars);
 
         //level 1 setup
-        StartLevel(1);
+        StartLevel(currentLevel);
     }
 
     // Update is called once per frame
@@ -159,7 +170,9 @@ public class GameControl : MonoBehaviour
 
         if (currentLevel == 7)
         {
-            //_endGameObject.SetActive(true);
+            // speed up at level 7
+            gameSpeed += Time.deltaTime * speedUpValue;
+            Time.timeScale = gameSpeed;
         }
 
         if (MaximumNumberOfBalls > currentNumOfBalls)
@@ -274,7 +287,8 @@ public class GameControl : MonoBehaviour
                 AddBall(Side.Left);
                 AddBall(Side.Right);
                 AddBall(Side.Right);
-                Time.timeScale = gameSpeed =+ 0.2f;
+                gameSpeed += 0.2f;
+                Time.timeScale = gameSpeed;
                 break;
             case 6:
                 AddBall(Side.Left);

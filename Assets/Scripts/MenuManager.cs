@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class MenuManager : MonoBehaviour
     private bool _isSoundSettingsOpen;
     private GameControl _gameControl;
 
+    public bool EndGame { get; set; }
 
     // Start is called before the first frame update
     void Start()
@@ -24,8 +26,15 @@ public class MenuManager : MonoBehaviour
     {
         if (!_isSoundSettingsOpen)
         {
-            _menuScreen.SetActive(false);
-            Time.timeScale = _gameControl.gameSpeed;
+            if (!EndGame)
+            {
+                _menuScreen.SetActive(false);
+                Time.timeScale = _gameControl.gameSpeed;
+            }
+            else
+            {
+                SceneManager.LoadScene("Main");
+            }
         }
     }
 
