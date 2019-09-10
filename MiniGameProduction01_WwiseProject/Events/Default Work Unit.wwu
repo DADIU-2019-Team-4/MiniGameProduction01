@@ -188,6 +188,91 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Folder Name="Items" ID="{3DD46BE0-4070-450D-94A2-0AAC0AB52904}" ShortID="945338232">
+					<ChildrenList>
+						<Event Name="caught_jugglingBall" ID="{FC86A473-D738-4013-8AB3-FC3B9865B23B}">
+							<ChildrenList>
+								<Action Name="" ID="{CCDE829E-B807-4D15-B7E5-286C87C8710E}" ShortID="382080038">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Catching" ID="{FBACB244-0984-406D-9559-A56B27A05F4F}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="caught_Bell" ID="{2AD8674A-1975-4CC1-ABAC-B078890D164D}">
+							<ChildrenList>
+								<Action Name="" ID="{EFAF6DEC-ABA7-42B2-9A60-F8E61E4F7C4E}" ShortID="1045274396">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Catching" ID="{FBACB244-0984-406D-9559-A56B27A05F4F}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="caught_Dad" ID="{1C61B438-2466-4EAC-988D-209A52D38BAD}">
+							<ChildrenList>
+								<Action Name="" ID="{868CF5DA-0EC8-45E0-9358-FDAE9E1F9B68}" ShortID="810898534">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Catching" ID="{FBACB244-0984-406D-9559-A56B27A05F4F}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="caught_Mom" ID="{9790CC8D-9B45-4910-A409-471646C0B947}">
+							<ChildrenList>
+								<Action Name="" ID="{8612B9D1-40A6-4EFA-A6D3-287872810701}" ShortID="440695732">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Catching" ID="{FBACB244-0984-406D-9559-A56B27A05F4F}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="caught_Rocket" ID="{F6F20B56-D257-4955-BF44-291AA0454549}">
+							<ChildrenList>
+								<Action Name="" ID="{55B7F7B4-31AF-432A-AF0C-C19ACA6009CB}" ShortID="787197449">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Catching" ID="{FBACB244-0984-406D-9559-A56B27A05F4F}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Event Name="menuPause_event" ID="{8869DEFD-B82D-40C4-9CA4-3C04E3A74B4D}">
+					<ChildrenList>
+						<Action Name="" ID="{C9ED5C27-43D6-42A2-92AE-C4FB722869BB}" ShortID="403460138">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="7"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Weather" ID="{98DC9751-2B4C-4AC1-984C-E953F85AEA50}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{CE74BF61-66B4-4C83-896E-F5E84F44BC93}" ShortID="512960990">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="7"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Dialogue" ID="{0F93606C-1D23-408B-9E2C-956386556386}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

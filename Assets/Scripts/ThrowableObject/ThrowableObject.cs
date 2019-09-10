@@ -58,7 +58,7 @@ public class ThrowableObject : MonoBehaviour
             Debug.Log("Ball Caught," + this.gameObject.GetInstanceID() + "Size = " + gc.rightHandObjects.Count);
             rb.position = RightHandHold;
             rb.useGravity = false;
-  
+		PlaySFXCaughtItem();
         }
         else if (collider.tag == "LeftHand")
         {
@@ -67,7 +67,7 @@ public class ThrowableObject : MonoBehaviour
             Debug.Log("Ball Caught," + this.gameObject.GetInstanceID() + "Size = " + gc.leftHandObjects.Count);
             rb.position = LeftHandHold;
             rb.useGravity = false;
-
+		PlaySFXCaughtItem();
         }
         else
         {
@@ -81,7 +81,7 @@ public class ThrowableObject : MonoBehaviour
     {
         string meshname = GetComponent<MeshFilter>().mesh.name;
         meshname = meshname.Substring(0, meshname.Length - " Instance".Length);
-        //AkSoundEngine.PostEvent("caught_" + meshname, null);
+        AkSoundEngine.PostEvent("caught_" + meshname, gameObject);
         Debug.Log("caught_" + meshname);
     }
 

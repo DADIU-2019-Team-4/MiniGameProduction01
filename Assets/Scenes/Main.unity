@@ -2274,6 +2274,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 659452563625561289, guid: 307d95a891291ee458e0102d3baaf89f,
+        type: 3}
+      propertyPath: triggerList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 659452563625561289, guid: 307d95a891291ee458e0102d3baaf89f,
+        type: 3}
+      propertyPath: triggerList.Array.data[0]
+      value: 1281810935
+      objectReference: {fileID: 0}
     - target: {fileID: 532857877177543079, guid: 307d95a891291ee458e0102d3baaf89f,
         type: 3}
       propertyPath: m_Name

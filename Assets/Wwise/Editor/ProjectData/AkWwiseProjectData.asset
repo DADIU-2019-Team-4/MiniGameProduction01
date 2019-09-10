@@ -31,7 +31,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 207c6f81333d85408092d3a1d2f59894
     GuidInternal: 
-    m_lastTime: -8586335026714775808
+    m_lastTime: -8586334999554775808
     List:
     - name: Default_bank
       guid: 61de74b161e7ad428fb2d10e1ca0a92b
@@ -47,8 +47,78 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 5076fae0cc0c7a43a62c15588b435fee
     GuidInternal: 
-    m_lastTime: -8586335026714775808
+    m_lastTime: -8586334984854775808
     List:
+    - name: caught_Ball
+      guid: 73a486fc38d713408ab3fc3b9865b23b
+      id: 1222133487
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Items
+        ObjectType: 4
+      - ElementName: caught_Ball
+        ObjectType: 3
+      Path: Default Work Unit\Items\caught_Ball
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: caught_Bell
+      guid: 4a67d82a7519c14cabacb078890d164d
+      id: 1221441867
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Items
+        ObjectType: 4
+      - ElementName: caught_Bell
+        ObjectType: 3
+      Path: Default Work Unit\Items\caught_Bell
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: caught_Dad
+      guid: 38b4611c6624ac4e988d209a52d38bad
+      id: 2961575211
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Items
+        ObjectType: 4
+      - ElementName: caught_Dad
+        ObjectType: 3
+      Path: Default Work Unit\Items\caught_Dad
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: caught_Mom
+      guid: 8dcc9097459b1049a409471646c0b947
+      id: 2524224301
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Items
+        ObjectType: 4
+      - ElementName: caught_Mom
+        ObjectType: 3
+      Path: Default Work Unit\Items\caught_Mom
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: caught_Rocket
+      guid: 560bf2f657d25549bf44291aa0454549
+      id: 1228823624
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Items
+        ObjectType: 4
+      - ElementName: caught_Rocket
+        ObjectType: 3
+      Path: Default Work Unit\Items\caught_Rocket
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: crows_event
       guid: 077c5b74b27679478940dfe6a0440588
       id: 3931550490
@@ -61,8 +131,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Weather\crows_event
       maxAttenuation: 0
-      maxDuration: 38728620
-      minDuration: 38728620
+      maxDuration: -1
+      minDuration: -1
     - name: DialogueDA_event
       guid: ed9df0f08eaa664d9902e9c7ff9f4bd3
       id: 2450003899
@@ -75,8 +145,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Dialogue\DialogueDA_event
       maxAttenuation: 0
-      maxDuration: 83720950
-      minDuration: 23040000
+      maxDuration: -1
+      minDuration: -1
     - name: DialogueEN_event
       guid: 27cef34cbf77124da0901c77b5b4a6e5
       id: 1976820711
@@ -89,8 +159,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Dialogue\DialogueEN_event
       maxAttenuation: 0
-      maxDuration: 93488380
-      minDuration: 26723264
+      maxDuration: -1
+      minDuration: -1
     - name: FailFeed_event
       guid: c8899f95300c804bba4f6128f55f9171
       id: 3370210432
@@ -101,8 +171,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\FailFeed_event
       maxAttenuation: 0
-      maxDuration: 2021565
-      minDuration: 2021565
+      maxDuration: -1
+      minDuration: -1
     - name: rain_event
       guid: ba3014bcff35b3488240234be1c2bca8
       id: 937827766
@@ -115,8 +185,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Weather\rain_event
       maxAttenuation: 0
-      maxDuration: 12260884
-      minDuration: 12260884
+      maxDuration: -1
+      minDuration: -1
     - name: Room_event
       guid: 4ead048ca9425046a594d7010c2c9c9f
       id: 2761588325
@@ -141,8 +211,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Stars\stars_event0
       maxAttenuation: 0
-      maxDuration: 1671247
-      minDuration: 1671247
+      maxDuration: -1
+      minDuration: -1
     - name: stars_event4
       guid: 4a3b56180ee8254b8efc50cbd25826f5
       id: 902224739
@@ -155,8 +225,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Stars\stars_event4
       maxAttenuation: 0
-      maxDuration: 1761610
-      minDuration: 1761610
+      maxDuration: -1
+      minDuration: -1
     - name: stars_event5
       guid: 257bd5f96701a849b7ec50a1f2cdab70
       id: 902224738
@@ -169,8 +239,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Stars\stars_event5
       maxAttenuation: 0
-      maxDuration: 1765283
-      minDuration: 1765283
+      maxDuration: -1
+      minDuration: -1
     - name: stars_event6
       guid: 052fcd1285d5724cac8ea55cc83c66cf
       id: 902224737
@@ -183,8 +253,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Stars\stars_event6
       maxAttenuation: 0
-      maxDuration: 1710816
-      minDuration: 1710816
+      maxDuration: -1
+      minDuration: -1
     - name: stars_event7
       guid: 8c91e56ac1c9ef49ab2930c099ce7ac0
       id: 902224736
@@ -197,8 +267,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Stars\stars_event7
       maxAttenuation: 0
-      maxDuration: 2809546
-      minDuration: 2809546
+      maxDuration: -1
+      minDuration: -1
     - name: sun_event
       guid: a39417f553f9b5418b841ab541e16d36
       id: 2216443840
@@ -211,8 +281,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Weather\sun_event
       maxAttenuation: 0
-      maxDuration: 54260884
-      minDuration: 54260884
+      maxDuration: -1
+      minDuration: -1
     - name: thunder_event
       guid: b268c70818248249a7d7edb85043ee3e
       id: 3141175304
@@ -225,8 +295,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Weather\thunder_event
       maxAttenuation: 0
-      maxDuration: 86578960
-      minDuration: 86578960
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -314,7 +384,6 @@ MonoBehaviour:
   - /MiniGameProduction01_WwiseProject
   - /MiniGameProduction01_WwiseProject/Events
   - /MiniGameProduction01_WwiseProject/Events/Default Work Unit
-  - /MiniGameProduction01_WwiseProject/Events/Default Work Unit/Stars
-  - /MiniGameProduction01_WwiseProject/Events/Default Work Unit/Weather
+  - /MiniGameProduction01_WwiseProject/Events/Default Work Unit/Items
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
