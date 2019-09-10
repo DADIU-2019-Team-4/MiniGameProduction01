@@ -106,7 +106,7 @@ public class GameControl : MonoBehaviour
         //	AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
 
         inputController.ThrowEvent.AddListener(UpdateStars);
-
+		AkSoundEngine.PostEvent("sun_event", gameObject);
         //level 1 setup
         StartLevel(1);
     }
@@ -134,6 +134,7 @@ public class GameControl : MonoBehaviour
             StartLevel(4);
             AkSoundEngine.SetSwitch("game_stage", "phase3", gameObject);
 			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+			AkSoundEngine.PostEvent("crows_event", gameObject);
         }
 
         if (currentLevelThrowCount >= toLevel5Count && currentLevel == 4)
@@ -141,6 +142,7 @@ public class GameControl : MonoBehaviour
             StartLevel(5);
             AkSoundEngine.SetSwitch("game_stage", "phase4", gameObject);
 			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+			AkSoundEngine.PostEvent("rain_event", gameObject);
         }
 
         if (currentLevelThrowCount >= toLevel6Count && currentLevel == 5)
@@ -155,6 +157,7 @@ public class GameControl : MonoBehaviour
             StartLevel(7);
             AkSoundEngine.SetSwitch("game_stage", "phase6", gameObject);
             AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+			AkSoundEngine.PostEvent("thunder_event", gameObject);
             //_endGameObject.SetActive(true);
         }
 
