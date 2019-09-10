@@ -110,8 +110,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gc: {fileID: 0}
   isWaiting: 0
-  RightHandHold: {x: -0.42, y: 0.5, z: 1.5}
-  LeftHandHold: {x: 0.4, y: 0.5, z: 1.5}
+  RightHandHold: {x: -0.239, y: 0.389, z: 1.5}
+  LeftHandHold: {x: 0.214, y: 0.389, z: 1.5}
+  dustCloud: {fileID: 0}
   type: 0
 --- !u!114 &3914257771926677165
 MonoBehaviour:
