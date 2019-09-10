@@ -66,6 +66,8 @@ public class GameControl : MonoBehaviour
                 m_Animator.SetTrigger("failL");
                 m_Animator.SetTrigger("failR");
 
+				AkSoundEngine.PostEvent("failFeed_event", gameObject);
+
                 //restart level
                 StartLevel(currentLevel);
                 StartCoroutine(_starManager.ResetStars(0f));
@@ -90,6 +92,8 @@ public class GameControl : MonoBehaviour
                 m_Animator.SetTrigger("failC");
                 m_Animator.SetTrigger("failL");
                 m_Animator.SetTrigger("failR");
+
+				AkSoundEngine.PostEvent("failFeed_event", gameObject);
 
                 //restart level
                 StartLevel(currentLevel);

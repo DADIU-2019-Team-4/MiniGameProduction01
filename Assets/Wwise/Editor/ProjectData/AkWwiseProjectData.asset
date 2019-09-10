@@ -24,14 +24,14 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 26ede085ba8edd4d84a1e48e2ce905f3
     GuidInternal: 
-    m_lastTime: -8586335036754775808
+    m_lastTime: -8586334943894775808
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 207c6f81333d85408092d3a1d2f59894
     GuidInternal: 
-    m_lastTime: -8586334999554775808
+    m_lastTime: -8586334942314775808
     List:
     - name: Default_bank
       guid: 61de74b161e7ad428fb2d10e1ca0a92b
@@ -47,23 +47,9 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 5076fae0cc0c7a43a62c15588b435fee
     GuidInternal: 
-    m_lastTime: -8586334984854775808
+    m_lastTime: -8586334943874775808
     List:
-    - name: caught_Ball
-      guid: 73a486fc38d713408ab3fc3b9865b23b
-      id: 1222133487
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Items
-        ObjectType: 4
-      - ElementName: caught_Ball
-        ObjectType: 3
-      Path: Default Work Unit\Items\caught_Ball
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: caught_Bell
+    - name: caught_bell
       guid: 4a67d82a7519c14cabacb078890d164d
       id: 1221441867
       PathAndIcons:
@@ -71,41 +57,111 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Items
         ObjectType: 4
-      - ElementName: caught_Bell
+      - ElementName: caught_bell
         ObjectType: 3
-      Path: Default Work Unit\Items\caught_Bell
+      Path: Default Work Unit\Items\caught_bell
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: caught_Dad
-      guid: 38b4611c6624ac4e988d209a52d38bad
-      id: 2961575211
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Items
-        ObjectType: 4
-      - ElementName: caught_Dad
-        ObjectType: 3
-      Path: Default Work Unit\Items\caught_Dad
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: caught_Mom
+      maxDuration: 871791
+      minDuration: 465125
+    - name: caught_dvd
       guid: 8dcc9097459b1049a409471646c0b947
-      id: 2524224301
+      id: 2642800386
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: Items
         ObjectType: 4
-      - ElementName: caught_Mom
+      - ElementName: caught_dvd
         ObjectType: 3
-      Path: Default Work Unit\Items\caught_Mom
+      Path: Default Work Unit\Items\caught_dvd
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: caught_Rocket
+      maxDuration: 871791
+      minDuration: 465125
+    - name: caught_jugglingBall
+      guid: 73a486fc38d713408ab3fc3b9865b23b
+      id: 2387556230
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Items
+        ObjectType: 4
+      - ElementName: caught_jugglingBall
+        ObjectType: 3
+      Path: Default Work Unit\Items\caught_jugglingBall
+      maxAttenuation: 0
+      maxDuration: 871791
+      minDuration: 465125
+    - name: caught_jugglingBall01
+      guid: 89c5990a6489c04393b661237d6c8085
+      id: 1107252823
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Items
+        ObjectType: 4
+      - ElementName: caught_jugglingBall01
+        ObjectType: 3
+      Path: Default Work Unit\Items\caught_jugglingBall01
+      maxAttenuation: 0
+      maxDuration: 871791
+      minDuration: 465125
+    - name: caught_jugglingBall02
+      guid: 8ccecdbe6d80454a8667ef60cbb05dc9
+      id: 1107252820
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Items
+        ObjectType: 4
+      - ElementName: caught_jugglingBall02
+        ObjectType: 3
+      Path: Default Work Unit\Items\caught_jugglingBall02
+      maxAttenuation: 0
+      maxDuration: 871791
+      minDuration: 465125
+    - name: caught_mug
+      guid: 2a27cd229c7605489cd062c3689ad3b2
+      id: 2960442441
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Items
+        ObjectType: 4
+      - ElementName: caught_mug
+        ObjectType: 3
+      Path: Default Work Unit\Items\caught_mug
+      maxAttenuation: 0
+      maxDuration: 871791
+      minDuration: 465125
+    - name: caught_package
+      guid: 38b4611c6624ac4e988d209a52d38bad
+      id: 1231394136
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Items
+        ObjectType: 4
+      - ElementName: caught_package
+        ObjectType: 3
+      Path: Default Work Unit\Items\caught_package
+      maxAttenuation: 0
+      maxDuration: 871791
+      minDuration: 465125
+    - name: caught_plate
+      guid: 7c71d468bee9554faa4fd54e1fb8a42d
+      id: 843837580
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Items
+        ObjectType: 4
+      - ElementName: caught_plate
+        ObjectType: 3
+      Path: Default Work Unit\Items\caught_plate
+      maxAttenuation: 0
+      maxDuration: 871791
+      minDuration: 465125
+    - name: caught_rocket
       guid: 560bf2f657d25549bf44291aa0454549
       id: 1228823624
       PathAndIcons:
@@ -113,12 +169,40 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Items
         ObjectType: 4
-      - ElementName: caught_Rocket
+      - ElementName: caught_rocket
         ObjectType: 3
-      Path: Default Work Unit\Items\caught_Rocket
+      Path: Default Work Unit\Items\caught_rocket
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 871791
+      minDuration: 465125
+    - name: caught_teaCup
+      guid: de510e3e1123da4d960b02862a9e76cd
+      id: 3444823518
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Items
+        ObjectType: 4
+      - ElementName: caught_teaCup
+        ObjectType: 3
+      Path: Default Work Unit\Items\caught_teaCup
+      maxAttenuation: 0
+      maxDuration: 871791
+      minDuration: 465125
+    - name: caught_toyCar
+      guid: 2cdcf6d3017d5e43b3c37e16d5a664cd
+      id: 277406514
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Items
+        ObjectType: 4
+      - ElementName: caught_toyCar
+        ObjectType: 3
+      Path: Default Work Unit\Items\caught_toyCar
+      maxAttenuation: 0
+      maxDuration: 871791
+      minDuration: 465125
     - name: crows_event
       guid: 077c5b74b27679478940dfe6a0440588
       id: 3931550490
@@ -145,8 +229,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Dialogue\DialogueDA_event
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 83720950
+      minDuration: 23040000
     - name: DialogueEN_event
       guid: 27cef34cbf77124da0901c77b5b4a6e5
       id: 1976820711
@@ -159,8 +243,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Dialogue\DialogueEN_event
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 93488380
+      minDuration: 26723264
     - name: FailFeed_event
       guid: c8899f95300c804bba4f6128f55f9171
       id: 3370210432
@@ -171,8 +255,20 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\FailFeed_event
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 2021565
+      minDuration: 2021565
+    - name: menuPause_event
+      guid: fdde69882db8c4409ca43c04e3a74b4d
+      id: 1105161895
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: menuPause_event
+        ObjectType: 3
+      Path: Default Work Unit\menuPause_event
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: rain_event
       guid: ba3014bcff35b3488240234be1c2bca8
       id: 937827766
@@ -211,8 +307,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Stars\stars_event0
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1671247
+      minDuration: 1671247
     - name: stars_event4
       guid: 4a3b56180ee8254b8efc50cbd25826f5
       id: 902224739
@@ -225,8 +321,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Stars\stars_event4
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1761610
+      minDuration: 1761610
     - name: stars_event5
       guid: 257bd5f96701a849b7ec50a1f2cdab70
       id: 902224738
@@ -239,8 +335,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Stars\stars_event5
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1765283
+      minDuration: 1765283
     - name: stars_event6
       guid: 052fcd1285d5724cac8ea55cc83c66cf
       id: 902224737
@@ -253,8 +349,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Stars\stars_event6
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1710816
+      minDuration: 1710816
     - name: stars_event7
       guid: 8c91e56ac1c9ef49ab2930c099ce7ac0
       id: 902224736
@@ -267,8 +363,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Stars\stars_event7
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 2809546
+      minDuration: 2809546
     - name: sun_event
       guid: a39417f553f9b5418b841ab541e16d36
       id: 2216443840
@@ -384,6 +480,7 @@ MonoBehaviour:
   - /MiniGameProduction01_WwiseProject
   - /MiniGameProduction01_WwiseProject/Events
   - /MiniGameProduction01_WwiseProject/Events/Default Work Unit
+  - /MiniGameProduction01_WwiseProject/Events/Default Work Unit/Dialogue
   - /MiniGameProduction01_WwiseProject/Events/Default Work Unit/Items
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

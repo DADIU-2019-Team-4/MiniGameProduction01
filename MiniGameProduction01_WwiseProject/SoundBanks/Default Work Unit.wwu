@@ -9,21 +9,28 @@
 						<ObjectRef Name="menuPause_event" ID="{8869DEFD-B82D-40C4-9CA4-3C04E3A74B4D}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="sun_event" ID="{F51794A3-F953-41B5-8B84-1AB541E16D36}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="stars_event0" ID="{16E246FA-F0F9-429F-A125-48528F1D2DD2}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="caught_toyCar" ID="{D3F6DC2C-7D01-435E-B3C3-7E16D5A664CD}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="caught_jugglingBall01" ID="{0A99C589-8964-43C0-93B6-61237D6C8085}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Room_event" ID="{8C04AD4E-42A9-4650-A594-D7010C2C9C9F}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="menuResume_event" ID="{D27298C3-537B-4703-AD91-D443F69295B5}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="crows_event" ID="{745B7C07-76B2-4779-8940-DFE6A0440588}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="caught_mug" ID="{22CD272A-769C-4805-9CD0-62C3689AD3B2}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="rain_event" ID="{BC1430BA-35FF-48B3-8240-234BE1C2BCA8}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="caught_Mom" ID="{9790CC8D-9B45-4910-A409-471646C0B947}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="caught_Rocket" ID="{F6F20B56-D257-4955-BF44-291AA0454549}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="caught_dvd" ID="{9790CC8D-9B45-4910-A409-471646C0B947}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="caught_rocket" ID="{F6F20B56-D257-4955-BF44-291AA0454549}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="thunder_event" ID="{08C768B2-2418-4982-A7D7-EDB85043EE3E}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="stars_event5" ID="{F9D57B25-0167-49A8-B7EC-50A1F2CDAB70}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="stars_event7" ID="{6AE5918C-C9C1-49EF-AB29-30C099CE7AC0}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="caught_jugglingBall02" ID="{BECDCE8C-806D-4A45-8667-EF60CBB05DC9}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="stars_event4" ID="{18563B4A-E80E-4B25-8EFC-50CBD25826F5}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="FailFeed_event" ID="{959F89C8-0C30-4B80-BA4F-6128F55F9171}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="stars_event6" ID="{12CD2F05-D585-4C72-AC8E-A55CC83C66CF}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="caught_Bell" ID="{2AD8674A-1975-4CC1-ABAC-B078890D164D}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="caught_bell" ID="{2AD8674A-1975-4CC1-ABAC-B078890D164D}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="DialogueEN_event" ID="{4CF3CE27-77BF-4D12-A090-1C77B5B4A6E5}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="DialogueDA_event" ID="{F0F09DED-AA8E-4D66-9902-E9C7FF9F4BD3}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="caught_Dad" ID="{1C61B438-2466-4EAC-988D-209A52D38BAD}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="caught_teaCup" ID="{3E0E51DE-2311-4DDA-960B-02862A9E76CD}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="caught_package" ID="{1C61B438-2466-4EAC-988D-209A52D38BAD}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="caught_plate" ID="{68D4717C-E9BE-4F55-AA4F-D54E1FB8A42D}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

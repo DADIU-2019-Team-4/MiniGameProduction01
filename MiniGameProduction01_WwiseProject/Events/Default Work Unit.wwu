@@ -201,7 +201,7 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="caught_Bell" ID="{2AD8674A-1975-4CC1-ABAC-B078890D164D}">
+						<Event Name="caught_bell" ID="{2AD8674A-1975-4CC1-ABAC-B078890D164D}">
 							<ChildrenList>
 								<Action Name="" ID="{EFAF6DEC-ABA7-42B2-9A60-F8E61E4F7C4E}" ShortID="1045274396">
 									<ReferenceList>
@@ -212,7 +212,7 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="caught_Dad" ID="{1C61B438-2466-4EAC-988D-209A52D38BAD}">
+						<Event Name="caught_package" ID="{1C61B438-2466-4EAC-988D-209A52D38BAD}">
 							<ChildrenList>
 								<Action Name="" ID="{868CF5DA-0EC8-45E0-9358-FDAE9E1F9B68}" ShortID="810898534">
 									<ReferenceList>
@@ -223,7 +223,7 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="caught_Mom" ID="{9790CC8D-9B45-4910-A409-471646C0B947}">
+						<Event Name="caught_dvd" ID="{9790CC8D-9B45-4910-A409-471646C0B947}">
 							<ChildrenList>
 								<Action Name="" ID="{8612B9D1-40A6-4EFA-A6D3-287872810701}" ShortID="440695732">
 									<ReferenceList>
@@ -234,9 +234,75 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="caught_Rocket" ID="{F6F20B56-D257-4955-BF44-291AA0454549}">
+						<Event Name="caught_rocket" ID="{F6F20B56-D257-4955-BF44-291AA0454549}">
 							<ChildrenList>
 								<Action Name="" ID="{55B7F7B4-31AF-432A-AF0C-C19ACA6009CB}" ShortID="787197449">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Catching" ID="{FBACB244-0984-406D-9559-A56B27A05F4F}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="caught_jugglingBall01" ID="{0A99C589-8964-43C0-93B6-61237D6C8085}">
+							<ChildrenList>
+								<Action Name="" ID="{35FA7788-1E48-4C76-8E60-66F63298A82E}" ShortID="604560868">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Catching" ID="{FBACB244-0984-406D-9559-A56B27A05F4F}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="caught_jugglingBall02" ID="{BECDCE8C-806D-4A45-8667-EF60CBB05DC9}">
+							<ChildrenList>
+								<Action Name="" ID="{550BBC4E-3CE2-4FA9-90C4-47B54EDBF560}" ShortID="909102764">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Catching" ID="{FBACB244-0984-406D-9559-A56B27A05F4F}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="caught_toyCar" ID="{D3F6DC2C-7D01-435E-B3C3-7E16D5A664CD}">
+							<ChildrenList>
+								<Action Name="" ID="{814A0B5E-D4DA-4A0D-AAEF-9D04770EF1C3}" ShortID="554129383">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Catching" ID="{FBACB244-0984-406D-9559-A56B27A05F4F}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="caught_mug" ID="{22CD272A-769C-4805-9CD0-62C3689AD3B2}">
+							<ChildrenList>
+								<Action Name="" ID="{82D22136-A93D-426C-8C22-8F5EAED19BD9}" ShortID="528825266">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Catching" ID="{FBACB244-0984-406D-9559-A56B27A05F4F}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="caught_plate" ID="{68D4717C-E9BE-4F55-AA4F-D54E1FB8A42D}">
+							<ChildrenList>
+								<Action Name="" ID="{C5124105-E175-411B-922F-DE6C21F76FD7}" ShortID="779162928">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Catching" ID="{FBACB244-0984-406D-9559-A56B27A05F4F}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="caught_teaCup" ID="{3E0E51DE-2311-4DDA-960B-02862A9E76CD}">
+							<ChildrenList>
+								<Action Name="" ID="{C332F591-48E6-4F32-8F57-EB0181639914}" ShortID="86576798">
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Catching" ID="{FBACB244-0984-406D-9559-A56B27A05F4F}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
@@ -263,6 +329,32 @@
 						<Action Name="" ID="{CE74BF61-66B4-4C83-896E-F5E84F44BC93}" ShortID="512960990">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="7"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Dialogue" ID="{0F93606C-1D23-408B-9E2C-956386556386}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="menuResume_event" ID="{D27298C3-537B-4703-AD91-D443F69295B5}">
+					<ChildrenList>
+						<Action Name="" ID="{DF018959-97C6-4355-819E-63D8E961FDB9}" ShortID="600494296">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="9"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Weather" ID="{98DC9751-2B4C-4AC1-984C-E953F85AEA50}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{EB70B4B5-8E33-4338-B903-0FEA3FAA8A22}" ShortID="811002620">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="9"/>
 								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
