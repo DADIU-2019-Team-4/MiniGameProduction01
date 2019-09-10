@@ -8,9 +8,11 @@ using UnityEngine.UI;
 public class IntroManager : MonoBehaviour
 {
     [SerializeField]
-    private Text _companyName;
+    private Image _companyName;
     [SerializeField]
-    private Text _gameName;
+    private Image _gameName;
+    [SerializeField]
+    private Image _splashScreen;
 
     [SerializeField]
     private float _fadeDuration = 3f;
@@ -32,6 +34,12 @@ public class IntroManager : MonoBehaviour
         yield return new WaitForSeconds(_fadeDuration);
         _gameName.DOFade(0f, _fadeDuration);
         yield return new WaitForSeconds(_fadeDuration);
+
+        _splashScreen.DOFade(1f, _fadeDuration);
+        yield return new WaitForSeconds(_fadeDuration);
+        _splashScreen.DOFade(0f, _fadeDuration);
+        yield return new WaitForSeconds(_fadeDuration);
+
         SceneManager.LoadScene("Main");
     }
 }
