@@ -314,6 +314,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2157983160396943440, guid: f25aab2e42679ed4caa19e9916f03dc4,
+        type: 3}
+      propertyPath: uncontrollableBalls
+      value: 
+      objectReference: {fileID: 8865814309794516258, guid: 8d759bc59f843c04582053cf02f241a1,
+        type: 3}
     - target: {fileID: 726737297, guid: f25aab2e42679ed4caa19e9916f03dc4, type: 3}
       propertyPath: Light
       value: 
