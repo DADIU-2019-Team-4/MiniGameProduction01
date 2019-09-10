@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<StateGroup Name="dia_lang" ID="{00676B05-70FD-4069-9ED7-901BA80ABE9B}">
 					<ChildrenList>
+						<State Name="None" ID="{AFB15B88-2477-4B6D-89D2-9FA08167DAAC}"/>
 						<State Name="DA" ID="{1D119CD1-BE27-426D-91E1-B8B94D1545D8}"/>
 						<State Name="EN" ID="{38BB2719-CE75-4708-84C2-43FA2656A5B4}"/>
 						<State Name="DK" ID="{9E83DD6D-7544-4F0C-9FB9-6F38019170FD}"/>

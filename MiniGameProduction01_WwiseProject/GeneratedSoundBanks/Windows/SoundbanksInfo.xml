@@ -52,6 +52,10 @@
 					<ShortName>stars_event5.wav</ShortName>
 					<Path>SFX\stars_event5_F2B9B919.wem</Path>
 				</File>
+				<File Id="96900878" Language="SFX">
+					<ShortName>EN_DIA_P6-edit_no_door.wav</ShortName>
+					<Path>SFX\EN_DIA_P6-edit_no_door_F2B9B919.wem</Path>
+				</File>
 				<File Id="109965146" Language="SFX">
 					<ShortName>sun.wav</ShortName>
 					<Path>SFX\sun_85C21AE7.wem</Path>
@@ -108,17 +112,9 @@
 					<ShortName>stars_event7.wav</ShortName>
 					<Path>SFX\stars_event7_F2B9B919.wem</Path>
 				</File>
-				<File Id="807246711" Language="SFX">
-					<ShortName>EN_DIA_P6-edit.wav</ShortName>
-					<Path>SFX\EN_DIA_P6-edit_F2B9B919.wem</Path>
-				</File>
 				<File Id="807851023" Language="SFX">
 					<ShortName>catch_paper0.wav</ShortName>
 					<Path>SFX\catch_paper0_F2B9B919.wem</Path>
-				</File>
-				<File Id="840184733" Language="SFX">
-					<ShortName>DA_DIA_P6-edit.wav</ShortName>
-					<Path>SFX\DA_DIA_P6-edit_F2B9B919.wem</Path>
 				</File>
 				<File Id="845272853" Language="SFX">
 					<ShortName>EN_DIA_P4-edit.wav</ShortName>
@@ -151,6 +147,10 @@
 				<File Id="1007295197" Language="SFX">
 					<ShortName>DA_DIA_P5-edit.wav</ShortName>
 					<Path>SFX\DA_DIA_P5-edit_F2B9B919.wem</Path>
+				</File>
+				<File Id="1064507178" Language="SFX">
+					<ShortName>DA_DIA_P6-edit_no_door.wav</ShortName>
+					<Path>SFX\DA_DIA_P6-edit_no_door_F2B9B919.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

@@ -49,6 +49,7 @@ namespace AK
 
             namespace STATE
             {
+                static const AkUniqueID DA = 1836525760U;
                 static const AkUniqueID DK = 1836525770U;
                 static const AkUniqueID EN = 1819748192U;
             } // namespace STATE
