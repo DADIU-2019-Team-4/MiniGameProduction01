@@ -72,7 +72,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dab2d80bb33d3f449a0d94ab2e00c2cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLevel: 6
+  currentLevel: 1
   currentLevelThrowCount: 0
   MaximumNumberOfBalls: 1
   ballSpawnInterval: 1

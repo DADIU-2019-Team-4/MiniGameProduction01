@@ -229,6 +229,11 @@ PrefabInstance:
       propertyPath: _endGameObject
       value: 
       objectReference: {fileID: 1262193318}
+    - target: {fileID: 7983392908799067626, guid: f25aab2e42679ed4caa19e9916f03dc4,
+        type: 3}
+      propertyPath: currentLevel
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 505171660684869035, guid: f25aab2e42679ed4caa19e9916f03dc4,
         type: 3}
       propertyPath: m_LocalPosition.x
