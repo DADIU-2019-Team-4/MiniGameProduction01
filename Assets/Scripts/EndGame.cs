@@ -33,23 +33,27 @@ public class EndGame : MonoBehaviour
     {
         _menuManager = FindObjectOfType<MenuManager>();
         _inputController = FindObjectOfType<InputController>();
+        _blackImage.SetActive(false);
         StartCoroutine(EndSequence());
     }
 
     private IEnumerator EndSequence()
     {
         _inputController.DisableControls(5f);
+        _blackImage.SetActive(true);
         _blackImage.GetComponent<Image>().DOFade(1f, _fadeTime);
         yield return new WaitForSeconds(_fadeTime);
         _balls = FindObjectsOfType<ThrowableObject>();
         foreach (ThrowableObject ball in _balls)
             Destroy(ball.gameObject);
 
+        Destroy(_inputController.uncontrollableBalls);
         _timmy.SetActive(false);
         _paperBall.SetActive(true);
         yield return new WaitForSeconds(_timeUntilEnd);
         _blackImage.GetComponent<Image>().DOFade(0f, _fadeTime);
         yield return new WaitForSeconds(_fadeTime);
+        _blackImage.SetActive(false);
         yield return new WaitForSeconds(_timeUntilDoorCloses);
         _menuManager.EndGame = true;
         _menuManager.OpenMenu();

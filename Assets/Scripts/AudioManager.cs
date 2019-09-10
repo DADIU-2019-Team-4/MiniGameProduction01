@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class AudioManager : MonoBehaviour
 {
     // UI Elements
-    public Slider MusicSlider;
-    public Slider SFXSlider;
+    public Slider MusicVolume;
+    public Slider SFXVolume;
 
     // Variables the UI Sliders write to.
     public float MusicSliderValue;
@@ -22,7 +22,11 @@ public class AudioManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MusicSliderValue = MusicSlider.value;
-        SFXSliderValue = SFXSlider.value;
+        MusicSliderValue = MusicVolume.value;
+		AkSoundEngine.SetRTPCValue("MusicVolume", MusicSliderValue);
+
+        SFXSliderValue = SFXVolume.value;
+		AkSoundEngine.SetRTPCValue("SFXVolume", SFXSliderValue);
     }
+
 }

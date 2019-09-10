@@ -36,6 +36,8 @@ public class ThrowableObject : MonoBehaviour
     public Vector3 RightHandHold;
     public Vector3 LeftHandHold;
 
+    public GameObject dustCloud;
+
     
     public Type type;
 
@@ -92,7 +94,6 @@ public class ThrowableObject : MonoBehaviour
         {
             isRightHand = false;
             isLeftHand = false;
-            rb.useGravity = true;
         }
            
     }
@@ -102,7 +103,6 @@ public class ThrowableObject : MonoBehaviour
         if (isLeftHand)
         {
             //applyForce(new Vector3(-0.2F, 1, 0));
-            rb.useGravity = true;
             StartCoroutine(JuggleRight());
             isLeftHand = false;
 
@@ -130,7 +130,6 @@ public class ThrowableObject : MonoBehaviour
             }
 
             StartCoroutine(JuggleLeft());
-            rb.useGravity = true;
             isRightHand = false;
 
             return true;
@@ -162,7 +161,6 @@ public class ThrowableObject : MonoBehaviour
         _animator.SetBool("isInLeftHand", true);
         _animator.SetBool("isInRightHand", false);
         _animator.SetBool("swipedRightSide", false);
-        _animator.enabled = false;
 
         Debug.Log("Done");
     }
@@ -184,7 +182,6 @@ public class ThrowableObject : MonoBehaviour
         _animator.SetBool("isInLeftHand", false);
         _animator.SetBool("isInRightHand", true);
         _animator.SetBool("swipedLeftSide", false);
-        _animator.enabled = false;
     }
 
     public void applyForce(Vector3 dir)
@@ -193,5 +190,10 @@ public class ThrowableObject : MonoBehaviour
         rb.velocity = new Vector3(0, 0, 0);
         rb.AddForce(dir * thrust);
         gc.currentLevelThrowCount++;
+    }
+
+    public void instantiateDust()
+    {
+        Instantiate(dustCloud, transform.position, Quaternion.identity); 
     }
 }
