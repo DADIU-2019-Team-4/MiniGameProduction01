@@ -29,21 +29,21 @@ public class LightStageModifier : MonoBehaviour
     public Color LightColor6;
     public Color LightColor7;
 
-    public Sprite SkyColourSprite1;
-    public Sprite SkyColourSprite2;
-    public Sprite SkyColourSprite3;
-    public Sprite SkyColourSprite4;
-    public Sprite SkyColourSprite5;
-    public Sprite SkyColourSprite6;
-    public Sprite SkyColourSprite7;
+    public Color SkyColourSprite1;
+    public Color SkyColourSprite2;
+    public Color SkyColourSprite3;
+    public Color SkyColourSprite4;
+    public Color SkyColourSprite5;
+    public Color SkyColourSprite6;
+    public Color SkyColourSprite7;
 
-    public Sprite LightConeSprite1;
-    public Sprite LightConeSprite2;
-    public Sprite LightConeSprite3;
-    public Sprite LightConeSprite4;
-    public Sprite LightConeSprite5;
-    public Sprite LightConeSprite6;
-    public Sprite LightConeSprite7;
+    public Color LightConeSprite1;
+    public Color LightConeSprite2;
+    public Color LightConeSprite3;
+    public Color LightConeSprite4;
+    public Color LightConeSprite5;
+    public Color LightConeSprite6;
+    public Color LightConeSprite7;
     #endregion
 
     // Start is called before the first frame update
@@ -66,56 +66,56 @@ public class LightStageModifier : MonoBehaviour
     {
         RenderSettings.skybox = Skybox1;
         Light.color = LightColor1;
-        SkyColorSpriteRenderer.sprite = SkyColourSprite1;
-        LightConeSpriteRenderer.sprite = LightConeSprite1;
+        SkyColorSpriteRenderer.color = SkyColourSprite1;
+        LightConeSpriteRenderer.color = LightConeSprite1;
     }
 
     public void ToStageTwo()
     {
         RenderSettings.skybox = Skybox2;
         Light.color = LightColor2;
-        SkyColorSpriteRenderer.sprite = SkyColourSprite2;
-        LightConeSpriteRenderer.sprite = LightConeSprite2;
+        SkyColorSpriteRenderer.color = SkyColourSprite2;
+        LightConeSpriteRenderer.color = LightConeSprite2;
     }
 
     public void ToStageThree()
     {
         RenderSettings.skybox = Skybox3;
         Light.color = LightColor3;
-        SkyColorSpriteRenderer.sprite = SkyColourSprite3;
-        LightConeSpriteRenderer.sprite = LightConeSprite3;
+        SkyColorSpriteRenderer.color = SkyColourSprite3;
+        LightConeSpriteRenderer.color = LightConeSprite3;
     }
 
     public void ToStageFour()
     {
         RenderSettings.skybox = Skybox4;
         Light.color = LightColor4;
-        SkyColorSpriteRenderer.sprite = SkyColourSprite4;
-        LightConeSpriteRenderer.sprite = LightConeSprite4;
+        SkyColorSpriteRenderer.color = SkyColourSprite4;
+        LightConeSpriteRenderer.color = LightConeSprite4;
     }
 
     public void ToStageFive()
     {
         RenderSettings.skybox = Skybox5;
         Light.color = LightColor5;
-        SkyColorSpriteRenderer.sprite = SkyColourSprite5;
-        LightConeSpriteRenderer.sprite = LightConeSprite5;
+        SkyColorSpriteRenderer.color = SkyColourSprite5;
+        LightConeSpriteRenderer.color = LightConeSprite5;
     }
 
     public void ToStageSix()
     {
         RenderSettings.skybox = Skybox6;
         Light.color = LightColor6;
-        SkyColorSpriteRenderer.sprite = SkyColourSprite6;
-        LightConeSpriteRenderer.sprite = LightConeSprite6;
+        SkyColorSpriteRenderer.color = SkyColourSprite6;
+        LightConeSpriteRenderer.color = LightConeSprite6;
     }
 
     public void ToStageSeven()
     {
         RenderSettings.skybox = Skybox7;
         Light.color = LightColor7;
-        SkyColorSpriteRenderer.sprite = SkyColourSprite7;
-        LightConeSpriteRenderer.sprite = LightConeSprite7;
+        SkyColorSpriteRenderer.color = SkyColourSprite7;
+        LightConeSpriteRenderer.color = LightConeSprite7;
     }
 
     #endregion
