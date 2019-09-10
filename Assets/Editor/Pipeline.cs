@@ -37,7 +37,10 @@ namespace UnityEditor
          * what git-hash the game were using*/
         public static string filename
         {
-            get { return (DateTime.Now.ToString("yyyyMMddHHmm") + ".apk"); }
+            get {
+                //return (DateTime.Now.ToString("yyyyMMddHHmm") + ".apk");
+                return "minigame1.apk";
+            }
         }
     }
 }

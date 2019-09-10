@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{816F7C20-3D33-4085-8092-D3A1D2F59894}" SchemaVersion="94">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{816F7C20-3D33-4085-8092-D3A1D2F59894}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Default_bank" ID="{B174DE61-E761-42AD-8FB2-D10E1CA0A92B}">
+					<ObjectInclusionList>
+						<ObjectRef Name="stars_event0" ID="{16E246FA-F0F9-429F-A125-48528F1D2DD2}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="stars_event5" ID="{F9D57B25-0167-49A8-B7EC-50A1F2CDAB70}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="stars_event7" ID="{6AE5918C-C9C1-49EF-AB29-30C099CE7AC0}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="stars_event4" ID="{18563B4A-E80E-4B25-8EFC-50CBD25826F5}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="FailFeed_event" ID="{959F89C8-0C30-4B80-BA4F-6128F55F9171}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="stars_event6" ID="{12CD2F05-D585-4C72-AC8E-A55CC83C66CF}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="DialogueEN_event" ID="{4CF3CE27-77BF-4D12-A090-1C77B5B4A6E5}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="DialogueDA_event" ID="{F0F09DED-AA8E-4D66-9902-E9C7FF9F4BD3}" WorkUnitID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

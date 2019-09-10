@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" SchemaVersion="94">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{E0FA7650-0CCC-437A-A62C-15588B435FEE}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="FailFeed_event" ID="{959F89C8-0C30-4B80-BA4F-6128F55F9171}">
+					<ChildrenList>
+						<Action Name="" ID="{FC0FCBB5-505B-44F6-BFC8-D2DC1B30528A}" ShortID="102934311">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FailFeed" ID="{D5EF642B-D080-4607-96A2-5C537267EC09}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Folder Name="Stars" ID="{8F4A8E4D-35C6-448B-9F03-610379688C0E}" ShortID="744780536">
+					<ChildrenList>
+						<Event Name="stars_event0" ID="{16E246FA-F0F9-429F-A125-48528F1D2DD2}">
+							<ChildrenList>
+								<Action Name="" ID="{7F12097D-F18C-4823-8DE8-35A8C387D342}" ShortID="859629298">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="stars_event0" ID="{96D3DC91-765B-48B7-896E-7B16D79AEFAA}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="stars_event4" ID="{18563B4A-E80E-4B25-8EFC-50CBD25826F5}">
+							<ChildrenList>
+								<Action Name="" ID="{C6576901-9450-4AF2-B33B-3CCA2E8CBC82}" ShortID="315963832">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="stars_event4" ID="{EC2FDF1F-E5DC-4A00-B1FB-B5EF0B2625FB}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="stars_event5" ID="{F9D57B25-0167-49A8-B7EC-50A1F2CDAB70}">
+							<ChildrenList>
+								<Action Name="" ID="{5B4F3DBD-1242-427A-ABD9-D8A1D0DA3A76}" ShortID="731558160">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="stars_event5" ID="{4F201413-88AD-4BF2-A7E9-A827ACAC2C72}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="stars_event6" ID="{12CD2F05-D585-4C72-AC8E-A55CC83C66CF}">
+							<ChildrenList>
+								<Action Name="" ID="{6356517E-295C-472C-BCB0-25E12A21149F}" ShortID="528903464">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="stars_event6" ID="{9C9AAA39-4527-480A-A99D-F40FF145036B}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="stars_event7" ID="{6AE5918C-C9C1-49EF-AB29-30C099CE7AC0}">
+							<ChildrenList>
+								<Action Name="" ID="{8E80419B-7907-4437-A33E-5C48638820E2}" ShortID="208037283">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="stars_event7" ID="{8C71484A-2D6C-4FCB-BD07-BE274616D32E}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Dialogue" ID="{C44FBB3B-3361-489D-9E0E-030C9C3ACBD8}" ShortID="984676578">
+					<ChildrenList>
+						<Event Name="DialogueDA_event" ID="{F0F09DED-AA8E-4D66-9902-E9C7FF9F4BD3}">
+							<ChildrenList>
+								<Action Name="" ID="{5B0034BA-9CF2-4DF7-BD75-8E93DCA40953}" ShortID="693954575">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="da_dia_switch" ID="{A36786C4-D558-48D5-8101-BA43BF60FC7E}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="DialogueEN_event" ID="{4CF3CE27-77BF-4D12-A090-1C77B5B4A6E5}">
+							<ChildrenList>
+								<Action Name="" ID="{7C7E68F8-E584-4626-A194-B15FF7709758}" ShortID="947256435">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="en_dia_switch" ID="{9DF05E67-C57E-4F14-B7CD-FDB52A38B0B9}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="134">
+	<RootPaths>
+		<ProjectRoot>E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1239515581" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Default_bank</ObjectPath>
+			<ShortName>Default_bank</ShortName>
+			<Path>Default_bank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2450003899" Name="DialogueDA_event" ObjectPath="\Events\Default Work Unit\DialogueDA_event" DurationType="OneShot" DurationMin="23.040001" DurationMax="83.720955"/>
+				<Event Id="1976820711" Name="DialogueEN_event" ObjectPath="\Events\Default Work Unit\DialogueEN_event" DurationType="OneShot" DurationMin="26.723265" DurationMax="93.488388"/>
+				<Event Id="3132622256" Name="FailFeed_event0" ObjectPath="\Events\Default Work Unit\FailFeed_event0" DurationType="OneShot" DurationMin="4.106871" DurationMax="4.106871"/>
+				<Event Id="3651821476" Name="WinFeed_event" ObjectPath="\Events\Default Work Unit\WinFeed_event" DurationType="OneShot" DurationMin="3.678141" DurationMax="3.678141"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="87159758" Language="SFX">
+					<ShortName>FailFeed.wav</ShortName>
+					<Path>SFX\FailFeed_10C4C929.wem</Path>
+				</File>
+				<File Id="131794834" Language="SFX">
+					<ShortName>WinFeed.wav</ShortName>
+					<Path>SFX\WinFeed_10C4C929.wem</Path>
+				</File>
+				<File Id="295969561" Language="SFX">
+					<ShortName>EN_DIA_P2-edit.wav</ShortName>
+					<Path>SFX\EN_DIA_P2-edit_10C4C929.wem</Path>
+				</File>
+				<File Id="422535274" Language="SFX">
+					<ShortName>DA_DIA_P1.wav</ShortName>
+					<Path>SFX\DA_DIA_P1_10C4C929.wem</Path>
+				</File>
+				<File Id="609625544" Language="SFX">
+					<ShortName>DA_DIA_P3-edit.wav</ShortName>
+					<Path>SFX\DA_DIA_P3-edit_10C4C929.wem</Path>
+				</File>
+				<File Id="759778719" Language="SFX">
+					<ShortName>DA_DIA_P4-edit.wav</ShortName>
+					<Path>SFX\DA_DIA_P4-edit_10C4C929.wem</Path>
+				</File>
+				<File Id="807246711" Language="SFX">
+					<ShortName>EN_DIA_P6-edit.wav</ShortName>
+					<Path>SFX\EN_DIA_P6-edit_10C4C929.wem</Path>
+				</File>
+				<File Id="840184733" Language="SFX">
+					<ShortName>DA_DIA_P6-edit.wav</ShortName>
+					<Path>SFX\DA_DIA_P6-edit_10C4C929.wem</Path>
+				</File>
+				<File Id="845272853" Language="SFX">
+					<ShortName>EN_DIA_P4-edit.wav</ShortName>
+					<Path>SFX\EN_DIA_P4-edit_10C4C929.wem</Path>
+				</File>
+				<File Id="855172982" Language="SFX">
+					<ShortName>EN_DIA_P1-edit.wav</ShortName>
+					<Path>SFX\EN_DIA_P1-edit_10C4C929.wem</Path>
+				</File>
+				<File Id="876716406" Language="SFX">
+					<ShortName>DA_DIA_P2-edit.wav</ShortName>
+					<Path>SFX\DA_DIA_P2-edit_10C4C929.wem</Path>
+				</File>
+				<File Id="939687044" Language="SFX">
+					<ShortName>EN_DIA_P3-edit.wav</ShortName>
+					<Path>SFX\EN_DIA_P3-edit_10C4C929.wem</Path>
+				</File>
+				<File Id="975427891" Language="SFX">
+					<ShortName>EN_DIA_P5-edit.wav</ShortName>
+					<Path>SFX\EN_DIA_P5-edit_10C4C929.wem</Path>
+				</File>
+				<File Id="1007295197" Language="SFX">
+					<ShortName>DA_DIA_P5-edit.wav</ShortName>
+					<Path>SFX\DA_DIA_P5-edit_10C4C929.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

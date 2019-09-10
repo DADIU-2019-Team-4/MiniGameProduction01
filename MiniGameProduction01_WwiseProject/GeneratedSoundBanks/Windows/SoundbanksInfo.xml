@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="134">
+	<RootPaths>
+		<ProjectRoot>E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1239515581" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Default_bank</ObjectPath>
+			<ShortName>Default_bank</ShortName>
+			<Path>Default_bank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2450003899" Name="DialogueDA_event" ObjectPath="\Events\Default Work Unit\Dialogue\DialogueDA_event" DurationType="OneShot" DurationMin="23.040001" DurationMax="83.720955"/>
+				<Event Id="1976820711" Name="DialogueEN_event" ObjectPath="\Events\Default Work Unit\Dialogue\DialogueEN_event" DurationType="OneShot" DurationMin="26.723265" DurationMax="93.488388"/>
+				<Event Id="3370210432" Name="FailFeed_event" ObjectPath="\Events\Default Work Unit\FailFeed_event" DurationType="OneShot" DurationMin="2.021565" DurationMax="2.021565"/>
+				<Event Id="902224743" Name="stars_event0" ObjectPath="\Events\Default Work Unit\Stars\stars_event0" DurationType="OneShot" DurationMin="1.671247" DurationMax="1.671247"/>
+				<Event Id="902224739" Name="stars_event4" ObjectPath="\Events\Default Work Unit\Stars\stars_event4" DurationType="OneShot" DurationMin="1.761610" DurationMax="1.761610"/>
+				<Event Id="902224738" Name="stars_event5" ObjectPath="\Events\Default Work Unit\Stars\stars_event5" DurationType="OneShot" DurationMin="1.765283" DurationMax="1.765283"/>
+				<Event Id="902224737" Name="stars_event6" ObjectPath="\Events\Default Work Unit\Stars\stars_event6" DurationType="OneShot" DurationMin="1.710816" DurationMax="1.710816"/>
+				<Event Id="902224736" Name="stars_event7" ObjectPath="\Events\Default Work Unit\Stars\stars_event7" DurationType="OneShot" DurationMin="2.809546" DurationMax="2.809546"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="87244112" Language="SFX">
+					<ShortName>stars_event5.wav</ShortName>
+					<Path>SFX\stars_event5_10C4C929.wem</Path>
+				</File>
+				<File Id="295969561" Language="SFX">
+					<ShortName>EN_DIA_P2-edit.wav</ShortName>
+					<Path>SFX\EN_DIA_P2-edit_10C4C929.wem</Path>
+				</File>
+				<File Id="422535274" Language="SFX">
+					<ShortName>DA_DIA_P1.wav</ShortName>
+					<Path>SFX\DA_DIA_P1_10C4C929.wem</Path>
+				</File>
+				<File Id="576820311" Language="SFX">
+					<ShortName>stars_event0.wav</ShortName>
+					<Path>SFX\stars_event0_10C4C929.wem</Path>
+				</File>
+				<File Id="609625544" Language="SFX">
+					<ShortName>DA_DIA_P3-edit.wav</ShortName>
+					<Path>SFX\DA_DIA_P3-edit_10C4C929.wem</Path>
+				</File>
+				<File Id="719967678" Language="SFX">
+					<ShortName>stars_event4.wav</ShortName>
+					<Path>SFX\stars_event4_10C4C929.wem</Path>
+				</File>
+				<File Id="759778719" Language="SFX">
+					<ShortName>DA_DIA_P4-edit.wav</ShortName>
+					<Path>SFX\DA_DIA_P4-edit_10C4C929.wem</Path>
+				</File>
+				<File Id="796341569" Language="SFX">
+					<ShortName>stars_event7.wav</ShortName>
+					<Path>SFX\stars_event7_10C4C929.wem</Path>
+				</File>
+				<File Id="807246711" Language="SFX">
+					<ShortName>EN_DIA_P6-edit.wav</ShortName>
+					<Path>SFX\EN_DIA_P6-edit_10C4C929.wem</Path>
+				</File>
+				<File Id="840184733" Language="SFX">
+					<ShortName>DA_DIA_P6-edit.wav</ShortName>
+					<Path>SFX\DA_DIA_P6-edit_10C4C929.wem</Path>
+				</File>
+				<File Id="845272853" Language="SFX">
+					<ShortName>EN_DIA_P4-edit.wav</ShortName>
+					<Path>SFX\EN_DIA_P4-edit_10C4C929.wem</Path>
+				</File>
+				<File Id="855172982" Language="SFX">
+					<ShortName>EN_DIA_P1-edit.wav</ShortName>
+					<Path>SFX\EN_DIA_P1-edit_10C4C929.wem</Path>
+				</File>
+				<File Id="876716406" Language="SFX">
+					<ShortName>DA_DIA_P2-edit.wav</ShortName>
+					<Path>SFX\DA_DIA_P2-edit_10C4C929.wem</Path>
+				</File>
+				<File Id="913491848" Language="SFX">
+					<ShortName>stars_event6.wav</ShortName>
+					<Path>SFX\stars_event6_10C4C929.wem</Path>
+				</File>
+				<File Id="930556678" Language="SFX">
+					<ShortName>FX01.wav</ShortName>
+					<Path>SFX\FX01_10C4C929.wem</Path>
+				</File>
+				<File Id="939687044" Language="SFX">
+					<ShortName>EN_DIA_P3-edit.wav</ShortName>
+					<Path>SFX\EN_DIA_P3-edit_10C4C929.wem</Path>
+				</File>
+				<File Id="975427891" Language="SFX">
+					<ShortName>EN_DIA_P5-edit.wav</ShortName>
+					<Path>SFX\EN_DIA_P5-edit_10C4C929.wem</Path>
+				</File>
+				<File Id="1007295197" Language="SFX">
+					<ShortName>DA_DIA_P5-edit.wav</ShortName>
+					<Path>SFX\DA_DIA_P5-edit_10C4C929.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

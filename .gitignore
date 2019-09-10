@@ -57,3 +57,23 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
+
+Ignore all .meta file
+*.meta
+#But not source file with postfix. which is everything but a folder
+!*.*.meta
+Assets/Wwise/Deployment/Plugins/Windows/x86/Debug/AkSoundEngine.pdb.meta
+Assets/Wwise/Deployment/Plugins/Windows/x86/Debug/AkWaapiClient.pdb.meta
+Assets/Wwise/Deployment/Plugins/Windows/x86/Profile/AkSoundEngine.pdb.meta
+Assets/Wwise/Deployment/Plugins/Windows/x86/Profile/AkWaapiClient.pdb.meta
+Assets/Wwise/Deployment/Plugins/Windows/x86/Release/AkSoundEngine.pdb.meta
+Assets/Wwise/Deployment/Plugins/Windows/x86/Release/AkWaapiClient.pdb.meta
+Assets/Wwise/Deployment/Plugins/Windows/x86_64/Debug/AkSoundEngine.pdb.meta
+Assets/Wwise/Deployment/Plugins/Windows/x86_64/Debug/AkWaapiClient.pdb.meta
+Assets/Wwise/Deployment/Plugins/Windows/x86_64/Profile/AkSoundEngine.pdb.meta
+Assets/Wwise/Deployment/Plugins/Windows/x86_64/Profile/AkWaapiClient.pdb.meta
+Assets/Wwise/Deployment/Plugins/Windows/x86_64/Release/AkSoundEngine.pdb.meta
+Assets/Wwise/Deployment/Plugins/Windows/x86_64/Release/AkWaapiClient.pdb.meta
+Assets/Demigiant/DOTween/DOTween.dll.mdb.meta
+Assets/Demigiant/DOTween/Editor/DOTweenEditor.dll.mdb.meta
+.vscode/settings.json

@@ -1,0 +1,42 @@
+Event	ID	Name			Wwise Object Path	Notes
+	902224736	stars_event7			\Default Work Unit\Stars\stars_event7	
+	902224737	stars_event6			\Default Work Unit\Stars\stars_event6	
+	902224738	stars_event5			\Default Work Unit\Stars\stars_event5	
+	902224739	stars_event4			\Default Work Unit\Stars\stars_event4	
+	902224743	stars_event0			\Default Work Unit\Stars\stars_event0	
+	1976820711	DialogueEN_event			\Default Work Unit\Dialogue\DialogueEN_event	
+	2450003899	DialogueDA_event			\Default Work Unit\Dialogue\DialogueDA_event	
+	3370210432	FailFeed_event			\Default Work Unit\FailFeed_event	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	548614456	game_stage			\Default Work Unit\game_stage	
+
+Switch	ID	Name	Switch Group			Notes
+	2607556080	menu	game_stage			
+	3630028968	phase2	game_stage			
+	3630028969	phase3	game_stage			
+	3630028971	phase1	game_stage			
+	3630028972	phase6	game_stage			
+	3630028974	phase4	game_stage			
+	3630028975	phase5	game_stage			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	87244112	stars_event5	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Android\SFX\stars_event5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stars\stars_event5		311460
+	295969561	EN_DIA_P2-edit	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Android\SFX\EN_DIA_P2-edit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\en_dia_switch\EN_DIA_P2-edit		5927926
+	422535274	DA_DIA_P1	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Android\SFX\DA_DIA_P1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\da_dia_switch\DA_DIA_P1		2032192
+	576820311	stars_event0	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Android\SFX\stars_event0_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stars\stars_event0		294872
+	609625544	DA_DIA_P3-edit	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Android\SFX\DA_DIA_P3-edit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\da_dia_switch\DA_DIA_P3-edit		6819734
+	719967678	stars_event4	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Android\SFX\stars_event4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stars\stars_event4		310812
+	759778719	DA_DIA_P4-edit	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Android\SFX\DA_DIA_P4-edit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\da_dia_switch\DA_DIA_P4-edit		3363862
+	796341569	stars_event7	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Android\SFX\stars_event7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stars\stars_event7		495668
+	807246711	EN_DIA_P6-edit	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Android\SFX\EN_DIA_P6-edit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\en_dia_switch\EN_DIA_P6-edit		7384252
+	840184733	DA_DIA_P6-edit	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Android\SFX\DA_DIA_P6-edit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\da_dia_switch\DA_DIA_P6-edit		7384252
+	845272853	EN_DIA_P4-edit	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Android\SFX\EN_DIA_P4-edit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\en_dia_switch\EN_DIA_P4-edit		3151042
+	855172982	EN_DIA_P1-edit	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Android\SFX\EN_DIA_P1-edit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\en_dia_switch\EN_DIA_P1-edit		2357056
+	876716406	DA_DIA_P2-edit	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Android\SFX\DA_DIA_P2-edit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\da_dia_switch\DA_DIA_P2-edit		5630502
+	913491848	stars_event6	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Android\SFX\stars_event6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stars\stars_event6		301852
+	930556678	FailFeed	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Android\SFX\FX01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FailFeed		356668
+	939687044	EN_DIA_P3-edit	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Android\SFX\EN_DIA_P3-edit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\en_dia_switch\EN_DIA_P3-edit		8245740
+	975427891	EN_DIA_P5-edit	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Android\SFX\EN_DIA_P5-edit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\en_dia_switch\EN_DIA_P5-edit		4704356
+	1007295197	DA_DIA_P5-edit	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Android\SFX\DA_DIA_P5-edit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\da_dia_switch\DA_DIA_P5-edit		4423114
+
