@@ -39,6 +39,7 @@ public class GameControl : MonoBehaviour
     public int toLevel7Count = 10;
 
     public float gameSpeed = 0.8f;
+    public float speedUpValue = 0.1f;
 
     [SerializeField]
     private GameObject _endGameObject;
@@ -60,16 +61,21 @@ public class GameControl : MonoBehaviour
         {
             if (leftHandObjects.Count > 0)
             {
+                if (currentLevel != 7)
+                {
                 // Trigger Timmy's animations for the failing
                 m_Animator.SetTrigger("failC");
                 m_Animator.SetTrigger("failL");
                 m_Animator.SetTrigger("failR");
 
-                //restart level
-                StartLevel(currentLevel);
-                StartCoroutine(_starManager.ResetStars(0f));
-                Debug.Log("Fail!!");
-                return;
+                    //restart level
+                    StartLevel(currentLevel);
+                    StartCoroutine(_starManager.ResetStars(0f));
+                    Debug.Log("Fail!!");
+                    return;
+                }
+
+                _endGameObject.SetActive(true);
             }
         }
 
@@ -84,16 +90,21 @@ public class GameControl : MonoBehaviour
         {
             if (rightHandObjects.Count > 0)
             {
+                if (currentLevel != 7)
+                {
                 // Trigger Timmy's animations for the failing
                 m_Animator.SetTrigger("failC");
                 m_Animator.SetTrigger("failL");
                 m_Animator.SetTrigger("failR");
 
-                //restart level
-                StartLevel(currentLevel);
-                StartCoroutine(_starManager.ResetStars(0f));
-                Debug.Log("Fail!!");
-                return;
+                    //restart level
+                    StartLevel(currentLevel);
+                    StartCoroutine(_starManager.ResetStars(0f));
+                    Debug.Log("Fail!!");
+                    return;
+                }
+
+                _endGameObject.SetActive(true);
             }
         }
 
@@ -120,7 +131,7 @@ public class GameControl : MonoBehaviour
 		AkSoundEngine.PostEvent("sun_event", gameObject);
 
         //level 1 setup
-        StartLevel(1);
+        StartLevel(currentLevel);
     }
 
     void PickUpBallScene() {
@@ -181,7 +192,9 @@ public class GameControl : MonoBehaviour
 
         if (currentLevel == 7)
         {
-            //_endGameObject.SetActive(true);
+            // speed up at level 7
+            gameSpeed += Time.deltaTime * speedUpValue;
+            Time.timeScale = gameSpeed;
         }
 
         if (MaximumNumberOfBalls > currentNumOfBalls)
@@ -296,7 +309,8 @@ public class GameControl : MonoBehaviour
                 AddBall(Side.Left, Type.Sex);
                 AddBall(Side.Right, Type.Package);
                 AddBall(Side.Right, Type.Rocket);
-                Time.timeScale = gameSpeed = 1;
+                gameSpeed += 0.2f;
+                Time.timeScale = gameSpeed;
                 break;
             case 6:
 
