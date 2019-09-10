@@ -8,11 +8,11 @@ public class InputController : MonoBehaviour
     private List<ThrowableObject> balls;
     private Vector3 position;
     private float width;
+    public GameObject uncontrollableBalls;
 
     // mobile input variables
     private Vector3 _firstTouchPos1;
     private Vector3 _lastTouchPos1;
-
     private Vector3 _firstTouchPos2;
     private Vector3 _lastTouchPos2;
 
@@ -20,12 +20,10 @@ public class InputController : MonoBehaviour
     [SerializeField]
     private float _minSwipeDistanceInPercentage = 0.10f;
     private float _minSwipeDistance;
-
     private float _swipeTimerLeft;
     private float _swipeTimerRight;
     private bool _hasSwipedLeft;
     private bool _hasSwipedRight;
-
     private bool _madeSwipe1;
     private bool _madeSwipe2;
 
@@ -36,14 +34,14 @@ public class InputController : MonoBehaviour
     private bool disableControls = false;
     private float disableControlsTimer = 0; //timer for counting how long the controls have been turned off
     private float disableControlsTime = 3f; //how long should the controls be turned off
-
-    Animator m_Animator;
-
+    private Animator timmyAnimator;
+    private StarManager _starManager;
     private GameControl gc;
-
     private FountainGameController _fountainGameController;
     public UnityEvent ThrowEvent;
 
+    public bool LevelEnd { get; set; }
+    public bool uncontrollableBallsAnimationStarted = false;
 
     // Start is called before the first frame update
     void Start()
@@ -52,7 +50,10 @@ public class InputController : MonoBehaviour
         _minSwipeDistance = Screen.height * _minSwipeDistanceInPercentage; // 10% height of the screen
 
         //Get the Animator attached to the Timmy's Model
-        m_Animator = GameObject.Find("Timmy_fbx").GetComponent<Animator>();
+        timmyAnimator = GameObject.Find("Timmy_fbx").GetComponent<Animator>();
+
+        _starManager = FindObjectOfType<StarManager>();
+        LevelEnd = false;
 
         //if (_isFountain)
         //    _fountainGameController = FindObjectOfType<FountainGameController>();
@@ -240,36 +241,57 @@ public class InputController : MonoBehaviour
     {
         ThrowableObject to = null;
 
-        if (gc.rightHandObjects.Count > 0 )
+        if (gc.rightHandObjects.Count > 0 && !LevelEnd)
         {
             to = gc.rightHandObjects.Dequeue();
             to.throwLeft();
             gc.stackingIsAllowed = false;
 
             // Trigger throwing Animation
-            m_Animator.SetTrigger("throwR");
+            timmyAnimator.SetTrigger("throwR");
 
             Debug.Log(to.gameObject.GetInstanceID() + "Size = " + gc.rightHandObjects.Count);
             ThrowEvent.Invoke();
         }
+        else if (LevelEnd)
+        {
+            // Trigger throwing Animation
+            timmyAnimator.SetTrigger("throwR");
 
+            if (!uncontrollableBallsAnimationStarted)
+            {
+                uncontrollableBalls = Instantiate(uncontrollableBalls);
+                uncontrollableBallsAnimationStarted = true;
+            }
+        }
     }
 
     private void ThrowRight()
     {
         ThrowableObject to = null;
 
-        if (gc.leftHandObjects.Count > 0 )
+        if (gc.leftHandObjects.Count > 0 && !LevelEnd)
         {
             to = gc.leftHandObjects.Dequeue();
             to.throwRight();
             gc.stackingIsAllowed = false;
 
             // Trigger throwing Animation
-            m_Animator.SetTrigger("throwL");
+            timmyAnimator.SetTrigger("throwL");
 
             Debug.Log(to.gameObject.GetInstanceID() + "Size = " + gc.leftHandObjects.Count);
             ThrowEvent.Invoke();
+        }
+        else if (LevelEnd)
+        {
+            // Trigger throwing Animation
+            timmyAnimator.SetTrigger("throwL");
+
+            if (!uncontrollableBallsAnimationStarted)
+            {
+                uncontrollableBalls = Instantiate(uncontrollableBalls);
+                uncontrollableBallsAnimationStarted = true;
+            }
         }
     }
 
