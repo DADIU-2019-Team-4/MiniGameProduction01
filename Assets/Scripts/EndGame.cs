@@ -45,6 +45,7 @@ public class EndGame : MonoBehaviour
         foreach (ThrowableObject ball in _balls)
             Destroy(ball.gameObject);
 
+        Destroy(_inputController.uncontrollableBalls);
         _timmy.SetActive(false);
         _paperBall.SetActive(true);
         yield return new WaitForSeconds(_timeUntilEnd);

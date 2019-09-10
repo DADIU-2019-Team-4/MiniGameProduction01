@@ -17,6 +17,8 @@ public class GameControl : MonoBehaviour
     [SerializeField]
     private float ballSpawnInterval = 1.0f;
     private float spawnTimer = 0f;
+    private float finalSceneDuration = 2f;
+    private float finalSceneTimer= 0f;
     [HideInInspector]
     //public bool ballWaiting = false;
     //private GameObject waitingBall;
@@ -180,7 +182,14 @@ public class GameControl : MonoBehaviour
             inputController.LevelEnd = true;
             gameSpeed += Time.deltaTime * speedUpValue;
             Time.timeScale = gameSpeed;
-        }
+
+            finalSceneTimer += Time.deltaTime;
+
+            if (finalSceneTimer > finalSceneDuration)
+            {
+                _endGameObject.SetActive(true);
+            }
+}
 
         if (MaximumNumberOfBalls > currentNumOfBalls)
         {

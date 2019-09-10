@@ -260,7 +260,7 @@ public class InputController : MonoBehaviour
 
             if (!uncontrollableBallsAnimationStarted)
             {
-                Instantiate(uncontrollableBalls);
+                uncontrollableBalls = Instantiate(uncontrollableBalls);
                 uncontrollableBallsAnimationStarted = true;
             }
         }
@@ -289,7 +289,7 @@ public class InputController : MonoBehaviour
 
             if (!uncontrollableBallsAnimationStarted)
             {
-                Instantiate(uncontrollableBalls);
+                uncontrollableBalls = Instantiate(uncontrollableBalls);
                 uncontrollableBallsAnimationStarted = true;
             }
         }
