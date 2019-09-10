@@ -286,27 +286,27 @@ public class GameControl : MonoBehaviour
     {
         if (currentLevel == 3 && levelTimer > bellSpawnTime && bellSpawnTime != 1f)
         {
-            throwableObjectList[1].gameObject.GetComponent<ModifyObjectMesh>().SetToBellMesh();
+            throwableObjectList[0].gameObject.GetComponent<ModifyObjectMesh>().SetToBellMesh();
             bellSpawnTime = -1f;
         }
         if (currentLevel == 4 && levelTimer > packageSpawnTime && packageSpawnTime!=-1f)
         {
-            throwableObjectList[0].gameObject.GetComponent<ModifyObjectMesh>().SetToPackageMesh();
+            throwableObjectList[1].gameObject.GetComponent<ModifyObjectMesh>().SetToPackageMesh();
             packageSpawnTime = -1f;
         }
         if (currentLevel == 4 && levelTimer > toySpawnTime && toySpawnTime != -1f)
         {
-            throwableObjectList[1].gameObject.GetComponent<ModifyObjectMesh>().SetToRocketMesh();
+            throwableObjectList[2].gameObject.GetComponent<ModifyObjectMesh>().SetToRocketMesh();
             toySpawnTime = -1f;
         }
         if (currentLevel == 4 && levelTimer > dvdSpawnTime && dvdSpawnTime != -1f)
         {
-            throwableObjectList[0].gameObject.GetComponent<ModifyObjectMesh>().SetToSexDrawingMesh();
+            throwableObjectList[3].gameObject.GetComponent<ModifyObjectMesh>().SetToSexDrawingMesh();
             dvdSpawnTime = -1f;
         }
         if (currentLevel == 5 && levelTimer > carSpawnTime && carSpawnTime!=-1f)
         {
-            throwableObjectList[3].gameObject.GetComponent<ModifyObjectMesh>().SetToToyCarMesh();
+            throwableObjectList[0].gameObject.GetComponent<ModifyObjectMesh>().SetToToyCarMesh();
             carSpawnTime = -1f;
         }
         if (currentLevel == 6 && levelTimer > porcelainSpawnTime && porcelainSpawnTime!=-1f)
@@ -379,29 +379,29 @@ public class GameControl : MonoBehaviour
                 AddBall(Side.Right, Type.Ball1);
                 break;
             case 3:
-                AddBall(Side.Left, Type.Bell);
+                AddBall(Side.Left, Type.Ball);
                 AddBall(Side.Left, Type.Ball1);
                 AddBall(Side.Right, Type.Ball2);
                 break;
             case 4:
                 AddBall(Side.Left, Type.Bell);
                 AddBall(Side.Left, Type.Ball);
-                AddBall(Side.Right, Type.Package);
-                AddBall(Side.Right, Type.Rocket);
+                AddBall(Side.Right, Type.Ball1);
+                AddBall(Side.Right, Type.Ball2);
                 break;
             case 5:
                 AddBall(Side.Left, Type.Bell);
-                AddBall(Side.Left, Type.Sex);
-                AddBall(Side.Right, Type.Package);
+                AddBall(Side.Left, Type.Package);
                 AddBall(Side.Right, Type.Rocket);
+                AddBall(Side.Right, Type.Sex);
                 gameSpeed =1f;
                 Time.timeScale = gameSpeed;
                 break;
             case 6:
                 AddBall(Side.Left, Type.Car);
-                AddBall(Side.Left, Type.Porcelain1);
-                AddBall(Side.Left, Type.Porcelain2);
-                AddBall(Side.Right, Type.Porcelain3);
+                AddBall(Side.Left, Type.Package);
+                AddBall(Side.Left, Type.Rocket);
+                AddBall(Side.Right, Type.Sex);
                 AddBall(Side.Right, Type.Porcelain1);
                 break;
             default:
