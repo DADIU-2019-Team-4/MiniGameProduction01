@@ -382,12 +382,16 @@ public class GameControl : MonoBehaviour
                 AddBall(Side.Left, Type.Ball);
                 AddBall(Side.Left, Type.Ball1);
                 AddBall(Side.Right, Type.Ball2);
+                bellSpawnTime = 19f;
                 break;
             case 4:
                 AddBall(Side.Left, Type.Bell);
                 AddBall(Side.Left, Type.Ball);
                 AddBall(Side.Right, Type.Ball1);
                 AddBall(Side.Right, Type.Ball2);
+                packageSpawnTime = 4f;
+                toySpawnTime = 12.3f;
+                dvdSpawnTime = 59.5f;
                 break;
             case 5:
                 AddBall(Side.Left, Type.Bell);
@@ -396,6 +400,7 @@ public class GameControl : MonoBehaviour
                 AddBall(Side.Right, Type.Sex);
                 gameSpeed =1f;
                 Time.timeScale = gameSpeed;
+                carSpawnTime = 20f;
                 break;
             case 6:
                 AddBall(Side.Left, Type.Car);
@@ -403,6 +408,7 @@ public class GameControl : MonoBehaviour
                 AddBall(Side.Left, Type.Rocket);
                 AddBall(Side.Right, Type.Sex);
                 AddBall(Side.Right, Type.Porcelain1);
+                porcelainSpawnTime = 23f;
                 break;
             default:
 
