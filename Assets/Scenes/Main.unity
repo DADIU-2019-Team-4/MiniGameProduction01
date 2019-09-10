@@ -672,6 +672,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2875003587775033341, guid: 70c1faaddec164af4aeabecec3119e0f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70c1faaddec164af4aeabecec3119e0f, type: 3}
 --- !u!4 &371498071 stripped
@@ -1239,6 +1244,49 @@ MonoBehaviour:
   multiPositionTypeLabel: 0
   LargeModePositions: []
   multiPositionArray: []
+--- !u!114 &726737297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726737294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c83cdd3ebff9f7046bbe7e2afec2a9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Light: {fileID: 0}
+  SkyColour: {fileID: 0}
+  LightCone: {fileID: 0}
+  Skybox1: {fileID: 0}
+  Skybox2: {fileID: 0}
+  Skybox3: {fileID: 0}
+  Skybox4: {fileID: 0}
+  Skybox5: {fileID: 0}
+  Skybox6: {fileID: 0}
+  Skybox7: {fileID: 0}
+  LightColor1: {r: 0, g: 0, b: 0, a: 0}
+  LightColor2: {r: 0, g: 0, b: 0, a: 0}
+  LightColor3: {r: 0, g: 0, b: 0, a: 0}
+  LightColor4: {r: 0, g: 0, b: 0, a: 0}
+  LightColor5: {r: 0, g: 0, b: 0, a: 0}
+  LightColor6: {r: 0, g: 0, b: 0, a: 0}
+  LightColor7: {r: 0, g: 0, b: 0, a: 0}
+  SkyColourSprite1: {fileID: 0}
+  SkyColourSprite2: {fileID: 0}
+  SkyColourSprite3: {fileID: 0}
+  SkyColourSprite4: {fileID: 0}
+  SkyColourSprite5: {fileID: 0}
+  SkyColourSprite6: {fileID: 0}
+  SkyColourSprite7: {fileID: 0}
+  LightConeSprite1: {fileID: 0}
+  LightConeSprite2: {fileID: 0}
+  LightConeSprite3: {fileID: 0}
+  LightConeSprite4: {fileID: 0}
+  LightConeSprite5: {fileID: 0}
+  LightConeSprite6: {fileID: 0}
+  LightConeSprite7: {fileID: 0}
 --- !u!114 &726737300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2622,6 +2670,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1595828089}
   - component: {fileID: 1595828090}
+  - component: {fileID: 1595828091}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -2703,6 +2752,25 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!95 &1595828091
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595828088}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c0a5cc32e781d15408387a24183db739, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1645011471
 GameObject:
   m_ObjectHideFlags: 0
