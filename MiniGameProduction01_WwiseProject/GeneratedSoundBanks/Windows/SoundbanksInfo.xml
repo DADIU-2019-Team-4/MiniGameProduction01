@@ -46,111 +46,111 @@
 			<IncludedMemoryFiles>
 				<File Id="10934945" Language="SFX">
 					<ShortName>catch_paper1.wav</ShortName>
-					<Path>SFX\catch_paper1_10C4C929.wem</Path>
+					<Path>SFX\catch_paper1_6296B0F9.wem</Path>
 				</File>
 				<File Id="87244112" Language="SFX">
 					<ShortName>stars_event5.wav</ShortName>
-					<Path>SFX\stars_event5_10C4C929.wem</Path>
+					<Path>SFX\stars_event5_6296B0F9.wem</Path>
 				</File>
 				<File Id="109965146" Language="SFX">
 					<ShortName>sun.wav</ShortName>
-					<Path>SFX\sun_D79FB2B7.wem</Path>
+					<Path>SFX\sun_9B96ECC7.wem</Path>
 				</File>
 				<File Id="242200253" Language="SFX">
 					<ShortName>FailFeed.wav</ShortName>
-					<Path>SFX\FailFeed_10C4C929.wem</Path>
+					<Path>SFX\FailFeed_6296B0F9.wem</Path>
 				</File>
 				<File Id="253455966" Language="SFX">
 					<ShortName>catch_paper2.wav</ShortName>
-					<Path>SFX\catch_paper2_10C4C929.wem</Path>
+					<Path>SFX\catch_paper2_6296B0F9.wem</Path>
 				</File>
 				<File Id="295969561" Language="SFX">
 					<ShortName>EN_DIA_P2-edit.wav</ShortName>
-					<Path>SFX\EN_DIA_P2-edit_10C4C929.wem</Path>
+					<Path>SFX\EN_DIA_P2-edit_6296B0F9.wem</Path>
 				</File>
 				<File Id="351704390" Language="SFX">
 					<ShortName>rain.wav</ShortName>
-					<Path>SFX\rain_D79FB2B7.wem</Path>
+					<Path>SFX\rain_9B96ECC7.wem</Path>
 				</File>
 				<File Id="422535274" Language="SFX">
 					<ShortName>DA_DIA_P1.wav</ShortName>
-					<Path>SFX\DA_DIA_P1_10C4C929.wem</Path>
+					<Path>SFX\DA_DIA_P1_6296B0F9.wem</Path>
 				</File>
 				<File Id="516845969" Language="SFX">
 					<ShortName>catch_paper3.wav</ShortName>
-					<Path>SFX\catch_paper3_10C4C929.wem</Path>
+					<Path>SFX\catch_paper3_6296B0F9.wem</Path>
 				</File>
 				<File Id="576820311" Language="SFX">
 					<ShortName>stars_event0.wav</ShortName>
-					<Path>SFX\stars_event0_10C4C929.wem</Path>
+					<Path>SFX\stars_event0_6296B0F9.wem</Path>
 				</File>
 				<File Id="579222029" Language="SFX">
 					<ShortName>crows.wav</ShortName>
-					<Path>SFX\crows_D79FB2B7.wem</Path>
+					<Path>SFX\crows_9B96ECC7.wem</Path>
 				</File>
 				<File Id="609625544" Language="SFX">
 					<ShortName>DA_DIA_P3-edit.wav</ShortName>
-					<Path>SFX\DA_DIA_P3-edit_10C4C929.wem</Path>
+					<Path>SFX\DA_DIA_P3-edit_6296B0F9.wem</Path>
 				</File>
 				<File Id="719967678" Language="SFX">
 					<ShortName>stars_event4.wav</ShortName>
-					<Path>SFX\stars_event4_10C4C929.wem</Path>
+					<Path>SFX\stars_event4_6296B0F9.wem</Path>
 				</File>
 				<File Id="759778719" Language="SFX">
 					<ShortName>DA_DIA_P4-edit.wav</ShortName>
-					<Path>SFX\DA_DIA_P4-edit_10C4C929.wem</Path>
+					<Path>SFX\DA_DIA_P4-edit_6296B0F9.wem</Path>
 				</File>
 				<File Id="779036515" Language="SFX">
 					<ShortName>thunder.wav</ShortName>
-					<Path>SFX\thunder_D79FB2B7.wem</Path>
+					<Path>SFX\thunder_9B96ECC7.wem</Path>
 				</File>
 				<File Id="796341569" Language="SFX">
 					<ShortName>stars_event7.wav</ShortName>
-					<Path>SFX\stars_event7_10C4C929.wem</Path>
+					<Path>SFX\stars_event7_6296B0F9.wem</Path>
 				</File>
 				<File Id="807246711" Language="SFX">
 					<ShortName>EN_DIA_P6-edit.wav</ShortName>
-					<Path>SFX\EN_DIA_P6-edit_10C4C929.wem</Path>
+					<Path>SFX\EN_DIA_P6-edit_6296B0F9.wem</Path>
 				</File>
 				<File Id="807851023" Language="SFX">
 					<ShortName>catch_paper0.wav</ShortName>
-					<Path>SFX\catch_paper0_10C4C929.wem</Path>
+					<Path>SFX\catch_paper0_6296B0F9.wem</Path>
 				</File>
 				<File Id="840184733" Language="SFX">
 					<ShortName>DA_DIA_P6-edit.wav</ShortName>
-					<Path>SFX\DA_DIA_P6-edit_10C4C929.wem</Path>
+					<Path>SFX\DA_DIA_P6-edit_6296B0F9.wem</Path>
 				</File>
 				<File Id="845272853" Language="SFX">
 					<ShortName>EN_DIA_P4-edit.wav</ShortName>
-					<Path>SFX\EN_DIA_P4-edit_10C4C929.wem</Path>
+					<Path>SFX\EN_DIA_P4-edit_6296B0F9.wem</Path>
 				</File>
 				<File Id="855172982" Language="SFX">
 					<ShortName>EN_DIA_P1-edit.wav</ShortName>
-					<Path>SFX\EN_DIA_P1-edit_10C4C929.wem</Path>
+					<Path>SFX\EN_DIA_P1-edit_6296B0F9.wem</Path>
 				</File>
 				<File Id="876716406" Language="SFX">
 					<ShortName>DA_DIA_P2-edit.wav</ShortName>
-					<Path>SFX\DA_DIA_P2-edit_10C4C929.wem</Path>
+					<Path>SFX\DA_DIA_P2-edit_6296B0F9.wem</Path>
 				</File>
 				<File Id="902393264" Language="SFX">
 					<ShortName>ROOM.wav</ShortName>
-					<Path>SFX\ROOM_D79FB2B7.wem</Path>
+					<Path>SFX\ROOM_9B96ECC7.wem</Path>
 				</File>
 				<File Id="913491848" Language="SFX">
 					<ShortName>stars_event6.wav</ShortName>
-					<Path>SFX\stars_event6_10C4C929.wem</Path>
+					<Path>SFX\stars_event6_6296B0F9.wem</Path>
 				</File>
 				<File Id="939687044" Language="SFX">
 					<ShortName>EN_DIA_P3-edit.wav</ShortName>
-					<Path>SFX\EN_DIA_P3-edit_10C4C929.wem</Path>
+					<Path>SFX\EN_DIA_P3-edit_6296B0F9.wem</Path>
 				</File>
 				<File Id="975427891" Language="SFX">
 					<ShortName>EN_DIA_P5-edit.wav</ShortName>
-					<Path>SFX\EN_DIA_P5-edit_10C4C929.wem</Path>
+					<Path>SFX\EN_DIA_P5-edit_6296B0F9.wem</Path>
 				</File>
 				<File Id="1007295197" Language="SFX">
 					<ShortName>DA_DIA_P5-edit.wav</ShortName>
-					<Path>SFX\DA_DIA_P5-edit_10C4C929.wem</Path>
+					<Path>SFX\DA_DIA_P5-edit_6296B0F9.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
