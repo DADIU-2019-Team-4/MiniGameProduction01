@@ -286,11 +286,11 @@ public class GameControl : MonoBehaviour
                 AddBall(Side.Right, Type.Porcelain1);
                 break;
             case 7:
-                AddBall(Side.Left);
-                AddBall(Side.Left);
-                AddBall(Side.Left);
-                AddBall(Side.Right);
-                AddBall(Side.Right);
+                AddBall(Side.Left, Type.Car);
+                AddBall(Side.Left, Type.Porcelain1);
+                AddBall(Side.Left, Type.Porcelain2);
+                AddBall(Side.Right, Type.Porcelain3);
+                AddBall(Side.Right, Type.Porcelain1);
                 break;
             default:
                 break;
