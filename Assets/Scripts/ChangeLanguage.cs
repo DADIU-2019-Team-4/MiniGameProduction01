@@ -32,13 +32,13 @@ public class ChangeLanguage : MonoBehaviour
         {
             // Ja, det bo' dejlig!
             CurrentLanguage = Language.Danish;
-            // AkSoundEngine.somethingSomething
+            AkSoundEngine.SetState("dia_lang", "DK");
         }
         else
         {
             // Ye olde butcherede Englishe!
             CurrentLanguage = Language.English;
-            // AkSoundEngine.somethingSomething
+            AkSoundEngine.SetState("dia_lang", "EN");
         }
     }
 

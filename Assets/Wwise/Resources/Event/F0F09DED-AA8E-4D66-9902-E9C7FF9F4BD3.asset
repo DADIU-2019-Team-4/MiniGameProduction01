@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b27c913a3b6762a4694a96529ff42f91, type: 3}
   m_Name: F0F09DED-AA8E-4D66-9902-E9C7FF9F4BD3
   m_EditorClassIdentifier: 
-  objectName: DialogueDA_event
-  id: 2450003899
+  objectName: DialogueDK_event
+  id: 4123255229
   guid: F0F09DED-AA8E-4D66-9902-E9C7FF9F4BD3

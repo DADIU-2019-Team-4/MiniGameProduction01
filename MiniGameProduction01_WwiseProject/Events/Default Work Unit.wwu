@@ -75,12 +75,12 @@
 				</Folder>
 				<Folder Name="Dialogue" ID="{C44FBB3B-3361-489D-9E0E-030C9C3ACBD8}" ShortID="984676578">
 					<ChildrenList>
-						<Event Name="DialogueDA_event" ID="{F0F09DED-AA8E-4D66-9902-E9C7FF9F4BD3}">
+						<Event Name="DialogueDK_event" ID="{F0F09DED-AA8E-4D66-9902-E9C7FF9F4BD3}">
 							<ChildrenList>
 								<Action Name="" ID="{5B0034BA-9CF2-4DF7-BD75-8E93DCA40953}" ShortID="693954575">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="da_dia_switch" ID="{A36786C4-D558-48D5-8101-BA43BF60FC7E}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+											<ObjectRef Name="dk_dia_switch" ID="{A36786C4-D558-48D5-8101-BA43BF60FC7E}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -106,7 +106,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="da_dia_switch" ID="{A36786C4-D558-48D5-8101-BA43BF60FC7E}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+											<ObjectRef Name="dk_dia_switch" ID="{A36786C4-D558-48D5-8101-BA43BF60FC7E}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -143,7 +143,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="da_dia_switch" ID="{A36786C4-D558-48D5-8101-BA43BF60FC7E}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+											<ObjectRef Name="dk_dia_switch" ID="{A36786C4-D558-48D5-8101-BA43BF60FC7E}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -417,6 +417,14 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Folder Name="Music" ID="{5122B693-93B4-45C8-B44F-C052FA161D33}" ShortID="529175228">
+					<ChildrenList>
+						<Event Name="musicP5a_event" ID="{CF36F217-6F30-4A10-8715-7A02359D1F03}"/>
+						<Event Name="musicP6a_event" ID="{77E57608-E780-4B4D-AC3E-CE9B7D771526}"/>
+						<Event Name="musicP5b_event" ID="{5F0BEA43-ED5F-4BD9-86A2-254F1031F1D9}"/>
+						<Event Name="musicP6b_event" ID="{862B6121-551E-4661-B194-F5DA1B5330D0}"/>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
