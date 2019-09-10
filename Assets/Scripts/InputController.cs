@@ -44,6 +44,8 @@ public class InputController : MonoBehaviour
     private FountainGameController _fountainGameController;
     public UnityEvent ThrowEvent;
 
+    public bool LevelEnd { get; set; }
+
 
     // Start is called before the first frame update
     void Start()
