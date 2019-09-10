@@ -75,12 +75,12 @@
 				</Folder>
 				<Folder Name="Dialogue" ID="{C44FBB3B-3361-489D-9E0E-030C9C3ACBD8}" ShortID="984676578">
 					<ChildrenList>
-						<Event Name="DialogueDA_event" ID="{F0F09DED-AA8E-4D66-9902-E9C7FF9F4BD3}">
+						<Event Name="DialogueDK_event" ID="{F0F09DED-AA8E-4D66-9902-E9C7FF9F4BD3}">
 							<ChildrenList>
 								<Action Name="" ID="{5B0034BA-9CF2-4DF7-BD75-8E93DCA40953}" ShortID="693954575">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="da_dia_switch" ID="{A36786C4-D558-48D5-8101-BA43BF60FC7E}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+											<ObjectRef Name="dk_dia_switch" ID="{A36786C4-D558-48D5-8101-BA43BF60FC7E}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -95,55 +95,14 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="switchLangEN_event" ID="{95D552CE-7146-4B64-9055-F85348B55D2E}">
-							<ChildrenList>
-								<Action Name="" ID="{167FD165-10BD-40CD-889E-D8B468053FEA}" ShortID="330893678">
+								<Action Name="" ID="{2ACDA890-FC29-40CD-A41A-AEB1291C3817}" ShortID="1040415908">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="4"/>
 										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="da_dia_switch" ID="{A36786C4-D558-48D5-8101-BA43BF60FC7E}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{CB3E43C4-6810-4842-BAAF-247F2B827CEC}" ShortID="222099336">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="5"/>
-										<Property Name="Scope" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="en_dia_switch" ID="{9DF05E67-C57E-4F14-B7CD-FDB52A38B0B9}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="switchLangDK_event" ID="{A2D70745-8FA1-4AA3-AD1B-85A200FD64CF}">
-							<ChildrenList>
-								<Action Name="" ID="{D8C5936D-8F2E-41A8-8733-86A347D48247}" ShortID="549504753">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="4"/>
-										<Property Name="Scope" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="en_dia_switch" ID="{9DF05E67-C57E-4F14-B7CD-FDB52A38B0B9}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{45370D1C-DB8A-4445-8221-312131B4CF63}" ShortID="96855660">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="5"/>
-										<Property Name="Scope" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="da_dia_switch" ID="{A36786C4-D558-48D5-8101-BA43BF60FC7E}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+											<ObjectRef Name="dk_dia_switch" ID="{A36786C4-D558-48D5-8101-BA43BF60FC7E}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -417,6 +376,14 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Folder Name="Music" ID="{5122B693-93B4-45C8-B44F-C052FA161D33}" ShortID="529175228">
+					<ChildrenList>
+						<Event Name="musicP5a_event" ID="{CF36F217-6F30-4A10-8715-7A02359D1F03}"/>
+						<Event Name="musicP6a_event" ID="{77E57608-E780-4B4D-AC3E-CE9B7D771526}"/>
+						<Event Name="musicP5b_event" ID="{5F0BEA43-ED5F-4BD9-86A2-254F1031F1D9}"/>
+						<Event Name="musicP6b_event" ID="{862B6121-551E-4661-B194-F5DA1B5330D0}"/>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

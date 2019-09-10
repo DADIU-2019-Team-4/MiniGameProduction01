@@ -7,7 +7,7 @@
 					<PropertyList>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-10</Value>
+								<Value>-15</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -163,11 +163,6 @@
 							</ValueList>
 						</Property>
 						<Property Name="SpeakerPanning" Type="int16" Value="1"/>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>6</Value>
-							</ValueList>
-						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -178,7 +173,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<SwitchContainer Name="da_dia_switch" ID="{A36786C4-D558-48D5-8101-BA43BF60FC7E}" ShortID="344877322">
+						<SwitchContainer Name="dk_dia_switch" ID="{A36786C4-D558-48D5-8101-BA43BF60FC7E}" ShortID="344877322">
 							<PropertyList>
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
@@ -279,25 +274,6 @@
 										<ActiveSource Name="DA_DIA_P5-edit" ID="{C0DAFA2B-AF17-4019-BD3B-144103B233C9}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="DA_DIA_P6-edit" ID="{2E63CBA6-569A-4C0D-B323-D7DFA37F6758}" ShortID="248619411">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85E0ED26-8EBA-4DDD-84A1-E48E2CE905F3}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="DA_DIA_P6-edit" ID="{2B8BFB23-A4A2-4FD4-B051-674DE78E2E4A}" ShortID="840184733">
-											<Language>SFX</Language>
-											<AudioFile>DA_DIA_P6-edit.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="DA_DIA_P6-edit" ID="{2B8BFB23-A4A2-4FD4-B051-674DE78E2E4A}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
 								<Sound Name="DA_DIA_P1" ID="{E19C6C63-88D6-436A-8BFB-7252706FAEC8}" ShortID="617547361">
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -317,6 +293,25 @@
 										<ActiveSource Name="DA_DIA_P1" ID="{469B3387-AAEC-4877-90AC-A21249185F3D}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<Sound Name="DA_DIA_P6-edit_no_door" ID="{0DA6750D-20BA-42A4-9EAB-DA351DE0FA0F}" ShortID="1015498920">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85E0ED26-8EBA-4DDD-84A1-E48E2CE905F3}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DA_DIA_P6-edit_no_door" ID="{E374D98B-EFDA-474F-BF3A-17932EB669CD}" ShortID="1064507178">
+											<Language>SFX</Language>
+											<AudioFile>DA_DIA_P6-edit_no_door.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DA_DIA_P6-edit_no_door" ID="{E374D98B-EFDA-474F-BF3A-17932EB669CD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 							<PositioningInfo>
 								<Panner Name="" ID="{F855FC24-92D9-4EDC-919F-6ACF6FA9B8F2}">
@@ -326,8 +321,32 @@
 									</PropertyList>
 								</Panner>
 							</PositioningInfo>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="dia_lang" ID="{00676B05-70FD-4069-9ED7-901BA80ABE9B}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="EN" ID="{38BB2719-CE75-4708-84C2-43FA2656A5B4}"/>
+										<CustomState Name="" ID="{FC0F3B70-0E99-42CF-A034-C671422FA51F}" ShortID="880217237">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-128"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="DK" ID="{9E83DD6D-7544-4F0C-9FB9-6F38019170FD}"/>
+										<CustomState Name="" ID="{F1A0B188-DBD2-46CD-84A7-606595DF0C3B}" ShortID="219875943"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<GroupingInfo>
 								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="DA_DIA_P6-edit_no_door" ID="{0DA6750D-20BA-42A4-9EAB-DA351DE0FA0F}"/>
+									</GroupingBehavior>
 									<GroupingBehavior>
 										<ItemRef Name="DA_DIA_P5-edit" ID="{442BC11D-52A9-47BA-9FC2-17CBE4D3FF93}"/>
 									</GroupingBehavior>
@@ -343,15 +362,12 @@
 									<GroupingBehavior>
 										<ItemRef Name="DA_DIA_P3-edit" ID="{BAB81C81-974D-4824-BF84-C0B2C8F03DBC}"/>
 									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="DA_DIA_P6-edit" ID="{2E63CBA6-569A-4C0D-B323-D7DFA37F6758}"/>
-									</GroupingBehavior>
 								</GroupingBehaviorList>
 								<GroupingList>
 									<Grouping>
 										<SwitchRef Name="phase6" ID="{BA107603-1752-4647-AC7D-188A5C85DCB2}"/>
 										<ItemList>
-											<ItemRef Name="DA_DIA_P6-edit" ID="{2E63CBA6-569A-4C0D-B323-D7DFA37F6758}"/>
+											<ItemRef Name="DA_DIA_P6-edit_no_door" ID="{0DA6750D-20BA-42A4-9EAB-DA351DE0FA0F}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
@@ -491,25 +507,6 @@
 										<ActiveSource Name="EN_DIA_P5-edit" ID="{78D27FFD-9411-4A08-AAF9-C57BC220AC8F}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="EN_DIA_P6-edit" ID="{ADECE3AB-ABC2-4A0A-B4D2-0924B8F7A6B1}" ShortID="855066182">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85E0ED26-8EBA-4DDD-84A1-E48E2CE905F3}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="EN_DIA_P6-edit" ID="{304AB83A-EFB3-4B59-960C-DAB2456B4057}" ShortID="807246711">
-											<Language>SFX</Language>
-											<AudioFile>EN_DIA_P6-edit.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="EN_DIA_P6-edit" ID="{304AB83A-EFB3-4B59-960C-DAB2456B4057}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
 								<Sound Name="EN_DIA_P1-edit" ID="{DEA5E669-EA9E-45CC-A97C-2A5F330E75D5}" ShortID="843608439">
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -529,6 +526,25 @@
 										<ActiveSource Name="EN_DIA_P1-edit" ID="{3C2971CE-14CD-4016-8758-F98DD2E64DE7}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<Sound Name="EN_DIA_P6-edit_no_door" ID="{6D42B63C-4FF2-47A7-BB08-EA2CE3E94D28}" ShortID="13323985">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6B64E79-C4C0-4C03-BD55-FC6566A0A987}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{85E0ED26-8EBA-4DDD-84A1-E48E2CE905F3}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="EN_DIA_P6-edit_no_door" ID="{4177F374-1075-457A-9B5B-3FE97A905370}" ShortID="96900878">
+											<Language>SFX</Language>
+											<AudioFile>EN_DIA_P6-edit_no_door.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="EN_DIA_P6-edit_no_door" ID="{4177F374-1075-457A-9B5B-3FE97A905370}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 							<PositioningInfo>
 								<Panner Name="" ID="{CDC7CD47-B0F9-48F6-B95B-E8BA5108507E}">
@@ -538,10 +554,34 @@
 									</PropertyList>
 								</Panner>
 							</PositioningInfo>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="dia_lang" ID="{00676B05-70FD-4069-9ED7-901BA80ABE9B}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="EN" ID="{38BB2719-CE75-4708-84C2-43FA2656A5B4}"/>
+										<CustomState Name="" ID="{C9DF986D-D1EC-4B14-AA73-F4E678DED889}" ShortID="839172551"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="DK" ID="{9E83DD6D-7544-4F0C-9FB9-6F38019170FD}"/>
+										<CustomState Name="" ID="{DD76E7DE-254B-4AC0-A84E-0EAB342178B8}" ShortID="110111308">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-128"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<GroupingInfo>
 								<GroupingBehaviorList>
 									<GroupingBehavior>
 										<ItemRef Name="EN_DIA_P4-edit" ID="{6FD58B0D-3BC7-41D9-ABBD-E12AAC87635B}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="EN_DIA_P6-edit_no_door" ID="{6D42B63C-4FF2-47A7-BB08-EA2CE3E94D28}"/>
 									</GroupingBehavior>
 									<GroupingBehavior>
 										<ItemRef Name="EN_DIA_P3-edit" ID="{51DC224C-D755-4AEC-8C8E-6A025B0A07FE}"/>
@@ -553,9 +593,6 @@
 										<ItemRef Name="EN_DIA_P1-edit" ID="{DEA5E669-EA9E-45CC-A97C-2A5F330E75D5}"/>
 									</GroupingBehavior>
 									<GroupingBehavior>
-										<ItemRef Name="EN_DIA_P6-edit" ID="{ADECE3AB-ABC2-4A0A-B4D2-0924B8F7A6B1}"/>
-									</GroupingBehavior>
-									<GroupingBehavior>
 										<ItemRef Name="EN_DIA_P5-edit" ID="{D45DF9F6-7615-441A-9F4E-CCD45DDECBE4}"/>
 									</GroupingBehavior>
 								</GroupingBehaviorList>
@@ -563,7 +600,7 @@
 									<Grouping>
 										<SwitchRef Name="phase6" ID="{BA107603-1752-4647-AC7D-188A5C85DCB2}"/>
 										<ItemList>
-											<ItemRef Name="EN_DIA_P6-edit" ID="{ADECE3AB-ABC2-4A0A-B4D2-0924B8F7A6B1}"/>
+											<ItemRef Name="EN_DIA_P6-edit_no_door" ID="{6D42B63C-4FF2-47A7-BB08-EA2CE3E94D28}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
@@ -777,7 +814,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>5</Value>
+										<Value>6</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -803,7 +840,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>7</Value>
+										<Value>10</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>

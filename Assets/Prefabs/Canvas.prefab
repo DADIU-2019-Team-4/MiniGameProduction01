@@ -1201,6 +1201,7 @@ GameObject:
   - component: {fileID: 6219455847407665024}
   - component: {fileID: 3633644889761398896}
   - component: {fileID: 6328475855795781511}
+  - component: {fileID: 3388441663985486371}
   m_Layer: 5
   m_Name: EnglishFlag
   m_TagString: Untagged
@@ -1310,6 +1311,18 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &3388441663985486371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619504759574084582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e675982d21181e7409b06c195115b716, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &889051298755993423
 GameObject:
   m_ObjectHideFlags: 0
@@ -1322,6 +1335,7 @@ GameObject:
   - component: {fileID: 1398244204665451446}
   - component: {fileID: 4438621453739430580}
   - component: {fileID: 3252750442503686618}
+  - component: {fileID: 5765549889705209175}
   m_Layer: 5
   m_Name: DanishFlag
   m_TagString: Untagged
@@ -1428,20 +1442,21 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4438621453739430580}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &5765549889705209175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889051298755993423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e675982d21181e7409b06c195115b716, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2551050536677264312
 GameObject:
   m_ObjectHideFlags: 0

@@ -113,6 +113,9 @@ MonoBehaviour:
   RightHandHold: {x: -0.239, y: 0.389, z: 1.5}
   LeftHandHold: {x: 0.214, y: 0.389, z: 1.5}
   dustCloud: {fileID: 0}
+  shakeDur: 5
+  mainCamera: {fileID: 0}
+  shake: {fileID: 0}
   type: 0
 --- !u!114 &3914257771926677165
 MonoBehaviour:

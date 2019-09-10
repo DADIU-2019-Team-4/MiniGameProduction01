@@ -39,7 +39,6 @@ public class EndGame : MonoBehaviour
 
     private IEnumerator EndSequence()
     {
-        _inputController.DisableControls(5f);
         _blackImage.SetActive(true);
         _blackImage.GetComponent<Image>().DOFade(1f, _fadeTime);
         yield return new WaitForSeconds(_fadeTime);
@@ -47,7 +46,8 @@ public class EndGame : MonoBehaviour
         foreach (ThrowableObject ball in _balls)
             Destroy(ball.gameObject);
 
-        Destroy(_inputController.uncontrollableBalls);
+        DestroyImmediate(_inputController.uncontrollableBalls, true);
+
         _timmy.SetActive(false);
         _paperBall.SetActive(true);
         yield return new WaitForSeconds(_timeUntilEnd);
