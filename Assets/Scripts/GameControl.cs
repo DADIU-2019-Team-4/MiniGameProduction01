@@ -51,6 +51,8 @@ public class GameControl : MonoBehaviour
 
     private StarManager _starManager;
 
+    Animator m_Animator;
+
     internal void QueueLeftHand(ThrowableObject throwableObject)
     {
 
@@ -58,6 +60,11 @@ public class GameControl : MonoBehaviour
         {
             if (leftHandObjects.Count > 0)
             {
+                // Trigger Timmy's animations for the failing
+                m_Animator.SetTrigger("failC");
+                m_Animator.SetTrigger("failL");
+                m_Animator.SetTrigger("failR");
+
                 //restart level
                 StartLevel(currentLevel);
                 StartCoroutine(_starManager.ResetStars(0f));
@@ -77,6 +84,11 @@ public class GameControl : MonoBehaviour
         {
             if (rightHandObjects.Count > 0)
             {
+                // Trigger Timmy's animations for the failing
+                m_Animator.SetTrigger("failC");
+                m_Animator.SetTrigger("failL");
+                m_Animator.SetTrigger("failR");
+
                 //restart level
                 StartLevel(currentLevel);
                 StartCoroutine(_starManager.ResetStars(0f));
@@ -92,6 +104,9 @@ public class GameControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Get the Animator attached to the Timmy's Model
+        m_Animator = GameObject.Find("Timmy_fbx").GetComponent< Animator > ();
+
         _endGameObject.SetActive(false);
         leftHandObjects = new Queue<ThrowableObject>();
         rightHandObjects = new Queue<ThrowableObject>();
@@ -106,6 +121,12 @@ public class GameControl : MonoBehaviour
 
         //level 1 setup
         StartLevel(1);
+    }
+
+    void PickUpBallScene() {
+        m_Animator.SetTrigger("startC");
+        m_Animator.SetTrigger("startL");
+        m_Animator.SetTrigger("startR");
     }
 
     // Update is called once per frame
@@ -290,8 +311,15 @@ public class GameControl : MonoBehaviour
                 AddBall(Side.Left);
                 AddBall(Side.Right);
                 AddBall(Side.Right);
+
                 break;
             default:
+
+                // Trigger Timmy's animations for the new level
+                m_Animator.SetTrigger("endGameC");
+                m_Animator.SetTrigger("endGameL");
+                m_Animator.SetTrigger("endGameR");
+
                 break;
         }
     }
