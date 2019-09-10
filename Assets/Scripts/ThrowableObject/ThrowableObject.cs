@@ -36,6 +36,8 @@ public class ThrowableObject : MonoBehaviour
     public Vector3 RightHandHold;
     public Vector3 LeftHandHold;
 
+    public GameObject dustCloud;
+
     
     public Type type;
 
@@ -193,5 +195,10 @@ public class ThrowableObject : MonoBehaviour
         rb.velocity = new Vector3(0, 0, 0);
         rb.AddForce(dir * thrust);
         gc.currentLevelThrowCount++;
+    }
+
+    public void instantiateDust()
+    {
+        Instantiate(dustCloud, transform.position, Quaternion.identity); 
     }
 }
