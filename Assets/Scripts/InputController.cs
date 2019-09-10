@@ -262,6 +262,10 @@ public class InputController : MonoBehaviour
             {
                 uncontrollableBalls = Instantiate(uncontrollableBalls);
                 uncontrollableBallsAnimationStarted = true;
+
+                ThrowableObject[] _balls = FindObjectsOfType<ThrowableObject>();
+                foreach (ThrowableObject ball in _balls)
+                    Destroy(ball.gameObject);
             }
         }
     }
@@ -291,6 +295,10 @@ public class InputController : MonoBehaviour
             {
                 uncontrollableBalls = Instantiate(uncontrollableBalls);
                 uncontrollableBallsAnimationStarted = true;
+
+                ThrowableObject[] _balls = FindObjectsOfType<ThrowableObject>();
+                foreach (ThrowableObject ball in _balls)
+                    Destroy(ball.gameObject);
             }
         }
     }
