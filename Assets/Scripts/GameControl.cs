@@ -57,7 +57,7 @@ public class GameControl : MonoBehaviour
 
         if (!stackingIsAllowed)
         {
-            if (leftHandObjects.Count > 0)
+            if (leftHandObjects.Count > 0 && !inputController.LevelEnd)
             {
                 // Trigger Timmy's animations for the failing
                 m_Animator.SetTrigger("failC");
@@ -81,7 +81,7 @@ public class GameControl : MonoBehaviour
 
         if (!stackingIsAllowed)
         {
-            if (rightHandObjects.Count > 0)
+            if (rightHandObjects.Count > 0 && !inputController.LevelEnd)
             {
                 // Trigger Timmy's animations for the failing
                 m_Animator.SetTrigger("failC");
@@ -177,6 +177,7 @@ public class GameControl : MonoBehaviour
 			AkSoundEngine.PostEvent("thunder_event", gameObject);
 
             // speed up at level 7
+            inputController.LevelEnd = true;
             gameSpeed += Time.deltaTime * speedUpValue;
             Time.timeScale = gameSpeed;
         }
@@ -212,7 +213,6 @@ public class GameControl : MonoBehaviour
                 break;
             default:
                 Debug.Log("Level 6 started");
-                inputController.LevelEnd = true;
                 break;
         }
     }
