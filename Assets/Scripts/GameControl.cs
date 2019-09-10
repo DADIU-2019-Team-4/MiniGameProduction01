@@ -27,6 +27,7 @@ public class GameControl : MonoBehaviour
     public Queue<ThrowableObject> leftHandObjects;
     public Queue<ThrowableObject> rightHandObjects;
 
+
     [SerializeField]
     public int toLevel2Count = 3;
     [SerializeField]
@@ -38,11 +39,39 @@ public class GameControl : MonoBehaviour
     [SerializeField]
     public int toLevel6Count = 10;
 
+
     public float gameSpeed = 0.8f;
     public float speedUpValue = 0.1f;
 
     [SerializeField]
     private GameObject _endGameObject;
+
+    [SerializeField]
+    private float levelTimer = 0;
+
+    [SerializeField]
+    private float bellSpawnTime = 19f;
+
+    [SerializeField]
+    private float packageSpawnTime = 4f;
+
+    [SerializeField]
+    private float toySpawnTime = 12.3f;
+
+    [SerializeField]
+    private float dvdSpawnTime = 59.5f;
+
+    [SerializeField]
+    private float carSpawnTime = 20f;
+
+    [SerializeField]
+    private float porcelainSpawnTime = 23f;
+
+    [SerializeField]
+    private float morePorcelainSpawnTime = 50f;
+
+   
+    private float numberOfObjectsSpawn;
 
     public bool stackingIsAllowed = false;
 
@@ -122,6 +151,7 @@ public class GameControl : MonoBehaviour
         inputController.ThrowEvent.AddListener(UpdateStars);
 
 		AkSoundEngine.PostEvent("sun_event", gameObject);
+        numberOfObjectsSpawn = 0;
 
         LightStageModifier = GetComponent<LightStageModifier>();
 
@@ -147,14 +177,17 @@ public class GameControl : MonoBehaviour
             StartLevel(2);
             AkSoundEngine.SetSwitch("game_stage", "phase1", gameObject);
 			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+            levelTimer = 0; //reset time used on level
 			AkSoundEngine.PostEvent("DialogueDK_event", gameObject);
             LightStageModifier.ToStageTwo();
+
         }
         if (currentLevelThrowCount >= toLevel3Count && currentLevel == 2)
         {
             StartLevel(3);
             AkSoundEngine.SetSwitch("game_stage", "phase2", gameObject);
             AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+            levelTimer = 0; //reset time used on level
 			AkSoundEngine.PostEvent("DialogueDK_event", gameObject);
             LightStageModifier.ToStageThree();
         }
@@ -166,6 +199,7 @@ public class GameControl : MonoBehaviour
 			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
 			AkSoundEngine.PostEvent("DialogueDK_event", gameObject);
 			AkSoundEngine.PostEvent("crows_event", gameObject);
+            levelTimer = 0; //reset time used on level
             LightStageModifier.ToStageFour();
         }
 
@@ -174,6 +208,7 @@ public class GameControl : MonoBehaviour
             StartLevel(5);
             AkSoundEngine.SetSwitch("game_stage", "phase4", gameObject);
 			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+            levelTimer = 0; //reset time used on level
 			AkSoundEngine.PostEvent("DialogueDK_event", gameObject);
             LightStageModifier.ToStageFive();
         }
@@ -185,6 +220,7 @@ public class GameControl : MonoBehaviour
             AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
 			AkSoundEngine.PostEvent("DialogueDK_event", gameObject);
 			AkSoundEngine.PostEvent("rain_event", gameObject);
+            levelTimer = 0; //reset time used on level
             LightStageModifier.ToStageSix();
         }
 
@@ -193,6 +229,8 @@ public class GameControl : MonoBehaviour
         {
             AkSoundEngine.SetSwitch("game_stage", "phase6", gameObject);
             AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+            levelTimer = 0; //reset time used on level
+        
 			AkSoundEngine.PostEvent("DialogueDK_event", gameObject);
             AkSoundEngine.PostEvent("thunder_event", gameObject);
             LightStageModifier.ToStageSeven();
@@ -216,7 +254,8 @@ public class GameControl : MonoBehaviour
             //currentNumOfBalls++;
         }
 
-        //CheckLooseCondition();
+        levelTimer += Time.deltaTime;
+        TimedSpawnHandler();
     }
 
     private void UpdateStars()
@@ -244,10 +283,48 @@ public class GameControl : MonoBehaviour
         }
     }
 
-    private void CheckLooseCondition()
-    {    
-    
-	}
+    private void TimedSpawnHandler()
+    {
+        if (currentLevel == 3 && levelTimer > bellSpawnTime && bellSpawnTime != 1f)
+        {
+            throwableObjectList[0].gameObject.GetComponent<ModifyObjectMesh>().SetToBellMesh();
+            bellSpawnTime = -1f;
+        }
+        if (currentLevel == 4 && levelTimer > packageSpawnTime && packageSpawnTime!=-1f)
+        {
+            throwableObjectList[1].gameObject.GetComponent<ModifyObjectMesh>().SetToPackageMesh();
+            packageSpawnTime = -1f;
+        }
+        if (currentLevel == 4 && levelTimer > toySpawnTime && toySpawnTime != -1f)
+        {
+            throwableObjectList[2].gameObject.GetComponent<ModifyObjectMesh>().SetToRocketMesh();
+            toySpawnTime = -1f;
+        }
+        if (currentLevel == 4 && levelTimer > dvdSpawnTime && dvdSpawnTime != -1f)
+        {
+            throwableObjectList[3].gameObject.GetComponent<ModifyObjectMesh>().SetToSexDrawingMesh();
+            dvdSpawnTime = -1f;
+        }
+        if (currentLevel == 5 && levelTimer > carSpawnTime && carSpawnTime!=-1f)
+        {
+            throwableObjectList[0].gameObject.GetComponent<ModifyObjectMesh>().SetToToyCarMesh();
+            carSpawnTime = -1f;
+        }
+        if (currentLevel == 6 && levelTimer > porcelainSpawnTime && porcelainSpawnTime!=-1f)
+        {
+            throwableObjectList[4].gameObject.GetComponent<ModifyObjectMesh>().SetToPorcelain1Mesh();
+            porcelainSpawnTime = -1f;
+        }
+        if (currentLevel == 7 && levelTimer > morePorcelainSpawnTime && morePorcelainSpawnTime!=-1f)
+        {
+            throwableObjectList[0].gameObject.GetComponent<ModifyObjectMesh>().SetToPorcelain1Mesh();
+            throwableObjectList[1].gameObject.GetComponent<ModifyObjectMesh>().SetToPorcelain2Mesh();
+            throwableObjectList[2].gameObject.GetComponent<ModifyObjectMesh>().SetToPorcelain3Mesh();
+            throwableObjectList[3].gameObject.GetComponent<ModifyObjectMesh>().SetToPorcelain1Mesh();
+            throwableObjectList[4].gameObject.GetComponent<ModifyObjectMesh>().SetToPorcelain2Mesh();
+            morePorcelainSpawnTime = -1f;
+        }
+    }
 
     private void ToNextScene()
     {
@@ -283,6 +360,7 @@ public class GameControl : MonoBehaviour
         currentLevelThrowCount = 0;
         inputController.DisableControls(0f);
         stackingIsAllowed = true;
+       
         
         foreach (ThrowableObject ball in throwableObjectList)
         {
@@ -302,30 +380,36 @@ public class GameControl : MonoBehaviour
                 AddBall(Side.Right, Type.Ball1);
                 break;
             case 3:
-                AddBall(Side.Left, Type.Bell);
+                AddBall(Side.Left, Type.Ball);
                 AddBall(Side.Left, Type.Ball1);
                 AddBall(Side.Right, Type.Ball2);
+                bellSpawnTime = 19f;
                 break;
             case 4:
                 AddBall(Side.Left, Type.Bell);
                 AddBall(Side.Left, Type.Ball);
-                AddBall(Side.Right, Type.Package);
-                AddBall(Side.Right, Type.Rocket);
+                AddBall(Side.Right, Type.Ball1);
+                AddBall(Side.Right, Type.Ball2);
+                packageSpawnTime = 4f;
+                toySpawnTime = 12.3f;
+                dvdSpawnTime = 59.5f;
                 break;
             case 5:
                 AddBall(Side.Left, Type.Bell);
-                AddBall(Side.Left, Type.Sex);
-                AddBall(Side.Right, Type.Package);
+                AddBall(Side.Left, Type.Package);
                 AddBall(Side.Right, Type.Rocket);
-                gameSpeed += 0.2f;
+                AddBall(Side.Right, Type.Sex);
+                gameSpeed =1f;
                 Time.timeScale = gameSpeed;
+                carSpawnTime = 20f;
                 break;
             case 6:
                 AddBall(Side.Left, Type.Car);
-                AddBall(Side.Left, Type.Porcelain1);
-                AddBall(Side.Left, Type.Porcelain2);
-                AddBall(Side.Right, Type.Porcelain3);
+                AddBall(Side.Left, Type.Package);
+                AddBall(Side.Left, Type.Rocket);
+                AddBall(Side.Right, Type.Sex);
                 AddBall(Side.Right, Type.Porcelain1);
+                porcelainSpawnTime = 23f;
                 break;
             default:
 
