@@ -13,9 +13,6 @@ public class StarManager : MonoBehaviour
 
     private InputController _inputController;
 
-    public bool LevelEnd { get; set; }
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -65,7 +62,7 @@ public class StarManager : MonoBehaviour
 
     public IEnumerator ResetStars(float waitForReset)
     {
-        if (LevelEnd)
+        if (_inputController.LevelEnd)
             yield break;
 
         yield return new WaitForSeconds(waitForReset);

@@ -17,6 +17,8 @@ public class GameControl : MonoBehaviour
     [SerializeField]
     private float ballSpawnInterval = 1.0f;
     private float spawnTimer = 0f;
+    private float finalSceneDuration = 2f;
+    private float finalSceneTimer= 0f;
     [HideInInspector]
     //public bool ballWaiting = false;
     //private GameObject waitingBall;
@@ -35,8 +37,6 @@ public class GameControl : MonoBehaviour
     public int toLevel5Count = 10;
     [SerializeField]
     public int toLevel6Count = 10;
-    [SerializeField]
-    public int toLevel7Count = 10;
 
     public float gameSpeed = 0.8f;
     public float speedUpValue = 0.1f;
@@ -61,7 +61,7 @@ public class GameControl : MonoBehaviour
 
         if (!stackingIsAllowed)
         {
-            if (leftHandObjects.Count > 0)
+            if (leftHandObjects.Count > 0 && !inputController.LevelEnd)
             {
                 // Trigger Timmy's animations for the failing
                 m_Animator.SetTrigger("failC");
@@ -74,9 +74,6 @@ public class GameControl : MonoBehaviour
                 StartLevel(currentLevel);
                 StartCoroutine(_starManager.ResetStars(0f));
                 Debug.Log("Fail!!");
-
-                if (currentLevel == 7)
-                    _endGameObject.SetActive(true);
             }
         }
 
@@ -88,7 +85,7 @@ public class GameControl : MonoBehaviour
 
         if (!stackingIsAllowed)
         {
-            if (rightHandObjects.Count > 0)
+            if (rightHandObjects.Count > 0 && !inputController.LevelEnd)
             {
                 // Trigger Timmy's animations for the failing
                 m_Animator.SetTrigger("failC");
@@ -101,9 +98,6 @@ public class GameControl : MonoBehaviour
                 StartLevel(currentLevel);
                 StartCoroutine(_starManager.ResetStars(0f));
                 Debug.Log("Fail!!");
-
-                if (currentLevel == 7)
-                    _endGameObject.SetActive(true);
             }
         }
 
@@ -189,21 +183,26 @@ public class GameControl : MonoBehaviour
         }
         
 
-        if (currentLevelThrowCount >= toLevel7Count && currentLevel == 6)
+        if (currentLevel == 6)
         {
-            StartLevel(7);
             AkSoundEngine.SetSwitch("game_stage", "phase6", gameObject);
             AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
 			AkSoundEngine.PostEvent("thunder_event", gameObject);
             LightStageModifier.ToStageSeven();
         }
 
-        if (currentLevel == 7)
-        {
             // speed up at level 7
+            inputController.LevelEnd = true;
             gameSpeed += Time.deltaTime * speedUpValue;
             Time.timeScale = gameSpeed;
-        }
+
+            finalSceneTimer += Time.deltaTime;
+
+            if (finalSceneTimer > finalSceneDuration)
+            {
+                _endGameObject.SetActive(true);
+            }
+}
 
         if (MaximumNumberOfBalls > currentNumOfBalls)
         {
@@ -234,12 +233,8 @@ public class GameControl : MonoBehaviour
             case 5:
                 _starManager.CalculatePercentage(currentLevelThrowCount, toLevel6Count);
                 break;
-            case 6:
-                _starManager.CalculatePercentage(currentLevelThrowCount, toLevel7Count);
-                break;
             default:
-                Debug.Log("Level 7 started");
-                _starManager.LevelEnd = true;
+                Debug.Log("Level 6 started");
                 break;
         }
     }
@@ -321,23 +316,11 @@ public class GameControl : MonoBehaviour
                 Time.timeScale = gameSpeed;
                 break;
             case 6:
-
                 AddBall(Side.Left, Type.Car);
                 AddBall(Side.Left, Type.Porcelain1);
                 AddBall(Side.Left, Type.Porcelain2);
                 AddBall(Side.Right, Type.Porcelain3);
                 AddBall(Side.Right, Type.Porcelain1);
-                break;
-            case 7:
-                if (_starManager.LevelEnd)
-                    break;
-
-                AddBall(Side.Left, Type.Car);
-                AddBall(Side.Left, Type.Porcelain1);
-                AddBall(Side.Left, Type.Porcelain2);
-                AddBall(Side.Right, Type.Porcelain3);
-                AddBall(Side.Right, Type.Porcelain1);
-
                 break;
             default:
 
