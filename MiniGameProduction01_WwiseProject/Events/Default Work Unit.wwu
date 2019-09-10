@@ -99,6 +99,95 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Weather" ID="{9395979F-4722-4A85-963B-F5945BD89136}" ShortID="73612418">
+					<ChildrenList>
+						<Event Name="sun_event" ID="{F51794A3-F953-41B5-8B84-1AB541E16D36}">
+							<ChildrenList>
+								<Action Name="" ID="{84018646-ECD6-4A2E-A685-F35002D45B6C}" ShortID="76109207">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sun" ID="{00AFECFF-F70A-4211-9FE2-EA154B615AA5}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="crows_event" ID="{745B7C07-76B2-4779-8940-DFE6A0440588}">
+							<ChildrenList>
+								<Action Name="" ID="{524EE030-A964-4A02-9286-D996CABF243C}" ShortID="842743272">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="crows" ID="{80BA26CB-9DC6-421C-9593-B9D4C785FA79}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{BA269D11-F111-4335-B342-E822BCF77956}" ShortID="263424373">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sun" ID="{00AFECFF-F70A-4211-9FE2-EA154B615AA5}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="rain_event" ID="{BC1430BA-35FF-48B3-8240-234BE1C2BCA8}">
+							<ChildrenList>
+								<Action Name="" ID="{974841EC-1C00-4E98-9E2E-41B075388426}" ShortID="764218281">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rain" ID="{940423C3-1734-43D0-AFF9-6F4B94D70599}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{79776F66-6D50-4A11-8B36-53E8D2F1B420}" ShortID="770805712">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="crows" ID="{80BA26CB-9DC6-421C-9593-B9D4C785FA79}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="thunder_event" ID="{08C768B2-2418-4982-A7D7-EDB85043EE3E}">
+							<ChildrenList>
+								<Action Name="" ID="{E1ECF4B7-187C-4EB2-A7F5-BF821CA16626}" ShortID="911077915">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="thunder" ID="{9F6151C4-3F10-47B9-94BC-69258C145532}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{037F403D-2B17-4DEB-B2CD-4FBF5BB9E5A1}" ShortID="230978913">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rain" ID="{940423C3-1734-43D0-AFF9-6F4B94D70599}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Event Name="Room_event" ID="{8C04AD4E-42A9-4650-A594-D7010C2C9C9F}">
+					<ChildrenList>
+						<Action Name="" ID="{F7587093-D974-43BB-BE3D-526CC6D2C518}" ShortID="950601020">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RoomLoop" ID="{19D86371-F666-464A-B806-70D7197B33A8}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
