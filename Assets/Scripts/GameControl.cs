@@ -146,6 +146,7 @@ public class GameControl : MonoBehaviour
             StartLevel(2);
             AkSoundEngine.SetSwitch("game_stage", "phase1", gameObject);
 			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+			AkSoundEngine.PostEvent("DialogueDK_event", gameObject);
             LightStageModifier.ToStageTwo();
         }
         if (currentLevelThrowCount >= toLevel3Count && currentLevel == 2)
@@ -153,6 +154,7 @@ public class GameControl : MonoBehaviour
             StartLevel(3);
             AkSoundEngine.SetSwitch("game_stage", "phase2", gameObject);
             AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+			AkSoundEngine.PostEvent("DialogueDK_event", gameObject);
             LightStageModifier.ToStageThree();
         }
         
@@ -161,6 +163,7 @@ public class GameControl : MonoBehaviour
             StartLevel(4);
             AkSoundEngine.SetSwitch("game_stage", "phase3", gameObject);
 			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+			AkSoundEngine.PostEvent("DialogueDK_event", gameObject);
 			AkSoundEngine.PostEvent("crows_event", gameObject);
             LightStageModifier.ToStageFour();
         }
@@ -170,6 +173,7 @@ public class GameControl : MonoBehaviour
             StartLevel(5);
             AkSoundEngine.SetSwitch("game_stage", "phase4", gameObject);
 			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+			AkSoundEngine.PostEvent("DialogueDK_event", gameObject);
             LightStageModifier.ToStageFive();
         }
 
@@ -178,6 +182,7 @@ public class GameControl : MonoBehaviour
             StartLevel(6);
             AkSoundEngine.SetSwitch("game_stage", "phase5", gameObject);
             AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+			AkSoundEngine.PostEvent("DialogueDK_event", gameObject);
 			AkSoundEngine.PostEvent("rain_event", gameObject);
             LightStageModifier.ToStageSix();
         }
@@ -187,6 +192,7 @@ public class GameControl : MonoBehaviour
         {
             AkSoundEngine.SetSwitch("game_stage", "phase6", gameObject);
             AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+			AkSoundEngine.PostEvent("DialogueDK_event", gameObject);
             AkSoundEngine.PostEvent("thunder_event", gameObject);
             LightStageModifier.ToStageSeven();
 
