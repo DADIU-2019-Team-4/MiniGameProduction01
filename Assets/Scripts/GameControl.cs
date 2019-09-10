@@ -155,6 +155,10 @@ public class GameControl : MonoBehaviour
             StartLevel(7);
             AkSoundEngine.SetSwitch("game_stage", "phase6", gameObject);
             AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+        }
+
+        if (currentLevel == 7)
+        {
             //_endGameObject.SetActive(true);
         }
 
@@ -165,8 +169,7 @@ public class GameControl : MonoBehaviour
             //currentNumOfBalls++;
         }
 
-        CheckLooseCondition();
-
+        //CheckLooseCondition();
     }
 
     private void UpdateStars()
@@ -191,14 +194,18 @@ public class GameControl : MonoBehaviour
             case 6:
                 _starManager.CalculatePercentage(currentLevelThrowCount, toLevel7Count);
                 break;
+            default:
+                Debug.Log("Level 7 started");
+                _starManager.LevelEnd = true;
+                break;
         }
     }
 
     private void CheckLooseCondition()
-    {
-        
+    {    
     
 	}
+
     private void ToNextScene()
     {
         if (Input.GetKeyDown(KeyCode.N))
@@ -267,19 +274,21 @@ public class GameControl : MonoBehaviour
                 AddBall(Side.Left);
                 AddBall(Side.Right);
                 AddBall(Side.Right);
-                Time.timeScale = gameSpeed = 1;
+                Time.timeScale = gameSpeed =+ 0.2f;
                 break;
             case 6:
-
                 AddBall(Side.Left);
                 AddBall(Side.Left);
                 AddBall(Side.Left);
                 AddBall(Side.Right);
-                AddBall(Side.Right);
-                
+                AddBall(Side.Right);             
                 break;
             case 7:
-
+                AddBall(Side.Left);
+                AddBall(Side.Left);
+                AddBall(Side.Left);
+                AddBall(Side.Right);
+                AddBall(Side.Right);
                 break;
             default:
                 break;

@@ -13,6 +13,8 @@ public class StarManager : MonoBehaviour
 
     private InputController _inputController;
 
+    public bool LevelEnd { get; set; }
+
 
     // Start is called before the first frame update
     void Start()
@@ -60,7 +62,7 @@ public class StarManager : MonoBehaviour
                 }
             }
 
-            if (starsToFill >= _totalAmountOfStars)
+            if (starsToFill >= _totalAmountOfStars && !LevelEnd)
             {
                 StartCoroutine(ResetStars(1f));
             }
