@@ -1273,7 +1273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MusicVolume: {fileID: 909011841}
   SFXVolume: {fileID: 754139888}
-  MusicSliderValue: 0
+  MusicSliderValue: 100
   SFXSliderValue: 0
 --- !u!4 &963082837
 Transform:
@@ -1623,6 +1623,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 566880109601031737, guid: 81f419b01d9623c40be51ff1a542f27e,
+        type: 3}
+      propertyPath: m_MaxValue
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 566880109601031737, guid: 81f419b01d9623c40be51ff1a542f27e,
+        type: 3}
+      propertyPath: m_Value
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 566880109491320568, guid: 81f419b01d9623c40be51ff1a542f27e,
+        type: 3}
+      propertyPath: m_MaxValue
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 566880109491320568, guid: 81f419b01d9623c40be51ff1a542f27e,
+        type: 3}
+      propertyPath: m_Value
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 566880108959796702, guid: 81f419b01d9623c40be51ff1a542f27e,
         type: 3}
