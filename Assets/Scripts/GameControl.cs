@@ -61,26 +61,22 @@ public class GameControl : MonoBehaviour
         {
             if (leftHandObjects.Count > 0)
             {
-                if (currentLevel != 7)
-                {
                 // Trigger Timmy's animations for the failing
                 m_Animator.SetTrigger("failC");
                 m_Animator.SetTrigger("failL");
                 m_Animator.SetTrigger("failR");
 
-                    //restart level
-                    StartLevel(currentLevel);
-                    StartCoroutine(_starManager.ResetStars(0f));
-                    Debug.Log("Fail!!");
-                    return;
-                }
+                //restart level
+                StartLevel(currentLevel);
+                StartCoroutine(_starManager.ResetStars(0f));
+                Debug.Log("Fail!!");
 
-                _endGameObject.SetActive(true);
+                if (currentLevel == 7)
+                    _endGameObject.SetActive(true);
             }
         }
 
         leftHandObjects.Enqueue(throwableObject);
-
     }
 
     internal void QueueRightHand(ThrowableObject throwableObject)
@@ -90,27 +86,23 @@ public class GameControl : MonoBehaviour
         {
             if (rightHandObjects.Count > 0)
             {
-                if (currentLevel != 7)
-                {
                 // Trigger Timmy's animations for the failing
                 m_Animator.SetTrigger("failC");
                 m_Animator.SetTrigger("failL");
                 m_Animator.SetTrigger("failR");
 
-                    //restart level
-                    StartLevel(currentLevel);
-                    StartCoroutine(_starManager.ResetStars(0f));
-                    Debug.Log("Fail!!");
-                    return;
-                }
+                //restart level
+                StartLevel(currentLevel);
+                StartCoroutine(_starManager.ResetStars(0f));
+                Debug.Log("Fail!!");
 
-                _endGameObject.SetActive(true);
+                if (currentLevel == 7)
+                    _endGameObject.SetActive(true);
             }
         }
 
         rightHandObjects.Enqueue(throwableObject);
-
-    }   
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -273,7 +265,7 @@ public class GameControl : MonoBehaviour
     {
         currentLevel = levelNumber;
         currentLevelThrowCount = 0;
-        inputController.DisableControls();
+        inputController.DisableControls(0f);
         stackingIsAllowed = true;
         
         foreach (ThrowableObject ball in throwableObjectList)
@@ -321,6 +313,9 @@ public class GameControl : MonoBehaviour
                 AddBall(Side.Right, Type.Porcelain1);
                 break;
             case 7:
+                if (_starManager.LevelEnd)
+                    break;
+
                 AddBall(Side.Left, Type.Car);
                 AddBall(Side.Left, Type.Porcelain1);
                 AddBall(Side.Left, Type.Porcelain2);

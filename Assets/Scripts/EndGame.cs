@@ -1,7 +1,8 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using DG.Tweening;
+using UnityEngine.UI;
+
 
 public class EndGame : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class EndGame : MonoBehaviour
 
     [SerializeField]
     private float _timeUntilDoorCloses = 1.5f;
+
+    [SerializeField]
+    private float _fadeTime = 3f;
 
     [SerializeField]
     private GameObject _timmy;
@@ -21,18 +25,22 @@ public class EndGame : MonoBehaviour
     private GameObject _blackImage;
 
     private MenuManager _menuManager;
+    private InputController _inputController;
     private ThrowableObject[] _balls;
 
     // Start is called before the first frame update
     void Start()
     {
         _menuManager = FindObjectOfType<MenuManager>();
+        _inputController = FindObjectOfType<InputController>();
         StartCoroutine(EndSequence());
     }
 
     private IEnumerator EndSequence()
     {
-        _blackImage.SetActive(true);
+        _inputController.DisableControls(5f);
+        _blackImage.GetComponent<Image>().DOFade(1f, _fadeTime);
+        yield return new WaitForSeconds(_fadeTime);
         _balls = FindObjectsOfType<ThrowableObject>();
         foreach (ThrowableObject ball in _balls)
             Destroy(ball.gameObject);
@@ -40,7 +48,8 @@ public class EndGame : MonoBehaviour
         _timmy.SetActive(false);
         _paperBall.SetActive(true);
         yield return new WaitForSeconds(_timeUntilEnd);
-        _blackImage.SetActive(false);
+        _blackImage.GetComponent<Image>().DOFade(0f, _fadeTime);
+        yield return new WaitForSeconds(_fadeTime);
         yield return new WaitForSeconds(_timeUntilDoorCloses);
         _menuManager.EndGame = true;
         _menuManager.OpenMenu();

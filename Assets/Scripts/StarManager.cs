@@ -62,7 +62,7 @@ public class StarManager : MonoBehaviour
                 }
             }
 
-            if (starsToFill >= _totalAmountOfStars && !LevelEnd)
+            if (starsToFill >= _totalAmountOfStars)
             {
                 StartCoroutine(ResetStars(1f));
             }
@@ -71,6 +71,9 @@ public class StarManager : MonoBehaviour
 
     public IEnumerator ResetStars(float waitForReset)
     {
+        if (LevelEnd)
+            yield break;
+
         yield return new WaitForSeconds(waitForReset);
         foreach (GameObject star in stars)
         {

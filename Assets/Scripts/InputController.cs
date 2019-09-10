@@ -35,7 +35,7 @@ public class InputController : MonoBehaviour
     //Disable control variables
     private bool disableControls = false;
     private float disableControlsTimer = 0; //timer for counting how long the controls have been turned off
-    private static float disableControlsTime = 3f; //how long should the controls be turned off
+    private float disableControlsTime = 3f; //how long should the controls be turned off
 
     Animator m_Animator;
 
@@ -91,6 +91,7 @@ public class InputController : MonoBehaviour
             else
             {
                 disableControlsTimer += Time.deltaTime;
+                return;
             }
         }
 
@@ -272,9 +273,10 @@ public class InputController : MonoBehaviour
         }
     }
 
-    public void DisableControls()
+    public void DisableControls(float duration)
     {
         disableControls = true;
+        disableControlsTime = duration;
         disableControlsTimer = 0;
     }
 }
