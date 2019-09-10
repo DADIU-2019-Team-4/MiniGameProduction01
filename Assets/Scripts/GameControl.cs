@@ -221,9 +221,9 @@ public class GameControl : MonoBehaviour
         }
     }
 
-    public void AddBall(Side side)
+    public void AddBall(Side side, Type type)
     {
-        addBall.SpawnBall(side);
+        addBall.SpawnBall(side, type);
         currentNumOfBalls++;
     }
 
@@ -245,37 +245,37 @@ public class GameControl : MonoBehaviour
         switch (levelNumber)
         {
             case 1:
-                AddBall(Side.Left);
+                AddBall(Side.Left, Type.Ball);
                 break;
             case 2:
-                AddBall(Side.Left);
-                AddBall(Side.Right);
+                AddBall(Side.Left, Type.Ball);
+                AddBall(Side.Right, Type.Ball1);
                 break;
             case 3:
-                AddBall(Side.Left);
-                AddBall(Side.Left);
-                AddBall(Side.Right);
+                AddBall(Side.Left, Type.Bell);
+                AddBall(Side.Left, Type.Ball1);
+                AddBall(Side.Right, Type.Ball2);
                 break;
             case 4:
-                AddBall(Side.Left);
-                AddBall(Side.Left);
-                AddBall(Side.Right);
-                AddBall(Side.Right);
+                AddBall(Side.Left, Type.Bell);
+                AddBall(Side.Left, Type.Ball);
+                AddBall(Side.Right, Type.Package);
+                AddBall(Side.Right, Type.Rocket);
                 break;
             case 5:
-                AddBall(Side.Left);
-                AddBall(Side.Left);
-                AddBall(Side.Right);
-                AddBall(Side.Right);
+                AddBall(Side.Left, Type.Bell);
+                AddBall(Side.Left, Type.Sex);
+                AddBall(Side.Right, Type.Package);
+                AddBall(Side.Right, Type.Rocket);
                 Time.timeScale = gameSpeed = 1;
                 break;
             case 6:
 
-                AddBall(Side.Left);
-                AddBall(Side.Left);
-                AddBall(Side.Left);
-                AddBall(Side.Right);
-                AddBall(Side.Right);
+                AddBall(Side.Left, Type.Car);
+                AddBall(Side.Left, Type.Porcelain1);
+                AddBall(Side.Left, Type.Porcelain2);
+                AddBall(Side.Right, Type.Porcelain3);
+                AddBall(Side.Right, Type.Porcelain1);
                 
                 break;
             case 7:

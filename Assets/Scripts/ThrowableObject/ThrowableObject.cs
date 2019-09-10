@@ -2,6 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Type
+{
+    Ball,
+    Ball1,
+    Ball2,
+    Bell,
+    Package,
+    Rocket,
+    Sex,
+    Car,
+    Dad,
+    Mom,
+    Porcelain1,
+    Porcelain2,
+    Porcelain3
+}
+
 public class ThrowableObject : MonoBehaviour
 {
 
@@ -19,14 +36,7 @@ public class ThrowableObject : MonoBehaviour
     public Vector3 RightHandHold;
     public Vector3 LeftHandHold;
 
-    public enum Type
-    {
-        Ball,
-        Bell,
-        Dad,
-        Mom,
-        Rocket
-    }
+    
     public Type type;
 
     void Awake()
