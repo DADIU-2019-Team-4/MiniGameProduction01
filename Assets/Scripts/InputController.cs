@@ -35,7 +35,6 @@ public class InputController : MonoBehaviour
     private float disableControlsTimer = 0; //timer for counting how long the controls have been turned off
     private float disableControlsTime = 3f; //how long should the controls be turned off
     private Animator timmyAnimator;
-    private Animator ballsAnimator;
     private StarManager _starManager;
     private GameControl gc;
     private FountainGameController _fountainGameController;
@@ -52,9 +51,9 @@ public class InputController : MonoBehaviour
 
         //Get the Animator attached to the Timmy's Model
         timmyAnimator = GameObject.Find("Timmy_fbx").GetComponent<Animator>();
-        ballsAnimator = GameObject.Find("UncontrollableBalls").GetComponent<Animator>();
 
         _starManager = FindObjectOfType<StarManager>();
+        LevelEnd = false;
 
         //if (_isFountain)
         //    _fountainGameController = FindObjectOfType<FountainGameController>();
@@ -261,7 +260,7 @@ public class InputController : MonoBehaviour
 
             if (!uncontrollableBallsAnimationStarted)
             {
-                uncontrollableBalls.SetActive(true);
+                Instantiate(uncontrollableBalls);
                 uncontrollableBallsAnimationStarted = true;
             }
         }
@@ -290,7 +289,7 @@ public class InputController : MonoBehaviour
 
             if (!uncontrollableBallsAnimationStarted)
             {
-                uncontrollableBalls.SetActive(true);
+                Instantiate(uncontrollableBalls);
                 uncontrollableBallsAnimationStarted = true;
             }
         }
