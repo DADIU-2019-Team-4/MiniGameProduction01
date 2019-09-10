@@ -24,14 +24,14 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 26ede085ba8edd4d84a1e48e2ce905f3
     GuidInternal: 
-    m_lastTime: -8586336298794775808
+    m_lastTime: -8586335036754775808
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 207c6f81333d85408092d3a1d2f59894
     GuidInternal: 
-    m_lastTime: -8586335659814775808
+    m_lastTime: -8586335026714775808
     List:
     - name: Default_bank
       guid: 61de74b161e7ad428fb2d10e1ca0a92b
@@ -47,8 +47,22 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 5076fae0cc0c7a43a62c15588b435fee
     GuidInternal: 
-    m_lastTime: -8586335660394775808
+    m_lastTime: -8586335026714775808
     List:
+    - name: crows_event
+      guid: 077c5b74b27679478940dfe6a0440588
+      id: 3931550490
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Weather
+        ObjectType: 4
+      - ElementName: crows_event
+        ObjectType: 3
+      Path: Default Work Unit\Weather\crows_event
+      maxAttenuation: 0
+      maxDuration: 38728620
+      minDuration: 38728620
     - name: DialogueDA_event
       guid: ed9df0f08eaa664d9902e9c7ff9f4bd3
       id: 2450003899
@@ -89,6 +103,32 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 2021565
       minDuration: 2021565
+    - name: rain_event
+      guid: ba3014bcff35b3488240234be1c2bca8
+      id: 937827766
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Weather
+        ObjectType: 4
+      - ElementName: rain_event
+        ObjectType: 3
+      Path: Default Work Unit\Weather\rain_event
+      maxAttenuation: 0
+      maxDuration: 12260884
+      minDuration: 12260884
+    - name: Room_event
+      guid: 4ead048ca9425046a594d7010c2c9c9f
+      id: 2761588325
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Room_event
+        ObjectType: 3
+      Path: Default Work Unit\Room_event
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: stars_event0
       guid: fa46e216f9f09f42a12548528f1d2dd2
       id: 902224743
@@ -159,6 +199,34 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 2809546
       minDuration: 2809546
+    - name: sun_event
+      guid: a39417f553f9b5418b841ab541e16d36
+      id: 2216443840
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Weather
+        ObjectType: 4
+      - ElementName: sun_event
+        ObjectType: 3
+      Path: Default Work Unit\Weather\sun_event
+      maxAttenuation: 0
+      maxDuration: 54260884
+      minDuration: 54260884
+    - name: thunder_event
+      guid: b268c70818248249a7d7edb85043ee3e
+      id: 3141175304
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Weather
+        ObjectType: 4
+      - ElementName: thunder_event
+        ObjectType: 3
+      Path: Default Work Unit\Weather\thunder_event
+      maxAttenuation: 0
+      maxDuration: 86578960
+      minDuration: 86578960
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -178,7 +246,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 1f4cfa72844fe240bf3af8bf99444437
     GuidInternal: 
-    m_lastTime: -8586335851554775808
+    m_lastTime: -8586335613614775808
     List:
     - name: game_stage
       guid: ebbb94c71d14224ab91d34ebd3f8731f
@@ -246,7 +314,7 @@ MonoBehaviour:
   - /MiniGameProduction01_WwiseProject
   - /MiniGameProduction01_WwiseProject/Events
   - /MiniGameProduction01_WwiseProject/Events/Default Work Unit
-  - /MiniGameProduction01_WwiseProject/Events/Default Work Unit/Dialogue
   - /MiniGameProduction01_WwiseProject/Events/Default Work Unit/Stars
+  - /MiniGameProduction01_WwiseProject/Events/Default Work Unit/Weather
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

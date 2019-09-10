@@ -52,6 +52,8 @@ public class GameControl : MonoBehaviour
 
     private StarManager _starManager;
 
+    Animator m_Animator;
+
     internal void QueueLeftHand(ThrowableObject throwableObject)
     {
 
@@ -61,6 +63,11 @@ public class GameControl : MonoBehaviour
             {
                 if (currentLevel != 7)
                 {
+                // Trigger Timmy's animations for the failing
+                m_Animator.SetTrigger("failC");
+                m_Animator.SetTrigger("failL");
+                m_Animator.SetTrigger("failR");
+
                     //restart level
                     StartLevel(currentLevel);
                     StartCoroutine(_starManager.ResetStars(0f));
@@ -85,6 +92,11 @@ public class GameControl : MonoBehaviour
             {
                 if (currentLevel != 7)
                 {
+                // Trigger Timmy's animations for the failing
+                m_Animator.SetTrigger("failC");
+                m_Animator.SetTrigger("failL");
+                m_Animator.SetTrigger("failR");
+
                     //restart level
                     StartLevel(currentLevel);
                     StartCoroutine(_starManager.ResetStars(0f));
@@ -103,6 +115,9 @@ public class GameControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Get the Animator attached to the Timmy's Model
+        m_Animator = GameObject.Find("Timmy_fbx").GetComponent< Animator > ();
+
         _endGameObject.SetActive(false);
         leftHandObjects = new Queue<ThrowableObject>();
         rightHandObjects = new Queue<ThrowableObject>();
@@ -110,16 +125,19 @@ public class GameControl : MonoBehaviour
         Time.timeScale = gameSpeed;
         _starManager = FindObjectOfType<StarManager>();
 
-        //     if (currentLevel == 1)
-        // NO SOUND IN PHASE 1   
-        //  AkSoundEngine.SetSwitch("game_stage", "phase1", gameObject);
         inputController = FindObjectOfType<InputController>();
-        //	AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
-
         inputController.ThrowEvent.AddListener(UpdateStars);
+
+		AkSoundEngine.PostEvent("sun_event", gameObject);
 
         //level 1 setup
         StartLevel(currentLevel);
+    }
+
+    void PickUpBallScene() {
+        m_Animator.SetTrigger("startC");
+        m_Animator.SetTrigger("startL");
+        m_Animator.SetTrigger("startR");
     }
 
     // Update is called once per frame
@@ -139,12 +157,13 @@ public class GameControl : MonoBehaviour
             StartLevel(3);
             AkSoundEngine.SetSwitch("game_stage", "phase2", gameObject);
 			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
-        }
+			
         if (currentLevelThrowCount >= toLevel4Count && currentLevel == 3)
         {
             StartLevel(4);
             AkSoundEngine.SetSwitch("game_stage", "phase3", gameObject);
 			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+			AkSoundEngine.PostEvent("crows_event", gameObject);
         }
 
         if (currentLevelThrowCount >= toLevel5Count && currentLevel == 4)
@@ -159,6 +178,8 @@ public class GameControl : MonoBehaviour
             StartLevel(6);
             AkSoundEngine.SetSwitch("game_stage", "phase5", gameObject);
             AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+			AkSoundEngine.PostEvent("rain_event", gameObject);
+        }
         }
 
         if (currentLevelThrowCount >= toLevel7Count && currentLevel == 6)
@@ -166,6 +187,7 @@ public class GameControl : MonoBehaviour
             StartLevel(7);
             AkSoundEngine.SetSwitch("game_stage", "phase6", gameObject);
             AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+			AkSoundEngine.PostEvent("thunder_event", gameObject);
         }
 
         if (currentLevel == 7)
@@ -241,9 +263,9 @@ public class GameControl : MonoBehaviour
         }
     }
 
-    public void AddBall(Side side)
+    public void AddBall(Side side, Type type)
     {
-        addBall.SpawnBall(side);
+        addBall.SpawnBall(side, type);
         currentNumOfBalls++;
     }
 
@@ -265,46 +287,54 @@ public class GameControl : MonoBehaviour
         switch (levelNumber)
         {
             case 1:
-                AddBall(Side.Left);
+                AddBall(Side.Left, Type.Ball);
                 break;
             case 2:
-                AddBall(Side.Left);
-                AddBall(Side.Right);
+                AddBall(Side.Left, Type.Ball);
+                AddBall(Side.Right, Type.Ball1);
                 break;
             case 3:
-                AddBall(Side.Left);
-                AddBall(Side.Left);
-                AddBall(Side.Right);
+                AddBall(Side.Left, Type.Bell);
+                AddBall(Side.Left, Type.Ball1);
+                AddBall(Side.Right, Type.Ball2);
                 break;
             case 4:
-                AddBall(Side.Left);
-                AddBall(Side.Left);
-                AddBall(Side.Right);
-                AddBall(Side.Right);
+                AddBall(Side.Left, Type.Bell);
+                AddBall(Side.Left, Type.Ball);
+                AddBall(Side.Right, Type.Package);
+                AddBall(Side.Right, Type.Rocket);
                 break;
             case 5:
-                AddBall(Side.Left);
-                AddBall(Side.Left);
-                AddBall(Side.Right);
-                AddBall(Side.Right);
+                AddBall(Side.Left, Type.Bell);
+                AddBall(Side.Left, Type.Sex);
+                AddBall(Side.Right, Type.Package);
+                AddBall(Side.Right, Type.Rocket);
                 gameSpeed += 0.2f;
                 Time.timeScale = gameSpeed;
                 break;
             case 6:
-                AddBall(Side.Left);
-                AddBall(Side.Left);
-                AddBall(Side.Left);
-                AddBall(Side.Right);
-                AddBall(Side.Right);             
+
+                AddBall(Side.Left, Type.Car);
+                AddBall(Side.Left, Type.Porcelain1);
+                AddBall(Side.Left, Type.Porcelain2);
+                AddBall(Side.Right, Type.Porcelain3);
+                AddBall(Side.Right, Type.Porcelain1);
                 break;
             case 7:
-                AddBall(Side.Left);
-                AddBall(Side.Left);
-                AddBall(Side.Left);
-                AddBall(Side.Right);
-                AddBall(Side.Right);
+                AddBall(Side.Left, Type.Car);
+                AddBall(Side.Left, Type.Porcelain1);
+                AddBall(Side.Left, Type.Porcelain2);
+                AddBall(Side.Right, Type.Porcelain3);
+                AddBall(Side.Right, Type.Porcelain1);
+
                 break;
             default:
+
+                // Trigger Timmy's animations for the new level
+                m_Animator.SetTrigger("endGameC");
+                m_Animator.SetTrigger("endGameL");
+                m_Animator.SetTrigger("endGameR");
+
                 break;
         }
     }
