@@ -6,28 +6,38 @@ public class LightStageModifier : MonoBehaviour
 {
 
     #region Fields
-    public Light Light;
+    public Light LightA;
+    public Light LightB;
+    public Light LightC;
     public GameObject SkyColour;
     public GameObject LightCone;
 
     private SpriteRenderer SkyColorSpriteRenderer;
     private SpriteRenderer LightConeSpriteRenderer;
 
-    public Material Skybox1;
-    public Material Skybox2;
-    public Material Skybox3;
-    public Material Skybox4;
-    public Material Skybox5;
-    public Material Skybox6;
-    public Material Skybox7;
+    public Color LightColourA1;
+    public Color LightColourA2;
+    public Color LightColourA3;
+    public Color LightColourA4;
+    public Color LightColourA5;
+    public Color LightColourA6;
+    public Color LightColourA7;
 
-    public Color LightColor1;
-    public Color LightColor2;
-    public Color LightColor3;
-    public Color LightColor4;
-    public Color LightColor5;
-    public Color LightColor6;
-    public Color LightColor7;
+    public Color LightColourB1;
+    public Color LightColourB2;
+    public Color LightColourB3;
+    public Color LightColourB4;
+    public Color LightColourB5;
+    public Color LightColourB6;
+    public Color LightColourB7;
+
+    public Color LightColourC1;
+    public Color LightColourC2;
+    public Color LightColourC3;
+    public Color LightColourC4;
+    public Color LightColourC5;
+    public Color LightColourC6;
+    public Color LightColourC7;
 
     public Color SkyColourSprite1;
     public Color SkyColourSprite2;
@@ -64,56 +74,63 @@ public class LightStageModifier : MonoBehaviour
 
     public void ToStageOne()
     {
-        RenderSettings.skybox = Skybox1;
-        Light.color = LightColor1;
+        LightA.color = LightColourA1;
+        LightB.color = LightColourB1;
+        LightC.color = LightColourC1;
         SkyColorSpriteRenderer.color = SkyColourSprite1;
         LightConeSpriteRenderer.color = LightConeSprite1;
     }
 
     public void ToStageTwo()
     {
-        RenderSettings.skybox = Skybox2;
-        Light.color = LightColor2;
+        LightA.color = LightColourA2;
+        LightB.color = LightColourB2;
+        LightC.color = LightColourC2;
         SkyColorSpriteRenderer.color = SkyColourSprite2;
         LightConeSpriteRenderer.color = LightConeSprite2;
     }
 
     public void ToStageThree()
     {
-        RenderSettings.skybox = Skybox3;
-        Light.color = LightColor3;
+        LightA.color = LightColourA3;
+        LightB.color = LightColourB3;
+        LightC.color = LightColourC3;
         SkyColorSpriteRenderer.color = SkyColourSprite3;
         LightConeSpriteRenderer.color = LightConeSprite3;
     }
 
     public void ToStageFour()
     {
-        RenderSettings.skybox = Skybox4;
-        Light.color = LightColor4;
+        LightA.color = LightColourA4;
+        LightB.color = LightColourB4;
+        LightC.color = LightColourC4;
         SkyColorSpriteRenderer.color = SkyColourSprite4;
         LightConeSpriteRenderer.color = LightConeSprite4;
     }
 
     public void ToStageFive()
     {
-        RenderSettings.skybox = Skybox5;
-        Light.color = LightColor5;
+        LightA.color = LightColourA5;
+        LightB.color = LightColourB5;
+        LightC.color = LightColourC5;
         SkyColorSpriteRenderer.color = SkyColourSprite5;
         LightConeSpriteRenderer.color = LightConeSprite5;
     }
 
     public void ToStageSix()
     {
-        RenderSettings.skybox = Skybox6;
-        Light.color = LightColor6;
+        LightA.color = LightColourA6;
+        LightB.color = LightColourB6;
+        LightC.color = LightColourC6;
         SkyColorSpriteRenderer.color = SkyColourSprite6;
         LightConeSpriteRenderer.color = LightConeSprite6;
     }
 
     public void ToStageSeven()
     {
-        RenderSettings.skybox = Skybox7;
-        Light.color = LightColor7;
+        LightA.color = LightColourA7;
+        LightB.color = LightColourB7;
+        LightC.color = LightColourC7;
         SkyColorSpriteRenderer.color = SkyColourSprite7;
         LightConeSpriteRenderer.color = LightConeSprite7;
     }
