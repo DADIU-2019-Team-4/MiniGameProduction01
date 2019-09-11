@@ -17,7 +17,7 @@ public class GameControl : MonoBehaviour
     [SerializeField]
     private float ballSpawnInterval = 1.0f;
     private float spawnTimer = 0f;
-    private float finalSceneDuration = 10f;
+    private float finalSceneDuration = 83f;
     private float finalSceneTimer= 0f;
     [HideInInspector]
     //public bool ballWaiting = false;
@@ -85,6 +85,7 @@ public class GameControl : MonoBehaviour
 
     private LightStageModifier LightStageModifier;
     private bool _triggeredEnding;
+    private bool _playedSoundPhase6;
 
     internal void QueueLeftHand(ThrowableObject throwableObject)
     {
@@ -228,15 +229,19 @@ public class GameControl : MonoBehaviour
 
         if (currentLevel == 6 && !_triggeredEnding)
         {
-            AkSoundEngine.SetSwitch("game_stage", "phase6", gameObject);
-            AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
-            levelTimer = 0; //reset time used on level
-        
-			AkSoundEngine.PostEvent("DialogueDK_event", gameObject);
-            AkSoundEngine.PostEvent("thunder_event", gameObject);
-            LightStageModifier.ToStageSeven();
+            if (!_playedSoundPhase6)
+            {
+                AkSoundEngine.SetSwitch("game_stage", "phase6", gameObject);
+                AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+                levelTimer = 0; //reset time used on level
 
-            inputController.LevelEnd = true;
+                AkSoundEngine.PostEvent("DialogueDK_event", gameObject);
+                AkSoundEngine.PostEvent("thunder_event", gameObject);
+                LightStageModifier.ToStageSeven();
+                inputController.LevelEnd = true;
+                _playedSoundPhase6 = true;
+            }
+
             gameSpeed += Time.deltaTime * speedUpValue;
             Time.timeScale = gameSpeed;
 
