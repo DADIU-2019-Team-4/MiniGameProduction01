@@ -2,8 +2,8 @@ State Group	ID	Name			Wwise Object Path	Notes
 	739838848	dia_lang			\Default Work Unit\dia_lang	
 
 State	ID	Name	State Group			Notes
+	0	None	dia_lang			
 	1819748192	EN	dia_lang			
-	1836525760	DA	dia_lang			
 	1836525770	DK	dia_lang			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes

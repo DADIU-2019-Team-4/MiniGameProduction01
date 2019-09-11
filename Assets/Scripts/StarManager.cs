@@ -13,6 +13,8 @@ public class StarManager : MonoBehaviour
 
     private InputController _inputController;
 
+    public GameObject LightShineparticle; 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +44,7 @@ public class StarManager : MonoBehaviour
                     {
                         stars[i].GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
                         AkSoundEngine.PostEvent("stars_event" + (i + 1), gameObject);
+                        Instantiate(LightShineparticle, stars[i].transform.position, Quaternion.identity);
                         star.IsActivated = true;
                     }
                 }
@@ -51,6 +54,7 @@ public class StarManager : MonoBehaviour
                     {
                         stars[i].GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
                         AkSoundEngine.PostEvent("stars_event0", gameObject);
+                        Instantiate(LightShineparticle, stars[i].transform.position, Quaternion.identity);
                         star.IsActivated = true;
                     }
                 }

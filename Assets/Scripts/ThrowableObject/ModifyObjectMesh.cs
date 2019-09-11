@@ -32,6 +32,9 @@ public class ModifyObjectMesh : MonoBehaviour
     public Mesh Porcelain3TransformMeshFilterer;
     public Material Porcelain3TransformMeshRenderer;
 
+    // Particles
+    public GameObject changeParticles;
+
 
     // Start is called before the first frame update
     void Start() { }
@@ -41,6 +44,7 @@ public class ModifyObjectMesh : MonoBehaviour
 
     public void SetToBallMesh()
     {
+        //Instantiate(changeParticles, transform.position, Quaternion.identity); 
         GetComponent<MeshFilter>().mesh = BallTransformMeshFilterer;
         GetComponent<MeshRenderer>().material = BallTransformMeshRenderer;
     }
