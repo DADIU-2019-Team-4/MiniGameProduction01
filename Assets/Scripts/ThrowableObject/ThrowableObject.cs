@@ -157,7 +157,7 @@ public class ThrowableObject : MonoBehaviour
 
         if (gc.currentLevel == 4)
             _animator.SetBool("4Balls", true);
-        else if (gc.currentLevel >= 5)
+        else if (gc.currentLevel >= 6)
             _animator.SetBool("5Balls", true);
         else
             _animator.SetBool("Default", true);
@@ -186,7 +186,7 @@ public class ThrowableObject : MonoBehaviour
 
         if (gc.currentLevel == 4)
             _animator.SetBool("4Balls", true);
-        else if (gc.currentLevel >= 5)
+        else if (gc.currentLevel >= 6)
             _animator.SetBool("5Balls", true);
         else
             _animator.SetBool("Default", true);
