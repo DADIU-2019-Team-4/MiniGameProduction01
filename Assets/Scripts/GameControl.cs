@@ -50,25 +50,25 @@ public class GameControl : MonoBehaviour
     private float levelTimer = 0;
 
     [SerializeField]
-    private float bellSpawnTime = 19f;
+    private float bellSpawnTime;
 
     [SerializeField]
-    private float packageSpawnTime = 4f;
+    private float packageSpawnTime;
 
     [SerializeField]
-    private float toySpawnTime = 12.3f;
+    private float toySpawnTime;
 
     [SerializeField]
-    private float dvdSpawnTime = 59.5f;
+    private float dvdSpawnTime;
 
     [SerializeField]
-    private float carSpawnTime = 20f;
+    private float carSpawnTime;
 
     [SerializeField]
-    private float porcelainSpawnTime = 23f;
+    private float porcelainSpawnTime;
 
     [SerializeField]
-    private float morePorcelainSpawnTime = 50f;
+    private float morePorcelainSpawnTime;
 
    
     private float numberOfObjectsSpawn;
@@ -177,6 +177,7 @@ public class GameControl : MonoBehaviour
         if (currentLevelThrowCount >= toLevel2Count && currentLevel == 1)
         {
             StartLevel(2);
+            GameObject.Find("TutorialHand").SetActive(false);
             AkSoundEngine.SetSwitch("game_stage", "phase1", gameObject);
 			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
             levelTimer = 0; //reset time used on level
@@ -387,7 +388,7 @@ public class GameControl : MonoBehaviour
                 AddBall(Side.Left, Type.Ball);
                 AddBall(Side.Left, Type.Ball1);
                 AddBall(Side.Right, Type.Ball2);
-                bellSpawnTime = 19f;
+                bellSpawnTime = 22f;
                 break;
             case 4:
                 AddBall(Side.Left, Type.Bell);
@@ -395,8 +396,8 @@ public class GameControl : MonoBehaviour
                 AddBall(Side.Right, Type.Ball1);
                 AddBall(Side.Right, Type.Ball2);
                 packageSpawnTime = 4f;
-                toySpawnTime = 12.3f;
-                dvdSpawnTime = 59.5f;
+                toySpawnTime = 13f;
+                dvdSpawnTime = 48f;
                 break;
             case 5:
                 AddBall(Side.Left, Type.Bell);
@@ -405,7 +406,7 @@ public class GameControl : MonoBehaviour
                 AddBall(Side.Right, Type.Sex);
                 gameSpeed =1f;
                 Time.timeScale = gameSpeed;
-                carSpawnTime = 20f;
+                carSpawnTime = 13f;
                 break;
             case 6:
                 AddBall(Side.Left, Type.Car);
@@ -413,7 +414,7 @@ public class GameControl : MonoBehaviour
                 AddBall(Side.Left, Type.Rocket);
                 AddBall(Side.Right, Type.Sex);
                 AddBall(Side.Right, Type.Porcelain1);
-                porcelainSpawnTime = 23f;
+                porcelainSpawnTime = 20f;
                 break;
             default:
 

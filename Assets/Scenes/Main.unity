@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: cd6d7a3b6b739f843b9610fd6168b87d, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44744188, g: 0.49738985, b: 0.575279, a: 1}
+  m_IndirectSpecularColor: {r: 0.22079489, g: 0.23004887, b: 0.42696652, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -330,6 +330,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8865814309794516258, guid: 8d759bc59f843c04582053cf02f241a1,
         type: 3}
+    - target: {fileID: 2157983160396943440, guid: f25aab2e42679ed4caa19e9916f03dc4,
+        type: 3}
+      propertyPath: _minSwipeDistanceInPercentage
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 726737297, guid: f25aab2e42679ed4caa19e9916f03dc4, type: 3}
       propertyPath: Light
       value: 
@@ -1490,6 +1495,12 @@ PrefabInstance:
       propertyPath: stars.Array.data[6]
       value: 
       objectReference: {fileID: 7760121969787164299}
+    - target: {fileID: 3036348045044622368, guid: 4cd10f1a35e57f8458c94fc1f37b228e,
+        type: 3}
+      propertyPath: LightShineparticle
+      value: 
+      objectReference: {fileID: 35924520619666324, guid: 16d8829829984408db24741da047af4a,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cd10f1a35e57f8458c94fc1f37b228e, type: 3}
 --- !u!1 &944629395
@@ -2261,7 +2272,53 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OpenMenu
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5670729242759918351, guid: 81f419b01d9623c40be51ff1a542f27e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6736237596710991418, guid: 81f419b01d9623c40be51ff1a542f27e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -784
+      objectReference: {fileID: 0}
+    - target: {fileID: 6736237596710991418, guid: 81f419b01d9623c40be51ff1a542f27e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 304
+      objectReference: {fileID: 0}
+    - target: {fileID: 6736237596710991418, guid: 81f419b01d9623c40be51ff1a542f27e,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8691639307952563905, guid: 81f419b01d9623c40be51ff1a542f27e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7838468229895801228, guid: 81f419b01d9623c40be51ff1a542f27e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 46
+      objectReference: {fileID: 0}
+    - target: {fileID: 7838468229895801228, guid: 81f419b01d9623c40be51ff1a542f27e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3145987578952365144, guid: 81f419b01d9623c40be51ff1a542f27e,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3145987578952365144, guid: 81f419b01d9623c40be51ff1a542f27e,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2924689331013845373, guid: 81f419b01d9623c40be51ff1a542f27e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 81f419b01d9623c40be51ff1a542f27e, type: 3}
 --- !u!1 &1475366677 stripped
 GameObject:
@@ -2564,7 +2621,7 @@ Transform:
   m_GameObject: {fileID: 1713888354}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.18, y: 4.2, z: 9.67}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 13.6186, y: 13.6186, z: 13.6186}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
