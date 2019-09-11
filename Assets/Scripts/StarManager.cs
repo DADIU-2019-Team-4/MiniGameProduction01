@@ -33,7 +33,7 @@ public class StarManager : MonoBehaviour
 
         for (int i = 0; i < starsToFill; i++)
         {
-            Debug.Log("Stars to fill: " + percentage * _totalAmountOfStars);
+            //Debug.Log("Stars to fill: " + percentage * _totalAmountOfStars);
 
             if (i < _totalAmountOfStars)
             {

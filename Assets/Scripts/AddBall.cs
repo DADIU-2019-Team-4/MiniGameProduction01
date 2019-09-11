@@ -19,7 +19,7 @@ public class AddBall : MonoBehaviour
     public Vector3 RightHandSpawn;
     private ModifyObjectMesh modifyObjectMesh;
 
-    private void Start()
+    private void Awake()
     {
         gc = GameObject.FindObjectOfType<GameControl>();
         
@@ -108,12 +108,16 @@ public class AddBall : MonoBehaviour
         if(side == Side.Left)
         {
             g = Instantiate(g, LeftHandSpawn, Quaternion.identity);
+            
         }
         else if (side == Side.Right)
         {
             g = Instantiate(g, RightHandSpawn, Quaternion.identity);
         }
 
+        //Debug.Log(g.gameObject.GetInstanceID());
+
+        Debug.Log(gc.gameObject.GetInstanceID()+ "lol");
         gc.throwableObjectList.Add(g.GetComponent<ThrowableObject>());
         return g;
     }

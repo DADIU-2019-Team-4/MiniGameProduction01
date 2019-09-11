@@ -53,13 +53,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BallOne: {fileID: 532857877177543079, guid: 307d95a891291ee458e0102d3baaf89f, type: 3}
-  BallTwo: {fileID: 532857877177543079, guid: 5132b582809a8114b9aa091cd35e0061, type: 3}
-  BallThree: {fileID: 532857877177543079, guid: bca044d32c5c3b54792971f3b99cb4c5,
-    type: 3}
-  BallFour: {fileID: 532857877177543079, guid: 322b1d39817d0264e90a04685cfb6113, type: 3}
   Balls: []
-  LeftHandSpawn: {x: -0.42, y: 1.3, z: 1.5}
-  RightHandSpawn: {x: 0.4, y: 1.3, z: 1.5}
+  LeftHandSpawn: {x: -0.25, y: 0.75, z: 1.5}
+  RightHandSpawn: {x: 0.24, y: 0.78, z: 1.5}
 --- !u!114 &7983392908799067626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,7 +89,6 @@ MonoBehaviour:
   dvdSpawnTime: 59.5
   carSpawnTime: 20
   porcelainSpawnTime: 23
-  morePorcelainSpawnTime: 50
   stackingIsAllowed: 0
   Balls: []
   TutorialHandLeft: {fileID: 0}

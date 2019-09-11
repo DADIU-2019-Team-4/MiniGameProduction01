@@ -92,59 +92,8 @@ public class GameControl : MonoBehaviour
     public GameObject TutorialHandRight;
     private float dumbTimer = 3f;
 
-    internal void QueueLeftHand(ThrowableObject throwableObject)
-    {
-
-        if (!stackingIsAllowed)
-        {
-            if (leftHandObjects.Count > 0 && !inputController.LevelEnd)
-            {
-                // Trigger Timmy's animations for the failing
-                m_Animator.SetTrigger("failC");
-                m_Animator.SetTrigger("failL");
-                m_Animator.SetTrigger("failR");
-
-                AkSoundEngine.PostEvent("failFeed_event", gameObject);
-
-                //restart level
-                StartLevel(currentLevel);
-                StartCoroutine(_starManager.ResetStars(0f));
-                Debug.Log("Fail!!");
-                return;
-            }
-
-        }
-
-        leftHandObjects.Enqueue(throwableObject);
-    }
-
-    internal void QueueRightHand(ThrowableObject throwableObject)
-    {
-
-        if (!stackingIsAllowed)
-        {
-            if (rightHandObjects.Count > 0 && !inputController.LevelEnd)
-            {
-                // Trigger Timmy's animations for the failing
-                m_Animator.SetTrigger("failC");
-                m_Animator.SetTrigger("failL");
-                m_Animator.SetTrigger("failR");
-
-                AkSoundEngine.PostEvent("failFeed_event", gameObject);
-
-                //restart level
-                StartLevel(currentLevel);
-                StartCoroutine(_starManager.ResetStars(0f));
-                Debug.Log("Fail!!");
-                return;
-            }
-        }
-
-        rightHandObjects.Enqueue(throwableObject);
-    }
-
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         //Get the Animator attached to the Timmy's Model
         m_Animator = GameObject.Find("Timmy_fbx").GetComponent<Animator>();
@@ -166,12 +115,68 @@ public class GameControl : MonoBehaviour
 
         LightStageModifier = GetComponent<LightStageModifier>();
 
+
+    }
+    void Start()
+    {
         //level 1 setup
         StartLevel(currentLevel);
         LightStageModifier.ToStageOne();
+
     }
 
-    void PickUpBallScene()
+    public void QueueLeftHand(ThrowableObject throwableObject)
+    {
+
+        if (!stackingIsAllowed)
+        {
+            if (leftHandObjects.Count > 0 && !inputController.LevelEnd)
+            {
+                // Trigger Timmy's animations for the failing
+                m_Animator.SetTrigger("failC");
+                m_Animator.SetTrigger("failL");
+                m_Animator.SetTrigger("failR");
+
+                AkSoundEngine.PostEvent("failFeed_event", gameObject);
+
+                //restart level
+                StartLevel(currentLevel);
+                StartCoroutine(_starManager.ResetStars(0f));
+                Debug.Log("Fail!!");
+                return;
+            }
+
+        }
+        leftHandObjects.Enqueue(throwableObject);
+    }
+
+    public void QueueRightHand(ThrowableObject throwableObject)
+    {
+
+        if (!stackingIsAllowed)
+        {
+            if (rightHandObjects.Count > 0 && !inputController.LevelEnd)
+            {
+                // Trigger Timmy's animations for the failing
+                m_Animator.SetTrigger("failC");
+                m_Animator.SetTrigger("failL");
+                m_Animator.SetTrigger("failR");
+
+                AkSoundEngine.PostEvent("failFeed_event", gameObject);
+
+                //restart level
+                StartLevel(currentLevel);
+                StartCoroutine(_starManager.ResetStars(0f));
+                Debug.Log("Fail!!");
+                return;
+            }
+        }
+        rightHandObjects.Enqueue(throwableObject);
+    }
+
+   
+
+        void PickUpBallScene()
     {
         m_Animator.SetTrigger("startC");
         m_Animator.SetTrigger("startL");
@@ -182,7 +187,8 @@ public class GameControl : MonoBehaviour
     void Update()
     {
         // to test preloading scenes
-        ToNextScene();
+        //ToNextScene();
+        //Debug.Log(leftHandObjects.Count + "  Right: " + rightHandObjects.Count);
 
         if (currentLevelThrowCount >= toLevel2Count && currentLevel == 1)
         {

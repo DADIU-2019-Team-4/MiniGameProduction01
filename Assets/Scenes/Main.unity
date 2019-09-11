@@ -256,21 +256,6 @@ PrefabInstance:
       objectReference: {fileID: 1262193318}
     - target: {fileID: 7983392908799067626, guid: f25aab2e42679ed4caa19e9916f03dc4,
         type: 3}
-      propertyPath: currentLevel
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7983392908799067626, guid: f25aab2e42679ed4caa19e9916f03dc4,
-        type: 3}
-      propertyPath: toLevel3Count
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 7983392908799067626, guid: f25aab2e42679ed4caa19e9916f03dc4,
-        type: 3}
-      propertyPath: toLevel4Count
-      value: 95
-      objectReference: {fileID: 0}
-    - target: {fileID: 7983392908799067626, guid: f25aab2e42679ed4caa19e9916f03dc4,
-        type: 3}
       propertyPath: TutorialHandLeft
       value: 
       objectReference: {fileID: 681275791}
@@ -279,11 +264,6 @@ PrefabInstance:
       propertyPath: TutorialHandRight
       value: 
       objectReference: {fileID: 1651691756}
-    - target: {fileID: 7983392908799067626, guid: f25aab2e42679ed4caa19e9916f03dc4,
-        type: 3}
-      propertyPath: toLevel7Count
-      value: 200
-      objectReference: {fileID: 0}
     - target: {fileID: 505171660684869035, guid: f25aab2e42679ed4caa19e9916f03dc4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1200,7 +1180,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 819371896}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.8287922, y: 1.534, z: -2.684651}
+  m_LocalPosition: {x: -0.921, y: 1.447, z: -2.684651}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1728275074}
@@ -1765,11 +1745,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndGame
       objectReference: {fileID: 0}
-    - target: {fileID: 8308866888199611672, guid: 3e327969fb0cbd244a6746ec4d285095,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8308866888199611674, guid: 3e327969fb0cbd244a6746ec4d285095,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1835,41 +1810,6 @@ PrefabInstance:
       propertyPath: _blackImage
       value: 
       objectReference: {fileID: 625192678}
-    - target: {fileID: 3121062126385634397, guid: 3e327969fb0cbd244a6746ec4d285095,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2092877155342151246, guid: 3e327969fb0cbd244a6746ec4d285095,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 2092877155342151246, guid: 3e327969fb0cbd244a6746ec4d285095,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2092877155342151246, guid: 3e327969fb0cbd244a6746ec4d285095,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2092877155342151246, guid: 3e327969fb0cbd244a6746ec4d285095,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2092877155342151246, guid: 3e327969fb0cbd244a6746ec4d285095,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2092877155342151246, guid: 3e327969fb0cbd244a6746ec4d285095,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e327969fb0cbd244a6746ec4d285095, type: 3}
 --- !u!1 &1262193318 stripped
@@ -2592,7 +2532,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1927580774}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.47720778, y: 1.566, z: -2.684651}
+  m_LocalPosition: {x: 0.573, y: 1.468, z: -2.684651}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1728275074}
@@ -2713,8 +2653,8 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2082654104}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
+  m_IsTrigger: 0
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}

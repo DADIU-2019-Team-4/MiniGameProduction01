@@ -11,6 +11,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: 4Balls
     m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: isInLeftHand
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1670589224309194843}
   m_Solo: 0
@@ -35,6 +38,9 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: 4Balls
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: isInRightHand
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1992012654749547073}
@@ -86,7 +92,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isInRightHand
+    m_ConditionEvent: isInLeftHand
     m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: swipedRightSide
@@ -99,7 +105,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0
   m_TransitionOffset: 0
-  m_ExitTime: 0.75
+  m_ExitTime: 0.7500001
   m_HasExitTime: 0
   m_HasFixedDuration: 0
   m_InterruptionSource: 0
@@ -115,6 +121,9 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: 5Balls
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: isInRightHand
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2786741193649371242}
@@ -223,7 +232,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isInRightHand
+    m_ConditionEvent: isInLeftHand
     m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: swipedRightSide
@@ -251,7 +260,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isInLeftHand
+    m_ConditionEvent: isInRightHand
     m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: swipedLeftSide
@@ -402,7 +411,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isInLeftHand
+    m_ConditionEvent: isInRightHand
     m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: swipedLeftSide
@@ -662,7 +671,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isInLeftHand
+    m_ConditionEvent: isInRightHand
     m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: swipedLeftSide
@@ -717,6 +726,9 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: Default
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: isInRightHand
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -737711742782712074}
@@ -773,6 +785,9 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: 5Balls
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: isInLeftHand
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5730495583380084896}
@@ -831,6 +846,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: Default
     m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: isInLeftHand
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3833843977822862834}
   m_Solo: 0
@@ -854,7 +872,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isInRightHand
+    m_ConditionEvent: isInLeftHand
     m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: swipedRightSide

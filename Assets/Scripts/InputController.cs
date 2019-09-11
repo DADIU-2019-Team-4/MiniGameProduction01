@@ -44,7 +44,7 @@ public class InputController : MonoBehaviour
     public bool uncontrollableBallsAnimationStarted = false;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         width = (float)Screen.width;
         _minSwipeDistance = Screen.height * _minSwipeDistanceInPercentage; // 10% height of the screen
@@ -64,7 +64,7 @@ public class InputController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        balls = new List<ThrowableObject>(FindObjectsOfType<ThrowableObject>());
+        //balls = new List<ThrowableObject>(FindObjectsOfType<ThrowableObject>());
         //Debug.Log(balls.Capacity);
 
         if (_hasSwipedLeft)
@@ -245,6 +245,7 @@ public class InputController : MonoBehaviour
         {
             to = gc.rightHandObjects.Dequeue();
             to.throwLeft();
+            Debug.Log("Throw Right");
             gc.stackingIsAllowed = false;
 
             // Trigger throwing Animation
@@ -278,6 +279,7 @@ public class InputController : MonoBehaviour
         {
             to = gc.leftHandObjects.Dequeue();
             to.throwRight();
+            Debug.Log("Throw Left");
             gc.stackingIsAllowed = false;
 
             // Trigger throwing Animation
