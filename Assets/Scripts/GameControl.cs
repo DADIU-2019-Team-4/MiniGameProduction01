@@ -70,8 +70,6 @@ public class GameControl : MonoBehaviour
     [SerializeField]
     private float porcelainSpawnTime;
 
-    [SerializeField]
-    private float morePorcelainSpawnTime;
 
 
     private float numberOfObjectsSpawn;
@@ -353,15 +351,6 @@ public class GameControl : MonoBehaviour
             throwableObjectList[4].gameObject.GetComponent<ModifyObjectMesh>().SetToPorcelain1Mesh();
             porcelainSpawnTime = -1f;
         }
-        //if (currentLevel == 7 && levelTimer > morePorcelainSpawnTime && morePorcelainSpawnTime!=-1f)
-        //{
-        //    throwableObjectList[0].gameObject.GetComponent<ModifyObjectMesh>().SetToPorcelain1Mesh();
-        //    throwableObjectList[1].gameObject.GetComponent<ModifyObjectMesh>().SetToPorcelain2Mesh();
-        //    throwableObjectList[2].gameObject.GetComponent<ModifyObjectMesh>().SetToPorcelain3Mesh();
-        //    throwableObjectList[3].gameObject.GetComponent<ModifyObjectMesh>().SetToPorcelain1Mesh();
-        //    throwableObjectList[4].gameObject.GetComponent<ModifyObjectMesh>().SetToPorcelain2Mesh();
-        //    morePorcelainSpawnTime = -1f;
-        //}
     }
 
     private void ToNextScene()
@@ -460,7 +449,6 @@ public class GameControl : MonoBehaviour
                 AddBall(Side.Right, Type.Porcelain1);
                 gameSpeed = StartGameSpeed;
                 Time.timeScale = gameSpeed;
-                porcelainSpawnTime = 20f;
                 break;
             default:
 
