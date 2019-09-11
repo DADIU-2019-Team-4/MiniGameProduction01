@@ -26,6 +26,7 @@ public class EndGame : MonoBehaviour
 
     private MenuManager _menuManager;
     private InputController _inputController;
+    private GameControl _gameControl;
     private ThrowableObject[] _balls;
 
     // Start is called before the first frame update
@@ -33,7 +34,9 @@ public class EndGame : MonoBehaviour
     {
         _menuManager = FindObjectOfType<MenuManager>();
         _inputController = FindObjectOfType<InputController>();
+        _gameControl = FindObjectOfType<GameControl>();
         _blackImage.SetActive(false);
+        Time.timeScale = _gameControl.StartGameSpeed;
         StartCoroutine(EndSequence());
     }
 
@@ -46,7 +49,7 @@ public class EndGame : MonoBehaviour
         foreach (ThrowableObject ball in _balls)
             Destroy(ball.gameObject);
 
-        DestroyImmediate(_inputController.uncontrollableBalls, true);
+        Destroy(_inputController.uncontrollableBalls);
 
         _timmy.SetActive(false);
         _paperBall.SetActive(true);
