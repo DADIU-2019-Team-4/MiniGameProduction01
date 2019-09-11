@@ -95,17 +95,6 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{2ACDA890-FC29-40CD-A41A-AEB1291C3817}" ShortID="1040415908">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="4"/>
-										<Property Name="Scope" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="dk_dia_switch" ID="{A36786C4-D558-48D5-8101-BA43BF60FC7E}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 							</ChildrenList>
 						</Event>
 					</ChildrenList>
@@ -378,10 +367,39 @@
 				</Event>
 				<Folder Name="Music" ID="{5122B693-93B4-45C8-B44F-C052FA161D33}" ShortID="529175228">
 					<ChildrenList>
-						<Event Name="musicP5a_event" ID="{CF36F217-6F30-4A10-8715-7A02359D1F03}"/>
-						<Event Name="musicP6a_event" ID="{77E57608-E780-4B4D-AC3E-CE9B7D771526}"/>
-						<Event Name="musicP5b_event" ID="{5F0BEA43-ED5F-4BD9-86A2-254F1031F1D9}"/>
-						<Event Name="musicP6b_event" ID="{862B6121-551E-4661-B194-F5DA1B5330D0}"/>
+						<Event Name="musicP5_event" ID="{CF36F217-6F30-4A10-8715-7A02359D1F03}">
+							<ChildrenList>
+								<Action Name="" ID="{72247721-8B48-45C8-B804-039480E46671}" ShortID="277600267">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="music_phase5_2" ID="{AAD8E757-57D1-4726-820E-A83C4C1E6FEB}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="musicP6_event" ID="{862B6121-551E-4661-B194-F5DA1B5330D0}">
+							<ChildrenList>
+								<Action Name="" ID="{B6CEB371-28A1-43B2-81CE-C29D9DA2EFA0}" ShortID="403998784">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="music_phase6_2" ID="{CD09AE3C-0A8F-4859-9DE0-FF193759BDB5}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B9B7D1E9-A7C4-4B02-8F01-552B1605FF1C}" ShortID="253047951">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="music_phase5_2" ID="{AAD8E757-57D1-4726-820E-A83C4C1E6FEB}" WorkUnitID="{1A39F37E-7DF3-40FE-9549-CABD2171327D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

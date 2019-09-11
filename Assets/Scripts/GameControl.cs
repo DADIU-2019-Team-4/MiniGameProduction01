@@ -203,6 +203,7 @@ public class GameControl : MonoBehaviour
             AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
             levelTimer = 0; //reset time used on level
             AkSoundEngine.PostEvent("DialogueDK_event", gameObject);
+			AkSoundEngine.PostEvent("crows_event", gameObject);
             LightStageModifier.ToStageThree();
         }
 
@@ -212,7 +213,7 @@ public class GameControl : MonoBehaviour
             AkSoundEngine.SetSwitch("game_stage", "phase3", gameObject);
             AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
             AkSoundEngine.PostEvent("DialogueDK_event", gameObject);
-            AkSoundEngine.PostEvent("crows_event", gameObject);
+            
             levelTimer = 0; //reset time used on level
             LightStageModifier.ToStageFour();
         }
@@ -224,6 +225,7 @@ public class GameControl : MonoBehaviour
             AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
             levelTimer = 0; //reset time used on level
             AkSoundEngine.PostEvent("DialogueDK_event", gameObject);
+			AkSoundEngine.PostEvent("rain_event", gameObject);
             LightStageModifier.ToStageFive();
         }
 
@@ -233,7 +235,8 @@ public class GameControl : MonoBehaviour
             AkSoundEngine.SetSwitch("game_stage", "phase5", gameObject);
             AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
             AkSoundEngine.PostEvent("DialogueDK_event", gameObject);
-            AkSoundEngine.PostEvent("rain_event", gameObject);
+            
+			AkSoundEngine.PostEvent("musicP5_event", gameObject);
             levelTimer = 0; //reset time used on level
             LightStageModifier.ToStageSix();
         }
@@ -246,6 +249,7 @@ public class GameControl : MonoBehaviour
 
             AkSoundEngine.PostEvent("DialogueDK_event", gameObject);
             AkSoundEngine.PostEvent("thunder_event", gameObject);
+			AkSoundEngine.PostEvent("musicP6_event", gameObject);
             levelTimer = 0; //reset time used on level
             LightStageModifier.ToStageSeven();
         }
