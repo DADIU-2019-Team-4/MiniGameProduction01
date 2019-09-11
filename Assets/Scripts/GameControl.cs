@@ -38,6 +38,8 @@ public class GameControl : MonoBehaviour
     public int toLevel5Count = 10;
     [SerializeField]
     public int toLevel6Count = 10;
+    [SerializeField]
+    public int toLevel7Count = 10;
 
 
     public float gameSpeed = 0.8f;
@@ -86,7 +88,7 @@ public class GameControl : MonoBehaviour
 
     private LightStageModifier LightStageModifier;
     private bool _triggeredEnding;
-    private bool _playedSoundPhase6;
+    private bool _playedSoundPhase7;
 
     public GameObject TutorialHandLeft;
     public GameObject TutorialHandRight;
@@ -238,20 +240,26 @@ public class GameControl : MonoBehaviour
             LightStageModifier.ToStageSix();
         }
 
-
-        if (currentLevel == 6 && !_triggeredEnding)
+        if (currentLevelThrowCount >= toLevel7Count && currentLevel == 6)
         {
-            if (!_playedSoundPhase6)
-            {
-                AkSoundEngine.SetSwitch("game_stage", "phase6", gameObject);
-                AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
-                levelTimer = 0; //reset time used on level
+            StartLevel(7);
+            AkSoundEngine.SetSwitch("game_stage", "phase6", gameObject);
+            AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
 
-                AkSoundEngine.PostEvent("DialogueDK_event", gameObject);
-                AkSoundEngine.PostEvent("thunder_event", gameObject);
-                LightStageModifier.ToStageSeven();
+            AkSoundEngine.PostEvent("DialogueDK_event", gameObject);
+            AkSoundEngine.PostEvent("thunder_event", gameObject);
+            levelTimer = 0; //reset time used on level
+            LightStageModifier.ToStageSeven();
+        }
+
+
+        if (currentLevel == 7 && !_triggeredEnding)
+        {
+            if (!_playedSoundPhase7)
+            {
                 inputController.LevelEnd = true;
-                _playedSoundPhase6 = true;
+                _playedSoundPhase7 = true;
+                LightStageModifier.ToStageSeven();
             }
 
             gameSpeed += Time.deltaTime * speedUpValue;
@@ -304,8 +312,11 @@ public class GameControl : MonoBehaviour
             case 5:
                 _starManager.CalculatePercentage(currentLevelThrowCount, toLevel6Count);
                 break;
+            case 6:
+                _starManager.CalculatePercentage(currentLevelThrowCount, toLevel7Count);
+                break;
             default:
-                Debug.Log("Level 6 started");
+                Debug.Log("Level 7 started");
                 break;
         }
     }
@@ -337,11 +348,11 @@ public class GameControl : MonoBehaviour
             throwableObjectList[0].gameObject.GetComponent<ModifyObjectMesh>().SetToToyCarMesh();
             carSpawnTime = -1f;
         }
-        //if (currentLevel == 6 && levelTimer > porcelainSpawnTime && porcelainSpawnTime!=-1f)
-        //{
-        //    throwableObjectList[4].gameObject.GetComponent<ModifyObjectMesh>().SetToPorcelain1Mesh();
-        //    porcelainSpawnTime = -1f;
-        //}
+        if (currentLevel == 6 && levelTimer > porcelainSpawnTime && porcelainSpawnTime!=-1f)
+        {
+            throwableObjectList[4].gameObject.GetComponent<ModifyObjectMesh>().SetToPorcelain1Mesh();
+            porcelainSpawnTime = -1f;
+        }
         //if (currentLevel == 7 && levelTimer > morePorcelainSpawnTime && morePorcelainSpawnTime!=-1f)
         //{
         //    throwableObjectList[0].gameObject.GetComponent<ModifyObjectMesh>().SetToPorcelain1Mesh();
@@ -432,6 +443,16 @@ public class GameControl : MonoBehaviour
                 carSpawnTime = 13f;
                 break;
             case 6:
+                AddBall(Side.Left, Type.Car);
+                AddBall(Side.Left, Type.Package);
+                AddBall(Side.Left, Type.Rocket);
+                AddBall(Side.Right, Type.Sex);
+                AddBall(Side.Right, Type.Porcelain1);
+                gameSpeed = StartGameSpeed;
+                Time.timeScale = gameSpeed;
+                porcelainSpawnTime = 20f;
+                break;
+            case 7:
                 AddBall(Side.Left, Type.Car);
                 AddBall(Side.Left, Type.Package);
                 AddBall(Side.Left, Type.Rocket);
