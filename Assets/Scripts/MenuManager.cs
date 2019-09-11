@@ -57,10 +57,4 @@ public class MenuManager : MonoBehaviour
         _isSoundSettingsOpen = true;
         _soundSettings.SetActive(true);
     }
-
-    public void ExitGame()
-    {
-        if (!_isSoundSettingsOpen)
-            Application.Quit();
-    }
 }
