@@ -78,15 +78,26 @@ MonoBehaviour:
   ballSpawnInterval: 1
   throwableObjectList: []
   toLevel2Count: 8
-  toLevel3Count: 50
-  toLevel4Count: 90
+  toLevel3Count: 60
+  toLevel4Count: 95
   toLevel5Count: 120
   toLevel6Count: 150
+  toLevel7Count: 200
   gameSpeed: 0.8
   speedUpValue: 0.1
   _endGameObject: {fileID: 0}
+  levelTimer: 0
+  bellSpawnTime: 19
+  packageSpawnTime: 4
+  toySpawnTime: 12.3
+  dvdSpawnTime: 59.5
+  carSpawnTime: 20
+  porcelainSpawnTime: 23
+  morePorcelainSpawnTime: 50
   stackingIsAllowed: 0
   Balls: []
+  TutorialHandLeft: {fileID: 0}
+  TutorialHandRight: {fileID: 0}
 --- !u!114 &2157983160396943440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,7 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uncontrollableBalls: {fileID: 8865814309794516258, guid: 8d759bc59f843c04582053cf02f241a1,
     type: 3}
-  _minSwipeDistanceInPercentage: 0.1
+  _minSwipeDistanceInPercentage: 0.05
   _coyoteTime: 0.2
   ThrowEvent:
     m_PersistentCalls:
@@ -279,23 +290,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c83cdd3ebff9f7046bbe7e2afec2a9f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Light: {fileID: 0}
+  LightA: {fileID: 0}
+  LightB: {fileID: 0}
+  LightC: {fileID: 0}
   SkyColour: {fileID: 0}
   LightCone: {fileID: 0}
-  Skybox1: {fileID: 2100000, guid: 48eed64810d632a4a814a95875238036, type: 2}
-  Skybox2: {fileID: 2100000, guid: 90a0c23d75c970643809eb13dd75b862, type: 2}
-  Skybox3: {fileID: 2100000, guid: 07e71f68a84526442a9060566d0fd705, type: 2}
-  Skybox4: {fileID: 2100000, guid: e93dd0dfd85ddda4abb4600eaa66edb6, type: 2}
-  Skybox5: {fileID: 2100000, guid: 674dad08be39a6e4c8e7c850b5d1d978, type: 2}
-  Skybox6: {fileID: 2100000, guid: f3941103b0fee1b41adcdd56b660c8df, type: 2}
-  Skybox7: {fileID: 2100000, guid: cd6d7a3b6b739f843b9610fd6168b87d, type: 2}
-  LightColor1: {r: 1, g: 0.95686275, b: 0.8392157, a: 0}
-  LightColor2: {r: 1, g: 0.88958347, b: 0.6462264, a: 0}
-  LightColor3: {r: 1, g: 0.7921569, b: 0.5137255, a: 0}
-  LightColor4: {r: 0.8784314, g: 0.7058824, b: 0.7176471, a: 0}
-  LightColor5: {r: 0.8039216, g: 0.5568628, b: 0.6117647, a: 0}
-  LightColor6: {r: 0.5294118, g: 0.4862745, b: 0.8, a: 0}
-  LightColor7: {r: 0.25882354, g: 0.8666667, b: 0.8784314, a: 0}
+  LightColourA1: {r: 1, g: 0.96470594, b: 0.854902, a: 0}
+  LightColourA2: {r: 0.9843138, g: 0.882353, b: 0.6627451, a: 0}
+  LightColourA3: {r: 1, g: 0.8000001, b: 0.54901963, a: 0}
+  LightColourA4: {r: 0.7960785, g: 0.5803922, b: 0.63529414, a: 0}
+  LightColourA5: {r: 0.7843138, g: 0.57254905, b: 0.62352943, a: 0}
+  LightColourA6: {r: 0.5372549, g: 0.5137255, b: 0.79215693, a: 0}
+  LightColourA7: {r: 0.32941177, g: 0.7254902, b: 0.7254902, a: 0}
+  LightColourB1: {r: 0.90588236, g: 0.5254902, b: 0.09019608, a: 0}
+  LightColourB2: {r: 0.7924528, g: 0.4359704, b: 0.16073336, a: 0}
+  LightColourB3: {r: 0.5754717, g: 0.3530016, b: 0.18187076, a: 0}
+  LightColourB4: {r: 0.5377358, g: 0.42299625, b: 0.2916963, a: 0}
+  LightColourB5: {r: 0.2830189, g: 0.19607672, b: 0.16153437, a: 0}
+  LightColourB6: {r: 0.21698111, g: 0.20049146, b: 0.18115875, a: 0}
+  LightColourB7: {r: 0, g: 0, b: 0, a: 0}
+  LightColourC1: {r: 0.5294118, g: 0.35686275, b: 0.09411765, a: 0}
+  LightColourC2: {r: 0.4716981, g: 0.29815197, b: 0.12237452, a: 0}
+  LightColourC3: {r: 0.3207547, g: 0.23473506, b: 0.14676042, a: 0}
+  LightColourC4: {r: 0.3301887, g: 0.28265005, b: 0.21026167, a: 0}
+  LightColourC5: {r: 0.18867922, g: 0.13438945, b: 0.15650752, a: 0}
+  LightColourC6: {r: 0.1509434, g: 0.14097545, b: 0.1260235, a: 0}
+  LightColourC7: {r: 0, g: 0, b: 0, a: 0}
   SkyColourSprite1: {r: 0.36078432, g: 0.6156863, b: 0.8, a: 0}
   SkyColourSprite2: {r: 0.2728729, g: 0.5389753, b: 0.7924528, a: 0}
   SkyColourSprite3: {r: 0.30980393, g: 0.4745098, b: 0.6784314, a: 0}

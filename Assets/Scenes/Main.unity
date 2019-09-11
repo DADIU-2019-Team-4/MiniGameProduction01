@@ -279,6 +279,11 @@ PrefabInstance:
       propertyPath: TutorialHandRight
       value: 
       objectReference: {fileID: 1651691756}
+    - target: {fileID: 7983392908799067626, guid: f25aab2e42679ed4caa19e9916f03dc4,
+        type: 3}
+      propertyPath: toLevel7Count
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 505171660684869035, guid: f25aab2e42679ed4caa19e9916f03dc4,
         type: 3}
       propertyPath: m_LocalPosition.x
