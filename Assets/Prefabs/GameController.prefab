@@ -77,8 +77,8 @@ MonoBehaviour:
   toLevel3Count: 60
   toLevel4Count: 95
   toLevel5Count: 120
-  toLevel6Count: 150
-  toLevel7Count: 200
+  toLevel6Count: 80
+  toLevel7Count: 130
   gameSpeed: 0.8
   speedUpValue: 0.1
   _endGameObject: {fileID: 0}
