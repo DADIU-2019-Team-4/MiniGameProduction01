@@ -41,6 +41,7 @@ public class GameControl : MonoBehaviour
 
 
     public float gameSpeed = 0.8f;
+    public float StartGameSpeed { get; set; }
     public float speedUpValue = 0.1f;
 
     [SerializeField]
@@ -145,6 +146,7 @@ public class GameControl : MonoBehaviour
         leftHandObjects = new Queue<ThrowableObject>();
         rightHandObjects = new Queue<ThrowableObject>();
         addBall = GetComponent<AddBall>();
+        StartGameSpeed = gameSpeed;
         Time.timeScale = gameSpeed;
         _starManager = FindObjectOfType<StarManager>();
 
@@ -414,6 +416,8 @@ public class GameControl : MonoBehaviour
                 AddBall(Side.Left, Type.Rocket);
                 AddBall(Side.Right, Type.Sex);
                 AddBall(Side.Right, Type.Porcelain1);
+                gameSpeed = StartGameSpeed;
+                Time.timeScale = gameSpeed;
                 porcelainSpawnTime = 20f;
                 break;
             default:

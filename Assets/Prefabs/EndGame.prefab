@@ -44,8 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0bbf3edf87579f4caab6ffaa37504c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeUntilEnd: 4
-  _timeUntilDoorCloses: 4
+  _timeUntilEnd: 3
+  _timeUntilDoorCloses: 3
+  _fadeTime: 3
   _timmy: {fileID: 0}
   _paperBall: {fileID: 3121062126385634397}
   _blackImage: {fileID: 0}
