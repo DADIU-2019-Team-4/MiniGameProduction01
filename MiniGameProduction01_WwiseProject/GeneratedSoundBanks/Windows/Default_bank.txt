@@ -44,7 +44,6 @@ State Group	ID	Name			Wwise Object Path	Notes
 State	ID	Name	State Group			Notes
 	0	None	dia_lang			
 	1819748192	EN	dia_lang			
-	1836525760	DA	dia_lang			
 	1836525770	DK	dia_lang			
 
 Custom State	ID	Name	State Group	Owner		Notes
@@ -54,11 +53,10 @@ Custom State	ID	Name	State Group	Owner		Notes
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	10934945	catch_paper1	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\catch_paper1_F2B9B919.wem		\Actor-Mixer Hierarchy\Default Work Unit\Catching\catch_paper1		9851
 	87244112	stars_event5	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\stars_event5_F2B9B919.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stars\stars_event5		66582
-	96900878	EN_DIA_P6-edit_no_door	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\EN_DIA_P6-edit_no_door_F2B9B919.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\en_dia_switch\EN_DIA_P6-edit_no_door		1131581
 	109965146	sun	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\sun_85C21AE7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weather\sun		1136241
 	242200253	FailFeed	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\FailFeed_F2B9B919.wem		\Actor-Mixer Hierarchy\Default Work Unit\FailFeed		98051
+	248445252	EN_DIA_P6_final	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\EN_DIA_P6_final_F2B9B919.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\en_dia_switch\EN_DIA_P6_final		440164
 	253455966	catch_paper2	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\catch_paper2_F2B9B919.wem		\Actor-Mixer Hierarchy\Default Work Unit\Catching\catch_paper2		12012
-	295969561	EN_DIA_P2-edit	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\EN_DIA_P2-edit_F2B9B919.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\en_dia_switch\EN_DIA_P2-edit		869280
 	351704390	rain	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\rain_85C21AE7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weather\rain		171885
 	422535274	DA_DIA_P1	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\DA_DIA_P1_F2B9B919.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\dk_dia_switch\DA_DIA_P1		361504
 	516845969	catch_paper3	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\catch_paper3_F2B9B919.wem		\Actor-Mixer Hierarchy\Default Work Unit\Catching\catch_paper3		9233
@@ -66,17 +64,18 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	579222029	crows	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\crows_85C21AE7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weather\crows		433606
 	609625544	DA_DIA_P3-edit	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\DA_DIA_P3-edit_F2B9B919.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\dk_dia_switch\DA_DIA_P3-edit		1062118
 	719967678	stars_event4	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\stars_event4_F2B9B919.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stars\stars_event4		61448
+	729893639	EN_DIA_P5_final	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\EN_DIA_P5_final_F2B9B919.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\en_dia_switch\EN_DIA_P5_final		532920
 	759778719	DA_DIA_P4-edit	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\DA_DIA_P4-edit_F2B9B919.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\dk_dia_switch\DA_DIA_P4-edit		483763
 	779036515	thunder	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\thunder_85C21AE7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weather\thunder		1228912
 	796341569	stars_event7	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\stars_event7_F2B9B919.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stars\stars_event7		106384
 	807851023	catch_paper0	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\catch_paper0_F2B9B919.wem		\Actor-Mixer Hierarchy\Default Work Unit\Catching\catch_paper0		15226
-	845272853	EN_DIA_P4-edit	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\EN_DIA_P4-edit_F2B9B919.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\en_dia_switch\EN_DIA_P4-edit		465126
 	855172982	EN_DIA_P1-edit	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\EN_DIA_P1-edit_F2B9B919.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\en_dia_switch\EN_DIA_P1-edit		412735
 	876716406	DA_DIA_P2-edit	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\DA_DIA_P2-edit_F2B9B919.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\dk_dia_switch\DA_DIA_P2-edit		818005
 	902393264	RoomLoop	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\ROOM_85C21AE7.wem		\Actor-Mixer Hierarchy\Default Work Unit\RoomLoop		153610
 	913491848	stars_event6	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\stars_event6_F2B9B919.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stars\stars_event6		64064
-	939687044	EN_DIA_P3-edit	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\EN_DIA_P3-edit_F2B9B919.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\en_dia_switch\EN_DIA_P3-edit		1326660
-	975427891	EN_DIA_P5-edit	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\EN_DIA_P5-edit_F2B9B919.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\en_dia_switch\EN_DIA_P5-edit		751560
+	915841421	EN_DIA_P4_final	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\EN_DIA_P4_final_F2B9B919.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\en_dia_switch\EN_DIA_P4_final		406627
+	923056721	EN_DIA_P3_final	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\EN_DIA_P3_final_F2B9B919.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\en_dia_switch\EN_DIA_P3_final		803309
+	974418420	EN_DIA_P2_final	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\EN_DIA_P2_final_F2B9B919.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\en_dia_switch\EN_DIA_P2_final		511207
 	1007295197	DA_DIA_P5-edit	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\DA_DIA_P5-edit_F2B9B919.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\dk_dia_switch\DA_DIA_P5-edit		720564
 	1064507178	DA_DIA_P6-edit_no_door	E:\MiniGameProduction01\MiniGameProduction01_WwiseProject\.cache\Windows\SFX\DA_DIA_P6-edit_no_door_F2B9B919.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\dk_dia_switch\DA_DIA_P6-edit_no_door		1191872
 

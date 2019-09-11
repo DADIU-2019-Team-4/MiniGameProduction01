@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4474414, g: 0.49738908, b: 0.5752779, a: 1}
+  m_IndirectSpecularColor: {r: 0.44744188, g: 0.49738985, b: 0.575279, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -258,6 +258,16 @@ PrefabInstance:
         type: 3}
       propertyPath: currentLevel
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7983392908799067626, guid: f25aab2e42679ed4caa19e9916f03dc4,
+        type: 3}
+      propertyPath: toLevel3Count
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7983392908799067626, guid: f25aab2e42679ed4caa19e9916f03dc4,
+        type: 3}
+      propertyPath: toLevel4Count
+      value: 95
       objectReference: {fileID: 0}
     - target: {fileID: 505171660684869035, guid: f25aab2e42679ed4caa19e9916f03dc4,
         type: 3}
@@ -2826,6 +2836,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TimmysRoom
       objectReference: {fileID: 0}
+    - target: {fileID: 5193658339592608083, guid: 00fcbbc496082874caf2d107b838ef65,
+        type: 3}
+      propertyPath: m_Name
+      value: DoorHinge
+      objectReference: {fileID: 0}
     - target: {fileID: 2512285763217032952, guid: 00fcbbc496082874caf2d107b838ef65,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2885,11 +2900,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5193658339592608083, guid: 00fcbbc496082874caf2d107b838ef65,
-        type: 3}
-      propertyPath: m_Name
-      value: DoorHinge
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00fcbbc496082874caf2d107b838ef65, type: 3}

@@ -29,7 +29,7 @@
 				<Event Id="277406514" Name="caught_toyCar" ObjectPath="\Events\Default Work Unit\Items\caught_toyCar" DurationType="OneShot" DurationMin="0.465125" DurationMax="0.871791"/>
 				<Event Id="3931550490" Name="crows_event" ObjectPath="\Events\Default Work Unit\Weather\crows_event" DurationType="Infinite"/>
 				<Event Id="4123255229" Name="DialogueDK_event" ObjectPath="\Events\Default Work Unit\Dialogue\DialogueDK_event" DurationType="OneShot" DurationMin="23.040001" DurationMax="83.720955"/>
-				<Event Id="1976820711" Name="DialogueEN_event" ObjectPath="\Events\Default Work Unit\Dialogue\DialogueEN_event" DurationType="OneShot" DurationMin="26.723265" DurationMax="93.488388"/>
+				<Event Id="1976820711" Name="DialogueEN_event" ObjectPath="\Events\Default Work Unit\Dialogue\DialogueEN_event" DurationType="OneShot" DurationMin="26.723265" DurationMax="72.704803"/>
 				<Event Id="3370210432" Name="FailFeed_event" ObjectPath="\Events\Default Work Unit\FailFeed_event" DurationType="OneShot" DurationMin="4.106871" DurationMax="4.106871"/>
 				<Event Id="1105161895" Name="menuPause_event" ObjectPath="\Events\Default Work Unit\menuPause_event" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2008163460" Name="menuResume_event" ObjectPath="\Events\Default Work Unit\menuResume_event" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
@@ -52,10 +52,6 @@
 					<ShortName>stars_event5.wav</ShortName>
 					<Path>SFX\stars_event5_F2B9B919.wem</Path>
 				</File>
-				<File Id="96900878" Language="SFX">
-					<ShortName>EN_DIA_P6-edit_no_door.wav</ShortName>
-					<Path>SFX\EN_DIA_P6-edit_no_door_F2B9B919.wem</Path>
-				</File>
 				<File Id="109965146" Language="SFX">
 					<ShortName>sun.wav</ShortName>
 					<Path>SFX\sun_85C21AE7.wem</Path>
@@ -64,13 +60,13 @@
 					<ShortName>FailFeed.wav</ShortName>
 					<Path>SFX\FailFeed_F2B9B919.wem</Path>
 				</File>
+				<File Id="248445252" Language="SFX">
+					<ShortName>EN_DIA_P6_final.wav</ShortName>
+					<Path>SFX\EN_DIA_P6_final_F2B9B919.wem</Path>
+				</File>
 				<File Id="253455966" Language="SFX">
 					<ShortName>catch_paper2.wav</ShortName>
 					<Path>SFX\catch_paper2_F2B9B919.wem</Path>
-				</File>
-				<File Id="295969561" Language="SFX">
-					<ShortName>EN_DIA_P2-edit.wav</ShortName>
-					<Path>SFX\EN_DIA_P2-edit_F2B9B919.wem</Path>
 				</File>
 				<File Id="351704390" Language="SFX">
 					<ShortName>rain.wav</ShortName>
@@ -100,6 +96,10 @@
 					<ShortName>stars_event4.wav</ShortName>
 					<Path>SFX\stars_event4_F2B9B919.wem</Path>
 				</File>
+				<File Id="729893639" Language="SFX">
+					<ShortName>EN_DIA_P5_final.wav</ShortName>
+					<Path>SFX\EN_DIA_P5_final_F2B9B919.wem</Path>
+				</File>
 				<File Id="759778719" Language="SFX">
 					<ShortName>DA_DIA_P4-edit.wav</ShortName>
 					<Path>SFX\DA_DIA_P4-edit_F2B9B919.wem</Path>
@@ -115,10 +115,6 @@
 				<File Id="807851023" Language="SFX">
 					<ShortName>catch_paper0.wav</ShortName>
 					<Path>SFX\catch_paper0_F2B9B919.wem</Path>
-				</File>
-				<File Id="845272853" Language="SFX">
-					<ShortName>EN_DIA_P4-edit.wav</ShortName>
-					<Path>SFX\EN_DIA_P4-edit_F2B9B919.wem</Path>
 				</File>
 				<File Id="855172982" Language="SFX">
 					<ShortName>EN_DIA_P1-edit.wav</ShortName>
@@ -136,13 +132,17 @@
 					<ShortName>stars_event6.wav</ShortName>
 					<Path>SFX\stars_event6_F2B9B919.wem</Path>
 				</File>
-				<File Id="939687044" Language="SFX">
-					<ShortName>EN_DIA_P3-edit.wav</ShortName>
-					<Path>SFX\EN_DIA_P3-edit_F2B9B919.wem</Path>
+				<File Id="915841421" Language="SFX">
+					<ShortName>EN_DIA_P4_final.wav</ShortName>
+					<Path>SFX\EN_DIA_P4_final_F2B9B919.wem</Path>
 				</File>
-				<File Id="975427891" Language="SFX">
-					<ShortName>EN_DIA_P5-edit.wav</ShortName>
-					<Path>SFX\EN_DIA_P5-edit_F2B9B919.wem</Path>
+				<File Id="923056721" Language="SFX">
+					<ShortName>EN_DIA_P3_final.wav</ShortName>
+					<Path>SFX\EN_DIA_P3_final_F2B9B919.wem</Path>
+				</File>
+				<File Id="974418420" Language="SFX">
+					<ShortName>EN_DIA_P2_final.wav</ShortName>
+					<Path>SFX\EN_DIA_P2_final_F2B9B919.wem</Path>
 				</File>
 				<File Id="1007295197" Language="SFX">
 					<ShortName>DA_DIA_P5-edit.wav</ShortName>
