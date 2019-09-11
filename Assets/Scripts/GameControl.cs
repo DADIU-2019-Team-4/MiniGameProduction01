@@ -50,7 +50,7 @@ public class GameControl : MonoBehaviour
     private float levelTimer = 0;
 
     [SerializeField]
-    private float bellSpawnTime = 19f;
+    private float bellSpawnTime = 28f;
 
     [SerializeField]
     private float packageSpawnTime = 4f;
@@ -389,7 +389,7 @@ public class GameControl : MonoBehaviour
                 AddBall(Side.Left, Type.Ball);
                 AddBall(Side.Left, Type.Ball1);
                 AddBall(Side.Right, Type.Ball2);
-                bellSpawnTime = 19f;
+                bellSpawnTime = 28f;
                 break;
             case 4:
                 AddBall(Side.Left, Type.Bell);
