@@ -30,6 +30,8 @@ namespace AK
         static const AkUniqueID FAILFEED_EVENT = 3370210432U;
         static const AkUniqueID MENUPAUSE_EVENT = 1105161895U;
         static const AkUniqueID MENURESUME_EVENT = 2008163460U;
+        static const AkUniqueID MUSICP5_EVENT = 1792560250U;
+        static const AkUniqueID MUSICP6_EVENT = 3801056957U;
         static const AkUniqueID RAIN_EVENT = 937827766U;
         static const AkUniqueID ROOM_EVENT = 2761588325U;
         static const AkUniqueID STARS_EVENT0 = 902224743U;

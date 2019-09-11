@@ -16,67 +16,151 @@
 			<ShortName>Default_bank</ShortName>
 			<Path>Default_bank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2450003899" Name="DialogueDA_event" ObjectPath="\Events\Default Work Unit\DialogueDA_event" DurationType="OneShot" DurationMin="23.040001" DurationMax="83.720955"/>
-				<Event Id="1976820711" Name="DialogueEN_event" ObjectPath="\Events\Default Work Unit\DialogueEN_event" DurationType="OneShot" DurationMin="26.723265" DurationMax="93.488388"/>
-				<Event Id="3132622256" Name="FailFeed_event0" ObjectPath="\Events\Default Work Unit\FailFeed_event0" DurationType="OneShot" DurationMin="4.106871" DurationMax="4.106871"/>
-				<Event Id="3651821476" Name="WinFeed_event" ObjectPath="\Events\Default Work Unit\WinFeed_event" DurationType="OneShot" DurationMin="3.678141" DurationMax="3.678141"/>
+				<Event Id="1221441867" Name="caught_bell" ObjectPath="\Events\Default Work Unit\Items\caught_bell" DurationType="OneShot" DurationMin="0.465125" DurationMax="0.871791"/>
+				<Event Id="2642800386" Name="caught_dvd" ObjectPath="\Events\Default Work Unit\Items\caught_dvd" DurationType="OneShot" DurationMin="0.465125" DurationMax="0.871791"/>
+				<Event Id="2387556230" Name="caught_jugglingBall" ObjectPath="\Events\Default Work Unit\Items\caught_jugglingBall" DurationType="OneShot" DurationMin="0.465125" DurationMax="0.871791"/>
+				<Event Id="1107252823" Name="caught_jugglingBall01" ObjectPath="\Events\Default Work Unit\Items\caught_jugglingBall01" DurationType="OneShot" DurationMin="0.465125" DurationMax="0.871791"/>
+				<Event Id="1107252820" Name="caught_jugglingBall02" ObjectPath="\Events\Default Work Unit\Items\caught_jugglingBall02" DurationType="OneShot" DurationMin="0.465125" DurationMax="0.871791"/>
+				<Event Id="2960442441" Name="caught_mug" ObjectPath="\Events\Default Work Unit\Items\caught_mug" DurationType="OneShot" DurationMin="0.465125" DurationMax="0.871791"/>
+				<Event Id="1231394136" Name="caught_package" ObjectPath="\Events\Default Work Unit\Items\caught_package" DurationType="OneShot" DurationMin="0.465125" DurationMax="0.871791"/>
+				<Event Id="843837580" Name="caught_plate" ObjectPath="\Events\Default Work Unit\Items\caught_plate" DurationType="OneShot" DurationMin="0.465125" DurationMax="0.871791"/>
+				<Event Id="1228823624" Name="caught_rocket" ObjectPath="\Events\Default Work Unit\Items\caught_rocket" DurationType="OneShot" DurationMin="0.465125" DurationMax="0.871791"/>
+				<Event Id="3444823518" Name="caught_teaCup" ObjectPath="\Events\Default Work Unit\Items\caught_teaCup" DurationType="OneShot" DurationMin="0.465125" DurationMax="0.871791"/>
+				<Event Id="277406514" Name="caught_toyCar" ObjectPath="\Events\Default Work Unit\Items\caught_toyCar" DurationType="OneShot" DurationMin="0.465125" DurationMax="0.871791"/>
+				<Event Id="3931550490" Name="crows_event" ObjectPath="\Events\Default Work Unit\Weather\crows_event" DurationType="Infinite"/>
+				<Event Id="4123255229" Name="DialogueDK_event" ObjectPath="\Events\Default Work Unit\Dialogue\DialogueDK_event" DurationType="OneShot" DurationMin="23.040001" DurationMax="60.858231"/>
+				<Event Id="1976820711" Name="DialogueEN_event" ObjectPath="\Events\Default Work Unit\Dialogue\DialogueEN_event" DurationType="OneShot" DurationMin="26.723265" DurationMax="72.704803"/>
+				<Event Id="3370210432" Name="FailFeed_event" ObjectPath="\Events\Default Work Unit\FailFeed_event" DurationType="OneShot" DurationMin="4.106871" DurationMax="4.106871"/>
+				<Event Id="1105161895" Name="menuPause_event" ObjectPath="\Events\Default Work Unit\menuPause_event" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2008163460" Name="menuResume_event" ObjectPath="\Events\Default Work Unit\menuResume_event" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1792560250" Name="musicP5_event" ObjectPath="\Events\Default Work Unit\Music\musicP5_event" DurationType="OneShot" DurationMin="475.312531" DurationMax="475.312531"/>
+				<Event Id="3801056957" Name="musicP6_event" ObjectPath="\Events\Default Work Unit\Music\musicP6_event" DurationType="OneShot" DurationMin="305.437500" DurationMax="305.437500"/>
+				<Event Id="937827766" Name="rain_event" ObjectPath="\Events\Default Work Unit\Weather\rain_event" DurationType="Infinite"/>
+				<Event Id="2761588325" Name="Room_event" ObjectPath="\Events\Default Work Unit\Room_event" DurationType="Infinite"/>
+				<Event Id="902224743" Name="stars_event0" ObjectPath="\Events\Default Work Unit\Stars\stars_event0" DurationType="OneShot" DurationMin="1.671247" DurationMax="1.671247"/>
+				<Event Id="902224739" Name="stars_event4" ObjectPath="\Events\Default Work Unit\Stars\stars_event4" DurationType="OneShot" DurationMin="1.761610" DurationMax="1.761610"/>
+				<Event Id="902224738" Name="stars_event5" ObjectPath="\Events\Default Work Unit\Stars\stars_event5" DurationType="OneShot" DurationMin="1.765283" DurationMax="1.765283"/>
+				<Event Id="902224737" Name="stars_event6" ObjectPath="\Events\Default Work Unit\Stars\stars_event6" DurationType="OneShot" DurationMin="1.710816" DurationMax="1.710816"/>
+				<Event Id="902224736" Name="stars_event7" ObjectPath="\Events\Default Work Unit\Stars\stars_event7" DurationType="OneShot" DurationMin="2.809546" DurationMax="2.809546"/>
+				<Event Id="2216443840" Name="sun_event" ObjectPath="\Events\Default Work Unit\Weather\sun_event" DurationType="Infinite"/>
+				<Event Id="3141175304" Name="thunder_event" ObjectPath="\Events\Default Work Unit\Weather\thunder_event" DurationType="Infinite"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="87159758" Language="SFX">
+				<File Id="10934945" Language="SFX">
+					<ShortName>catch_paper1.wav</ShortName>
+					<Path>SFX\catch_paper1_F2B9B919.wem</Path>
+				</File>
+				<File Id="41973457" Language="SFX">
+					<ShortName>DK_DIA_P4_final.wav</ShortName>
+					<Path>SFX\DK_DIA_P4_final_F2B9B919.wem</Path>
+				</File>
+				<File Id="87244112" Language="SFX">
+					<ShortName>stars_event5.wav</ShortName>
+					<Path>SFX\stars_event5_F2B9B919.wem</Path>
+				</File>
+				<File Id="109965146" Language="SFX">
+					<ShortName>sun.wav</ShortName>
+					<Path>SFX\sun_85C21AE7.wem</Path>
+				</File>
+				<File Id="113123724" Language="SFX">
+					<ShortName>DK_DIA_P5_final.wav</ShortName>
+					<Path>SFX\DK_DIA_P5_final_F2B9B919.wem</Path>
+				</File>
+				<File Id="242200253" Language="SFX">
 					<ShortName>FailFeed.wav</ShortName>
-					<Path>SFX\FailFeed_10C4C929.wem</Path>
+					<Path>SFX\FailFeed_F2B9B919.wem</Path>
 				</File>
-				<File Id="131794834" Language="SFX">
-					<ShortName>WinFeed.wav</ShortName>
-					<Path>SFX\WinFeed_10C4C929.wem</Path>
+				<File Id="248445252" Language="SFX">
+					<ShortName>EN_DIA_P6_final.wav</ShortName>
+					<Path>SFX\EN_DIA_P6_final_F2B9B919.wem</Path>
 				</File>
-				<File Id="295969561" Language="SFX">
-					<ShortName>EN_DIA_P2-edit.wav</ShortName>
-					<Path>SFX\EN_DIA_P2-edit_10C4C929.wem</Path>
+				<File Id="253455966" Language="SFX">
+					<ShortName>catch_paper2.wav</ShortName>
+					<Path>SFX\catch_paper2_F2B9B919.wem</Path>
+				</File>
+				<File Id="351704390" Language="SFX">
+					<ShortName>rain.wav</ShortName>
+					<Path>SFX\rain_85C21AE7.wem</Path>
+				</File>
+				<File Id="376772925" Language="SFX">
+					<ShortName>DK_DIA_P3_final.wav</ShortName>
+					<Path>SFX\DK_DIA_P3_final_F2B9B919.wem</Path>
 				</File>
 				<File Id="422535274" Language="SFX">
 					<ShortName>DA_DIA_P1.wav</ShortName>
-					<Path>SFX\DA_DIA_P1_10C4C929.wem</Path>
+					<Path>SFX\DA_DIA_P1_F2B9B919.wem</Path>
 				</File>
-				<File Id="609625544" Language="SFX">
-					<ShortName>DA_DIA_P3-edit.wav</ShortName>
-					<Path>SFX\DA_DIA_P3-edit_10C4C929.wem</Path>
+				<File Id="516845969" Language="SFX">
+					<ShortName>catch_paper3.wav</ShortName>
+					<Path>SFX\catch_paper3_F2B9B919.wem</Path>
 				</File>
-				<File Id="759778719" Language="SFX">
-					<ShortName>DA_DIA_P4-edit.wav</ShortName>
-					<Path>SFX\DA_DIA_P4-edit_10C4C929.wem</Path>
+				<File Id="576820311" Language="SFX">
+					<ShortName>stars_event0.wav</ShortName>
+					<Path>SFX\stars_event0_F2B9B919.wem</Path>
 				</File>
-				<File Id="807246711" Language="SFX">
-					<ShortName>EN_DIA_P6-edit.wav</ShortName>
-					<Path>SFX\EN_DIA_P6-edit_10C4C929.wem</Path>
+				<File Id="579222029" Language="SFX">
+					<ShortName>crows.wav</ShortName>
+					<Path>SFX\crows_85C21AE7.wem</Path>
 				</File>
-				<File Id="840184733" Language="SFX">
-					<ShortName>DA_DIA_P6-edit.wav</ShortName>
-					<Path>SFX\DA_DIA_P6-edit_10C4C929.wem</Path>
+				<File Id="693621732" Language="SFX">
+					<ShortName>DK_DIA_P6_final.wav</ShortName>
+					<Path>SFX\DK_DIA_P6_final_F2B9B919.wem</Path>
 				</File>
-				<File Id="845272853" Language="SFX">
-					<ShortName>EN_DIA_P4-edit.wav</ShortName>
-					<Path>SFX\EN_DIA_P4-edit_10C4C929.wem</Path>
+				<File Id="719967678" Language="SFX">
+					<ShortName>stars_event4.wav</ShortName>
+					<Path>SFX\stars_event4_F2B9B919.wem</Path>
+				</File>
+				<File Id="729893639" Language="SFX">
+					<ShortName>EN_DIA_P5_final.wav</ShortName>
+					<Path>SFX\EN_DIA_P5_final_F2B9B919.wem</Path>
+				</File>
+				<File Id="758738449" Language="SFX">
+					<ShortName>music_phase5_2.wav</ShortName>
+					<Path>SFX\music_phase5_2_F2B9B919.wem</Path>
+				</File>
+				<File Id="779036515" Language="SFX">
+					<ShortName>thunder.wav</ShortName>
+					<Path>SFX\thunder_85C21AE7.wem</Path>
+				</File>
+				<File Id="796341569" Language="SFX">
+					<ShortName>stars_event7.wav</ShortName>
+					<Path>SFX\stars_event7_F2B9B919.wem</Path>
+				</File>
+				<File Id="807851023" Language="SFX">
+					<ShortName>catch_paper0.wav</ShortName>
+					<Path>SFX\catch_paper0_F2B9B919.wem</Path>
 				</File>
 				<File Id="855172982" Language="SFX">
 					<ShortName>EN_DIA_P1-edit.wav</ShortName>
-					<Path>SFX\EN_DIA_P1-edit_10C4C929.wem</Path>
+					<Path>SFX\EN_DIA_P1-edit_F2B9B919.wem</Path>
 				</File>
-				<File Id="876716406" Language="SFX">
-					<ShortName>DA_DIA_P2-edit.wav</ShortName>
-					<Path>SFX\DA_DIA_P2-edit_10C4C929.wem</Path>
+				<File Id="883314705" Language="SFX">
+					<ShortName>music_phase6_2.wav</ShortName>
+					<Path>SFX\music_phase6_2_F2B9B919.wem</Path>
 				</File>
-				<File Id="939687044" Language="SFX">
-					<ShortName>EN_DIA_P3-edit.wav</ShortName>
-					<Path>SFX\EN_DIA_P3-edit_10C4C929.wem</Path>
+				<File Id="902393264" Language="SFX">
+					<ShortName>ROOM.wav</ShortName>
+					<Path>SFX\ROOM_85C21AE7.wem</Path>
 				</File>
-				<File Id="975427891" Language="SFX">
-					<ShortName>EN_DIA_P5-edit.wav</ShortName>
-					<Path>SFX\EN_DIA_P5-edit_10C4C929.wem</Path>
+				<File Id="913491848" Language="SFX">
+					<ShortName>stars_event6.wav</ShortName>
+					<Path>SFX\stars_event6_F2B9B919.wem</Path>
 				</File>
-				<File Id="1007295197" Language="SFX">
-					<ShortName>DA_DIA_P5-edit.wav</ShortName>
-					<Path>SFX\DA_DIA_P5-edit_10C4C929.wem</Path>
+				<File Id="915841421" Language="SFX">
+					<ShortName>EN_DIA_P4_final.wav</ShortName>
+					<Path>SFX\EN_DIA_P4_final_F2B9B919.wem</Path>
+				</File>
+				<File Id="923056721" Language="SFX">
+					<ShortName>EN_DIA_P3_final.wav</ShortName>
+					<Path>SFX\EN_DIA_P3_final_F2B9B919.wem</Path>
+				</File>
+				<File Id="974418420" Language="SFX">
+					<ShortName>EN_DIA_P2_final.wav</ShortName>
+					<Path>SFX\EN_DIA_P2_final_F2B9B919.wem</Path>
+				</File>
+				<File Id="996069545" Language="SFX">
+					<ShortName>DK_DIA_P2_final.wav</ShortName>
+					<Path>SFX\DK_DIA_P2_final_F2B9B919.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
