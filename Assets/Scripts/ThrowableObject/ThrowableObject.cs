@@ -112,7 +112,6 @@ public class ThrowableObject : MonoBehaviour
     {
         if (isLeftHand)
         {
-            //applyForce(new Vector3(-0.2F, 1, 0));
             Vibration.Vibrate(shakeDur);
            // StartCoroutine(shake.Shake(.04f, 0.03f));
             StartCoroutine(JuggleRight());
@@ -130,17 +129,6 @@ public class ThrowableObject : MonoBehaviour
     {
         if (isRightHand)
         {
-
-            if (gc.getCurrentLevel() == 1) //on level 1 just throw upwards
-            {
-                //applyForce(new Vector3(0, 0.8F, 0));
-            }
-            else
-            {
-                //applyForce(new Vector3(0.35F, 0.6F, 0));           
-
-            }
-
             Vibration.Vibrate(shakeDur);
            // StartCoroutine(shake.Shake(.04f, 0.03f));
             StartCoroutine(JuggleLeft());
@@ -166,11 +154,19 @@ public class ThrowableObject : MonoBehaviour
         gc.currentLevelThrowCount++;
 
         _animator.enabled = true;
+
+        if (gc.currentLevel == 4)
+            _animator.SetBool("4Balls", true);
+        else if (gc.currentLevel >= 5)
+            _animator.SetBool("5Balls", true);
+        else
+            _animator.SetBool("Default", true);
+
         _animator.SetBool("isInLeftHand", false);
         _animator.SetBool("isInRightHand", true);
         _animator.SetBool("swipedRightSide", true);
 
-        yield return new WaitForSeconds(1.05f);
+        yield return new WaitForSeconds(0.5f);
 
         _animator.SetBool("isInLeftHand", true);
         _animator.SetBool("isInRightHand", false);
@@ -187,11 +183,19 @@ public class ThrowableObject : MonoBehaviour
         gc.currentLevelThrowCount++;
 
         _animator.enabled = true;
+
+        if (gc.currentLevel == 4)
+            _animator.SetBool("4Balls", true);
+        else if (gc.currentLevel >= 5)
+            _animator.SetBool("5Balls", true);
+        else
+            _animator.SetBool("Default", true);
+
         _animator.SetBool("isInLeftHand", true);
         _animator.SetBool("isInRightHand", false);
         _animator.SetBool("swipedLeftSide", true);
 
-        yield return new WaitForSeconds(1.05f);
+        yield return new WaitForSeconds(0.5f);
 
         _animator.SetBool("isInLeftHand", false);
         _animator.SetBool("isInRightHand", true);

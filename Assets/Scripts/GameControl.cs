@@ -364,14 +364,12 @@ public class GameControl : MonoBehaviour
     {
         currentLevel = levelNumber;
         currentLevelThrowCount = 0;
-        inputController.DisableControls(0f);
+        inputController.DisableControls(0.5f);
         stackingIsAllowed = true;
-       
-        
+         
         foreach (ThrowableObject ball in throwableObjectList)
-        {
             Destroy(ball.gameObject);
-        }
+
         throwableObjectList.Clear();
         leftHandObjects.Clear();
         rightHandObjects.Clear();
