@@ -18,7 +18,7 @@ public class GameControl : MonoBehaviour
     private float ballSpawnInterval = 1.0f;
     private float spawnTimer = 0f;
     private float finalSceneDuration = 83f;
-    private float finalSceneTimer= 0f;
+    private float finalSceneTimer = 0f;
     [HideInInspector]
     //public bool ballWaiting = false;
     //private GameObject waitingBall;
@@ -70,7 +70,7 @@ public class GameControl : MonoBehaviour
     [SerializeField]
     private float morePorcelainSpawnTime;
 
-   
+
     private float numberOfObjectsSpawn;
 
     public bool stackingIsAllowed = false;
@@ -87,6 +87,10 @@ public class GameControl : MonoBehaviour
     private bool _triggeredEnding;
     private bool _playedSoundPhase6;
 
+    public GameObject TutorialHandLeft;
+    public GameObject TutorialHandRight;
+    private float dumbTimer = 3f;
+
     internal void QueueLeftHand(ThrowableObject throwableObject)
     {
 
@@ -99,7 +103,7 @@ public class GameControl : MonoBehaviour
                 m_Animator.SetTrigger("failL");
                 m_Animator.SetTrigger("failR");
 
-				AkSoundEngine.PostEvent("failFeed_event", gameObject);
+                AkSoundEngine.PostEvent("failFeed_event", gameObject);
 
                 //restart level
                 StartLevel(currentLevel);
@@ -123,7 +127,7 @@ public class GameControl : MonoBehaviour
                 m_Animator.SetTrigger("failL");
                 m_Animator.SetTrigger("failR");
 
-				AkSoundEngine.PostEvent("failFeed_event", gameObject);
+                AkSoundEngine.PostEvent("failFeed_event", gameObject);
 
                 //restart level
                 StartLevel(currentLevel);
@@ -139,7 +143,7 @@ public class GameControl : MonoBehaviour
     void Start()
     {
         //Get the Animator attached to the Timmy's Model
-        m_Animator = GameObject.Find("Timmy_fbx").GetComponent< Animator > ();
+        m_Animator = GameObject.Find("Timmy_fbx").GetComponent<Animator>();
 
         _endGameObject.SetActive(false);
         leftHandObjects = new Queue<ThrowableObject>();
@@ -151,8 +155,8 @@ public class GameControl : MonoBehaviour
         inputController = FindObjectOfType<InputController>();
         inputController.ThrowEvent.AddListener(UpdateStars);
 
-		AkSoundEngine.PostEvent("sun_event", gameObject);
-		AkSoundEngine.SetState("dia_lang", "EN");
+        AkSoundEngine.PostEvent("sun_event", gameObject);
+        AkSoundEngine.SetState("dia_lang", "EN");
         numberOfObjectsSpawn = 0;
 
         LightStageModifier = GetComponent<LightStageModifier>();
@@ -162,7 +166,8 @@ public class GameControl : MonoBehaviour
         LightStageModifier.ToStageOne();
     }
 
-    void PickUpBallScene() {
+    void PickUpBallScene()
+    {
         m_Animator.SetTrigger("startC");
         m_Animator.SetTrigger("startL");
         m_Animator.SetTrigger("startR");
@@ -177,11 +182,12 @@ public class GameControl : MonoBehaviour
         if (currentLevelThrowCount >= toLevel2Count && currentLevel == 1)
         {
             StartLevel(2);
-            GameObject.Find("TutorialHand").SetActive(false);
+            TutorialHandRight.SetActive(false);
+            TutorialHandLeft.SetActive(false);
             AkSoundEngine.SetSwitch("game_stage", "phase1", gameObject);
-			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+            AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
             levelTimer = 0; //reset time used on level
-			AkSoundEngine.PostEvent("DialogueDK_event", gameObject);
+            AkSoundEngine.PostEvent("DialogueDK_event", gameObject);
             LightStageModifier.ToStageTwo();
 
         }
@@ -191,17 +197,17 @@ public class GameControl : MonoBehaviour
             AkSoundEngine.SetSwitch("game_stage", "phase2", gameObject);
             AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
             levelTimer = 0; //reset time used on level
-			AkSoundEngine.PostEvent("DialogueDK_event", gameObject);
+            AkSoundEngine.PostEvent("DialogueDK_event", gameObject);
             LightStageModifier.ToStageThree();
         }
-        
+
         if (currentLevelThrowCount >= toLevel4Count && currentLevel == 3)
         {
             StartLevel(4);
             AkSoundEngine.SetSwitch("game_stage", "phase3", gameObject);
-			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
-			AkSoundEngine.PostEvent("DialogueDK_event", gameObject);
-			AkSoundEngine.PostEvent("crows_event", gameObject);
+            AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+            AkSoundEngine.PostEvent("DialogueDK_event", gameObject);
+            AkSoundEngine.PostEvent("crows_event", gameObject);
             levelTimer = 0; //reset time used on level
             LightStageModifier.ToStageFour();
         }
@@ -210,9 +216,9 @@ public class GameControl : MonoBehaviour
         {
             StartLevel(5);
             AkSoundEngine.SetSwitch("game_stage", "phase4", gameObject);
-			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
+            AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
             levelTimer = 0; //reset time used on level
-			AkSoundEngine.PostEvent("DialogueDK_event", gameObject);
+            AkSoundEngine.PostEvent("DialogueDK_event", gameObject);
             LightStageModifier.ToStageFive();
         }
 
@@ -221,8 +227,8 @@ public class GameControl : MonoBehaviour
             StartLevel(6);
             AkSoundEngine.SetSwitch("game_stage", "phase5", gameObject);
             AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
-			AkSoundEngine.PostEvent("DialogueDK_event", gameObject);
-			AkSoundEngine.PostEvent("rain_event", gameObject);
+            AkSoundEngine.PostEvent("DialogueDK_event", gameObject);
+            AkSoundEngine.PostEvent("rain_event", gameObject);
             levelTimer = 0; //reset time used on level
             LightStageModifier.ToStageSix();
         }
@@ -263,6 +269,15 @@ public class GameControl : MonoBehaviour
 
         levelTimer += Time.deltaTime;
         TimedSpawnHandler();
+
+        if (dumbTimer <= 0)
+        {
+            TutorialSides();
+        }
+        else
+        {
+            dumbTimer -= Time.deltaTime;
+        }
     }
 
     private void UpdateStars()
@@ -297,7 +312,7 @@ public class GameControl : MonoBehaviour
             throwableObjectList[0].gameObject.GetComponent<ModifyObjectMesh>().SetToBellMesh();
             bellSpawnTime = -1f;
         }
-        if (currentLevel == 4 && levelTimer > packageSpawnTime && packageSpawnTime!=-1f)
+        if (currentLevel == 4 && levelTimer > packageSpawnTime && packageSpawnTime != -1f)
         {
             throwableObjectList[1].gameObject.GetComponent<ModifyObjectMesh>().SetToPackageMesh();
             packageSpawnTime = -1f;
@@ -312,7 +327,7 @@ public class GameControl : MonoBehaviour
             throwableObjectList[3].gameObject.GetComponent<ModifyObjectMesh>().SetToSexDrawingMesh();
             dvdSpawnTime = -1f;
         }
-        if (currentLevel == 5 && levelTimer > carSpawnTime && carSpawnTime!=-1f)
+        if (currentLevel == 5 && levelTimer > carSpawnTime && carSpawnTime != -1f)
         {
             throwableObjectList[0].gameObject.GetComponent<ModifyObjectMesh>().SetToToyCarMesh();
             carSpawnTime = -1f;
@@ -367,7 +382,7 @@ public class GameControl : MonoBehaviour
         currentLevelThrowCount = 0;
         inputController.DisableControls(0.5f);
         stackingIsAllowed = true;
-         
+
         foreach (ThrowableObject ball in throwableObjectList)
             Destroy(ball.gameObject);
 
@@ -404,7 +419,7 @@ public class GameControl : MonoBehaviour
                 AddBall(Side.Left, Type.Package);
                 AddBall(Side.Right, Type.Rocket);
                 AddBall(Side.Right, Type.Sex);
-                gameSpeed =1f;
+                gameSpeed = 1f;
                 Time.timeScale = gameSpeed;
                 carSpawnTime = 13f;
                 break;
@@ -435,6 +450,23 @@ public class GameControl : MonoBehaviour
     public void removeBall()
     {
         currentNumOfBalls--;
+    }
+
+    private void TutorialSides()
+    {
+        if (currentLevel == 1)
+        {
+            if (leftHandObjects.Count > 0)
+            {
+                TutorialHandLeft.SetActive(false);
+                TutorialHandRight.SetActive(true);
+            }
+            else if (rightHandObjects.Count > 0)
+            {
+                TutorialHandLeft.SetActive(true);
+                TutorialHandRight.SetActive(false);
+            }
+        }
     }
 
 }
