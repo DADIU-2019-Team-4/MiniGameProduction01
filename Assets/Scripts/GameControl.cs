@@ -397,9 +397,9 @@ public class GameControl : MonoBehaviour
                 AddBall(Side.Left, Type.Ball);
                 AddBall(Side.Right, Type.Ball1);
                 AddBall(Side.Right, Type.Ball2);
-                packageSpawnTime = 4f;
-                toySpawnTime = 13f;
-                dvdSpawnTime = 48f;
+                packageSpawnTime = 5f;
+                toySpawnTime = 14f;
+                dvdSpawnTime = 49f;
                 break;
             case 5:
                 AddBall(Side.Left, Type.Bell);
