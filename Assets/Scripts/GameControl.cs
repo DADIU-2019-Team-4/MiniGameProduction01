@@ -242,8 +242,9 @@ public class GameControl : MonoBehaviour
                 _playedSoundPhase6 = true;
             }
 
-            gameSpeed += Time.deltaTime * speedUpValue;
-            Time.timeScale = gameSpeed;
+            // todo speed up animation
+            //gameSpeed += Time.deltaTime * speedUpValue;
+            //Time.timeScale = gameSpeed;
 
             finalSceneTimer += Time.deltaTime;
             if (finalSceneTimer > finalSceneDuration)
@@ -405,8 +406,7 @@ public class GameControl : MonoBehaviour
                 AddBall(Side.Left, Type.Package);
                 AddBall(Side.Right, Type.Rocket);
                 AddBall(Side.Right, Type.Sex);
-                gameSpeed =1f;
-                Time.timeScale = gameSpeed;
+                // todo speed up animation
                 carSpawnTime = 20f;
                 break;
             case 6:

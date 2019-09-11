@@ -29,8 +29,8 @@ public class MenuManager : MonoBehaviour
             if (!EndGame)
             {
                 _menuScreen.SetActive(false);
-            Time.timeScale = _gameControl.gameSpeed;
-			AkSoundEngine.PostEvent("menuResume_event", gameObject);
+                Time.timeScale = _gameControl.gameSpeed;
+                AkSoundEngine.PostEvent("menuResume_event", gameObject);
             }
             else
             {

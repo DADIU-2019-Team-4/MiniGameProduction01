@@ -143,7 +143,7 @@ public class ThrowableObject : MonoBehaviour
 
             Vibration.Vibrate(shakeDur);
            // StartCoroutine(shake.Shake(.04f, 0.03f));
-            StartCoroutine(JuggleLeft());
+ 
             isRightHand = false;
 
             return true;
@@ -163,9 +163,13 @@ public class ThrowableObject : MonoBehaviour
     {
         Debug.Log("Animating");
 
+        _animator.enabled = true;
+
+        if (gc.currentLevel == 3)
+            _animator.speed = 0.5f;
+
         gc.currentLevelThrowCount++;
 
-        _animator.enabled = true;
         _animator.SetBool("isInLeftHand", false);
         _animator.SetBool("isInRightHand", true);
         _animator.SetBool("swipedRightSide", true);
@@ -187,6 +191,10 @@ public class ThrowableObject : MonoBehaviour
         gc.currentLevelThrowCount++;
 
         _animator.enabled = true;
+
+        if (gc.currentLevel == 3)
+            _animator.speed = 0.5f;
+
         _animator.SetBool("isInLeftHand", true);
         _animator.SetBool("isInRightHand", false);
         _animator.SetBool("swipedLeftSide", true);
