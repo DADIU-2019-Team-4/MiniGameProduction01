@@ -6,9 +6,9 @@ using UnityEngine;
 public class AddBall : MonoBehaviour
 {
     public GameObject BallOne;
-    public GameObject BallTwo;
-    public GameObject BallThree;
-    public GameObject BallFour;
+    //public GameObject BallTwo;
+    //public GameObject BallThree;
+    //public GameObject BallFour;
     private int MaximumNumberOfBalls;
 
     private GameControl gc;
