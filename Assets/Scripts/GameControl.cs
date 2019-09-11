@@ -250,6 +250,7 @@ public class GameControl : MonoBehaviour
             {
                 inputController.LevelEnd = true;
                 _playedSoundPhase7 = true;
+                LightStageModifier.ToStageSeven();
             }
 
             gameSpeed += Time.deltaTime * speedUpValue;
