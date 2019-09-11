@@ -177,6 +177,7 @@ public class GameControl : MonoBehaviour
         if (currentLevelThrowCount >= toLevel2Count && currentLevel == 1)
         {
             StartLevel(2);
+            GameObject.Find("TutorialHand").SetActive(false);
             AkSoundEngine.SetSwitch("game_stage", "phase1", gameObject);
 			AkSoundEngine.PostEvent("DialogueEN_event", gameObject);
             levelTimer = 0; //reset time used on level
