@@ -110,7 +110,9 @@ public class GameControl : MonoBehaviour
                 StartLevel(currentLevel);
                 StartCoroutine(_starManager.ResetStars(0f));
                 Debug.Log("Fail!!");
+                return;
             }
+
         }
 
         leftHandObjects.Enqueue(throwableObject);
@@ -134,6 +136,7 @@ public class GameControl : MonoBehaviour
                 StartLevel(currentLevel);
                 StartCoroutine(_starManager.ResetStars(0f));
                 Debug.Log("Fail!!");
+                return;
             }
         }
 
@@ -384,6 +387,9 @@ public class GameControl : MonoBehaviour
         currentLevelThrowCount = 0;
         inputController.DisableControls(0.5f);
         stackingIsAllowed = true;
+
+        leftHandObjects.Clear();
+        rightHandObjects.Clear();
 
         foreach (ThrowableObject ball in throwableObjectList)
             Destroy(ball.gameObject);
